@@ -1,0 +1,397 @@
+{
+  "generator": "sgen1",
+  "image": "satex-gen/sgen1:2009",
+  "results": [
+    {
+      "instance": "sgen1-sat-100-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "100",
+        "-s",
+        "100"
+      ],
+      "expected": "c12d5e3213fbe4071aa8a64618c67445",
+      "got": "c12d5e3213fbe4071aa8a64618c67445",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-120-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "120",
+        "-s",
+        "100"
+      ],
+      "expected": "c31f64e36934747378efbea57f27b8ef",
+      "got": "c31f64e36934747378efbea57f27b8ef",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-140-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "140",
+        "-s",
+        "100"
+      ],
+      "expected": "da842d9bdb3696fb5023d8a5d8ae4cd0",
+      "got": "0023b1cb2ab6f1092999e378bdc76012",
+      "level": "N1",
+      "matched": "the author's copy in sgen1-sat.tar on eeecs.qub.ac.uk/~I.Spence/sgen"
+    },
+    {
+      "instance": "sgen1-sat-160-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "160",
+        "-s",
+        "100"
+      ],
+      "expected": "f9abcc53e363e33bd31203b341dfc73c",
+      "got": "f9abcc53e363e33bd31203b341dfc73c",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-180-100-sc2009.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "180",
+        "-s",
+        "100"
+      ],
+      "expected": "5feccc06fd6bbced837e6533a9098f3d",
+      "got": "41f4cb4992a481c9d43e2e1a4e2349ac",
+      "level": "N3"
+    },
+    {
+      "instance": "sgen1-sat-180-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "180",
+        "-s",
+        "100"
+      ],
+      "expected": "41f4cb4992a481c9d43e2e1a4e2349ac",
+      "got": "41f4cb4992a481c9d43e2e1a4e2349ac",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-200-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "200",
+        "-s",
+        "100"
+      ],
+      "expected": "f4fc9d5721fe8bec5fc8dfff2f7c55f9",
+      "got": "f4fc9d5721fe8bec5fc8dfff2f7c55f9",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-220-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "220",
+        "-s",
+        "100"
+      ],
+      "expected": "72a076145481e1780ffef9dfbe3c41fa",
+      "got": "72a076145481e1780ffef9dfbe3c41fa",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-230-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "230",
+        "-s",
+        "100"
+      ],
+      "expected": "05f5567936f582edc0d3ea9903f540bc",
+      "got": "05f5567936f582edc0d3ea9903f540bc",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-240-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "240",
+        "-s",
+        "100"
+      ],
+      "expected": "91f7c642053c6b373664df3813ae5b04",
+      "got": "91f7c642053c6b373664df3813ae5b04",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-250-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "250",
+        "-s",
+        "100"
+      ],
+      "expected": "d2b4aadcd03948f93148886be40013b2",
+      "got": "d2b4aadcd03948f93148886be40013b2",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-260-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "260",
+        "-s",
+        "100"
+      ],
+      "expected": "f1c7fb2d19b357ee0ed4e9df28a1b533",
+      "got": "f1c7fb2d19b357ee0ed4e9df28a1b533",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-270-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "270",
+        "-s",
+        "100"
+      ],
+      "expected": "5c0b9c890caf6ee742f7c878b1b3b065",
+      "got": "5c0b9c890caf6ee742f7c878b1b3b065",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-280-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "280",
+        "-s",
+        "100"
+      ],
+      "expected": "71aceeaec564ce406345093712000b7f",
+      "got": "71aceeaec564ce406345093712000b7f",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-290-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "290",
+        "-s",
+        "100"
+      ],
+      "expected": "c4f2774e12156450b8fe8d29fabc701f",
+      "got": "c4f2774e12156450b8fe8d29fabc701f",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-sat-300-100.cnf",
+      "args": [
+        "-sat",
+        "-n",
+        "300",
+        "-s",
+        "100"
+      ],
+      "expected": "d9fad7d0dba338510848ad27032a4688",
+      "got": "d9fad7d0dba338510848ad27032a4688",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-103-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "103",
+        "-s",
+        "100"
+      ],
+      "expected": "7489dc4e399a6792fd8840921359d6d8",
+      "got": "7489dc4e399a6792fd8840921359d6d8",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-109-100-sc2009.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "109",
+        "-s",
+        "100"
+      ],
+      "expected": "a9e528e396f42fd1de5aac050ef5b1dd",
+      "got": "b0aa647211464a18951e4473237eed08",
+      "level": "N3"
+    },
+    {
+      "instance": "sgen1-unsat-109-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "109",
+        "-s",
+        "100"
+      ],
+      "expected": "b0aa647211464a18951e4473237eed08",
+      "got": "b0aa647211464a18951e4473237eed08",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-115-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "115",
+        "-s",
+        "100"
+      ],
+      "expected": "a14b9718d5072259d65bd96416767142",
+      "got": "a14b9718d5072259d65bd96416767142",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-121-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "121",
+        "-s",
+        "100"
+      ],
+      "expected": "2b60f9be1439f63b7f174c6b8ca7fedf",
+      "got": "2b60f9be1439f63b7f174c6b8ca7fedf",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-127-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "127",
+        "-s",
+        "100"
+      ],
+      "expected": "b0da15e2ce92b55bed01e5d776da942a",
+      "got": "b0da15e2ce92b55bed01e5d776da942a",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-133-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "133",
+        "-s",
+        "100"
+      ],
+      "expected": "8f7ae5a737fdc0bbf1d48aaf3159f8fd",
+      "got": "8f7ae5a737fdc0bbf1d48aaf3159f8fd",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-139-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "139",
+        "-s",
+        "100"
+      ],
+      "expected": "ef901de4fdfe01598c33b37ac4e935c9",
+      "got": "ef901de4fdfe01598c33b37ac4e935c9",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-145-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "145",
+        "-s",
+        "100"
+      ],
+      "expected": "8a8b184febd79c2c864b653cfb396a30",
+      "got": "8a8b184febd79c2c864b653cfb396a30",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-151-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "151",
+        "-s",
+        "100"
+      ],
+      "expected": "69b4f3e5329c1d1460a2237d96e3e705",
+      "got": "69b4f3e5329c1d1460a2237d96e3e705",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-61-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "61",
+        "-s",
+        "100"
+      ],
+      "expected": "a73dfc45bae3b9d48bf8d26b8a3ab761",
+      "got": "a73dfc45bae3b9d48bf8d26b8a3ab761",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-73-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "73",
+        "-s",
+        "100"
+      ],
+      "expected": "1fdc28d676358b7e66bdf072dbbdba0b",
+      "got": "1fdc28d676358b7e66bdf072dbbdba0b",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-85-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "85",
+        "-s",
+        "100"
+      ],
+      "expected": "107e43f3e7616bc80201d3694a7fba14",
+      "got": "107e43f3e7616bc80201d3694a7fba14",
+      "level": "N1"
+    },
+    {
+      "instance": "sgen1-unsat-97-100.cnf",
+      "args": [
+        "-unsat",
+        "-n",
+        "97",
+        "-s",
+        "100"
+      ],
+      "expected": "56123e4cc587dc9731b8d7911d38fc88",
+      "got": "56123e4cc587dc9731b8d7911d38fc88",
+      "level": "N1"
+    }
+  ]
+}

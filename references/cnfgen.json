@@ -1,0 +1,433 @@
+{
+  "generator": "cnfgen",
+  "source": "GBD metadata (meta.db of the SAT Competition 2026 benchmark compilation script)",
+  "references": [
+    {
+      "instance": "bphp_p23_h22.sanitized.cnf",
+      "gbdhash": "fa5c6d6736a42650656c5bc018413254",
+      "isohash2": "2d171ca11d3cc3fe",
+      "result": "unsat",
+      "family": "binary-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/584822",
+      "args": [
+        "-S",
+        "1",
+        "bphp",
+        "23",
+        "22"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "bphp_p51_h50.sanitized.cnf",
+      "gbdhash": "d6bb07788867cb7230f5e6e936fd1cad",
+      "isohash2": "0abe68dd66af88f4",
+      "result": "unknown",
+      "family": "binary-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/584822",
+      "args": [
+        "-S",
+        "1",
+        "bphp",
+        "51",
+        "50"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "bphp_p67_h66.sanitized.cnf",
+      "gbdhash": "a2cec4c897b33da62719473af301997d",
+      "isohash2": "8ec4da668686f253",
+      "result": "unknown",
+      "family": "binary-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/584822",
+      "args": [
+        "-S",
+        "1",
+        "bphp",
+        "67",
+        "66"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "bphp_p75_h74.sanitized.cnf",
+      "gbdhash": "9ce3632c9e43702eebb386cd4e736092",
+      "isohash2": "a902527c7fe49761",
+      "result": "unknown",
+      "family": "binary-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/584822",
+      "args": [
+        "-S",
+        "1",
+        "bphp",
+        "75",
+        "74"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "bphp_p99_h98.sanitized.cnf",
+      "gbdhash": "6a0f28c023b54203aab84bd0b7402bf4",
+      "isohash2": "0f6117cfc0b8c1ed",
+      "result": "unknown",
+      "family": "binary-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/584822",
+      "args": [
+        "-S",
+        "1",
+        "bphp",
+        "99",
+        "98"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p100_r100.cnf",
+      "gbdhash": "02a5d44d0559dc046e591dd8c10f2c10",
+      "isohash2": "96e3c6fbdc345feb",
+      "result": "unknown",
+      "family": "relativized-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/359079",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "100",
+        "100",
+        "99"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p105_r105.cnf",
+      "gbdhash": "e4f345877ba5fa2b8fb26be06a123748",
+      "isohash2": "cd18b1a69fb5818f",
+      "result": "unknown",
+      "family": "relativized-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/359079",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "105",
+        "105",
+        "104"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p110_r110.cnf",
+      "gbdhash": "a8667fe48e25063e36a27d4ba06f4bce",
+      "isohash2": "79c1d6bf3b6ad2e7",
+      "result": "unknown",
+      "family": "relativized-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/359079",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "110",
+        "110",
+        "109"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p115_r115.cnf",
+      "gbdhash": "ecd26dfc88ceeb22ad9461fb48bf0cba",
+      "isohash2": "e316f369e13a93b8",
+      "result": "unknown",
+      "family": "relativized-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/359079",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "115",
+        "115",
+        "114"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p14_r14.cnf",
+      "gbdhash": "9f7ec7ef3a908c2e93b5553670a207b1",
+      "isohash2": "217cc93de9c6f914",
+      "result": "unsat",
+      "family": "relativized-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/359079",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "14",
+        "14",
+        "13"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p6_r28.cnf",
+      "gbdhash": "d518d21a9d851741940749cb59f558af",
+      "isohash2": "9258b8d0bd4cc88d",
+      "result": "unsat",
+      "family": "relativized-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/359079",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "6",
+        "28",
+        "5"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p6_r300.cnf",
+      "gbdhash": "3b158899d5a3a07e3aea9e0f3406c4f4",
+      "isohash2": "6931188a1096d2c6",
+      "result": "unknown",
+      "family": "relativized-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/359079",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "6",
+        "300",
+        "5"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p6_r540.cnf",
+      "gbdhash": "7e3df5ae1e84d1f38d196e61db1735cb",
+      "isohash2": "73aa699aed236052",
+      "result": "unknown",
+      "family": "relativized-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/359079",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "6",
+        "540",
+        "5"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p8_r160.sanitized.cnf",
+      "gbdhash": "2dd4b14a8a820e7baa073554ae2c6cb0",
+      "isohash2": "8dcfc03abe20d5c7",
+      "result": "unsat",
+      "family": "relativized-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/584822",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "8",
+        "160",
+        "7"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p8_r170.sanitized.cnf",
+      "gbdhash": "1156429862d3c03160406d6d1a786f11",
+      "isohash2": "add6939610ce187b",
+      "result": "unsat",
+      "family": "relativized-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/584822",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "8",
+        "170",
+        "7"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p90_r90.cnf",
+      "gbdhash": "928436a6e8edbcde2d82504a85c88853",
+      "isohash2": "da2f0298c65f5f9f",
+      "result": "unknown",
+      "family": "relativized-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/359079",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "90",
+        "90",
+        "89"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p95_r95.cnf",
+      "gbdhash": "2d01c7744a990469354a3c53cc2727fb",
+      "isohash2": "a62ffb7684790fd9",
+      "result": "unknown",
+      "family": "relativized-pigeon-hole",
+      "author": "oertel",
+      "proceedings": "http://hdl.handle.net/10138/359079",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "95",
+        "95",
+        "94"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p20_r20.cnf",
+      "gbdhash": "189e5991b041a89700513106988e720d",
+      "isohash2": "5c10af191d686d5d",
+      "result": "unsat",
+      "family": "relativized-pigeon-hole",
+      "author": "yldirimoglu",
+      "proceedings": "http://hdl.handle.net/10138/563824",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "20",
+        "20",
+        "19"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p25_r25.cnf",
+      "gbdhash": "e430acf720b63044e5c825a00a76b0eb",
+      "isohash2": "1446877e85276d5a",
+      "result": "unknown",
+      "family": "relativized-pigeon-hole",
+      "author": "yldirimoglu",
+      "proceedings": "http://hdl.handle.net/10138/563824",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "25",
+        "25",
+        "24"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p30_r30.cnf",
+      "gbdhash": "54ab5a53d2fdfcda16ec74768b29f901",
+      "isohash2": "ee4eb0c8f2bd6396",
+      "result": "unsat",
+      "family": "relativized-pigeon-hole",
+      "author": "yldirimoglu",
+      "proceedings": "http://hdl.handle.net/10138/563824",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "30",
+        "30",
+        "29"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p35_r35.cnf",
+      "gbdhash": "5351fa0e442345fe238e7dd3f6a42b7f",
+      "isohash2": "8c9b4ca8d25cd932",
+      "result": "unknown",
+      "family": "relativized-pigeon-hole",
+      "author": "yldirimoglu",
+      "proceedings": "http://hdl.handle.net/10138/563824",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "35",
+        "35",
+        "34"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p60_r60.cnf",
+      "gbdhash": "23c4e178c94c0dff82ea6c87abed7ecc",
+      "isohash2": "693c689935e6a46f",
+      "result": "unsat",
+      "family": "relativized-pigeon-hole",
+      "author": "yldirimoglu",
+      "proceedings": "http://hdl.handle.net/10138/563824",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "60",
+        "60",
+        "59"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p8_r25.cnf",
+      "gbdhash": "f56c3e42f82da8324eacecee0982eb5a",
+      "isohash2": "ffa5331b12829d82",
+      "result": "unknown",
+      "family": "relativized-pigeon-hole",
+      "author": "yldirimoglu",
+      "proceedings": "http://hdl.handle.net/10138/563824",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "8",
+        "25",
+        "7"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    },
+    {
+      "instance": "rphp_p8_r250.cnf",
+      "gbdhash": "eaf2f0803dd2045f1b189ee834ef0c8f",
+      "isohash2": "139c370b139bd52b",
+      "result": "unsat",
+      "family": "relativized-pigeon-hole",
+      "author": "yldirimoglu",
+      "proceedings": "http://hdl.handle.net/10138/563824",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "8",
+        "250",
+        "7"
+      ],
+      "note": "parameters read from the file name; rphp uses P-1 holes, found by matching the variable and clause counts"
+    }
+  ]
+}

@@ -1,0 +1,337 @@
+{
+  "generator": "cnfgen",
+  "image": "satex-gen/cnfgen:0.9.6",
+  "results": [
+    {
+      "instance": "bphp_p23_h22.sanitized.cnf",
+      "args": [
+        "-S",
+        "1",
+        "bphp",
+        "23",
+        "22"
+      ],
+      "expected": "fa5c6d6736a42650656c5bc018413254",
+      "got": "fa5c6d6736a42650656c5bc018413254",
+      "level": "N1"
+    },
+    {
+      "instance": "bphp_p51_h50.sanitized.cnf",
+      "args": [
+        "-S",
+        "1",
+        "bphp",
+        "51",
+        "50"
+      ],
+      "expected": "d6bb07788867cb7230f5e6e936fd1cad",
+      "got": "d6bb07788867cb7230f5e6e936fd1cad",
+      "level": "N1"
+    },
+    {
+      "instance": "bphp_p67_h66.sanitized.cnf",
+      "args": [
+        "-S",
+        "1",
+        "bphp",
+        "67",
+        "66"
+      ],
+      "expected": "a2cec4c897b33da62719473af301997d",
+      "got": "a2cec4c897b33da62719473af301997d",
+      "level": "N1"
+    },
+    {
+      "instance": "bphp_p75_h74.sanitized.cnf",
+      "args": [
+        "-S",
+        "1",
+        "bphp",
+        "75",
+        "74"
+      ],
+      "expected": "9ce3632c9e43702eebb386cd4e736092",
+      "got": "9ce3632c9e43702eebb386cd4e736092",
+      "level": "N1"
+    },
+    {
+      "instance": "bphp_p99_h98.sanitized.cnf",
+      "args": [
+        "-S",
+        "1",
+        "bphp",
+        "99",
+        "98"
+      ],
+      "expected": "6a0f28c023b54203aab84bd0b7402bf4",
+      "got": "6a0f28c023b54203aab84bd0b7402bf4",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p100_r100.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "100",
+        "100",
+        "99"
+      ],
+      "expected": "02a5d44d0559dc046e591dd8c10f2c10",
+      "got": "02a5d44d0559dc046e591dd8c10f2c10",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p105_r105.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "105",
+        "105",
+        "104"
+      ],
+      "expected": "e4f345877ba5fa2b8fb26be06a123748",
+      "got": "e4f345877ba5fa2b8fb26be06a123748",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p110_r110.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "110",
+        "110",
+        "109"
+      ],
+      "expected": "a8667fe48e25063e36a27d4ba06f4bce",
+      "got": "a8667fe48e25063e36a27d4ba06f4bce",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p115_r115.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "115",
+        "115",
+        "114"
+      ],
+      "expected": "ecd26dfc88ceeb22ad9461fb48bf0cba",
+      "got": "ecd26dfc88ceeb22ad9461fb48bf0cba",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p14_r14.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "14",
+        "14",
+        "13"
+      ],
+      "expected": "9f7ec7ef3a908c2e93b5553670a207b1",
+      "got": "9f7ec7ef3a908c2e93b5553670a207b1",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p6_r28.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "6",
+        "28",
+        "5"
+      ],
+      "expected": "d518d21a9d851741940749cb59f558af",
+      "got": "d518d21a9d851741940749cb59f558af",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p6_r300.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "6",
+        "300",
+        "5"
+      ],
+      "expected": "3b158899d5a3a07e3aea9e0f3406c4f4",
+      "got": "3b158899d5a3a07e3aea9e0f3406c4f4",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p6_r540.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "6",
+        "540",
+        "5"
+      ],
+      "expected": "7e3df5ae1e84d1f38d196e61db1735cb",
+      "got": "7e3df5ae1e84d1f38d196e61db1735cb",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p8_r160.sanitized.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "8",
+        "160",
+        "7"
+      ],
+      "expected": "2dd4b14a8a820e7baa073554ae2c6cb0",
+      "got": "2dd4b14a8a820e7baa073554ae2c6cb0",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p8_r170.sanitized.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "8",
+        "170",
+        "7"
+      ],
+      "expected": "1156429862d3c03160406d6d1a786f11",
+      "got": "1156429862d3c03160406d6d1a786f11",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p90_r90.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "90",
+        "90",
+        "89"
+      ],
+      "expected": "928436a6e8edbcde2d82504a85c88853",
+      "got": "928436a6e8edbcde2d82504a85c88853",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p95_r95.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "95",
+        "95",
+        "94"
+      ],
+      "expected": "2d01c7744a990469354a3c53cc2727fb",
+      "got": "2d01c7744a990469354a3c53cc2727fb",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p20_r20.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "20",
+        "20",
+        "19"
+      ],
+      "expected": "189e5991b041a89700513106988e720d",
+      "got": "189e5991b041a89700513106988e720d",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p25_r25.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "25",
+        "25",
+        "24"
+      ],
+      "expected": "e430acf720b63044e5c825a00a76b0eb",
+      "got": "e430acf720b63044e5c825a00a76b0eb",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p30_r30.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "30",
+        "30",
+        "29"
+      ],
+      "expected": "54ab5a53d2fdfcda16ec74768b29f901",
+      "got": "54ab5a53d2fdfcda16ec74768b29f901",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p35_r35.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "35",
+        "35",
+        "34"
+      ],
+      "expected": "5351fa0e442345fe238e7dd3f6a42b7f",
+      "got": "5351fa0e442345fe238e7dd3f6a42b7f",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p60_r60.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "60",
+        "60",
+        "59"
+      ],
+      "expected": "23c4e178c94c0dff82ea6c87abed7ecc",
+      "got": "23c4e178c94c0dff82ea6c87abed7ecc",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p8_r25.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "8",
+        "25",
+        "7"
+      ],
+      "expected": "f56c3e42f82da8324eacecee0982eb5a",
+      "got": "f56c3e42f82da8324eacecee0982eb5a",
+      "level": "N1"
+    },
+    {
+      "instance": "rphp_p8_r250.cnf",
+      "args": [
+        "-S",
+        "1",
+        "rphp",
+        "8",
+        "250",
+        "7"
+      ],
+      "expected": "eaf2f0803dd2045f1b189ee834ef0c8f",
+      "got": "eaf2f0803dd2045f1b189ee834ef0c8f",
+      "level": "N1"
+    }
+  ]
+}

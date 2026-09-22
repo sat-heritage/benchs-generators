@@ -1,0 +1,32 @@
+{
+  "sgen1": {
+    "name": "sgen1",
+    "authors": "Ivor Spence",
+    "authors_source": "author's page (eeecs.qub.ac.uk/~I.Spence/sgen) and the header of sgen1.c",
+    "year": 2009,
+    "competitions": [
+      "SAT Competition 2009"
+    ],
+    "language": "C",
+    "license": "none stated",
+    "license_note": "no licence in the source nor on the page: ask the author before publishing the image",
+    "source_url": "https://www.eeecs.qub.ac.uk/~I.Spence/sgen/sgen1.c",
+    "image": "satex-gen/sgen1:2009",
+    "usage": "sgen1 -n VARIABLES (-sat | -unsat) [-s SEED] [-m MODEL_FILE] [-min-variables] [-reorder]",
+    "seed": "-s, default 1; the generator uses its own linear congruential generator",
+    "notes": "main() always returns 1, even on success; the verifier ignores the exit status and checks the output instead"
+  },
+  "cnfgen": {
+    "name": "CNFgen",
+    "authors": "Massimo Lauria and contributors",
+    "authors_source": "project page massimolauria.net/cnfgen and PyPI",
+    "year": 2013,
+    "competitions": [],
+    "language": "Python",
+    "license": "GPL-3.0",
+    "source_url": "https://pypi.org/project/cnfgen/0.9.6/",
+    "image": "satex-gen/cnfgen:0.9.6",
+    "usage": "cnfgen FAMILY PARAMETERS...; cnfgen --help lists the families",
+    "seed": "random families take a seed option; Python's random module does not promise identical draws across Python versions"
+  }
+}

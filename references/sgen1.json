@@ -1,0 +1,432 @@
+{
+  "generator": "sgen1",
+  "source": "GBD metadata (meta.db of the SAT Competition 2026 benchmark compilation script)",
+  "references": [
+    {
+      "instance": "sgen1-sat-100-100.cnf",
+      "gbdhash": "c12d5e3213fbe4071aa8a64618c67445",
+      "isohash2": "f883653374dd8789",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "100",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-120-100.cnf",
+      "gbdhash": "c31f64e36934747378efbea57f27b8ef",
+      "isohash2": "afc85939c49b5512",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "120",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-140-100.cnf",
+      "gbdhash": "da842d9bdb3696fb5023d8a5d8ae4cd0",
+      "isohash2": "d9072a421511bf40",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "140",
+        "-s",
+        "100"
+      ],
+      "note": "the GBD copy lacks one clause of the author's file, (-25 -23): 335 clauses instead of 336; the image reproduces the author's file exactly",
+      "alternates": [
+        {
+          "gbdhash": "0023b1cb2ab6f1092999e378bdc76012",
+          "provenance": "the author's copy in sgen1-sat.tar on eeecs.qub.ac.uk/~I.Spence/sgen"
+        }
+      ]
+    },
+    {
+      "instance": "sgen1-sat-160-100.cnf",
+      "gbdhash": "f9abcc53e363e33bd31203b341dfc73c",
+      "isohash2": "1d84db4cb28481da",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "160",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-180-100-sc2009.cnf",
+      "gbdhash": "5feccc06fd6bbced837e6533a9098f3d",
+      "isohash2": "0616283b2778ec86",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "180",
+        "-s",
+        "100"
+      ],
+      "note": "variant published by the SAT Competition 2009 organisers; parameters read from the file name"
+    },
+    {
+      "instance": "sgen1-sat-180-100.cnf",
+      "gbdhash": "41f4cb4992a481c9d43e2e1a4e2349ac",
+      "isohash2": "0616283b2778ec86",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "180",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-200-100.cnf",
+      "gbdhash": "f4fc9d5721fe8bec5fc8dfff2f7c55f9",
+      "isohash2": "24cf57677702ba73",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "200",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-220-100.cnf",
+      "gbdhash": "72a076145481e1780ffef9dfbe3c41fa",
+      "isohash2": "b3e29d01a51d6489",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "220",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-230-100.cnf",
+      "gbdhash": "05f5567936f582edc0d3ea9903f540bc",
+      "isohash2": "163c169923fe4220",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "230",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-240-100.cnf",
+      "gbdhash": "91f7c642053c6b373664df3813ae5b04",
+      "isohash2": "4ffaeedd2f4ef02b",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "240",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-250-100.cnf",
+      "gbdhash": "d2b4aadcd03948f93148886be40013b2",
+      "isohash2": "6abdb5a3f088e2c4",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "250",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-260-100.cnf",
+      "gbdhash": "f1c7fb2d19b357ee0ed4e9df28a1b533",
+      "isohash2": "2f3c58ddeb755a4f",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "260",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-270-100.cnf",
+      "gbdhash": "5c0b9c890caf6ee742f7c878b1b3b065",
+      "isohash2": "33c1729d1fcf0dbd",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "270",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-280-100.cnf",
+      "gbdhash": "71aceeaec564ce406345093712000b7f",
+      "isohash2": "4da9ec2d2d00ccd9",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "280",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-290-100.cnf",
+      "gbdhash": "c4f2774e12156450b8fe8d29fabc701f",
+      "isohash2": "0e52ad8fe419e298",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "290",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-sat-300-100.cnf",
+      "gbdhash": "d9fad7d0dba338510848ad27032a4688",
+      "isohash2": "83379abbbf547019",
+      "result": "sat",
+      "args": [
+        "-sat",
+        "-n",
+        "300",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-103-100.cnf",
+      "gbdhash": "7489dc4e399a6792fd8840921359d6d8",
+      "isohash2": "5671984731831434",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "103",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-109-100-sc2009.cnf",
+      "gbdhash": "a9e528e396f42fd1de5aac050ef5b1dd",
+      "isohash2": "d8eb6d8cc7aaa9d4",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "109",
+        "-s",
+        "100"
+      ],
+      "note": "variant published by the SAT Competition 2009 organisers; parameters read from the file name"
+    },
+    {
+      "instance": "sgen1-unsat-109-100.cnf",
+      "gbdhash": "b0aa647211464a18951e4473237eed08",
+      "isohash2": "d8eb6d8cc7aaa9d4",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "109",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-115-100.cnf",
+      "gbdhash": "a14b9718d5072259d65bd96416767142",
+      "isohash2": "9655b246dbb54721",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "115",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-121-100.cnf",
+      "gbdhash": "2b60f9be1439f63b7f174c6b8ca7fedf",
+      "isohash2": "b74e77310b9bc454",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "121",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-127-100.cnf",
+      "gbdhash": "b0da15e2ce92b55bed01e5d776da942a",
+      "isohash2": "40f33c7441b59f6e",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "127",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-133-100.cnf",
+      "gbdhash": "8f7ae5a737fdc0bbf1d48aaf3159f8fd",
+      "isohash2": "f6eb6e15230d3a36",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "133",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-139-100.cnf",
+      "gbdhash": "ef901de4fdfe01598c33b37ac4e935c9",
+      "isohash2": "d10d9de3137deb03",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "139",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-145-100.cnf",
+      "gbdhash": "8a8b184febd79c2c864b653cfb396a30",
+      "isohash2": "837ca90168ee63e9",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "145",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-151-100.cnf",
+      "gbdhash": "69b4f3e5329c1d1460a2237d96e3e705",
+      "isohash2": "aad08e09b5a56db1",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "151",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-61-100.cnf",
+      "gbdhash": "a73dfc45bae3b9d48bf8d26b8a3ab761",
+      "isohash2": "8c7367dd0247ac68",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "61",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-73-100.cnf",
+      "gbdhash": "1fdc28d676358b7e66bdf072dbbdba0b",
+      "isohash2": "135c9d9c7b719c86",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "73",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-85-100.cnf",
+      "gbdhash": "107e43f3e7616bc80201d3694a7fba14",
+      "isohash2": "7243da09c0a47ff2",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "85",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    },
+    {
+      "instance": "sgen1-unsat-97-100.cnf",
+      "gbdhash": "56123e4cc587dc9731b8d7911d38fc88",
+      "isohash2": "7608dcc9c635b100",
+      "result": "unsat",
+      "args": [
+        "-unsat",
+        "-n",
+        "97",
+        "-s",
+        "100"
+      ],
+      "note": "parameters read from the file name, and from the command line kept in the author's copy"
+    }
+  ]
+}
