@@ -28,5 +28,43 @@
     "image": "satex-gen/cnfgen:0.9.6",
     "usage": "cnfgen FAMILY PARAMETERS...; cnfgen --help lists the families",
     "seed": "random families take a seed option; Python's random module does not promise identical draws across Python versions"
+  },
+  "lockchart": {
+    "name": "lockchart-to-cnf",
+    "authors": "Nikolaus Riedl-Ehrenreich",
+    "authors_source": "repository nrilu/lockchart-to-cnf and the SAT Competition 2025 benchmark description",
+    "year": 2025,
+    "competitions": [
+      "SAT Competition 2025"
+    ],
+    "language": "Python",
+    "license": "CC0-1.0",
+    "publish_image": true,
+    "source_repo": "https://github.com/nrilu/lockchart-to-cnf.git",
+    "source_commit": "6ba6ec0539bab3e690c5e65419315d0dcebf917b",
+    "source_tree": "4b7926400c08ba03675770796777e5ec8253f22d",
+    "image": "satex-gen/lockchart:2025",
+    "usage": "lockchart-gen -l LOCKS [-p POSITIONS] [-d DEPTHS] [-r DENSITY]",
+    "seed": "none; with -r the lock-chart is randomised from the clock and cannot be reproduced",
+    "notes": "the script draws the lock-chart after writing the formula, which needs LaTeX and fails in the image; the formula is already complete at that point"
+  },
+  "oddball": {
+    "name": "Oddball",
+    "authors": "Andrew Mihal",
+    "authors_source": "repository acmihal/oddball and the SAT Competition 2025 benchmark description",
+    "year": 2025,
+    "competitions": [
+      "SAT Competition 2025"
+    ],
+    "language": "Python",
+    "license": "none stated",
+    "publish_image": false,
+    "license_note": "the repository declares no licence: the recipe is published, the image is not, until the author agrees",
+    "source_repo": "https://github.com/acmihal/oddball.git",
+    "source_commit": "e1c977c6daedfa295caf911c6b08f2b516e782c4",
+    "source_tree": "227f5e953c1cb858d91e8191e2fef9db71e97792",
+    "image": "satex-gen/oddball:2025",
+    "usage": "oddball-gen BALLS WEIGHINGS [--strategy NAME]",
+    "seed": "none; the formula is built through z3 and is deterministic"
   }
 }

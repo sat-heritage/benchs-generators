@@ -28,12 +28,34 @@ GBD metadata shipped with the SAT Competition 2026 benchmark compilation script.
 Note that `isohash2` is the column that matches that metadata; `isohash` has
 changed algorithm since.
 
+## Sources and licences
+
+Each recipe pins its source: the repository URL, the exact commit, and the git
+tree hash of that commit, which is git's own content digest and, unlike the
+tarballs GitHub generates on the fly, does not change under us. The build fails
+if the tree does not match.
+
+Pinning fixes provenance, not permission, so `generators.json` also carries a
+`publish_image` flag:
+
+| Licence of the generator | What we do |
+|---|---|
+| clear (MIT, GPL, CC0, ...) | build the image and publish it; for the GPL the image also carries the sources |
+| none stated | publish the recipe, the references and the results, but **not** the image: a public repository without a licence file stays under plain copyright, and publishing the image would redistribute the code |
+
+Either way the verification below runs the same, since it builds the image
+locally before comparing hashes. Authors who add a licence file to their
+repository move their generator from the second row to the first.
+
 ## Results
 
 | Generator | Image | References | N1 | N3 |
 |---|---|---|---|---|
 | sgen1 | `satex-gen/sgen1:2009` | 30 | 28 | 2 |
 | CNFgen | `satex-gen/cnfgen:0.9.6` | 24 | 24 | 0 |
+| mdp-benchmark | `satex-gen/mdp:2022` | 30 | 28 | 0 |
+| Round-robin | `satex-gen/roundrobin:2025` | 20 | 20 | 0 |
+| lockchart-to-cnf | `satex-gen/lockchart:2025` | 20 (5 checked) | 3 | 0 |
 
 - **sgen1**: 27 instances match their GBD hash. The GBD copy of
   `sgen1-sat-140-100` lacks one clause, (-25 -23), of the author's file; the
@@ -46,6 +68,21 @@ changed algorithm since.
   (the last one is the SAT Competition 2024).
   Their parameters come from the file names; `rphp` uses P-1 holes, found by
   matching variable and clause counts.
+
+- **mdp-benchmark**: the repository ships the script that produced the submitted
+  set, so every parameter is known. Two GBD copies differ from what the script
+  produces: `mdp-32-14-unsat` lacks one clause and `mdp-36-10-unsat` lacks one
+  literal of a clause. No other threshold or seed reproduces them, and the
+  author's own copies are not published, so the difference is recorded, not
+  resolved.
+- **Round-robin**: all 20 submitted instances, single and multi-venue, are
+  regenerated exactly.
+- **lockchart-to-cnf**: only the five small instances of group 3 were checked,
+  since those of group 1 are tens of megabytes each. Three match exactly; two
+  have the right size but different clauses, which suggests the submitted set
+  came from an earlier revision of the script. The generator is deterministic:
+  two runs give the same formula. The group 2 instances are randomised from the
+  clock and cannot be reproduced at all.
 
 ## Building and running
 

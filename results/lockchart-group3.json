@@ -1,0 +1,77 @@
+{
+  "generator": "lockchart",
+  "image": "satex-gen/lockchart:2025",
+  "subset": "group3",
+  "results": [
+    {
+      "instance": "lockchart-group3-L11-K23-p4d3j1.normalised.cnf",
+      "args": [
+        "-l",
+        "11",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "expected": "dbb42e010bed2259e4e27bc43e4d86c6",
+      "got": "dbb42e010bed2259e4e27bc43e4d86c6",
+      "level": "N1"
+    },
+    {
+      "instance": "lockchart-group3-L12-K24-p4d3j1.normalised.cnf",
+      "args": [
+        "-l",
+        "12",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "expected": "5321e066293f3e315d84fb46e6a31a1a",
+      "got": "ff05d0fd8d391148d1eaa2cabb6980af",
+      "level": "N4"
+    },
+    {
+      "instance": "lockchart-group3-L13-K26-p4d3j1.normalised.cnf",
+      "args": [
+        "-l",
+        "13",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "expected": "96977e8e00a3728097861502a449e343",
+      "got": "96977e8e00a3728097861502a449e343",
+      "level": "N1"
+    },
+    {
+      "instance": "lockchart-group3-L14-K27-p4d3j1.normalised.cnf",
+      "args": [
+        "-l",
+        "14",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "expected": "9c499a4d1fd042320ccc64a4413ae492",
+      "got": "9c499a4d1fd042320ccc64a4413ae492",
+      "level": "N1"
+    },
+    {
+      "instance": "lockchart-group3-L15-K29-p4d3j1.normalised.cnf",
+      "args": [
+        "-l",
+        "15",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "expected": "b99ba7e9113280393c64863dfbfa2c3b",
+      "got": "eb87f593f609f19f76d2851589486ddd",
+      "level": "N4"
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "generator": "roundrobin",
+  "source": "GBD metadata (meta.db of the SAT Competition 2026 benchmark compilation script)",
+  "references": [
+    {
+      "instance": "MVRoundRobin_n12_d10_v2.cnf",
+      "gbdhash": "e44a8781cf3ed03300d39277413396dc",
+      "isohash2": "57e405ccb7aa3c4e",
+      "result": "unknown",
+      "args": [
+        "mv",
+        "12",
+        "10",
+        "2"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "MVRoundRobin_n12_d10_v3.cnf",
+      "gbdhash": "f1c6af11e7776e890c2f99b5dbd3f091",
+      "isohash2": "bce7d6391da6ebac",
+      "result": "unknown",
+      "args": [
+        "mv",
+        "12",
+        "10",
+        "3"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "MVRoundRobin_n12_d10_v4.cnf",
+      "gbdhash": "bf6a49b7bec5f8f6a200485dc938b224",
+      "isohash2": "9df60ed5a744e8e6",
+      "result": "unknown",
+      "args": [
+        "mv",
+        "12",
+        "10",
+        "4"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "MVRoundRobin_n14_d10_v2.cnf",
+      "gbdhash": "35ec95b9b2398fb522db178855016ae0",
+      "isohash2": "239561c691d4edbb",
+      "result": "unknown",
+      "args": [
+        "mv",
+        "14",
+        "10",
+        "2"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "MVRoundRobin_n14_d10_v3.cnf",
+      "gbdhash": "4f0b1a0922f86b21c909151cb9b1127a",
+      "isohash2": "7cc70feb46a4eb21",
+      "result": "unknown",
+      "args": [
+        "mv",
+        "14",
+        "10",
+        "3"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "MVRoundRobin_n14_d10_v4.cnf",
+      "gbdhash": "008b8c7864ae12dddfc27d0bce8ff7d9",
+      "isohash2": "97a455732a962ac7",
+      "result": "unknown",
+      "args": [
+        "mv",
+        "14",
+        "10",
+        "4"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "MVRoundRobin_n16_d10_v2.cnf",
+      "gbdhash": "c05d4d3ecd06a2e3942fea09159dd27b",
+      "isohash2": "8e1251a67802e363",
+      "result": "unknown",
+      "args": [
+        "mv",
+        "16",
+        "10",
+        "2"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "MVRoundRobin_n16_d10_v3.cnf",
+      "gbdhash": "3a1f1b4b9a521737cc760017fe9d8b43",
+      "isohash2": "a8c502a9af33bda5",
+      "result": "unknown",
+      "args": [
+        "mv",
+        "16",
+        "10",
+        "3"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "MVRoundRobin_n20_d10_v2.cnf",
+      "gbdhash": "908433870bee8ba2c86f266d0b002fdb",
+      "isohash2": "080bb71bf6d088b9",
+      "result": "unknown",
+      "args": [
+        "mv",
+        "20",
+        "10",
+        "2"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "MVRoundRobin_n20_d10_v3.cnf",
+      "gbdhash": "a07a2796a8a61336b748ce7f615aae18",
+      "isohash2": "590b6bb814be0388",
+      "result": "unknown",
+      "args": [
+        "mv",
+        "20",
+        "10",
+        "3"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "RoundRobin_n15_d13.cnf",
+      "gbdhash": "822cf4daaa4e1d16ad53d088ff567f32",
+      "isohash2": "f08d767a4cd53e44",
+      "result": "unknown",
+      "args": [
+        "rr",
+        "15",
+        "13"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "RoundRobin_n16_d13.cnf",
+      "gbdhash": "6cb995b1c550beb579c53e27f6ca881a",
+      "isohash2": "5e53b18522fc0404",
+      "result": "unknown",
+      "args": [
+        "rr",
+        "16",
+        "13"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "RoundRobin_n16_d14.cnf",
+      "gbdhash": "12820b981e6b199a1b1a8c896386a337",
+      "isohash2": "7b1adc3f87d39e33",
+      "result": "unknown",
+      "args": [
+        "rr",
+        "16",
+        "14"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "RoundRobin_n17_d13.cnf",
+      "gbdhash": "cb66276897e4d1ff1368a4430598e11c",
+      "isohash2": "d081a90ea3967c21",
+      "result": "unknown",
+      "args": [
+        "rr",
+        "17",
+        "13"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "RoundRobin_n17_d14.cnf",
+      "gbdhash": "78e8f5b0d59512cc4910fd63b4acb7fa",
+      "isohash2": "514c37fa54441cea",
+      "result": "unknown",
+      "args": [
+        "rr",
+        "17",
+        "14"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "RoundRobin_n17_d15.cnf",
+      "gbdhash": "53e347648553a2f2223614d3b4a07a4b",
+      "isohash2": "737ff1a24b47658f",
+      "result": "unknown",
+      "args": [
+        "rr",
+        "17",
+        "15"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "RoundRobin_n18_d13.cnf",
+      "gbdhash": "d66a2e73c7d6145eb16bcd0ae4a9e59c",
+      "isohash2": "946434fe23461033",
+      "result": "unknown",
+      "args": [
+        "rr",
+        "18",
+        "13"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "RoundRobin_n18_d14.cnf",
+      "gbdhash": "46beda38f893f274c685a98115ad303c",
+      "isohash2": "dced353735bb8aaf",
+      "result": "unknown",
+      "args": [
+        "rr",
+        "18",
+        "14"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "RoundRobin_n18_d15.cnf",
+      "gbdhash": "6f6a20cd654701b5e7fe9e9e0e5e7787",
+      "isohash2": "bbeffc1060c94d1e",
+      "result": "unknown",
+      "args": [
+        "rr",
+        "18",
+        "15"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    },
+    {
+      "instance": "RoundRobin_n18_d16.cnf",
+      "gbdhash": "a09eb02bbaa7a0ae171123a782c2164d",
+      "isohash2": "5c29abb6a640a8fd",
+      "result": "unknown",
+      "args": [
+        "rr",
+        "18",
+        "16"
+      ],
+      "note": "parameters read from the file name; the repository also ships the submitted CNF files"
+    }
+  ]
+}

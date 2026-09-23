@@ -1,0 +1,490 @@
+{
+  "generator": "oddball",
+  "source": "GBD metadata (meta.db of the SAT Competition 2026 benchmark compilation script)",
+  "references": [
+    {
+      "instance": "oddball_112_5_ttf.normalised.cnf",
+      "gbdhash": "f406e2b8b28f205f16e8983bd522db13",
+      "isohash2": "7228b32153a0b8c5",
+      "result": "sat",
+      "args": [
+        "112",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_13_4_ttf.normalised.cnf",
+      "gbdhash": "e7d3f698d527c8c06e00a6eefa9212ad",
+      "isohash2": "df2ff403182fe723",
+      "result": "unknown",
+      "args": [
+        "13",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_13_5_ttf.normalised.cnf",
+      "gbdhash": "c569d4b2b2e90a1a70bd23a1169355ef",
+      "isohash2": "aa711d8573e0d653",
+      "result": "unsat",
+      "args": [
+        "13",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_17_5_ttf.normalised.cnf",
+      "gbdhash": "cabfdc91f644200767df9d480d2cc53e",
+      "isohash2": "ae9a96824fa6012a",
+      "result": "unsat",
+      "args": [
+        "17",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_19_4_ttf.normalised.cnf",
+      "gbdhash": "efc1b7cc3861df8c2b68ca10399b794e",
+      "isohash2": "b060e32b4fdfab8c",
+      "result": "unsat",
+      "args": [
+        "19",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_19_5_ttf.normalised.cnf",
+      "gbdhash": "3e68fee79ecf9f7e1ba1e426b6fab968",
+      "isohash2": "7feeef572500ddd8",
+      "result": "unknown",
+      "args": [
+        "19",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_20_4_ttf.normalised.cnf",
+      "gbdhash": "9b990af19f6cad823e18ef914766be49",
+      "isohash2": "a6aee5e3c08ae442",
+      "result": "unknown",
+      "args": [
+        "20",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_20_5_ttf.normalised.cnf",
+      "gbdhash": "8f391f2bf8167f1b96467f3479b33dc5",
+      "isohash2": "fb1332a62464178c",
+      "result": "unsat",
+      "args": [
+        "20",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_22_4_ttf.normalised.cnf",
+      "gbdhash": "8085f8b3179021d32b98d7b9e0f97b70",
+      "isohash2": "5f0750ae2e8f32a1",
+      "result": "unknown",
+      "args": [
+        "22",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_22_5_ttf.normalised.cnf",
+      "gbdhash": "a1fdd60d2570f47fb14956ac9e96951f",
+      "isohash2": "8fc57c2ee1b9c1c7",
+      "result": "unsat",
+      "args": [
+        "22",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_23_4_ttf.normalised.cnf",
+      "gbdhash": "13bcbba1b2e93cc28e767e4c3294e289",
+      "isohash2": "194c4ada986dee39",
+      "result": "unknown",
+      "args": [
+        "23",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_23_5_ttf.normalised.cnf",
+      "gbdhash": "263dc10d97622cc2ca5d9f6dd6d9981a",
+      "isohash2": "5ef928c40b6eaaf1",
+      "result": "unknown",
+      "args": [
+        "23",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_24_4_ttf.normalised.cnf",
+      "gbdhash": "f1cd694d42891a20c96a65ee1c321edc",
+      "isohash2": "30bd84f12fca2a97",
+      "result": "unsat",
+      "args": [
+        "24",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_24_5_ttf.normalised.cnf",
+      "gbdhash": "296fd43ed40e242875984420f29be73f",
+      "isohash2": "c920daa30ce63a38",
+      "result": "unsat",
+      "args": [
+        "24",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_26_4_ttf.normalised.cnf",
+      "gbdhash": "4cf3505e5183c26bbd97d89fdaa93f8c",
+      "isohash2": "92df3fdff4de24d6",
+      "result": "unsat",
+      "args": [
+        "26",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_26_5_ttf.normalised.cnf",
+      "gbdhash": "1c30806c5aa9cd54bf823c20fa078243",
+      "isohash2": "54c930719fc7ebbb",
+      "result": "unsat",
+      "args": [
+        "26",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_28_4_ttf.normalised.cnf",
+      "gbdhash": "c9a0cd269f38e5b71d4e1d83dc9af53c",
+      "isohash2": "8deab528aa5c1a2b",
+      "result": "unknown",
+      "args": [
+        "28",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_28_5_ttf.normalised.cnf",
+      "gbdhash": "a8201f69aa22d587e1186c27c7f1c93c",
+      "isohash2": "c8e47f55a171b5ce",
+      "result": "unknown",
+      "args": [
+        "28",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_29_4_ttf.normalised.cnf",
+      "gbdhash": "fdefca5f5236d5a8361dbdff0d017eeb",
+      "isohash2": "def476575ed856ef",
+      "result": "unsat",
+      "args": [
+        "29",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_29_5_ttf.normalised.cnf",
+      "gbdhash": "d2796e06d615e49584ff8397ee0aa96f",
+      "isohash2": "9811066ff8274e98",
+      "result": "unknown",
+      "args": [
+        "29",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_33_4_ttf.normalised.cnf",
+      "gbdhash": "575aa1cccad84d9cb9a614d9169651bb",
+      "isohash2": "ed465e5bb8951912",
+      "result": "unknown",
+      "args": [
+        "33",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    },
+    {
+      "instance": "oddball_43_5_tto_zp.normalised.cnf",
+      "gbdhash": "d25a85b032d5b8e90917b226ae778b70",
+      "isohash2": "ae4fc020c9470bb5",
+      "result": "unknown",
+      "args": [
+        "43",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_44_5_tto_zp.normalised.cnf",
+      "gbdhash": "da1491f3317f7ef17f73b9d000c6b662",
+      "isohash2": "b418584c71ef633c",
+      "result": "unknown",
+      "args": [
+        "44",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_47_5_tto_zp.normalised.cnf",
+      "gbdhash": "cdf2e47ea6439e1d2a1341aa4b7e4b8b",
+      "isohash2": "083683b0335c05ba",
+      "result": "unknown",
+      "args": [
+        "47",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_50_5_tto_zp.normalised.cnf",
+      "gbdhash": "ee8d5e66d3bc3208ead9a418c3a91b8b",
+      "isohash2": "fbf561a0976eeb29",
+      "result": "unknown",
+      "args": [
+        "50",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_51_5_tto_zp.normalised.cnf",
+      "gbdhash": "41915707d831e1365389d3cc47c7953f",
+      "isohash2": "8c515af6fa2eddf3",
+      "result": "sat",
+      "args": [
+        "51",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_52_5_tto_zp.normalised.cnf",
+      "gbdhash": "1b8806812861df2b7e91dc316ad1ef80",
+      "isohash2": "70d1bc22bf0eaece",
+      "result": "sat",
+      "args": [
+        "52",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_53_5_tto_zp.normalised.cnf",
+      "gbdhash": "0c0430a68f147be18ab3fded07f30fdb",
+      "isohash2": "cedc4bdc59cf5494",
+      "result": "sat",
+      "args": [
+        "53",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_54_5_tto_zp.normalised.cnf",
+      "gbdhash": "0ec8c5e9084cbc8a326f8f37e1abf741",
+      "isohash2": "12e20a9bec45bb7c",
+      "result": "sat",
+      "args": [
+        "54",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_56_5_tto_zp.normalised.cnf",
+      "gbdhash": "7a206b67366c3049f214f360ff943f62",
+      "isohash2": "c46e9f5873cea0d3",
+      "result": "sat",
+      "args": [
+        "56",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_57_5_tto_zp.normalised.cnf",
+      "gbdhash": "ddf9620410e6a4351f64c745670ef5d4",
+      "isohash2": "ce51a6bb9f2dd597",
+      "result": "sat",
+      "args": [
+        "57",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_67_5_tto_zp.normalised.cnf",
+      "gbdhash": "43ebdada6f6153b50a140ba908d5bf44",
+      "isohash2": "95d96e21b2201f36",
+      "result": "sat",
+      "args": [
+        "67",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_69_5_tto_zp.normalised.cnf",
+      "gbdhash": "2b4467a5ac4ac41b36d4c3432b07f767",
+      "isohash2": "309e8401b5f1596f",
+      "result": "sat",
+      "args": [
+        "69",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_70_5_tto_zp.normalised.cnf",
+      "gbdhash": "2c458ef30d7b670f143d6c6e175e3ee9",
+      "isohash2": "aef174b833627715",
+      "result": "unknown",
+      "args": [
+        "70",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_74_5_tto_zp.normalised.cnf",
+      "gbdhash": "96a8a019f970d0be0cc8d6a0e9a379b9",
+      "isohash2": "67aec0abe5fd0cb7",
+      "result": "unknown",
+      "args": [
+        "74",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_76_5_tto_zp.normalised.cnf",
+      "gbdhash": "559579ca5365b115ad5017b17ffc519e",
+      "isohash2": "dde5b4ef1133c9c9",
+      "result": "unknown",
+      "args": [
+        "76",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_78_5_tto_zp.normalised.cnf",
+      "gbdhash": "4acbafdcef64389bc852913cefeeac3a",
+      "isohash2": "a7faeafef6a82daa",
+      "result": "unknown",
+      "args": [
+        "78",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_79_5_tto_zp.normalised.cnf",
+      "gbdhash": "95d9c7e9f2c7c2202371fbdb9eecf5f6",
+      "isohash2": "23e61399f8970cd8",
+      "result": "unknown",
+      "args": [
+        "79",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_80_5_tto_zp.normalised.cnf",
+      "gbdhash": "19951d43eff5fc4ef6fd07d7a5324fa0",
+      "isohash2": "58e654467d418706",
+      "result": "unknown",
+      "args": [
+        "80",
+        "5"
+      ],
+      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+    },
+    {
+      "instance": "oddball_97_5_ttf.normalised.cnf",
+      "gbdhash": "83edb5b9f4f595ec8337548e462d0a40",
+      "isohash2": "ca21b130c23f8522",
+      "result": "unknown",
+      "args": [
+        "97",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+    }
+  ]
+}

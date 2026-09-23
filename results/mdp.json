@@ -1,0 +1,426 @@
+{
+  "generator": "mdp",
+  "image": "satex-gen/mdp:2022",
+  "results": [
+    {
+      "instance": "mdp-28-10-sat.cnf",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "7",
+        "-s",
+        "10"
+      ],
+      "expected": "5457c05649be6f3bc4f743c5e6086a18",
+      "got": "5457c05649be6f3bc4f743c5e6086a18",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-28-10-unsat.cnf",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "6",
+        "-s",
+        "10"
+      ],
+      "expected": "3184e52e950ac39095a801c418f68d50",
+      "got": "3184e52e950ac39095a801c418f68d50",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-28-11-sat.cnf",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "7",
+        "-s",
+        "11"
+      ],
+      "expected": "d1940d3d830eb16a7d2270ca4af4acba",
+      "got": "d1940d3d830eb16a7d2270ca4af4acba",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-28-11-unsat.cnf",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "6",
+        "-s",
+        "11"
+      ],
+      "expected": "26f8332e50a4ba5c371852e3737a3002",
+      "got": "26f8332e50a4ba5c371852e3737a3002",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-28-12-sat.cnf",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "7",
+        "-s",
+        "12"
+      ],
+      "expected": "cd36b290c27ed9bafedfb2ca88469f01",
+      "got": "cd36b290c27ed9bafedfb2ca88469f01",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-28-12-unsat.cnf",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "6",
+        "-s",
+        "12"
+      ],
+      "expected": "c221c5dc006de79e561124dab52aae82",
+      "got": "c221c5dc006de79e561124dab52aae82",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-28-14-sat.cnf",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "7",
+        "-s",
+        "14"
+      ],
+      "expected": "04ded94454830d4ea960327e8b91f5a3",
+      "got": "04ded94454830d4ea960327e8b91f5a3",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-28-14-unsat.cnf",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "6",
+        "-s",
+        "14"
+      ],
+      "expected": "1548977b4e27032fe07cda357782cd6a",
+      "got": "1548977b4e27032fe07cda357782cd6a",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-28-16-sat.cnf",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "7",
+        "-s",
+        "16"
+      ],
+      "expected": "090585dc32a79f2bf6fb61a2c7079682",
+      "got": "090585dc32a79f2bf6fb61a2c7079682",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-28-16-unsat.cnf",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "6",
+        "-s",
+        "16"
+      ],
+      "expected": "37a11ae189df2834a3f294736f34608f",
+      "got": "37a11ae189df2834a3f294736f34608f",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-32-10-sat.cnf",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "8",
+        "-s",
+        "10"
+      ],
+      "expected": "8ffd718f763ed7a3f691cf46e57f8d98",
+      "got": "8ffd718f763ed7a3f691cf46e57f8d98",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-32-10-unsat.cnf",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "7",
+        "-s",
+        "10"
+      ],
+      "expected": "1e74212168124b696531fed471b480b1",
+      "got": "1e74212168124b696531fed471b480b1",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-32-11-sat.cnf",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "8",
+        "-s",
+        "11"
+      ],
+      "expected": "db15a85651e0d941a11bf8640625edd8",
+      "got": "db15a85651e0d941a11bf8640625edd8",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-32-11-unsat.cnf",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "7",
+        "-s",
+        "11"
+      ],
+      "expected": "4f2d6659b5c9bf594ea12e3e1a85799f",
+      "got": "4f2d6659b5c9bf594ea12e3e1a85799f",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-32-12-sat.cnf",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "8",
+        "-s",
+        "12"
+      ],
+      "expected": "3e2fe1556893706475f9dd19c1a7b8fe",
+      "got": "3e2fe1556893706475f9dd19c1a7b8fe",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-32-12-unsat.cnf",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "7",
+        "-s",
+        "12"
+      ],
+      "expected": "425c81fc3af7f5124b6282583d80df11",
+      "got": "425c81fc3af7f5124b6282583d80df11",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-32-14-sat.cnf",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "8",
+        "-s",
+        "14"
+      ],
+      "expected": "d11944fbca2dd6540f18bd05b6ccda0c",
+      "got": "d11944fbca2dd6540f18bd05b6ccda0c",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-32-14-unsat.cnf",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "7",
+        "-s",
+        "14"
+      ],
+      "expected": "23daec2c71ce3c1e346e6042f3dc42eb",
+      "got": "4e134a4a2651bd01587a10ec5c044cb8",
+      "level": "--"
+    },
+    {
+      "instance": "mdp-32-16-sat.cnf",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "8",
+        "-s",
+        "16"
+      ],
+      "expected": "a9cb77454c6cfdf4092fb304d3aae8b7",
+      "got": "a9cb77454c6cfdf4092fb304d3aae8b7",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-32-16-unsat.cnf",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "7",
+        "-s",
+        "16"
+      ],
+      "expected": "59047491e4828ed2bb79572330df6f77",
+      "got": "59047491e4828ed2bb79572330df6f77",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-36-10-sat.cnf",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "9",
+        "-s",
+        "10"
+      ],
+      "expected": "a5dc6226e4c0bebb06926efe55640995",
+      "got": "a5dc6226e4c0bebb06926efe55640995",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-36-10-unsat.cnf",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "8",
+        "-s",
+        "10"
+      ],
+      "expected": "16ca57f2cdffd5b0260fc771017e1f04",
+      "got": "1ac3e1167dd10efaab98f0878f5ee687",
+      "level": "N4"
+    },
+    {
+      "instance": "mdp-36-11-sat.cnf",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "9",
+        "-s",
+        "11"
+      ],
+      "expected": "6fa8b4b7f4b059bd46913dbe741c0b94",
+      "got": "6fa8b4b7f4b059bd46913dbe741c0b94",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-36-11-unsat.cnf",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "8",
+        "-s",
+        "11"
+      ],
+      "expected": "b043968ec004b4ac19eb31926c24d22c",
+      "got": "b043968ec004b4ac19eb31926c24d22c",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-36-12-sat.cnf",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "9",
+        "-s",
+        "12"
+      ],
+      "expected": "f9dd957b2f5940a3e3adaa2eeaaba011",
+      "got": "f9dd957b2f5940a3e3adaa2eeaaba011",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-36-12-unsat.cnf",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "8",
+        "-s",
+        "12"
+      ],
+      "expected": "9a06700729bf3426beb8a62040f92960",
+      "got": "9a06700729bf3426beb8a62040f92960",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-36-14-sat.cnf",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "9",
+        "-s",
+        "14"
+      ],
+      "expected": "ab3438b504b296fcee78ec9e71969863",
+      "got": "ab3438b504b296fcee78ec9e71969863",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-36-14-unsat.cnf",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "8",
+        "-s",
+        "14"
+      ],
+      "expected": "e6f793931983295561620a027d9b3e95",
+      "got": "e6f793931983295561620a027d9b3e95",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-36-16-sat.cnf",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "9",
+        "-s",
+        "16"
+      ],
+      "expected": "d40af7b45bba9c64033c0dd47b07f4a4",
+      "got": "d40af7b45bba9c64033c0dd47b07f4a4",
+      "level": "N1"
+    },
+    {
+      "instance": "mdp-36-16-unsat.cnf",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "8",
+        "-s",
+        "16"
+      ],
+      "expected": "2a43c3327fb817d82496449265d6630d",
+      "got": "2a43c3327fb817d82496449265d6630d",
+      "level": "N1"
+    }
+  ]
+}

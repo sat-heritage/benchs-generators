@@ -1,0 +1,456 @@
+{
+  "generator": "mdp",
+  "source": "GBD metadata (meta.db of the SAT Competition 2026 benchmark compilation script)",
+  "references": [
+    {
+      "instance": "mdp-28-10-sat.cnf",
+      "gbdhash": "5457c05649be6f3bc4f743c5e6086a18",
+      "isohash2": "63a830ea89e62ab5",
+      "result": "sat",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "7",
+        "-s",
+        "10"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-28-10-unsat.cnf",
+      "gbdhash": "3184e52e950ac39095a801c418f68d50",
+      "isohash2": "b1f674167e4adb9b",
+      "result": "unsat",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "6",
+        "-s",
+        "10"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-28-11-sat.cnf",
+      "gbdhash": "d1940d3d830eb16a7d2270ca4af4acba",
+      "isohash2": "dac5eb40ff5f2b06",
+      "result": "sat",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "7",
+        "-s",
+        "11"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-28-11-unsat.cnf",
+      "gbdhash": "26f8332e50a4ba5c371852e3737a3002",
+      "isohash2": "03a3d4509e08432d",
+      "result": "unsat",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "6",
+        "-s",
+        "11"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-28-12-sat.cnf",
+      "gbdhash": "cd36b290c27ed9bafedfb2ca88469f01",
+      "isohash2": "5ecb0a08f20221d5",
+      "result": "sat",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "7",
+        "-s",
+        "12"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-28-12-unsat.cnf",
+      "gbdhash": "c221c5dc006de79e561124dab52aae82",
+      "isohash2": "b3818324b1d6141c",
+      "result": "unsat",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "6",
+        "-s",
+        "12"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-28-14-sat.cnf",
+      "gbdhash": "04ded94454830d4ea960327e8b91f5a3",
+      "isohash2": "c7e45e737ce92d85",
+      "result": "sat",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "7",
+        "-s",
+        "14"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-28-14-unsat.cnf",
+      "gbdhash": "1548977b4e27032fe07cda357782cd6a",
+      "isohash2": "eb5b429f2d6455c3",
+      "result": "unsat",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "6",
+        "-s",
+        "14"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-28-16-sat.cnf",
+      "gbdhash": "090585dc32a79f2bf6fb61a2c7079682",
+      "isohash2": "82517db16eb93849",
+      "result": "sat",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "7",
+        "-s",
+        "16"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-28-16-unsat.cnf",
+      "gbdhash": "37a11ae189df2834a3f294736f34608f",
+      "isohash2": "e0d3006c7decc532",
+      "result": "unsat",
+      "args": [
+        "-n",
+        "28",
+        "-t",
+        "6",
+        "-s",
+        "16"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-32-10-sat.cnf",
+      "gbdhash": "8ffd718f763ed7a3f691cf46e57f8d98",
+      "isohash2": "222463fc75921939",
+      "result": "sat",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "8",
+        "-s",
+        "10"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-32-10-unsat.cnf",
+      "gbdhash": "1e74212168124b696531fed471b480b1",
+      "isohash2": "3acd8c8b641a39d9",
+      "result": "unsat",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "7",
+        "-s",
+        "10"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-32-11-sat.cnf",
+      "gbdhash": "db15a85651e0d941a11bf8640625edd8",
+      "isohash2": "9fb97b64030ed771",
+      "result": "sat",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "8",
+        "-s",
+        "11"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-32-11-unsat.cnf",
+      "gbdhash": "4f2d6659b5c9bf594ea12e3e1a85799f",
+      "isohash2": "14d85997f8a04ad6",
+      "result": "unsat",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "7",
+        "-s",
+        "11"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-32-12-sat.cnf",
+      "gbdhash": "3e2fe1556893706475f9dd19c1a7b8fe",
+      "isohash2": "be399bd8553bf308",
+      "result": "sat",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "8",
+        "-s",
+        "12"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-32-12-unsat.cnf",
+      "gbdhash": "425c81fc3af7f5124b6282583d80df11",
+      "isohash2": "b35e416cf809ff27",
+      "result": "unsat",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "7",
+        "-s",
+        "12"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-32-14-sat.cnf",
+      "gbdhash": "d11944fbca2dd6540f18bd05b6ccda0c",
+      "isohash2": "5f44f16b7ab49e46",
+      "result": "sat",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "8",
+        "-s",
+        "14"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-32-14-unsat.cnf",
+      "gbdhash": "23daec2c71ce3c1e346e6042f3dc42eb",
+      "isohash2": "255e953585c8ee56",
+      "result": "unsat",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "7",
+        "-s",
+        "14"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-32-16-sat.cnf",
+      "gbdhash": "a9cb77454c6cfdf4092fb304d3aae8b7",
+      "isohash2": "41f7b1df7c14da55",
+      "result": "sat",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "8",
+        "-s",
+        "16"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-32-16-unsat.cnf",
+      "gbdhash": "59047491e4828ed2bb79572330df6f77",
+      "isohash2": "549143d115081652",
+      "result": "unsat",
+      "args": [
+        "-n",
+        "32",
+        "-t",
+        "7",
+        "-s",
+        "16"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-36-10-sat.cnf",
+      "gbdhash": "a5dc6226e4c0bebb06926efe55640995",
+      "isohash2": "21980c30522975a6",
+      "result": "sat",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "9",
+        "-s",
+        "10"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-36-10-unsat.cnf",
+      "gbdhash": "16ca57f2cdffd5b0260fc771017e1f04",
+      "isohash2": "ffb09d7954c44efe",
+      "result": "unknown",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "8",
+        "-s",
+        "10"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-36-11-sat.cnf",
+      "gbdhash": "6fa8b4b7f4b059bd46913dbe741c0b94",
+      "isohash2": "28444b63327acc83",
+      "result": "sat",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "9",
+        "-s",
+        "11"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-36-11-unsat.cnf",
+      "gbdhash": "b043968ec004b4ac19eb31926c24d22c",
+      "isohash2": "65403695ac7ac105",
+      "result": "unknown",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "8",
+        "-s",
+        "11"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-36-12-sat.cnf",
+      "gbdhash": "f9dd957b2f5940a3e3adaa2eeaaba011",
+      "isohash2": "8572f150b7737e18",
+      "result": "sat",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "9",
+        "-s",
+        "12"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-36-12-unsat.cnf",
+      "gbdhash": "9a06700729bf3426beb8a62040f92960",
+      "isohash2": "36b4918d7d48ee77",
+      "result": "unknown",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "8",
+        "-s",
+        "12"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-36-14-sat.cnf",
+      "gbdhash": "ab3438b504b296fcee78ec9e71969863",
+      "isohash2": "93773c98a72f41a7",
+      "result": "sat",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "9",
+        "-s",
+        "14"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-36-14-unsat.cnf",
+      "gbdhash": "e6f793931983295561620a027d9b3e95",
+      "isohash2": "afd7b39c517047db",
+      "result": "unknown",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "8",
+        "-s",
+        "14"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-36-16-sat.cnf",
+      "gbdhash": "d40af7b45bba9c64033c0dd47b07f4a4",
+      "isohash2": "073211fd1b8e7873",
+      "result": "sat",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "9",
+        "-s",
+        "16"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    },
+    {
+      "instance": "mdp-36-16-unsat.cnf",
+      "gbdhash": "2a43c3327fb817d82496449265d6630d",
+      "isohash2": "62040cdd0096fa7e",
+      "result": "unknown",
+      "args": [
+        "-n",
+        "36",
+        "-t",
+        "8",
+        "-s",
+        "16"
+      ],
+      "note": "parameters from src/generate.sh of the repository: t = n/4 for the satisfiable instance, t = n/4 - 1 for the unsatisfiable one"
+    }
+  ]
+}

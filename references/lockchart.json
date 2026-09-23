@@ -1,0 +1,316 @@
+{
+  "generator": "lockchart",
+  "source": "GBD metadata (meta.db of the SAT Competition 2026 benchmark compilation script)",
+  "references": [
+    {
+      "instance": "lockchart-group1-L190-K276-p8d4j1.normalised.cnf",
+      "gbdhash": "d2af3fde615d7c4d4a4574fc8839970e",
+      "isohash2": "b9b17b4d2b688042",
+      "result": "sat",
+      "args": [
+        "-l",
+        "190",
+        "-p",
+        "8",
+        "-d",
+        "4"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks; the reference file is tens of megabytes"
+    },
+    {
+      "instance": "lockchart-group1-L200-K289-p8d4j1.normalised.cnf",
+      "gbdhash": "30f64b3b0870ce5d22d4217782224dfe",
+      "isohash2": "076b284204846625",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "200",
+        "-p",
+        "8",
+        "-d",
+        "4"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks; the reference file is tens of megabytes"
+    },
+    {
+      "instance": "lockchart-group1-L210-K303-p8d4j1.normalised.cnf",
+      "gbdhash": "89002102bdb86946869a06dc1f604315",
+      "isohash2": "e55ba87ca1480623",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "210",
+        "-p",
+        "8",
+        "-d",
+        "4"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks; the reference file is tens of megabytes"
+    },
+    {
+      "instance": "lockchart-group1-L220-K317-p8d4j1.normalised.cnf",
+      "gbdhash": "fe9b9a35531e13dab41307e569386dab",
+      "isohash2": "2e15dab244a3d57e",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "220",
+        "-p",
+        "8",
+        "-d",
+        "4"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks; the reference file is tens of megabytes"
+    },
+    {
+      "instance": "lockchart-group1-L230-K331-p8d4j1.normalised.cnf",
+      "gbdhash": "d99f6ac1629292249fae3d1ff4924b5d",
+      "isohash2": "5086e7ab259a5ccc",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "230",
+        "-p",
+        "8",
+        "-d",
+        "4"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks; the reference file is tens of megabytes"
+    },
+    {
+      "instance": "lockchart-group1-L235-K339-p8d4j1.normalised.cnf",
+      "gbdhash": "a4269b1a0c595d1aaa02122f72eefbe6",
+      "isohash2": "287b6f9b9196fb2b",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "235",
+        "-p",
+        "8",
+        "-d",
+        "4"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks; the reference file is tens of megabytes"
+    },
+    {
+      "instance": "lockchart-group1-L240-K345-p8d4j1.normalised.cnf",
+      "gbdhash": "ee602653c2d68022c715b01e63b727e5",
+      "isohash2": "c0d03a3416f5fd76",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "240",
+        "-p",
+        "8",
+        "-d",
+        "4"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks; the reference file is tens of megabytes"
+    },
+    {
+      "instance": "lockchart-group1-L245-K352-p8d4j1.normalised.cnf",
+      "gbdhash": "955d77fddd1fb501f8d708bf73dcd189",
+      "isohash2": "33c90c0366823559",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "245",
+        "-p",
+        "8",
+        "-d",
+        "4"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks; the reference file is tens of megabytes"
+    },
+    {
+      "instance": "lockchart-group1-L250-K359-p8d4j1.normalised.cnf",
+      "gbdhash": "c1dab6f771ddf82264e8e975d67ac1dc",
+      "isohash2": "2bf67f935d3cbe10",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "250",
+        "-p",
+        "8",
+        "-d",
+        "4"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks; the reference file is tens of megabytes"
+    },
+    {
+      "instance": "lockchart-group1-L255-K366-p8d4j1.normalised.cnf",
+      "gbdhash": "a1121f9e7bb4a8b43b523034c7fcc739",
+      "isohash2": "3b62ec7f97111628",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "255",
+        "-p",
+        "8",
+        "-d",
+        "4"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks; the reference file is tens of megabytes"
+    },
+    {
+      "instance": "lockchart-group2-rnd0.3-L18-K36-P8D4J1.cnf",
+      "gbdhash": "4c037368864330bff3940837ac28ac14",
+      "isohash2": "0a280fc0be08b44f",
+      "result": "sat",
+      "args": [
+        "-l",
+        "18",
+        "-p",
+        "8",
+        "-d",
+        "4",
+        "-r",
+        "0.3"
+      ],
+      "note": "randomised lock-chart: the script seeds Python's random module from the clock, so this instance cannot be reproduced"
+    },
+    {
+      "instance": "lockchart-group2-rnd0.3-L19-K38-P8D4J1_1.normalised.cnf",
+      "gbdhash": "395829127ec213c2e69a6a13dda3623b",
+      "isohash2": "d3e1d336e95848fe",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "19",
+        "-p",
+        "8",
+        "-d",
+        "4",
+        "-r",
+        "0.3"
+      ],
+      "note": "randomised lock-chart: the script seeds Python's random module from the clock, so this instance cannot be reproduced"
+    },
+    {
+      "instance": "lockchart-group2-rnd0.3-L19-K38-P8D4J1_2.cnf",
+      "gbdhash": "5d62e4d7ab116c477c8d4f5bd36907de",
+      "isohash2": "7f56d4630b5788ac",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "19",
+        "-p",
+        "8",
+        "-d",
+        "4",
+        "-r",
+        "0.3"
+      ],
+      "note": "randomised lock-chart: the script seeds Python's random module from the clock, so this instance cannot be reproduced"
+    },
+    {
+      "instance": "lockchart-group2-rnd0.3-L19-K38-P8D4J1_3.cnf",
+      "gbdhash": "3cda1cbfbcabfc71ece7961d4d6ad1bb",
+      "isohash2": "35eadb6f617eb81a",
+      "result": "sat",
+      "args": [
+        "-l",
+        "19",
+        "-p",
+        "8",
+        "-d",
+        "4",
+        "-r",
+        "0.3"
+      ],
+      "note": "randomised lock-chart: the script seeds Python's random module from the clock, so this instance cannot be reproduced"
+    },
+    {
+      "instance": "lockchart-group2-rnd0.3-L19-K38-P8D4J1_4.cnf",
+      "gbdhash": "f1973c0a4e960a914ff12aa7e4e9293c",
+      "isohash2": "a21a535bf7d778cd",
+      "result": "sat",
+      "args": [
+        "-l",
+        "19",
+        "-p",
+        "8",
+        "-d",
+        "4",
+        "-r",
+        "0.3"
+      ],
+      "note": "randomised lock-chart: the script seeds Python's random module from the clock, so this instance cannot be reproduced"
+    },
+    {
+      "instance": "lockchart-group3-L11-K23-p4d3j1.normalised.cnf",
+      "gbdhash": "dbb42e010bed2259e4e27bc43e4d86c6",
+      "isohash2": "4eb016d8fe59b01b",
+      "result": "unsat",
+      "args": [
+        "-l",
+        "11",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks"
+    },
+    {
+      "instance": "lockchart-group3-L12-K24-p4d3j1.normalised.cnf",
+      "gbdhash": "5321e066293f3e315d84fb46e6a31a1a",
+      "isohash2": "9da7d61085cc2c63",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "12",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks"
+    },
+    {
+      "instance": "lockchart-group3-L13-K26-p4d3j1.normalised.cnf",
+      "gbdhash": "96977e8e00a3728097861502a449e343",
+      "isohash2": "1d2f3a9c67fb6da1",
+      "result": "unsat",
+      "args": [
+        "-l",
+        "13",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks"
+    },
+    {
+      "instance": "lockchart-group3-L14-K27-p4d3j1.normalised.cnf",
+      "gbdhash": "9c499a4d1fd042320ccc64a4413ae492",
+      "isohash2": "33d645e913ed66d2",
+      "result": "unknown",
+      "args": [
+        "-l",
+        "14",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks"
+    },
+    {
+      "instance": "lockchart-group3-L15-K29-p4d3j1.normalised.cnf",
+      "gbdhash": "b99ba7e9113280393c64863dfbfa2c3b",
+      "isohash2": "3242fafd6c12038c",
+      "result": "unsat",
+      "args": [
+        "-l",
+        "15",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "note": "parameters read from the file name; the number of keys K follows from the number of locks"
+    }
+  ]
+}

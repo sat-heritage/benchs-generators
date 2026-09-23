@@ -7,7 +7,10 @@ Levels, from strongest to weakest:
   N3  same GBD isohash2: equal up to a renaming of the variables
   N4  same numbers of variables and clauses
   --  none of the above
-Usage: tools/verify.py GENERATOR  (reads references/GENERATOR.json, writes results/GENERATOR.json)
+Usage: tools/verify.py GENERATOR [SUBSTRING]
+Reads references/GENERATOR.json and writes results/GENERATOR.json.  With a
+SUBSTRING, only the reference instances whose name contains it are checked,
+which keeps a run short when a family has very large instances.
 """
 import json, lzma, os, subprocess, sys, tempfile, urllib.request
 from pathlib import Path
@@ -57,9 +60,13 @@ def reference_file(h, cache):
     return path
 
 
-def main(gen):
+def main(gen, only=None):
     meta = json.load(open(ROOT / "generators.json"))[gen]
     refs = json.load(open(ROOT / "references" / f"{gen}.json"))["references"]
+    if only:
+        refs = [r for r in refs if only in r["instance"]]
+        if not refs:
+            sys.exit(f"{gen}: no reference instance matches {only!r}")
     cache = ROOT / "references" / "cache"
     results = []
     with tempfile.TemporaryDirectory() as tmp:
@@ -100,8 +107,9 @@ def main(gen):
                             "got": g["gbdhash"], "level": level or "--",
                             **({"matched": matched} if level == "N1" and matched != "GBD" else {})})
     (ROOT / "results").mkdir(exist_ok=True)
-    json.dump({"generator": gen, "image": meta["image"], "results": results},
-              open(ROOT / "results" / f"{gen}.json", "w"), indent=2)
+    out = ROOT / "results" / (f"{gen}.json" if not only else f"{gen}-{only}.json")
+    json.dump({"generator": gen, "image": meta["image"], "subset": only, "results": results},
+              open(out, "w"), indent=2)
     counts = {}
     for x in results:
         counts[x["level"]] = counts.get(x["level"], 0) + 1
@@ -111,4 +119,4 @@ def main(gen):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(*sys.argv[1:3])
