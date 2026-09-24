@@ -1,0 +1,19 @@
+{
+  "generator": "oddball",
+  "image": "satex-gen/oddball:2025",
+  "subset": "oddball_13_4",
+  "results": [
+    {
+      "instance": "oddball_13_4_ttf.normalised.cnf",
+      "args": [
+        "13",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "e7d3f698d527c8c06e00a6eefa9212ad",
+      "got": "e7d3f698d527c8c06e00a6eefa9212ad",
+      "level": "N1"
+    }
+  ]
+}

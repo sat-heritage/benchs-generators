@@ -1,0 +1,1127 @@
+{
+  "generator": "commattach",
+  "image": "satex-gen/commattach:2015",
+  "subset": null,
+  "results": [
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.108.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "108"
+      ],
+      "expected": "519ea88c9f43a7fed60b5d718adb4723",
+      "got": "519ea88c9f43a7fed60b5d718adb4723",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.109.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "109"
+      ],
+      "expected": "468c32ec8eb910bd06121e790331f36a",
+      "got": "468c32ec8eb910bd06121e790331f36a",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.117.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "117"
+      ],
+      "expected": "cf0df5b35d072339a23cf0c1a60c6d23",
+      "got": "cf0df5b35d072339a23cf0c1a60c6d23",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.135.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "135"
+      ],
+      "expected": "9300c4f755e5f8a1edb288cf01a10a29",
+      "got": "9300c4f755e5f8a1edb288cf01a10a29",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.136.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "136"
+      ],
+      "expected": "0415acae197134f9d1cd7bea5ac3f2fd",
+      "got": "0415acae197134f9d1cd7bea5ac3f2fd",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.149-sr2015.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "149"
+      ],
+      "expected": "59fc779feee4390b57502814d424e0d6",
+      "got": "6907af9adb93b94a0f5347407f53aacc",
+      "level": "N3"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.149.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "149"
+      ],
+      "expected": "6907af9adb93b94a0f5347407f53aacc",
+      "got": "6907af9adb93b94a0f5347407f53aacc",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.158.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "158"
+      ],
+      "expected": "32f9e6d8589013f96d86b3bcb3888dac",
+      "got": "32f9e6d8589013f96d86b3bcb3888dac",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.167.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "167"
+      ],
+      "expected": "b9bc23a50c2ddffad683f3a9045b3192",
+      "got": "b9bc23a50c2ddffad683f3a9045b3192",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.180.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "180"
+      ],
+      "expected": "6afdaec2b82ea578e0c3aeaff3269ef2",
+      "got": "6afdaec2b82ea578e0c3aeaff3269ef2",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.188.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "188"
+      ],
+      "expected": "30864e4330354181c1c7ccbf301123d9",
+      "got": "30864e4330354181c1c7ccbf301123d9",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.194.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "194"
+      ],
+      "expected": "5bf70209a3e832543c8f3b0059d39172",
+      "got": "5bf70209a3e832543c8f3b0059d39172",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.2.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "2"
+      ],
+      "expected": "9203e3759c90c9e9f9410a0ed17f030c",
+      "got": "9203e3759c90c9e9f9410a0ed17f030c",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.20.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "20"
+      ],
+      "expected": "aca63f96bdcb3897821f771e9b1ea2a8",
+      "got": "55594a1964502999ceec61d4e49d72fa",
+      "level": "N4"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.22.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "22"
+      ],
+      "expected": "ed0bae76794b5ac6c74a11cd708d7cba",
+      "got": "ed0bae76794b5ac6c74a11cd708d7cba",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.28.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "28"
+      ],
+      "expected": "b468577fb9bb05da34532fff619bcaad",
+      "got": "b468577fb9bb05da34532fff619bcaad",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.33.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "33"
+      ],
+      "expected": "67d0def974882bfe1ecfce2f3539271d",
+      "got": "67d0def974882bfe1ecfce2f3539271d",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.35.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "35"
+      ],
+      "expected": "cb4630347440d6d7436c4dc7423d4cde",
+      "got": "cb4630347440d6d7436c4dc7423d4cde",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.41.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "41"
+      ],
+      "expected": "0fa9521ff633b27be11525a7b0f7d8b6",
+      "got": "0fa9521ff633b27be11525a7b0f7d8b6",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.46.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "46"
+      ],
+      "expected": "9d474975d3439f742f354b2880bb7dcc",
+      "got": "9d474975d3439f742f354b2880bb7dcc",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.62.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "62"
+      ],
+      "expected": "d5f16e727046b1f0a5b4645ab8b610f0",
+      "got": "d5f16e727046b1f0a5b4645ab8b610f0",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.79.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "79"
+      ],
+      "expected": "ce7ea71be4a85ea64f84be79b8b29106",
+      "got": "ce7ea71be4a85ea64f84be79b8b29106",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.8.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "8"
+      ],
+      "expected": "539f85494f9070dc6a617c8b6a6fd09a",
+      "got": "539f85494f9070dc6a617c8b6a6fd09a",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.81.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "81"
+      ],
+      "expected": "f8ba1bc57b00b8f52bf94f28e8043a54",
+      "got": "f8ba1bc57b00b8f52bf94f28e8043a54",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.83.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "83"
+      ],
+      "expected": "447a4317bafeaa2f4a3eeb1516ff45a6",
+      "got": "447a4317bafeaa2f4a3eeb1516ff45a6",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.85.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "85"
+      ],
+      "expected": "8000ee90ae5c404e10799eded4477ecb",
+      "got": "8000ee90ae5c404e10799eded4477ecb",
+      "level": "N1"
+    },
+    {
+      "instance": "jgiraldezlevy.2200.9086.08.40.93.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "93"
+      ],
+      "expected": "40f01c313adaaf86672576676efe6a53",
+      "got": "40f01c313adaaf86672576676efe6a53",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-1006.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "1006"
+      ],
+      "expected": "8cf952836f79c77178375f0abda2790d",
+      "got": "8cf952836f79c77178375f0abda2790d",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-11953.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "11953"
+      ],
+      "expected": "6d12f7972e402769c45d151387122959",
+      "got": "6d12f7972e402769c45d151387122959",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-12992.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "12992"
+      ],
+      "expected": "4a208e84509d3715094eed49ff3b5ec3",
+      "got": "4a208e84509d3715094eed49ff3b5ec3",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-13845.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "13845"
+      ],
+      "expected": "169b832e8ad5102801bc5390663b0a81",
+      "got": "169b832e8ad5102801bc5390663b0a81",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-1434.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "1434"
+      ],
+      "expected": "e0865e41d14d6f6e2f54581f1e931950",
+      "got": "e0865e41d14d6f6e2f54581f1e931950",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-14424.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "14424"
+      ],
+      "expected": "09f3078602566bbeb02821503e5d2554",
+      "got": "09f3078602566bbeb02821503e5d2554",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-14808.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "14808"
+      ],
+      "expected": "f62f5ce0ab2763b4ca2da5de8c0a552c",
+      "got": "f62f5ce0ab2763b4ca2da5de8c0a552c",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-15163.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "15163"
+      ],
+      "expected": "8682ee8df9efc9913a04040511196352",
+      "got": "8682ee8df9efc9913a04040511196352",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-15606.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "15606"
+      ],
+      "expected": "e05565e0ae13a4a49feec0ca8c7acdb7",
+      "got": "e05565e0ae13a4a49feec0ca8c7acdb7",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-1585.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "1585"
+      ],
+      "expected": "11ef5907b3eae3c89e10c65ea370c1f1",
+      "got": "11ef5907b3eae3c89e10c65ea370c1f1",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-16597.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "16597"
+      ],
+      "expected": "0c60cae1d0bd8a26f87a3aab7077e0d8",
+      "got": "0c60cae1d0bd8a26f87a3aab7077e0d8",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-1876.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "1876"
+      ],
+      "expected": "9c85afa2b91dcacb9f423db437f34507",
+      "got": "9c85afa2b91dcacb9f423db437f34507",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-18788.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "18788"
+      ],
+      "expected": "0e9f0315dd6f93a2613812dfbfcfffa9",
+      "got": "0e9f0315dd6f93a2613812dfbfcfffa9",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-18972.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "18972"
+      ],
+      "expected": "a66fe20eef25b41691bcba3b8d559c83",
+      "got": "a66fe20eef25b41691bcba3b8d559c83",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-19419.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "19419"
+      ],
+      "expected": "542bc521dfc843751118a12bd7f7b5f6",
+      "got": "542bc521dfc843751118a12bd7f7b5f6",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-2087.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "2087"
+      ],
+      "expected": "bd4b2ff95379844ec733cf0cad39d56c",
+      "got": "bd4b2ff95379844ec733cf0cad39d56c",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-21438.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "21438"
+      ],
+      "expected": "09ed4d881b6dd70d30f59217573369f1",
+      "got": "09ed4d881b6dd70d30f59217573369f1",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-22556.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "22556"
+      ],
+      "expected": "6cc3bed2a2b38c8c057a5980224f8f1e",
+      "got": "6cc3bed2a2b38c8c057a5980224f8f1e",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-25297.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "25297"
+      ],
+      "expected": "377278200c88d5aef1b647bda899ec2e",
+      "got": "377278200c88d5aef1b647bda899ec2e",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-28046.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "28046"
+      ],
+      "expected": "e175112cb4648cda6c16d67822d794ce",
+      "got": "e175112cb4648cda6c16d67822d794ce",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-29020.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "29020"
+      ],
+      "expected": "ef7bdabd6f4d23c23b0ad87d82c501e5",
+      "got": "ef7bdabd6f4d23c23b0ad87d82c501e5",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-3230.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "3230"
+      ],
+      "expected": "71ffea57fecb071b6c4dbf220eacc056",
+      "got": "71ffea57fecb071b6c4dbf220eacc056",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-3866.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "3866"
+      ],
+      "expected": "94648507b3650a0b1c7549597c2e8509",
+      "got": "94648507b3650a0b1c7549597c2e8509",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-4208.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "4208"
+      ],
+      "expected": "67b0b2940b091d318ec25307a948f862",
+      "got": "67b0b2940b091d318ec25307a948f862",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-5377.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "5377"
+      ],
+      "expected": "c50e0cba8e14add52ca738afc1201c20",
+      "got": "c50e0cba8e14add52ca738afc1201c20",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-6295.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "6295"
+      ],
+      "expected": "2c17a6de2848b26d45e8a66f5feaa894",
+      "got": "2c17a6de2848b26d45e8a66f5feaa894",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-6336.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "6336"
+      ],
+      "expected": "f4b71ea8807414ae20be45f23aacfdec",
+      "got": "f4b71ea8807414ae20be45f23aacfdec",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-6967.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "6967"
+      ],
+      "expected": "4572f8d9b7f4f152b5d4147ec3f40303",
+      "got": "4572f8d9b7f4f152b5d4147ec3f40303",
+      "level": "N1"
+    },
+    {
+      "instance": "modgen-n200-m90860q08c40-9056.cnf",
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9086",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "9056"
+      ],
+      "expected": "8ce5c7def256797660d94fe1326a2cf8",
+      "got": "8ce5c7def256797660d94fe1326a2cf8",
+      "level": "N1"
+    }
+  ]
+}

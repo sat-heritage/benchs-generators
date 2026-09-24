@@ -13,7 +13,7 @@ RUN git clone -q "$SOURCE_REPO" /src \
     && rm -rf /src/.git
 
 FROM python:3.12.7-slim-bookworm
-ARG Z3_VERSION=4.13.0.0
+ARG Z3_VERSION=4.14.1.0
 RUN pip install --no-cache-dir "z3-solver==${Z3_VERSION}"
 COPY --from=fetch /src /src
 RUN pip install --no-cache-dir -e /src

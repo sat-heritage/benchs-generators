@@ -1,0 +1,451 @@
+{
+  "generator": "oddball",
+  "image": "satex-gen/oddball:2025",
+  "subset": null,
+  "results": [
+    {
+      "instance": "oddball_112_5_ttf.normalised.cnf",
+      "args": [
+        "112",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "f406e2b8b28f205f16e8983bd522db13",
+      "got": "f406e2b8b28f205f16e8983bd522db13",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_13_4_ttf.normalised.cnf",
+      "args": [
+        "13",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "e7d3f698d527c8c06e00a6eefa9212ad",
+      "got": "e7d3f698d527c8c06e00a6eefa9212ad",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_13_5_ttf.normalised.cnf",
+      "args": [
+        "13",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "c569d4b2b2e90a1a70bd23a1169355ef",
+      "got": "c569d4b2b2e90a1a70bd23a1169355ef",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_17_5_ttf.normalised.cnf",
+      "args": [
+        "17",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "cabfdc91f644200767df9d480d2cc53e",
+      "got": "cabfdc91f644200767df9d480d2cc53e",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_19_4_ttf.normalised.cnf",
+      "args": [
+        "19",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "efc1b7cc3861df8c2b68ca10399b794e",
+      "got": "efc1b7cc3861df8c2b68ca10399b794e",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_19_5_ttf.normalised.cnf",
+      "args": [
+        "19",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "3e68fee79ecf9f7e1ba1e426b6fab968",
+      "got": "3e68fee79ecf9f7e1ba1e426b6fab968",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_20_4_ttf.normalised.cnf",
+      "args": [
+        "20",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "9b990af19f6cad823e18ef914766be49",
+      "got": "9b990af19f6cad823e18ef914766be49",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_20_5_ttf.normalised.cnf",
+      "args": [
+        "20",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "8f391f2bf8167f1b96467f3479b33dc5",
+      "got": "8f391f2bf8167f1b96467f3479b33dc5",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_22_4_ttf.normalised.cnf",
+      "args": [
+        "22",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "8085f8b3179021d32b98d7b9e0f97b70",
+      "got": "8085f8b3179021d32b98d7b9e0f97b70",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_22_5_ttf.normalised.cnf",
+      "args": [
+        "22",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "a1fdd60d2570f47fb14956ac9e96951f",
+      "got": "a1fdd60d2570f47fb14956ac9e96951f",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_23_4_ttf.normalised.cnf",
+      "args": [
+        "23",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "13bcbba1b2e93cc28e767e4c3294e289",
+      "got": "13bcbba1b2e93cc28e767e4c3294e289",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_23_5_ttf.normalised.cnf",
+      "args": [
+        "23",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "263dc10d97622cc2ca5d9f6dd6d9981a",
+      "got": "263dc10d97622cc2ca5d9f6dd6d9981a",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_24_4_ttf.normalised.cnf",
+      "args": [
+        "24",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "f1cd694d42891a20c96a65ee1c321edc",
+      "got": "f1cd694d42891a20c96a65ee1c321edc",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_24_5_ttf.normalised.cnf",
+      "args": [
+        "24",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "296fd43ed40e242875984420f29be73f",
+      "got": "296fd43ed40e242875984420f29be73f",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_26_4_ttf.normalised.cnf",
+      "args": [
+        "26",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "4cf3505e5183c26bbd97d89fdaa93f8c",
+      "got": "4cf3505e5183c26bbd97d89fdaa93f8c",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_26_5_ttf.normalised.cnf",
+      "args": [
+        "26",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "1c30806c5aa9cd54bf823c20fa078243",
+      "got": "1c30806c5aa9cd54bf823c20fa078243",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_28_4_ttf.normalised.cnf",
+      "args": [
+        "28",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "c9a0cd269f38e5b71d4e1d83dc9af53c",
+      "got": "c9a0cd269f38e5b71d4e1d83dc9af53c",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_28_5_ttf.normalised.cnf",
+      "args": [
+        "28",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "a8201f69aa22d587e1186c27c7f1c93c",
+      "got": "a8201f69aa22d587e1186c27c7f1c93c",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_29_4_ttf.normalised.cnf",
+      "args": [
+        "29",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "fdefca5f5236d5a8361dbdff0d017eeb",
+      "got": "fdefca5f5236d5a8361dbdff0d017eeb",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_29_5_ttf.normalised.cnf",
+      "args": [
+        "29",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "d2796e06d615e49584ff8397ee0aa96f",
+      "got": "d2796e06d615e49584ff8397ee0aa96f",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_33_4_ttf.normalised.cnf",
+      "args": [
+        "33",
+        "4",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "575aa1cccad84d9cb9a614d9169651bb",
+      "got": "575aa1cccad84d9cb9a614d9169651bb",
+      "level": "N1"
+    },
+    {
+      "instance": "oddball_43_5_tto_zp.normalised.cnf",
+      "args": [
+        "43",
+        "5"
+      ],
+      "expected": "d25a85b032d5b8e90917b226ae778b70",
+      "got": "2bdcfa13678b05f263570bb727ba9728",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_44_5_tto_zp.normalised.cnf",
+      "args": [
+        "44",
+        "5"
+      ],
+      "expected": "da1491f3317f7ef17f73b9d000c6b662",
+      "got": "cdb8923b484d1da8c90c9ddf8a8e76ef",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_47_5_tto_zp.normalised.cnf",
+      "args": [
+        "47",
+        "5"
+      ],
+      "expected": "cdf2e47ea6439e1d2a1341aa4b7e4b8b",
+      "got": "f99fa65509962d05e4294c6ae1234c3a",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_50_5_tto_zp.normalised.cnf",
+      "args": [
+        "50",
+        "5"
+      ],
+      "expected": "ee8d5e66d3bc3208ead9a418c3a91b8b",
+      "got": "a4ad4d4aade10d8017f46f78f28427c4",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_51_5_tto_zp.normalised.cnf",
+      "args": [
+        "51",
+        "5"
+      ],
+      "expected": "41915707d831e1365389d3cc47c7953f",
+      "got": "c0214f4e9cbf5af92ff8063ff27758b2",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_52_5_tto_zp.normalised.cnf",
+      "args": [
+        "52",
+        "5"
+      ],
+      "expected": "1b8806812861df2b7e91dc316ad1ef80",
+      "got": "f3abe6edae8a477e376cfaf522b9b28c",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_53_5_tto_zp.normalised.cnf",
+      "args": [
+        "53",
+        "5"
+      ],
+      "expected": "0c0430a68f147be18ab3fded07f30fdb",
+      "got": "05c480ff408bf3ab76e5ce37a19242d8",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_54_5_tto_zp.normalised.cnf",
+      "args": [
+        "54",
+        "5"
+      ],
+      "expected": "0ec8c5e9084cbc8a326f8f37e1abf741",
+      "got": "9720e40516cb45e53c73b94d5e64a350",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_56_5_tto_zp.normalised.cnf",
+      "args": [
+        "56",
+        "5"
+      ],
+      "expected": "7a206b67366c3049f214f360ff943f62",
+      "got": "c5ad44f6b2afcefd3b86d008152581fd",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_57_5_tto_zp.normalised.cnf",
+      "args": [
+        "57",
+        "5"
+      ],
+      "expected": "ddf9620410e6a4351f64c745670ef5d4",
+      "got": "acf446531fd730b3e3ad135e342c639c",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_67_5_tto_zp.normalised.cnf",
+      "args": [
+        "67",
+        "5"
+      ],
+      "expected": "43ebdada6f6153b50a140ba908d5bf44",
+      "got": "a37ab8de33d942a4fd436eac79ab5000",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_69_5_tto_zp.normalised.cnf",
+      "args": [
+        "69",
+        "5"
+      ],
+      "expected": "2b4467a5ac4ac41b36d4c3432b07f767",
+      "got": "f1343b51ecaa74a9e5f3fd4cacfd1548",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_70_5_tto_zp.normalised.cnf",
+      "args": [
+        "70",
+        "5"
+      ],
+      "expected": "2c458ef30d7b670f143d6c6e175e3ee9",
+      "got": "76c81ef5732627a65d5579849ad7f086",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_74_5_tto_zp.normalised.cnf",
+      "args": [
+        "74",
+        "5"
+      ],
+      "expected": "96a8a019f970d0be0cc8d6a0e9a379b9",
+      "got": "3eb58c310d7d97382890944f44efa8fd",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_76_5_tto_zp.normalised.cnf",
+      "args": [
+        "76",
+        "5"
+      ],
+      "expected": "559579ca5365b115ad5017b17ffc519e",
+      "got": "820df367f780bb344081a4fdd2d7a13f",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_78_5_tto_zp.normalised.cnf",
+      "args": [
+        "78",
+        "5"
+      ],
+      "expected": "4acbafdcef64389bc852913cefeeac3a",
+      "got": "635a680a6a34a46fa5250b17b1de154e",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_79_5_tto_zp.normalised.cnf",
+      "args": [
+        "79",
+        "5"
+      ],
+      "expected": "95d9c7e9f2c7c2202371fbdb9eecf5f6",
+      "got": "764faec31e8c28cd5519950d5439a72a",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_80_5_tto_zp.normalised.cnf",
+      "args": [
+        "80",
+        "5"
+      ],
+      "expected": "19951d43eff5fc4ef6fd07d7a5324fa0",
+      "got": "475e082c99d1783b23edbedf005a81de",
+      "level": "--"
+    },
+    {
+      "instance": "oddball_97_5_ttf.normalised.cnf",
+      "args": [
+        "97",
+        "5",
+        "--strategy",
+        "TruthTableForced"
+      ],
+      "expected": "83edb5b9f4f595ec8337548e462d0a40",
+      "got": "83edb5b9f4f595ec8337548e462d0a40",
+      "level": "N1"
+    }
+  ]
+}

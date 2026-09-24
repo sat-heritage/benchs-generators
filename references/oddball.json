@@ -13,7 +13,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_13_4_ttf.normalised.cnf",
@@ -26,7 +26,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_13_5_ttf.normalised.cnf",
@@ -39,7 +39,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_17_5_ttf.normalised.cnf",
@@ -52,7 +52,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_19_4_ttf.normalised.cnf",
@@ -65,7 +65,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_19_5_ttf.normalised.cnf",
@@ -78,7 +78,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_20_4_ttf.normalised.cnf",
@@ -91,7 +91,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_20_5_ttf.normalised.cnf",
@@ -104,7 +104,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_22_4_ttf.normalised.cnf",
@@ -117,7 +117,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_22_5_ttf.normalised.cnf",
@@ -130,7 +130,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_23_4_ttf.normalised.cnf",
@@ -143,7 +143,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_23_5_ttf.normalised.cnf",
@@ -156,7 +156,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_24_4_ttf.normalised.cnf",
@@ -169,7 +169,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_24_5_ttf.normalised.cnf",
@@ -182,7 +182,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_26_4_ttf.normalised.cnf",
@@ -195,7 +195,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_26_5_ttf.normalised.cnf",
@@ -208,7 +208,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_28_4_ttf.normalised.cnf",
@@ -221,7 +221,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_28_5_ttf.normalised.cnf",
@@ -234,7 +234,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_29_4_ttf.normalised.cnf",
@@ -247,7 +247,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_29_5_ttf.normalised.cnf",
@@ -260,7 +260,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_33_4_ttf.normalised.cnf",
@@ -273,7 +273,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_43_5_tto_zp.normalised.cnf",
@@ -282,9 +282,13 @@
       "result": "unknown",
       "args": [
         "43",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_44_5_tto_zp.normalised.cnf",
@@ -293,9 +297,13 @@
       "result": "unknown",
       "args": [
         "44",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_47_5_tto_zp.normalised.cnf",
@@ -304,9 +312,13 @@
       "result": "unknown",
       "args": [
         "47",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_50_5_tto_zp.normalised.cnf",
@@ -315,9 +327,13 @@
       "result": "unknown",
       "args": [
         "50",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_51_5_tto_zp.normalised.cnf",
@@ -326,9 +342,13 @@
       "result": "sat",
       "args": [
         "51",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_52_5_tto_zp.normalised.cnf",
@@ -337,9 +357,13 @@
       "result": "sat",
       "args": [
         "52",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_53_5_tto_zp.normalised.cnf",
@@ -348,9 +372,13 @@
       "result": "sat",
       "args": [
         "53",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_54_5_tto_zp.normalised.cnf",
@@ -359,9 +387,13 @@
       "result": "sat",
       "args": [
         "54",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_56_5_tto_zp.normalised.cnf",
@@ -370,9 +402,13 @@
       "result": "sat",
       "args": [
         "56",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_57_5_tto_zp.normalised.cnf",
@@ -381,9 +417,13 @@
       "result": "sat",
       "args": [
         "57",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_67_5_tto_zp.normalised.cnf",
@@ -392,9 +432,13 @@
       "result": "sat",
       "args": [
         "67",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_69_5_tto_zp.normalised.cnf",
@@ -403,9 +447,13 @@
       "result": "sat",
       "args": [
         "69",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_70_5_tto_zp.normalised.cnf",
@@ -414,9 +462,13 @@
       "result": "unknown",
       "args": [
         "70",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_74_5_tto_zp.normalised.cnf",
@@ -425,9 +477,13 @@
       "result": "unknown",
       "args": [
         "74",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_76_5_tto_zp.normalised.cnf",
@@ -436,9 +492,13 @@
       "result": "unknown",
       "args": [
         "76",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_78_5_tto_zp.normalised.cnf",
@@ -447,9 +507,13 @@
       "result": "unknown",
       "args": [
         "78",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_79_5_tto_zp.normalised.cnf",
@@ -458,9 +522,13 @@
       "result": "unknown",
       "args": [
         "79",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_80_5_tto_zp.normalised.cnf",
@@ -469,9 +537,13 @@
       "result": "unknown",
       "args": [
         "80",
-        "5"
+        "5",
+        "--strategy",
+        "TruthTableOrdering",
+        "--strategy",
+        "ZeroPlus"
       ],
-      "note": "strategy abbreviation tto_zp not resolved; args may be incomplete"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     },
     {
       "instance": "oddball_97_5_ttf.normalised.cnf",
@@ -484,7 +556,7 @@
         "--strategy",
         "TruthTableForced"
       ],
-      "note": "parameters read from the file name; the strategy abbreviation comes from generate_benchmarks.sh of the repository"
+      "note": "parameters and symmetry-breaking strategies read from generate_benchmarks.sh of the repository"
     }
   ]
 }
