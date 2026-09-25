@@ -56,6 +56,8 @@ repository move their generator from the second row to the first.
 | mdp-benchmark | `satex-gen/mdp:2022` | 30 | 28 | 0 |
 | Round-robin | `satex-gen/roundrobin:2025` | 20 | 20 | 0 |
 | lockchart-to-cnf | `satex-gen/lockchart:2025` | 20 (5 checked) | 3 | 0 |
+| Oddball | `satex-gen/oddball:2025` | 40 | 40 | 0 |
+| Community Attachment | `satex-gen/commattach:2015` | 56 | 54 | 1 |
 
 - **sgen1**: 27 instances match their GBD hash. The GBD copy of
   `sgen1-sat-140-100` lacks one clause, (-25 -23), of the author's file; the
@@ -83,6 +85,16 @@ repository move their generator from the second row to the first.
   came from an earlier revision of the script. The generator is deterministic:
   two runs give the same formula. The group 2 instances are randomised from the
   clock and cannot be reproduced at all.
+
+- **Oddball**: all 40 instances are regenerated exactly, once z3 is pinned to
+  4.14.1 and the symmetry-breaking strategies of `generate_benchmarks.sh` are
+  passed: `ttf` is TruthTableForced, `tto_zp` is TruthTableOrdering plus
+  ZeroPlus. The repository declares no licence, so the image is not published.
+- **Community Attachment**: 54 of the 56 modularity instances of the
+  competitions are exact. The digits of the `modgen` file names are shifted, so
+  the real size, 2200 variables and 9086 clauses, comes from the instance
+  headers rather than the names. One shuffled variant of 2015 matches up to a
+  renaming. This repository declares no licence either.
 
 ## Building and running
 
