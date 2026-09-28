@@ -1,0 +1,2307 @@
+{
+  "generator": "cruxmiter",
+  "image": "satex-gen/cruxmiter:2021",
+  "subset": null,
+  "results": [
+    {
+      "instance": "cruxmiter10seed0.cnf",
+      "args": [
+        "10",
+        "0"
+      ],
+      "expected": "f5dbd5d4f47f28b5c5930d181c749549",
+      "got": "f5dbd5d4f47f28b5c5930d181c749549",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter10seed1.cnf",
+      "args": [
+        "10",
+        "1"
+      ],
+      "expected": "f5dbd5d4f47f28b5c5930d181c749549",
+      "got": "f5dbd5d4f47f28b5c5930d181c749549",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter10seed2.cnf",
+      "args": [
+        "10",
+        "2"
+      ],
+      "expected": "0126fe1b2d758286390d220cba49f4f8",
+      "got": "0126fe1b2d758286390d220cba49f4f8",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter10seed3.cnf",
+      "args": [
+        "10",
+        "3"
+      ],
+      "expected": "5787818feb7ee1a823c0076b73bd9c23",
+      "got": "5787818feb7ee1a823c0076b73bd9c23",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter10seed4.cnf",
+      "args": [
+        "10",
+        "4"
+      ],
+      "expected": "c4b18e990cacba06a93855a2f0903c1e",
+      "got": "c4b18e990cacba06a93855a2f0903c1e",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter10seed5.cnf",
+      "args": [
+        "10",
+        "5"
+      ],
+      "expected": "eab5c02d8fd6b650156dcca048633cd7",
+      "got": "eab5c02d8fd6b650156dcca048633cd7",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter10seed6.cnf",
+      "args": [
+        "10",
+        "6"
+      ],
+      "expected": "06fe82db1d0b25c78c27ddaa95f2c019",
+      "got": "06fe82db1d0b25c78c27ddaa95f2c019",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter10seed7.cnf",
+      "args": [
+        "10",
+        "7"
+      ],
+      "expected": "251141e8fe238a0277c90550d8e7796f",
+      "got": "251141e8fe238a0277c90550d8e7796f",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter10seed8.cnf",
+      "args": [
+        "10",
+        "8"
+      ],
+      "expected": "e8ca74d792fa69ae4dcbe63fef4cefe0",
+      "got": "e8ca74d792fa69ae4dcbe63fef4cefe0",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter10seed9.cnf",
+      "args": [
+        "10",
+        "9"
+      ],
+      "expected": "070e33720779b5feeaa36ca22dfca519",
+      "got": "070e33720779b5feeaa36ca22dfca519",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter11seed0.cnf",
+      "args": [
+        "11",
+        "0"
+      ],
+      "expected": "2ae9eb7156a91f58f08ba7ba49c522f8",
+      "got": "2ae9eb7156a91f58f08ba7ba49c522f8",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter11seed1.cnf",
+      "args": [
+        "11",
+        "1"
+      ],
+      "expected": "2ae9eb7156a91f58f08ba7ba49c522f8",
+      "got": "2ae9eb7156a91f58f08ba7ba49c522f8",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter11seed2.cnf",
+      "args": [
+        "11",
+        "2"
+      ],
+      "expected": "99b30b45c711c9bdb048c2a6c678a316",
+      "got": "99b30b45c711c9bdb048c2a6c678a316",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter11seed3.cnf",
+      "args": [
+        "11",
+        "3"
+      ],
+      "expected": "6ca59f2863acd15642dd933078eda578",
+      "got": "6ca59f2863acd15642dd933078eda578",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter11seed4.cnf",
+      "args": [
+        "11",
+        "4"
+      ],
+      "expected": "f1874ffdc3050137cc1ff6eaf2e19d3a",
+      "got": "f1874ffdc3050137cc1ff6eaf2e19d3a",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter11seed5.cnf",
+      "args": [
+        "11",
+        "5"
+      ],
+      "expected": "2e1ad0103e4ab637778cfcc8d15ebb9b",
+      "got": "2e1ad0103e4ab637778cfcc8d15ebb9b",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter11seed6.cnf",
+      "args": [
+        "11",
+        "6"
+      ],
+      "expected": "5cd05e64830e3640020733872388d83b",
+      "got": "5cd05e64830e3640020733872388d83b",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter11seed7.cnf",
+      "args": [
+        "11",
+        "7"
+      ],
+      "expected": "a43b6a132d77a284f8e613e7625493e4",
+      "got": "a43b6a132d77a284f8e613e7625493e4",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter11seed8.cnf",
+      "args": [
+        "11",
+        "8"
+      ],
+      "expected": "2f86c65c40b1f5d997928257837411ef",
+      "got": "2f86c65c40b1f5d997928257837411ef",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter11seed9.cnf",
+      "args": [
+        "11",
+        "9"
+      ],
+      "expected": "22c59d7284c70e9d29ec9b9a560bb0c7",
+      "got": "22c59d7284c70e9d29ec9b9a560bb0c7",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter12seed0.cnf",
+      "args": [
+        "12",
+        "0"
+      ],
+      "expected": "34ae73bed8443157423bf68f8372f368",
+      "got": "34ae73bed8443157423bf68f8372f368",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter12seed1.cnf",
+      "args": [
+        "12",
+        "1"
+      ],
+      "expected": "34ae73bed8443157423bf68f8372f368",
+      "got": "34ae73bed8443157423bf68f8372f368",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter12seed2.cnf",
+      "args": [
+        "12",
+        "2"
+      ],
+      "expected": "6d16a7c58313da0fdf0bafd2001e7429",
+      "got": "6d16a7c58313da0fdf0bafd2001e7429",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter12seed3.cnf",
+      "args": [
+        "12",
+        "3"
+      ],
+      "expected": "0554775d247c4f108e3367394ba3b0ee",
+      "got": "0554775d247c4f108e3367394ba3b0ee",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter12seed4.cnf",
+      "args": [
+        "12",
+        "4"
+      ],
+      "expected": "4abc84392ec0a4604cd1e17d14cddb98",
+      "got": "4abc84392ec0a4604cd1e17d14cddb98",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter12seed5.cnf",
+      "args": [
+        "12",
+        "5"
+      ],
+      "expected": "c0156fb94d583831f2d12593218f1b3e",
+      "got": "c0156fb94d583831f2d12593218f1b3e",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter12seed6.cnf",
+      "args": [
+        "12",
+        "6"
+      ],
+      "expected": "9b946b0e33f39ebc5e064d55dbafc0fe",
+      "got": "9b946b0e33f39ebc5e064d55dbafc0fe",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter12seed7.cnf",
+      "args": [
+        "12",
+        "7"
+      ],
+      "expected": "a32a95cc0e0c7bec65be4c16baef92de",
+      "got": "a32a95cc0e0c7bec65be4c16baef92de",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter12seed8.cnf",
+      "args": [
+        "12",
+        "8"
+      ],
+      "expected": "a1a66bbe7924dbac33c615262935beaf",
+      "got": "a1a66bbe7924dbac33c615262935beaf",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter12seed9.cnf",
+      "args": [
+        "12",
+        "9"
+      ],
+      "expected": "9771eeb4d5bcf3550b2d79fdce8b0911",
+      "got": "9771eeb4d5bcf3550b2d79fdce8b0911",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter13seed0.cnf",
+      "args": [
+        "13",
+        "0"
+      ],
+      "expected": "ce7fce30d14c50a4711ef4afe56d5a5b",
+      "got": "ce7fce30d14c50a4711ef4afe56d5a5b",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter13seed1.cnf",
+      "args": [
+        "13",
+        "1"
+      ],
+      "expected": "ce7fce30d14c50a4711ef4afe56d5a5b",
+      "got": "ce7fce30d14c50a4711ef4afe56d5a5b",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter13seed2.cnf",
+      "args": [
+        "13",
+        "2"
+      ],
+      "expected": "781b621b4414244380d43a3cf080ee72",
+      "got": "781b621b4414244380d43a3cf080ee72",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter13seed3.cnf",
+      "args": [
+        "13",
+        "3"
+      ],
+      "expected": "c74fd0efa26e0848979ffc505c4be04b",
+      "got": "c74fd0efa26e0848979ffc505c4be04b",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter13seed4.cnf",
+      "args": [
+        "13",
+        "4"
+      ],
+      "expected": "f2fb2f2afbf87babeda106e5e164b4bc",
+      "got": "f2fb2f2afbf87babeda106e5e164b4bc",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter13seed5.cnf",
+      "args": [
+        "13",
+        "5"
+      ],
+      "expected": "e7539ca6504b6c6db8810a818dd28682",
+      "got": "e7539ca6504b6c6db8810a818dd28682",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter13seed6.cnf",
+      "args": [
+        "13",
+        "6"
+      ],
+      "expected": "a6696684984a5c1bec0b26bcc841dc61",
+      "got": "a6696684984a5c1bec0b26bcc841dc61",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter13seed7.cnf",
+      "args": [
+        "13",
+        "7"
+      ],
+      "expected": "2e31702c4ce57926edf9bb724596a58a",
+      "got": "2e31702c4ce57926edf9bb724596a58a",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter13seed8.cnf",
+      "args": [
+        "13",
+        "8"
+      ],
+      "expected": "a632d7903fb770bb4550252065cd0dbf",
+      "got": "a632d7903fb770bb4550252065cd0dbf",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter13seed9.cnf",
+      "args": [
+        "13",
+        "9"
+      ],
+      "expected": "2520575e17e92937798318e2d04ac4c7",
+      "got": "2520575e17e92937798318e2d04ac4c7",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter14seed0.cnf",
+      "args": [
+        "14",
+        "0"
+      ],
+      "expected": "e99f2ef4c8e0aa52d048c1463dc7be1f",
+      "got": "e99f2ef4c8e0aa52d048c1463dc7be1f",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter14seed1.cnf",
+      "args": [
+        "14",
+        "1"
+      ],
+      "expected": "e99f2ef4c8e0aa52d048c1463dc7be1f",
+      "got": "e99f2ef4c8e0aa52d048c1463dc7be1f",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter14seed2.cnf",
+      "args": [
+        "14",
+        "2"
+      ],
+      "expected": "e81c8ebd6a13b7d51de39f24562affab",
+      "got": "e81c8ebd6a13b7d51de39f24562affab",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter14seed3.cnf",
+      "args": [
+        "14",
+        "3"
+      ],
+      "expected": "1592be15013717383558f7aa5fc6c6d3",
+      "got": "1592be15013717383558f7aa5fc6c6d3",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter14seed4.cnf",
+      "args": [
+        "14",
+        "4"
+      ],
+      "expected": "813b2ab1cfe48ece1c41d8dcc089d898",
+      "got": "813b2ab1cfe48ece1c41d8dcc089d898",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter14seed5.cnf",
+      "args": [
+        "14",
+        "5"
+      ],
+      "expected": "0e4e840a8e5c1de68729ffdb9441e240",
+      "got": "0e4e840a8e5c1de68729ffdb9441e240",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter14seed6.cnf",
+      "args": [
+        "14",
+        "6"
+      ],
+      "expected": "9708d062bc4e2fef3e031350287800bb",
+      "got": "9708d062bc4e2fef3e031350287800bb",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter14seed7.cnf",
+      "args": [
+        "14",
+        "7"
+      ],
+      "expected": "aa13c9b5ce2fdfb16227367ae24ca1e0",
+      "got": "aa13c9b5ce2fdfb16227367ae24ca1e0",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter14seed8.cnf",
+      "args": [
+        "14",
+        "8"
+      ],
+      "expected": "d39dda2fc2f0b4da69141c255d1aa210",
+      "got": "d39dda2fc2f0b4da69141c255d1aa210",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter14seed9.cnf",
+      "args": [
+        "14",
+        "9"
+      ],
+      "expected": "b5ec9ceeb4b114b95729126c5057079e",
+      "got": "b5ec9ceeb4b114b95729126c5057079e",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter15seed0.cnf",
+      "args": [
+        "15",
+        "0"
+      ],
+      "expected": "b7ba4e40c5dea363257e264b5a223025",
+      "got": "b7ba4e40c5dea363257e264b5a223025",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter15seed1.cnf",
+      "args": [
+        "15",
+        "1"
+      ],
+      "expected": "b7ba4e40c5dea363257e264b5a223025",
+      "got": "b7ba4e40c5dea363257e264b5a223025",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter15seed2.cnf",
+      "args": [
+        "15",
+        "2"
+      ],
+      "expected": "48c4178b216c521190b9562bb7fb3b35",
+      "got": "48c4178b216c521190b9562bb7fb3b35",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter15seed3.cnf",
+      "args": [
+        "15",
+        "3"
+      ],
+      "expected": "e7c9859b1efce33c1b2b3ccdd38fe5c4",
+      "got": "e7c9859b1efce33c1b2b3ccdd38fe5c4",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter15seed4.cnf",
+      "args": [
+        "15",
+        "4"
+      ],
+      "expected": "65ca0a9408f8331487be2b021d9a9aa8",
+      "got": "65ca0a9408f8331487be2b021d9a9aa8",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter15seed5.cnf",
+      "args": [
+        "15",
+        "5"
+      ],
+      "expected": "26562de82769530382c75b3f627f7dfc",
+      "got": "26562de82769530382c75b3f627f7dfc",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter15seed6.cnf",
+      "args": [
+        "15",
+        "6"
+      ],
+      "expected": "336cc4fc88bf788707050a7f8629e410",
+      "got": "336cc4fc88bf788707050a7f8629e410",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter15seed7.cnf",
+      "args": [
+        "15",
+        "7"
+      ],
+      "expected": "059e668db9f76edac6404a51a3ea6894",
+      "got": "059e668db9f76edac6404a51a3ea6894",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter15seed8.cnf",
+      "args": [
+        "15",
+        "8"
+      ],
+      "expected": "9924215b76df3f0d0cb46c9cc1fe7d87",
+      "got": "9924215b76df3f0d0cb46c9cc1fe7d87",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter15seed9.cnf",
+      "args": [
+        "15",
+        "9"
+      ],
+      "expected": "b12cdfff2f22515401119f82db742f86",
+      "got": "b12cdfff2f22515401119f82db742f86",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter16seed0.cnf",
+      "args": [
+        "16",
+        "0"
+      ],
+      "expected": "bd7b3604c6c2b955e6fe3412a4a72dc0",
+      "got": "bd7b3604c6c2b955e6fe3412a4a72dc0",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter16seed1.cnf",
+      "args": [
+        "16",
+        "1"
+      ],
+      "expected": "bd7b3604c6c2b955e6fe3412a4a72dc0",
+      "got": "bd7b3604c6c2b955e6fe3412a4a72dc0",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter16seed2.cnf",
+      "args": [
+        "16",
+        "2"
+      ],
+      "expected": "89f56e35e8d25a1b9123555046a85978",
+      "got": "89f56e35e8d25a1b9123555046a85978",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter16seed3.cnf",
+      "args": [
+        "16",
+        "3"
+      ],
+      "expected": "a623c4fd0de389dbe1214d1e20c7af9e",
+      "got": "a623c4fd0de389dbe1214d1e20c7af9e",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter16seed4.cnf",
+      "args": [
+        "16",
+        "4"
+      ],
+      "expected": "97fd639e4a9ec243fe76af7fe2c5c211",
+      "got": "97fd639e4a9ec243fe76af7fe2c5c211",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter16seed5.cnf",
+      "args": [
+        "16",
+        "5"
+      ],
+      "expected": "b2a1b4d79392e7d228aa2a11e8b49ffd",
+      "got": "b2a1b4d79392e7d228aa2a11e8b49ffd",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter16seed6.cnf",
+      "args": [
+        "16",
+        "6"
+      ],
+      "expected": "f77af556e780bd6718a720cc34e90ac3",
+      "got": "f77af556e780bd6718a720cc34e90ac3",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter16seed7.cnf",
+      "args": [
+        "16",
+        "7"
+      ],
+      "expected": "802dff90f7084916ed3c23794ee8480d",
+      "got": "802dff90f7084916ed3c23794ee8480d",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter16seed8.cnf",
+      "args": [
+        "16",
+        "8"
+      ],
+      "expected": "860b864f63b967fb6fb0d8a3f6e9f652",
+      "got": "860b864f63b967fb6fb0d8a3f6e9f652",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter16seed9.cnf",
+      "args": [
+        "16",
+        "9"
+      ],
+      "expected": "9edfb83987c5131f6772863a7839bb3e",
+      "got": "9edfb83987c5131f6772863a7839bb3e",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter17seed0.cnf",
+      "args": [
+        "17",
+        "0"
+      ],
+      "expected": "1dd75285764a6ca3ad3dbd1b5ac8cab8",
+      "got": "1dd75285764a6ca3ad3dbd1b5ac8cab8",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter17seed1.cnf",
+      "args": [
+        "17",
+        "1"
+      ],
+      "expected": "1dd75285764a6ca3ad3dbd1b5ac8cab8",
+      "got": "1dd75285764a6ca3ad3dbd1b5ac8cab8",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter17seed2.cnf",
+      "args": [
+        "17",
+        "2"
+      ],
+      "expected": "3c11a1da0348b2088cb9096e32b3f8a4",
+      "got": "3c11a1da0348b2088cb9096e32b3f8a4",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter17seed3.cnf",
+      "args": [
+        "17",
+        "3"
+      ],
+      "expected": "baba358e4624de51d918e9be4110e1ee",
+      "got": "baba358e4624de51d918e9be4110e1ee",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter17seed4.cnf",
+      "args": [
+        "17",
+        "4"
+      ],
+      "expected": "483316573e45832d7b93575da36997ba",
+      "got": "483316573e45832d7b93575da36997ba",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter17seed5.cnf",
+      "args": [
+        "17",
+        "5"
+      ],
+      "expected": "f72b3e8524b6869ac8760ea8405903de",
+      "got": "f72b3e8524b6869ac8760ea8405903de",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter17seed6.cnf",
+      "args": [
+        "17",
+        "6"
+      ],
+      "expected": "e37b4930e0dd882ea704470f737b3e45",
+      "got": "e37b4930e0dd882ea704470f737b3e45",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter17seed7.cnf",
+      "args": [
+        "17",
+        "7"
+      ],
+      "expected": "e785f705ce1bbcf6794c17e9c251d383",
+      "got": "e785f705ce1bbcf6794c17e9c251d383",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter17seed8.cnf",
+      "args": [
+        "17",
+        "8"
+      ],
+      "expected": "e649ed8731605e81599a433d3a7da8c2",
+      "got": "e649ed8731605e81599a433d3a7da8c2",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter17seed9.cnf",
+      "args": [
+        "17",
+        "9"
+      ],
+      "expected": "6321de33396ccf0cf7e2f3250000af5e",
+      "got": "6321de33396ccf0cf7e2f3250000af5e",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter18seed0.cnf",
+      "args": [
+        "18",
+        "0"
+      ],
+      "expected": "a118c9d9451191163fab8d95e7a69949",
+      "got": "a118c9d9451191163fab8d95e7a69949",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter18seed1.cnf",
+      "args": [
+        "18",
+        "1"
+      ],
+      "expected": "a118c9d9451191163fab8d95e7a69949",
+      "got": "a118c9d9451191163fab8d95e7a69949",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter18seed2.cnf",
+      "args": [
+        "18",
+        "2"
+      ],
+      "expected": "c0f8d64fc76ef61a625af20e533286fe",
+      "got": "c0f8d64fc76ef61a625af20e533286fe",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter18seed3.cnf",
+      "args": [
+        "18",
+        "3"
+      ],
+      "expected": "6a05e26b05e828e7e981326fc2e8a245",
+      "got": "6a05e26b05e828e7e981326fc2e8a245",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter18seed4.cnf",
+      "args": [
+        "18",
+        "4"
+      ],
+      "expected": "ee934f0f8f1338553541d32a21a22a3e",
+      "got": "ee934f0f8f1338553541d32a21a22a3e",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter18seed5.cnf",
+      "args": [
+        "18",
+        "5"
+      ],
+      "expected": "57275a3fd27c0ba07ad1c33a7171756b",
+      "got": "57275a3fd27c0ba07ad1c33a7171756b",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter18seed6.cnf",
+      "args": [
+        "18",
+        "6"
+      ],
+      "expected": "33c7c57a9499693f139f0a6904aa66ee",
+      "got": "33c7c57a9499693f139f0a6904aa66ee",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter18seed7.cnf",
+      "args": [
+        "18",
+        "7"
+      ],
+      "expected": "a6cdb3554cbd12b8b0e755649fad70d3",
+      "got": "a6cdb3554cbd12b8b0e755649fad70d3",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter18seed8.cnf",
+      "args": [
+        "18",
+        "8"
+      ],
+      "expected": "adff9a6714a9f1fccbb9e56fa2aab5ee",
+      "got": "adff9a6714a9f1fccbb9e56fa2aab5ee",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter18seed9.cnf",
+      "args": [
+        "18",
+        "9"
+      ],
+      "expected": "582c17d0ad37c23d56d443d5f6661d7b",
+      "got": "582c17d0ad37c23d56d443d5f6661d7b",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter19seed0.cnf",
+      "args": [
+        "19",
+        "0"
+      ],
+      "expected": "23545195b813a797c9db57a712f111aa",
+      "got": "23545195b813a797c9db57a712f111aa",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter19seed1.cnf",
+      "args": [
+        "19",
+        "1"
+      ],
+      "expected": "23545195b813a797c9db57a712f111aa",
+      "got": "23545195b813a797c9db57a712f111aa",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter19seed2.cnf",
+      "args": [
+        "19",
+        "2"
+      ],
+      "expected": "df86e547cdda48d03e8ae49fa8d13f3d",
+      "got": "df86e547cdda48d03e8ae49fa8d13f3d",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter19seed3.cnf",
+      "args": [
+        "19",
+        "3"
+      ],
+      "expected": "58b0cbe5bb722285dfda1852aeb00fb4",
+      "got": "58b0cbe5bb722285dfda1852aeb00fb4",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter19seed4.cnf",
+      "args": [
+        "19",
+        "4"
+      ],
+      "expected": "9d6d9dd6e72014f78aa528c42f712df9",
+      "got": "9d6d9dd6e72014f78aa528c42f712df9",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter19seed5.cnf",
+      "args": [
+        "19",
+        "5"
+      ],
+      "expected": "a17e62af055f322b159fd7fa51ea693f",
+      "got": "a17e62af055f322b159fd7fa51ea693f",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter19seed6.cnf",
+      "args": [
+        "19",
+        "6"
+      ],
+      "expected": "82988eaba1d2a230c81e6dcd78a9a6d3",
+      "got": "82988eaba1d2a230c81e6dcd78a9a6d3",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter19seed7.cnf",
+      "args": [
+        "19",
+        "7"
+      ],
+      "expected": "883407716d22d2ba3bcd4ed3f7c22b78",
+      "got": "883407716d22d2ba3bcd4ed3f7c22b78",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter19seed8.cnf",
+      "args": [
+        "19",
+        "8"
+      ],
+      "expected": "760233ac2d554885f823ff98b2dd1eab",
+      "got": "760233ac2d554885f823ff98b2dd1eab",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter19seed9.cnf",
+      "args": [
+        "19",
+        "9"
+      ],
+      "expected": "331a0e370e0e5c9333848407d300a265",
+      "got": "331a0e370e0e5c9333848407d300a265",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter20seed0.cnf",
+      "args": [
+        "20",
+        "0"
+      ],
+      "expected": "c32e76d1593d449bb4099a1643f3d502",
+      "got": "c32e76d1593d449bb4099a1643f3d502",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter20seed1.cnf",
+      "args": [
+        "20",
+        "1"
+      ],
+      "expected": "c32e76d1593d449bb4099a1643f3d502",
+      "got": "c32e76d1593d449bb4099a1643f3d502",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter20seed2.cnf",
+      "args": [
+        "20",
+        "2"
+      ],
+      "expected": "24120db16eef6e32d14f984634e8c168",
+      "got": "24120db16eef6e32d14f984634e8c168",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter20seed3.cnf",
+      "args": [
+        "20",
+        "3"
+      ],
+      "expected": "cefb399a8d42dd6879fd6ecb819944b6",
+      "got": "cefb399a8d42dd6879fd6ecb819944b6",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter20seed4.cnf",
+      "args": [
+        "20",
+        "4"
+      ],
+      "expected": "fe5b418b80a7dfec2aca433b30e472ed",
+      "got": "fe5b418b80a7dfec2aca433b30e472ed",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter20seed5.cnf",
+      "args": [
+        "20",
+        "5"
+      ],
+      "expected": "4c5e83b500d308f54778c3b3a49d9e75",
+      "got": "4c5e83b500d308f54778c3b3a49d9e75",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter20seed6.cnf",
+      "args": [
+        "20",
+        "6"
+      ],
+      "expected": "cf9e4890cb5d81c2946330f0d99ed335",
+      "got": "cf9e4890cb5d81c2946330f0d99ed335",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter20seed7.cnf",
+      "args": [
+        "20",
+        "7"
+      ],
+      "expected": "efff1336b388dfeb34b803c8514d3724",
+      "got": "efff1336b388dfeb34b803c8514d3724",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter20seed8.cnf",
+      "args": [
+        "20",
+        "8"
+      ],
+      "expected": "4840dd2ce47690726d3d25662d10de1f",
+      "got": "4840dd2ce47690726d3d25662d10de1f",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter20seed9.cnf",
+      "args": [
+        "20",
+        "9"
+      ],
+      "expected": "56f146a5d962d6f9f195d16b893b66e1",
+      "got": "56f146a5d962d6f9f195d16b893b66e1",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter21seed0.cnf",
+      "args": [
+        "21",
+        "0"
+      ],
+      "expected": "39ab64808a483056bfb5fe0986b4c833",
+      "got": "39ab64808a483056bfb5fe0986b4c833",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter21seed1.cnf",
+      "args": [
+        "21",
+        "1"
+      ],
+      "expected": "39ab64808a483056bfb5fe0986b4c833",
+      "got": "39ab64808a483056bfb5fe0986b4c833",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter21seed2.cnf",
+      "args": [
+        "21",
+        "2"
+      ],
+      "expected": "93fa26d7f6d3e7a78216b776ed515a34",
+      "got": "93fa26d7f6d3e7a78216b776ed515a34",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter21seed3.cnf",
+      "args": [
+        "21",
+        "3"
+      ],
+      "expected": "0f24f1cb7be6e4ba299238eb7dd0e19c",
+      "got": "0f24f1cb7be6e4ba299238eb7dd0e19c",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter21seed4.cnf",
+      "args": [
+        "21",
+        "4"
+      ],
+      "expected": "45a6d6bc9b044878d9f88526f979e4b5",
+      "got": "45a6d6bc9b044878d9f88526f979e4b5",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter21seed5.cnf",
+      "args": [
+        "21",
+        "5"
+      ],
+      "expected": "239c060c8a9f61d9ce49c052e807e139",
+      "got": "239c060c8a9f61d9ce49c052e807e139",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter21seed6.cnf",
+      "args": [
+        "21",
+        "6"
+      ],
+      "expected": "ecd14f7fd458436d91321030d1aeb06a",
+      "got": "ecd14f7fd458436d91321030d1aeb06a",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter21seed7.cnf",
+      "args": [
+        "21",
+        "7"
+      ],
+      "expected": "3356e19818af80e0514ca985f6e36024",
+      "got": "3356e19818af80e0514ca985f6e36024",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter21seed8.cnf",
+      "args": [
+        "21",
+        "8"
+      ],
+      "expected": "6e3ac22f929adec3dab5dfcea8f25528",
+      "got": "6e3ac22f929adec3dab5dfcea8f25528",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter21seed9.cnf",
+      "args": [
+        "21",
+        "9"
+      ],
+      "expected": "5303b3540ea89cbcc966c44b809f90ae",
+      "got": "5303b3540ea89cbcc966c44b809f90ae",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter22seed0.cnf",
+      "args": [
+        "22",
+        "0"
+      ],
+      "expected": "4e750c80ffcdd7f500036dadee91688d",
+      "got": "4e750c80ffcdd7f500036dadee91688d",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter22seed1.cnf",
+      "args": [
+        "22",
+        "1"
+      ],
+      "expected": "4e750c80ffcdd7f500036dadee91688d",
+      "got": "4e750c80ffcdd7f500036dadee91688d",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter22seed2.cnf",
+      "args": [
+        "22",
+        "2"
+      ],
+      "expected": "2c4f9b3c310f71cd37d92ba82f8d0737",
+      "got": "2c4f9b3c310f71cd37d92ba82f8d0737",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter22seed3.cnf",
+      "args": [
+        "22",
+        "3"
+      ],
+      "expected": "c5b14d7a2a7dbab6bcf9fb673a5a6698",
+      "got": "c5b14d7a2a7dbab6bcf9fb673a5a6698",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter22seed4.cnf",
+      "args": [
+        "22",
+        "4"
+      ],
+      "expected": "37a9f1f756bdde3e3ccd3822774351aa",
+      "got": "37a9f1f756bdde3e3ccd3822774351aa",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter22seed5.cnf",
+      "args": [
+        "22",
+        "5"
+      ],
+      "expected": "bb9b8fa20257bb747d25aa287c949de7",
+      "got": "bb9b8fa20257bb747d25aa287c949de7",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter22seed6.cnf",
+      "args": [
+        "22",
+        "6"
+      ],
+      "expected": "3ee9eaf1b9a3080a4372329ac9c30725",
+      "got": "3ee9eaf1b9a3080a4372329ac9c30725",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter22seed7.cnf",
+      "args": [
+        "22",
+        "7"
+      ],
+      "expected": "a33432c603faacd018fd561eb77fad79",
+      "got": "a33432c603faacd018fd561eb77fad79",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter22seed8.cnf",
+      "args": [
+        "22",
+        "8"
+      ],
+      "expected": "8c8723812387854831070e55c8825916",
+      "got": "8c8723812387854831070e55c8825916",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter22seed9.cnf",
+      "args": [
+        "22",
+        "9"
+      ],
+      "expected": "e418b7ad5c16c4ab664b587145a5e848",
+      "got": "e418b7ad5c16c4ab664b587145a5e848",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter23seed0.cnf",
+      "args": [
+        "23",
+        "0"
+      ],
+      "expected": "88feb4f03132d38c3ac8cd18b8fb3370",
+      "got": "88feb4f03132d38c3ac8cd18b8fb3370",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter23seed1.cnf",
+      "args": [
+        "23",
+        "1"
+      ],
+      "expected": "88feb4f03132d38c3ac8cd18b8fb3370",
+      "got": "88feb4f03132d38c3ac8cd18b8fb3370",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter23seed2.cnf",
+      "args": [
+        "23",
+        "2"
+      ],
+      "expected": "7b39cd6ff160c8a7d9ed706b5d4c54e8",
+      "got": "7b39cd6ff160c8a7d9ed706b5d4c54e8",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter23seed3.cnf",
+      "args": [
+        "23",
+        "3"
+      ],
+      "expected": "9623459bdb1e6178a6958b45efd7d425",
+      "got": "9623459bdb1e6178a6958b45efd7d425",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter23seed4.cnf",
+      "args": [
+        "23",
+        "4"
+      ],
+      "expected": "f28692e639936c3573d702086df1f46c",
+      "got": "f28692e639936c3573d702086df1f46c",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter23seed5.cnf",
+      "args": [
+        "23",
+        "5"
+      ],
+      "expected": "1f1debfc992b914267854f53cb36eb71",
+      "got": "1f1debfc992b914267854f53cb36eb71",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter23seed6.cnf",
+      "args": [
+        "23",
+        "6"
+      ],
+      "expected": "13ccaf23b099496d0b5d17f0c6594bc7",
+      "got": "13ccaf23b099496d0b5d17f0c6594bc7",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter23seed7.cnf",
+      "args": [
+        "23",
+        "7"
+      ],
+      "expected": "9fcdeaeade4fd5011d0a4a9d74795cb2",
+      "got": "9fcdeaeade4fd5011d0a4a9d74795cb2",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter23seed8.cnf",
+      "args": [
+        "23",
+        "8"
+      ],
+      "expected": "859763491b8de1eb2609c30e2a664261",
+      "got": "859763491b8de1eb2609c30e2a664261",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter23seed9.cnf",
+      "args": [
+        "23",
+        "9"
+      ],
+      "expected": "49409cececa1ff42a4f1753420f9d820",
+      "got": "49409cececa1ff42a4f1753420f9d820",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter24seed0.cnf",
+      "args": [
+        "24",
+        "0"
+      ],
+      "expected": "2243275b91fd308e60822e50a11f7c25",
+      "got": "2243275b91fd308e60822e50a11f7c25",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter24seed1.cnf",
+      "args": [
+        "24",
+        "1"
+      ],
+      "expected": "2243275b91fd308e60822e50a11f7c25",
+      "got": "2243275b91fd308e60822e50a11f7c25",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter24seed2.cnf",
+      "args": [
+        "24",
+        "2"
+      ],
+      "expected": "442df355eeb51b4fe5dedad0373c1ab6",
+      "got": "442df355eeb51b4fe5dedad0373c1ab6",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter24seed3.cnf",
+      "args": [
+        "24",
+        "3"
+      ],
+      "expected": "156d20fa16de0ddc0af755d92e2aa848",
+      "got": "156d20fa16de0ddc0af755d92e2aa848",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter24seed4.cnf",
+      "args": [
+        "24",
+        "4"
+      ],
+      "expected": "8b138df9c78a06e058e3214fd4a722a9",
+      "got": "8b138df9c78a06e058e3214fd4a722a9",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter24seed5.cnf",
+      "args": [
+        "24",
+        "5"
+      ],
+      "expected": "5238c8896abc20c97ff1ff7d181f9411",
+      "got": "5238c8896abc20c97ff1ff7d181f9411",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter24seed6.cnf",
+      "args": [
+        "24",
+        "6"
+      ],
+      "expected": "63ad1e4a9290e0781c4b42b642684c90",
+      "got": "63ad1e4a9290e0781c4b42b642684c90",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter24seed7.cnf",
+      "args": [
+        "24",
+        "7"
+      ],
+      "expected": "201483ce9ee6dbddc97437fde8e7b6de",
+      "got": "201483ce9ee6dbddc97437fde8e7b6de",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter24seed8.cnf",
+      "args": [
+        "24",
+        "8"
+      ],
+      "expected": "c796e52f1641bdeaaf8157736e39f5d8",
+      "got": "c796e52f1641bdeaaf8157736e39f5d8",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter24seed9.cnf",
+      "args": [
+        "24",
+        "9"
+      ],
+      "expected": "72d1ec1b5d77ad6101670f287aa5913e",
+      "got": "72d1ec1b5d77ad6101670f287aa5913e",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter25seed0.cnf",
+      "args": [
+        "25",
+        "0"
+      ],
+      "expected": "34122dc95769ab2cce85039f9c834bb6",
+      "got": "34122dc95769ab2cce85039f9c834bb6",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter25seed1.cnf",
+      "args": [
+        "25",
+        "1"
+      ],
+      "expected": "34122dc95769ab2cce85039f9c834bb6",
+      "got": "34122dc95769ab2cce85039f9c834bb6",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter25seed2.cnf",
+      "args": [
+        "25",
+        "2"
+      ],
+      "expected": "b75d9591198391f7af94ba755c5bd573",
+      "got": "b75d9591198391f7af94ba755c5bd573",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter25seed3.cnf",
+      "args": [
+        "25",
+        "3"
+      ],
+      "expected": "cd46355842860200f1af49d299e45f7b",
+      "got": "cd46355842860200f1af49d299e45f7b",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter25seed4.cnf",
+      "args": [
+        "25",
+        "4"
+      ],
+      "expected": "dbb8171d1692c6c204fa2977733f56a1",
+      "got": "dbb8171d1692c6c204fa2977733f56a1",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter25seed5.cnf",
+      "args": [
+        "25",
+        "5"
+      ],
+      "expected": "ca21a15a2d5a7c219c56b862bf337ddd",
+      "got": "ca21a15a2d5a7c219c56b862bf337ddd",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter25seed6.cnf",
+      "args": [
+        "25",
+        "6"
+      ],
+      "expected": "b6098161311bcf55e2b2fcfb94ad2fe8",
+      "got": "b6098161311bcf55e2b2fcfb94ad2fe8",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter25seed7.cnf",
+      "args": [
+        "25",
+        "7"
+      ],
+      "expected": "be87f2f9427c8cb544bd7adf62648b54",
+      "got": "be87f2f9427c8cb544bd7adf62648b54",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter25seed8.cnf",
+      "args": [
+        "25",
+        "8"
+      ],
+      "expected": "9fa3768bc2fae716a547d8ef48c635e2",
+      "got": "9fa3768bc2fae716a547d8ef48c635e2",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter25seed9.cnf",
+      "args": [
+        "25",
+        "9"
+      ],
+      "expected": "07b464e82974c47667d5d0ec698c0a5e",
+      "got": "07b464e82974c47667d5d0ec698c0a5e",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter26seed0.cnf",
+      "args": [
+        "26",
+        "0"
+      ],
+      "expected": "50dff9620ffdbab0616dce7d18baf76a",
+      "got": "50dff9620ffdbab0616dce7d18baf76a",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter26seed1.cnf",
+      "args": [
+        "26",
+        "1"
+      ],
+      "expected": "50dff9620ffdbab0616dce7d18baf76a",
+      "got": "50dff9620ffdbab0616dce7d18baf76a",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter26seed2.cnf",
+      "args": [
+        "26",
+        "2"
+      ],
+      "expected": "52ae4b4ad82977bae0acaa687c7cbf30",
+      "got": "52ae4b4ad82977bae0acaa687c7cbf30",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter26seed3.cnf",
+      "args": [
+        "26",
+        "3"
+      ],
+      "expected": "e9394b8759bb8f23a83eab6ec0db3632",
+      "got": "e9394b8759bb8f23a83eab6ec0db3632",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter26seed4.cnf",
+      "args": [
+        "26",
+        "4"
+      ],
+      "expected": "26b96a641a827ae3802320fba07575ed",
+      "got": "26b96a641a827ae3802320fba07575ed",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter26seed5.cnf",
+      "args": [
+        "26",
+        "5"
+      ],
+      "expected": "bbc06ca022639d4586abe9c6ff0b84bc",
+      "got": "bbc06ca022639d4586abe9c6ff0b84bc",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter26seed6.cnf",
+      "args": [
+        "26",
+        "6"
+      ],
+      "expected": "3dbfe106204d3b7ba63f555f189794e6",
+      "got": "3dbfe106204d3b7ba63f555f189794e6",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter26seed7.cnf",
+      "args": [
+        "26",
+        "7"
+      ],
+      "expected": "4372e8cd4784ee9d8d2d207ec06837e6",
+      "got": "4372e8cd4784ee9d8d2d207ec06837e6",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter26seed8.cnf",
+      "args": [
+        "26",
+        "8"
+      ],
+      "expected": "08fbb55735fb4893130d71882077e210",
+      "got": "08fbb55735fb4893130d71882077e210",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter26seed9.cnf",
+      "args": [
+        "26",
+        "9"
+      ],
+      "expected": "0105daabd31b3ec961eb5614cf899262",
+      "got": "0105daabd31b3ec961eb5614cf899262",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter27seed0.cnf",
+      "args": [
+        "27",
+        "0"
+      ],
+      "expected": "37332ddd48dff67a40f3b2b406396934",
+      "got": "37332ddd48dff67a40f3b2b406396934",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter27seed1.cnf",
+      "args": [
+        "27",
+        "1"
+      ],
+      "expected": "37332ddd48dff67a40f3b2b406396934",
+      "got": "37332ddd48dff67a40f3b2b406396934",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter27seed2.cnf",
+      "args": [
+        "27",
+        "2"
+      ],
+      "expected": "f5e7faf7749e3686de859e347b9af628",
+      "got": "f5e7faf7749e3686de859e347b9af628",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter27seed3.cnf",
+      "args": [
+        "27",
+        "3"
+      ],
+      "expected": "2e2226386dd27d072de0aef8b7f90428",
+      "got": "2e2226386dd27d072de0aef8b7f90428",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter27seed4.cnf",
+      "args": [
+        "27",
+        "4"
+      ],
+      "expected": "bc9ed70cf383c847ba17f8ad32266127",
+      "got": "bc9ed70cf383c847ba17f8ad32266127",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter27seed5.cnf",
+      "args": [
+        "27",
+        "5"
+      ],
+      "expected": "d0bd4b62f7e9e13337e73209485e916b",
+      "got": "d0bd4b62f7e9e13337e73209485e916b",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter27seed6.cnf",
+      "args": [
+        "27",
+        "6"
+      ],
+      "expected": "7eacf10fed12cbe3e9dddf9474bf5e2f",
+      "got": "7eacf10fed12cbe3e9dddf9474bf5e2f",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter27seed7.cnf",
+      "args": [
+        "27",
+        "7"
+      ],
+      "expected": "128035706e5137023a3c031c72e071f7",
+      "got": "128035706e5137023a3c031c72e071f7",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter27seed8.cnf",
+      "args": [
+        "27",
+        "8"
+      ],
+      "expected": "3a9bc30bca889038ad53f62a33b856c5",
+      "got": "3a9bc30bca889038ad53f62a33b856c5",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter27seed9.cnf",
+      "args": [
+        "27",
+        "9"
+      ],
+      "expected": "cdc999fd7c151da1dedae2ae0a2d0861",
+      "got": "cdc999fd7c151da1dedae2ae0a2d0861",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter28seed0.cnf",
+      "args": [
+        "28",
+        "0"
+      ],
+      "expected": "776f643668c2cfcd4ca953b1ce4611a2",
+      "got": "776f643668c2cfcd4ca953b1ce4611a2",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter28seed1.cnf",
+      "args": [
+        "28",
+        "1"
+      ],
+      "expected": "776f643668c2cfcd4ca953b1ce4611a2",
+      "got": "776f643668c2cfcd4ca953b1ce4611a2",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter28seed2.cnf",
+      "args": [
+        "28",
+        "2"
+      ],
+      "expected": "a46ce33db415caf47defc8f85470743f",
+      "got": "a46ce33db415caf47defc8f85470743f",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter28seed3.cnf",
+      "args": [
+        "28",
+        "3"
+      ],
+      "expected": "babfd78551c0e0c497726857634c763e",
+      "got": "babfd78551c0e0c497726857634c763e",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter28seed4.cnf",
+      "args": [
+        "28",
+        "4"
+      ],
+      "expected": "05497afd8eca2879a1f5eafaff8eb098",
+      "got": "05497afd8eca2879a1f5eafaff8eb098",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter28seed5.cnf",
+      "args": [
+        "28",
+        "5"
+      ],
+      "expected": "b1a7a045561e4ca90fca542e8b2dff80",
+      "got": "b1a7a045561e4ca90fca542e8b2dff80",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter28seed6.cnf",
+      "args": [
+        "28",
+        "6"
+      ],
+      "expected": "bf3d06797f4db43692ae86fe5b51364b",
+      "got": "bf3d06797f4db43692ae86fe5b51364b",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter28seed7.cnf",
+      "args": [
+        "28",
+        "7"
+      ],
+      "expected": "7cea02289609271157bd0e190acf30fd",
+      "got": "7cea02289609271157bd0e190acf30fd",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter28seed8.cnf",
+      "args": [
+        "28",
+        "8"
+      ],
+      "expected": "95c01e6943a1de7ee5b64b65817be67d",
+      "got": "95c01e6943a1de7ee5b64b65817be67d",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter28seed9.cnf",
+      "args": [
+        "28",
+        "9"
+      ],
+      "expected": "7f4708cabc47483e84d06bdc8d971c81",
+      "got": "7f4708cabc47483e84d06bdc8d971c81",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter29seed0.cnf",
+      "args": [
+        "29",
+        "0"
+      ],
+      "expected": "f5368c3795beabf08da11592ae4d0d2a",
+      "got": "f5368c3795beabf08da11592ae4d0d2a",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter29seed1.cnf",
+      "args": [
+        "29",
+        "1"
+      ],
+      "expected": "f5368c3795beabf08da11592ae4d0d2a",
+      "got": "f5368c3795beabf08da11592ae4d0d2a",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter29seed2.cnf",
+      "args": [
+        "29",
+        "2"
+      ],
+      "expected": "1d9ab102cd4702746a557dfec3be0ffd",
+      "got": "1d9ab102cd4702746a557dfec3be0ffd",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter29seed3.cnf",
+      "args": [
+        "29",
+        "3"
+      ],
+      "expected": "23610ef45d83de79f1a37748dd808ff8",
+      "got": "23610ef45d83de79f1a37748dd808ff8",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter29seed4.cnf",
+      "args": [
+        "29",
+        "4"
+      ],
+      "expected": "aa842e13530cb3f3fb1f7382afd57cb1",
+      "got": "aa842e13530cb3f3fb1f7382afd57cb1",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter29seed5.cnf",
+      "args": [
+        "29",
+        "5"
+      ],
+      "expected": "34fde06575121a82ed69b0ab0bab5f68",
+      "got": "34fde06575121a82ed69b0ab0bab5f68",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter29seed6.cnf",
+      "args": [
+        "29",
+        "6"
+      ],
+      "expected": "6de6ffca8f1af6a0d89f16fd4d5c6200",
+      "got": "6de6ffca8f1af6a0d89f16fd4d5c6200",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter29seed7.cnf",
+      "args": [
+        "29",
+        "7"
+      ],
+      "expected": "b6d67e521f6cb7ac4c4e4f324f29a84d",
+      "got": "b6d67e521f6cb7ac4c4e4f324f29a84d",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter29seed8.cnf",
+      "args": [
+        "29",
+        "8"
+      ],
+      "expected": "bbffebef679e703a3e4af43ac8250cfb",
+      "got": "bbffebef679e703a3e4af43ac8250cfb",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter29seed9.cnf",
+      "args": [
+        "29",
+        "9"
+      ],
+      "expected": "0531dfdf91140bc66411b5fd34cc4b49",
+      "got": "0531dfdf91140bc66411b5fd34cc4b49",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter30seed0.cnf",
+      "args": [
+        "30",
+        "0"
+      ],
+      "expected": "9bfa40ce5cf9f0229131d1888a9dee35",
+      "got": "9bfa40ce5cf9f0229131d1888a9dee35",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter30seed1.cnf",
+      "args": [
+        "30",
+        "1"
+      ],
+      "expected": "9bfa40ce5cf9f0229131d1888a9dee35",
+      "got": "9bfa40ce5cf9f0229131d1888a9dee35",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter30seed2.cnf",
+      "args": [
+        "30",
+        "2"
+      ],
+      "expected": "f0ffaf203f8d49f18de7abeddb7a1ab5",
+      "got": "f0ffaf203f8d49f18de7abeddb7a1ab5",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter30seed3.cnf",
+      "args": [
+        "30",
+        "3"
+      ],
+      "expected": "764f9ae8d8994aa18bee5141edd61e98",
+      "got": "764f9ae8d8994aa18bee5141edd61e98",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter30seed4.cnf",
+      "args": [
+        "30",
+        "4"
+      ],
+      "expected": "3b1e6d2f739b3a530e2042e721710e40",
+      "got": "3b1e6d2f739b3a530e2042e721710e40",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter30seed5.cnf",
+      "args": [
+        "30",
+        "5"
+      ],
+      "expected": "185e75cc192ef62a195d4b8001cd27b0",
+      "got": "185e75cc192ef62a195d4b8001cd27b0",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter30seed6.cnf",
+      "args": [
+        "30",
+        "6"
+      ],
+      "expected": "0809314d4bb07a6486d4182f5bb5b6f4",
+      "got": "0809314d4bb07a6486d4182f5bb5b6f4",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter30seed7.cnf",
+      "args": [
+        "30",
+        "7"
+      ],
+      "expected": "a51bbbe6bc5bfa82b1603c47b89def4a",
+      "got": "a51bbbe6bc5bfa82b1603c47b89def4a",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter30seed8.cnf",
+      "args": [
+        "30",
+        "8"
+      ],
+      "expected": "c76cb796ee7d79df7f6e480eec7b3f30",
+      "got": "c76cb796ee7d79df7f6e480eec7b3f30",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter30seed9.cnf",
+      "args": [
+        "30",
+        "9"
+      ],
+      "expected": "8ffb75b0ea9ecc453b8980c9229e23ca",
+      "got": "8ffb75b0ea9ecc453b8980c9229e23ca",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter31seed0.cnf",
+      "args": [
+        "31",
+        "0"
+      ],
+      "expected": "85b13b97beb49686874b13fad7d4031f",
+      "got": "85b13b97beb49686874b13fad7d4031f",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter31seed1.cnf",
+      "args": [
+        "31",
+        "1"
+      ],
+      "expected": "85b13b97beb49686874b13fad7d4031f",
+      "got": "85b13b97beb49686874b13fad7d4031f",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter31seed2.cnf",
+      "args": [
+        "31",
+        "2"
+      ],
+      "expected": "fc8c3f16c407364beac9fd60be3b9095",
+      "got": "fc8c3f16c407364beac9fd60be3b9095",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter31seed3.cnf",
+      "args": [
+        "31",
+        "3"
+      ],
+      "expected": "4711f0508ad7ea2d04d44ebd89457406",
+      "got": "4711f0508ad7ea2d04d44ebd89457406",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter31seed4.cnf",
+      "args": [
+        "31",
+        "4"
+      ],
+      "expected": "14f4000f47b721d3aea9b5beb8faa570",
+      "got": "14f4000f47b721d3aea9b5beb8faa570",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter31seed5.cnf",
+      "args": [
+        "31",
+        "5"
+      ],
+      "expected": "331ab8b94b882226018a9149708f95ab",
+      "got": "331ab8b94b882226018a9149708f95ab",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter31seed6.cnf",
+      "args": [
+        "31",
+        "6"
+      ],
+      "expected": "7fc9b2ce01c6ff6dc009b368c6504873",
+      "got": "7fc9b2ce01c6ff6dc009b368c6504873",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter31seed7.cnf",
+      "args": [
+        "31",
+        "7"
+      ],
+      "expected": "d9e88967735054d63842538db52c31e0",
+      "got": "d9e88967735054d63842538db52c31e0",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter31seed8.cnf",
+      "args": [
+        "31",
+        "8"
+      ],
+      "expected": "6506365b80def4e5c9a0b5b1d758f446",
+      "got": "6506365b80def4e5c9a0b5b1d758f446",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter31seed9.cnf",
+      "args": [
+        "31",
+        "9"
+      ],
+      "expected": "3913b1aff1bd54b51d985a0fcbc34c16",
+      "got": "3913b1aff1bd54b51d985a0fcbc34c16",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter32seed0.cnf",
+      "args": [
+        "32",
+        "0"
+      ],
+      "expected": "5993bc9be99d258c63ab74f729804125",
+      "got": "5993bc9be99d258c63ab74f729804125",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter32seed1.cnf",
+      "args": [
+        "32",
+        "1"
+      ],
+      "expected": "5993bc9be99d258c63ab74f729804125",
+      "got": "5993bc9be99d258c63ab74f729804125",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter32seed2.cnf",
+      "args": [
+        "32",
+        "2"
+      ],
+      "expected": "17ead282ac0c8b4f4e6d2915e57ed041",
+      "got": "17ead282ac0c8b4f4e6d2915e57ed041",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter32seed3.cnf",
+      "args": [
+        "32",
+        "3"
+      ],
+      "expected": "f776a1974ab6c760bd062ad6a0fbaa52",
+      "got": "f776a1974ab6c760bd062ad6a0fbaa52",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter32seed4.cnf",
+      "args": [
+        "32",
+        "4"
+      ],
+      "expected": "7d7f665dfb248ef13700749464a22b30",
+      "got": "7d7f665dfb248ef13700749464a22b30",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter32seed5.cnf",
+      "args": [
+        "32",
+        "5"
+      ],
+      "expected": "59109d3f33e9669a83965494100a1bc7",
+      "got": "59109d3f33e9669a83965494100a1bc7",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter32seed6.cnf",
+      "args": [
+        "32",
+        "6"
+      ],
+      "expected": "433b5b3bd785cc5affe7a2e227775174",
+      "got": "433b5b3bd785cc5affe7a2e227775174",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter32seed7.cnf",
+      "args": [
+        "32",
+        "7"
+      ],
+      "expected": "93d1cd11c99342f8e3c4515b04adbd94",
+      "got": "93d1cd11c99342f8e3c4515b04adbd94",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter32seed8.cnf",
+      "args": [
+        "32",
+        "8"
+      ],
+      "expected": "67cfa4b9c81159367b1253151bdc2e0c",
+      "got": "67cfa4b9c81159367b1253151bdc2e0c",
+      "level": "N1"
+    },
+    {
+      "instance": "cruxmiter32seed9.cnf",
+      "args": [
+        "32",
+        "9"
+      ],
+      "expected": "73bb304bddb3e9d54189fcfee9e1f012",
+      "got": "73bb304bddb3e9d54189fcfee9e1f012",
+      "level": "N1"
+    }
+  ]
+}

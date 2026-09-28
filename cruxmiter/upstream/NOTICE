@@ -1,0 +1,9 @@
+gencruxmitersmt.c, README.upstream and generate-some-aigs-and-cnfs.sh were
+written by Armin Biere (Johannes Kepler University Linz, now University of
+Freiburg).  They are not published in a public repository; Armin Biere sent
+them to Laurent Simon and agreed, in September 2026, to their being part of
+SAT Heritage.  They carry no licence of their own: ask him before reusing them
+elsewhere.
+
+The CRUX miters they produce were used in the SAT Race 2019 and, beyond the
+competitions, in work on distributed cube and conquer and on tuning for cubing.

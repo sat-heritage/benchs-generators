@@ -143,5 +143,23 @@
     "usage": "genxormiter [-l | -s | -r | -v] INPUTS [SEED]",
     "seed": "the second positional argument; without it the generator seeds itself from the clock and the instance cannot be reproduced",
     "notes": "the miter between two parity circuits over shared inputs: solvable by XOR reasoning, trivially with -s, and still solvable with -r; -l disables the randomisation of the variable order. Beware of the seed: in this version parse_seed assigns instead of accumulating, so only the last digit of a multi-digit seed is used, and 2, 42, 12 and 102 all give the same instance. Use single-digit seeds until it is fixed upstream."
+  },
+  "cruxmiter": {
+    "name": "CRUX miters",
+    "authors": "Armin Biere",
+    "authors_source": "the generator and its README, sent by the author in September 2026",
+    "year": 2021,
+    "competitions": [
+      "SAT Race 2019"
+    ],
+    "language": "C, then Boolector and aiger",
+    "license": "none stated",
+    "publish_image": false,
+    "license_note": "the generator is not published in a public repository; Armin Biere agreed in September 2026 that it be part of SAT Heritage, and the sources are kept in cruxmiter/upstream with that notice. Ask him before reusing them elsewhere, and before publishing the image",
+    "source_repo": "sent by the author, kept in cruxmiter/upstream",
+    "image": "satex-gen/cruxmiter:2021",
+    "usage": "crux-gen SIZE SEED",
+    "seed": "the second argument; the generator seeds the C library random generator, so the same seed gives the same formula on the same C library",
+    "notes": "a miter between two trees of bit-vector adders over the same inputs, added in a random order on each side: hard for resolution, and used beyond the competitions, in work on distributed cube and conquer and on tuning for cubing. The chain needs Boolector with the normalisation of adders disabled and the aiger of May 2021: at its default rewriting level Boolector proves the miter away, and a later aigtocnf writes smaller, different formulas"
   }
 }

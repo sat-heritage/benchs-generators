@@ -1,0 +1,24 @@
+With commit a2142ddcd060d0d2d8a0657527164ca3e257053c on the default 'master'
+branch of Boolector I have added an option to disable normalization of adders.
+With that disabled '-nadd 0' one can generate interesting CRUX Miters.  The
+idea is to take the 'n' input bits (number given as first argument) and then
+add them together with bit-vector adders of width 'm = ceil(log2 (n))' in
+a random way.   For the first CRUX tree we randomly partition the remaining
+not added up inputs in two parts and add those together recursively.  The
+same for the second CRUX, but there we permute the inputs first.  Then an
+equivalence check is added to the outputs of the two CRUX trees. To generate
+a BTOR word level benchmark:
+
+  ./gencruxmitersmt 8 0|boolector -nadd 0 -db
+
+  (can be visualized with 'btorvis')
+
+where n=8 and  seed=0 (the seed) and accordingly AIGs
+
+  ./gencruxmitersmt 8 0|boolector -nadd 0 -daa
+
+  (can be visualized with 'aigvis')
+
+and finally CNF as follows
+
+  ./gencruxmitersmt 8 0|boolector -nadd 0 -dai|aigtocnf

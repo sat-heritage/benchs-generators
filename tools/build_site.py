@@ -121,7 +121,7 @@ def page(title: str, body: str, depth: int, active: str = "") -> str:
 <title>{esc(title)} · SAT Heritage generators</title><link rel="stylesheet" href="{root}style.css"></head>
 <body><header><a class="logo" href="{root}index.html"><span class="dot"></span>SAT Heritage generators</a>
 <nav>{nav}</nav>
-<p>The programs that produced the SAT competition benchmarks, each as a Docker image, checked by regenerating the instances the competitions actually used.</p></header>
+<p>The programs that produce SAT benchmarks, each as a Docker image: the families the competitions used, and others that live outside them, in papers and in solver tuning.</p></header>
 <div class="warning"><b>A pilot, and a collective one: please check, correct and contribute.</b> Everything here is generated from the data of the <a href="{REPO_URL}">sat-heritage/benchs-generators</a> repository. A generator whose licence is unknown has its recipe published but no image, and a family with no generator is one we could not find or could not run: corrections, missing generators and licence clarifications are welcome as <a href="{REPO_URL}/pulls">pull requests</a> or <a href="{REPO_URL}/issues">issues</a>. The companion project for solvers is <a href="{SOLVERS_SITE}">SAT Heritage</a>.</div>
 <main>{body}</main>
 <footer>Generated from the <a href="{REPO_URL}">sat-heritage/benchs-generators</a> repository · solver rankings computed from the detailed results published by the SAT competitions, joined with <a href="{GBD_URL}">GBD</a> · a project by {esc(AUTHORS)}, assembled with the help of an AI assistant: check every claim against the original competition material.</footer></body></html>
@@ -152,14 +152,15 @@ def overview_page(gens: dict, rankings: dict) -> str:
     published = sum(1 for g in gens.values() if g.get("publish_image"))
     covered = {f for g in gens.values() for f in g["families"]}
     all_fams = {f for y in rankings["years"].values() for f in y["families"] if f != "ALL"}
-    body = f"""<div class="hero"><h1>Benchmark generators of the SAT competitions</h1>
-<p>A benchmark is only reproducible if the program that produced it still runs. This repository packages those programs as Docker images, pins their sources to one commit, and checks each image by regenerating the instances the competitions used: same GBD hash, same instance.</p></div>
+    body = f"""<div class="hero"><h1>SAT benchmark generators, from the competitions and beyond</h1>
+<p>A benchmark is only reproducible if the program that produced it still runs. This repository packages those programs as Docker images, pins their sources to one commit, and checks each image by regenerating known instances: same GBD hash, same instance. Many of these families were used by the competitions; others were never submitted to one, and serve in papers, in solver tuning or in cube and conquer experiments.</p></div>
 <div class="stats">
 <div class="stat"><div class="n">{len(gens)}</div><div class="l">generators packaged</div></div>
 <div class="stat"><div class="n">{exact}</div><div class="l">instances regenerated exactly</div></div>
 <div class="stat"><div class="n">{checked}</div><div class="l">reference instances checked, of {refs} recorded</div></div>
 <div class="stat"><div class="n">{published}</div><div class="l">images publishable, the others lack a licence</div></div>
 <div class="stat"><div class="n">{len(covered)}</div><div class="l">competition families with a generator here</div></div>
+<div class="stat"><div class="n">{sum(1 for g in gens.values() if not g.get("competitions"))}</div><div class="l">generators whose families never went to a competition</div></div>
 </div>
 <h2>Generators</h2><div class="grid">{"".join(gen_card(g) for g in sorted(gens.values(), key=lambda g: g['name'].lower()))}</div>
 <div class="section"><h2>Where the rankings come from</h2>

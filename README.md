@@ -2,7 +2,10 @@
 
 `sat-heritage/benchs-generators`
 
-Docker images of SAT benchmark **generators**, in the spirit of
+Docker images of SAT benchmark **generators**, from the competitions and
+beyond: several of these families were never submitted to a competition and
+serve in papers, in solver tuning or in cube and conquer experiments. In the
+spirit of
 [SAT Heritage](https://github.com/sat-heritage/docker-images) for solvers: each
 generator is built from its archived sources in a pinned environment, and each
 image is checked against the instances actually used in the SAT Competitions.
@@ -67,6 +70,7 @@ repository move their generator from the second row to the first.
 | Oddball | `satex-gen/oddball:2025` | 40 | 40 | 0 |
 | Community Attachment | `satex-gen/commattach:2015` | 56 | 54 | 1 |
 | genxormiter | `satex-gen/genxormiter:2025` | none | — | — |
+| CRUX miters | `satex-gen/cruxmiter:2021` | 230 | 230 | 0 |
 
 - **sgen1**: 27 instances match their GBD hash. The GBD copy of
   `sgen1-sat-140-100` lacks one clause, (-25 -23), of the author's file; the
@@ -110,6 +114,17 @@ repository move their generator from the second row to the first.
   circuits. Its seed parser assigns where it should accumulate, so only the last
   digit of a multi-digit seed is used: seeds 2, 42, 12 and 102 all produce the
   same formula. Use single-digit seeds until that is fixed upstream.
+
+- **CRUX miters**: all 230 instances the author generated in December 2021, of
+  sizes 10 to 32 with ten seeds each, are regenerated exactly. Four of them were
+  used in the SAT Race 2019; the copies GBD keeps of those have their variables
+  renamed, so they match only up to a renaming, and both hashes are recorded.
+  Two pins matter here: Boolector needs `-rwl 2 -nadd 0`, since at its default
+  rewriting level it proves the miter away and dumps an empty circuit, and aiger
+  must be the May 2021 one, since a later `aigtocnf` writes smaller, different
+  formulas. The generator itself is not on any public repository: Armin Biere
+  agreed in September 2026 that it be part of SAT Heritage, and it is kept under
+  `cruxmiter/upstream` with that notice, so the image stays unpublished.
 
 ## Building and running
 
