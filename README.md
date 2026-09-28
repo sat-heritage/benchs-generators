@@ -129,6 +129,24 @@ Every image writes the CNF on standard output.
   `random` module does not promise identical draws across versions; a fixed
   seed gives identical output from run to run.
 
+## Website
+
+`tools/build_site.py` writes a static site from the repository: an overview, one
+page per generator, one page per competition benchmark family, and a page on how
+instances are checked. The family pages carry the solver ranking on that family
+alone, computed by `tools/collect_rankings.py` from the detailed results the
+competitions publish, joined with GBD; the result is kept in
+`data/rankings.json` so that building the site needs no network.
+
+```sh
+python3 tools/collect_rankings.py     # refresh data/rankings.json (downloads)
+python3 tools/build_site.py --output _site
+```
+
+A GitHub Actions workflow publishes the site on GitHub Pages at every push to
+`main`, and once a month so that newly published competition results are picked
+up.
+
 ## Layout
 
 - `generators.json`: one entry per generator (authors and their source, licence, image, usage, seed)

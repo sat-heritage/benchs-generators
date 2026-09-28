@@ -9,12 +9,13 @@
     ],
     "language": "C",
     "license": "none stated",
-    "license_note": "no licence in the source nor on the page: ask the author before publishing the image",
+    "license_note": "no licence in the source nor on the page: the recipe is published, the image is not, until the author agrees",
     "source_url": "https://www.eeecs.qub.ac.uk/~I.Spence/sgen/sgen1.c",
     "image": "satex-gen/sgen1:2009",
     "usage": "sgen1 -n VARIABLES (-sat | -unsat) [-s SEED] [-m MODEL_FILE] [-min-variables] [-reorder]",
     "seed": "-s, default 1; the generator uses its own linear congruential generator",
-    "notes": "main() always returns 1, even on success; the verifier ignores the exit status and checks the output instead"
+    "notes": "main() always returns 1, even on success; the verifier ignores the exit status and checks the output instead",
+    "publish_image": false
   },
   "cnfgen": {
     "name": "CNFgen",
@@ -27,7 +28,9 @@
     "source_url": "https://pypi.org/project/cnfgen/0.9.6/",
     "image": "satex-gen/cnfgen:0.9.6",
     "usage": "cnfgen FAMILY PARAMETERS...; cnfgen --help lists the families",
-    "seed": "random families take a seed option; Python's random module does not promise identical draws across Python versions"
+    "seed": "random families take a seed option; Python's random module does not promise identical draws across Python versions",
+    "publish_image": true,
+    "license_note": "GPL-3.0: the image is publishable provided its sources travel with it, which the pinned PyPI release and the recorded version give"
   },
   "lockchart": {
     "name": "lockchart-to-cnf",
@@ -86,5 +89,42 @@
     "image": "satex-gen/commattach:2015",
     "usage": "commAttach -n VARIABLES -m CLAUSES -k CLAUSE_LENGTH -c COMMUNITIES -Q MODULARITY -s SEED",
     "seed": "-s, mandatory for reproducibility; the repository also builds a plain random k-CNF generator"
+  },
+  "mdp": {
+    "name": "mdp-benchmark",
+    "authors": "Randal E. Bryant",
+    "authors_source": "repository rebryant/mdp-benchmark and the SAT Competition 2022 benchmark description",
+    "year": 2022,
+    "competitions": [
+      "SAT Competition 2022"
+    ],
+    "language": "Python",
+    "license": "MIT",
+    "publish_image": true,
+    "source_repo": "https://github.com/rebryant/mdp-benchmark.git",
+    "source_commit": "9d7199acc6ae7cedb9f9581c5a0a147351228a84",
+    "source_tree": "61abbdd6b0cde3f001040e8f2e9a4e9ff3614977",
+    "image": "satex-gen/mdp:2022",
+    "usage": "mdp-gen -n BITS -t THRESHOLD -s SEED",
+    "seed": "-s; the repository ships src/generate.sh, the script that produced the submitted instances"
+  },
+  "roundrobin": {
+    "name": "Round-robin tournament scheduling",
+    "authors": "Joseph Reeves",
+    "authors_source": "repository Aeacu2/RR-Benchmarks and the SAT Competition 2025 benchmark description",
+    "year": 2025,
+    "competitions": [
+      "SAT Competition 2025"
+    ],
+    "language": "Python",
+    "license": "MIT",
+    "publish_image": true,
+    "source_repo": "https://github.com/Aeacu2/RR-Benchmarks.git",
+    "source_commit": "6735ee973a0f2b0489a2b13fabe3455e90042728",
+    "source_tree": "2e897d2a1e34376ac8a883176ca00368e9518cb1",
+    "image": "satex-gen/roundrobin:2025",
+    "usage": "rr-gen rr TEAMS ROUNDS | rr-gen mv TEAMS ROUNDS VENUES",
+    "seed": "none, the encoding is deterministic",
+    "notes": "the submitted scripts keep their instance list at the top of the file; the entry point substitutes the single instance asked for and runs the encoder verbatim"
   }
 }
