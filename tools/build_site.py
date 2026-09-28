@@ -141,7 +141,7 @@ def gen_card(g: dict) -> str:
 <h3>{esc(g['name'])}</h3>
 <div class="meta">{esc(g.get('authors',''))} · {esc(g.get('year',''))}</div>
 <div class="tags"><span class="tag">{esc(g.get('language',''))}</span><span class="tag">{esc(g.get('license',''))}</span><span class="tag cap">{esc(pub)}</span></div>
-<div class="tags"><span class="badge {'ok' if exact == checked and checked else 'warn'}">{exact} of {checked} instances exact</span>{"".join(f'<span class="tag">{esc(f)}</span>' for f in g['families'][:3])}</div>
+<div class="tags">{f'<span class="badge ok">{exact} of {checked} instances exact</span>' if checked else '<span class="badge none">no competition instance to check against</span>' if not g['references'] else f'<span class="badge warn">{exact} of {checked} instances exact</span>'}{"".join(f'<span class="tag">{esc(f)}</span>' for f in g['families'][:3])}</div>
 </a>"""
 
 

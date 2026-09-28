@@ -66,6 +66,7 @@ repository move their generator from the second row to the first.
 | lockchart-to-cnf | `satex-gen/lockchart:2025` | 20 (5 checked) | 3 | 0 |
 | Oddball | `satex-gen/oddball:2025` | 40 | 40 | 0 |
 | Community Attachment | `satex-gen/commattach:2015` | 56 | 54 | 1 |
+| genxormiter | `satex-gen/genxormiter:2025` | none | — | — |
 
 - **sgen1**: 27 instances match their GBD hash. The GBD copy of
   `sgen1-sat-140-100` lacks one clause, (-25 -23), of the author's file; the
@@ -103,6 +104,12 @@ repository move their generator from the second row to the first.
   the real size, 2200 variables and 9086 clauses, comes from the instance
   headers rather than the names. One shuffled variant of 2015 matches up to a
   renaming. This repository declares no licence either.
+
+- **genxormiter**: a parametric generator with no competition instance to check
+  against, kept for the family it produces, miters of two random parity
+  circuits. Its seed parser assigns where it should accumulate, so only the last
+  digit of a multi-digit seed is used: seeds 2, 42, 12 and 102 all produce the
+  same formula. Use single-digit seeds until that is fixed upstream.
 
 ## Building and running
 
