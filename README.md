@@ -1,5 +1,7 @@
 # SAT Heritage generators (pilot)
 
+`sat-heritage/benchs-generators`
+
 Docker images of SAT benchmark **generators**, in the spirit of
 [SAT Heritage](https://github.com/sat-heritage/docker-images) for solvers: each
 generator is built from its archived sources in a pinned environment, and each
