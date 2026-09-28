@@ -1,0 +1,18 @@
+--- orig.c	2026-09-28 16:05:24
++++ genxormiter.c	2026-09-28 16:05:34
+@@ -167,12 +167,12 @@
+   while ((ch = *p++)) {
+     if (UINT64_MAX / 10 < seed)
+     SEED_TOO_LARGE:
+-      die("seed '%s' too large", seed);
+-    seed = 10;
++      die("seed '%s' too large", arg);
++    seed *= 10;
+     unsigned digit = ch - '0';
+     if (UINT64_MAX - digit < seed)
+       goto SEED_TOO_LARGE;
+-    seed = digit;
++    seed += digit;
+   }
+ }
+ 
