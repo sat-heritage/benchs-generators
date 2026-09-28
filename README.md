@@ -28,6 +28,12 @@ GBD metadata shipped with the SAT Competition 2026 benchmark compilation script.
 Note that `isohash2` is the column that matches that metadata; `isohash` has
 changed algorithm since.
 
+The MIT licence of this repository covers what is in it: the recipes, the
+metadata, the reference lists and the tools. It says nothing about the
+generators themselves, which stay under their own authors' terms and are never
+copied here: each recipe downloads its sources from the author's own
+repository at a pinned commit.
+
 ## Sources and licences
 
 Each recipe pins its source: the repository URL, the exact commit, and the git
