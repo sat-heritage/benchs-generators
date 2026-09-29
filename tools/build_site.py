@@ -39,6 +39,7 @@ def load(root: Path):
     gens = json.load(open(root / "generators.json"))
     rankings = json.load(open(root / "data" / "rankings.json"))
     fam_of = {h: tuple(v) for h, v in rankings["instance_family"].items()}
+    size_of = {h: n for h, n in rankings.get("instance_file", {}).items()}
     for key, g in gens.items():
         refs = json.load(open(root / "references" / f"{key}.json"))["references"] \
             if (root / "references" / f"{key}.json").exists() else []
@@ -51,6 +52,9 @@ def load(root: Path):
             r["level"] = got["level"] if got else None
             r["matched"] = (got or {}).get("matched")
             r["family"], r["family_author"] = fam_of.get(r["gbdhash"], ("unknown", ""))
+            r["size"] = size_of.get(r["gbdhash"])
+            for a in r.get("alternates", []):
+                a["size"] = size_of.get(a["gbdhash"])
         g["key"] = key
         g["references"] = refs
         g["checked"] = [r for r in refs if r["level"]]
@@ -101,6 +105,10 @@ th { color:var(--muted); font-weight:600; } td.num, th.num { text-align:right; f
 .rank1 td { font-weight:600; }
 .bar { display:block; height:8px; border-radius:4px; background:var(--hf); }
 .legend { color:var(--muted); font-size:13px; margin:-6px 0 14px; }
+a.dl { display:inline-flex; align-items:baseline; gap:5px; white-space:nowrap; }
+svg.dl { width:13px; height:13px; align-self:center; stroke:currentColor; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.sz { color:var(--muted); font-size:12px; font-variant-numeric:tabular-nums; }
+.nolink { color:var(--muted); }
 .toolbar { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:8px 0 18px; padding:12px 14px; background:var(--bg2); border:1px solid var(--line); border-radius:14px; }
 .toolbar input, .toolbar select { font:inherit; padding:8px 10px; border:1px solid var(--line); border-radius:999px; background:var(--card); color:var(--ink); }
 .count { color:var(--muted); margin-left:auto; font-size:14px; }
@@ -126,6 +134,27 @@ def page(title: str, body: str, depth: int, active: str = "") -> str:
 <main>{body}</main>
 <footer>Generated from the <a href="{REPO_URL}">sat-heritage/benchs-generators</a> repository · solver rankings computed from the detailed results published by the SAT competitions, joined with <a href="{GBD_URL}">GBD</a> · a project by {esc(AUTHORS)}, assembled with the help of an AI assistant: check every claim against the original competition material.</footer></body></html>
 """
+
+
+DOWNLOAD_ICON = ('<svg class="dl" viewBox="0 0 24 24" aria-hidden="true">'
+                 '<path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>')
+
+
+def human_size(n: int) -> str:
+    if n >= 1024 * 1024:
+        return f"{n / (1024 * 1024):.1f} MB"
+    if n >= 1024:
+        return f"{n / 1024:.0f} kB"
+    return f"{n} B"
+
+
+def gbd_link(h: str, size, label: str = "") -> str:
+    """Download link to the instance GBD serves, with its compressed size."""
+    if size is None:
+        return f'<span class="nolink" title="GBD does not serve this instance">{esc(h[:12])}…</span>'
+    title = f"download {label or 'this instance'} from GBD, {human_size(size)} compressed"
+    return (f'<a class="dl" href="{GBD_URL}/file/{esc(h)}" title="{esc(title)}">{DOWNLOAD_ICON}'
+            f'{esc(h[:12])}… <span class="sz">{human_size(size)}</span></a>')
 
 
 def level_badge(level: str) -> str:
@@ -186,7 +215,8 @@ def generator_page(g: dict, rankings: dict) -> str:
     meta = [("Authors", g.get("authors")), ("Source of the author list", g.get("authors_source")),
             ("Language", g.get("language")), ("Licence", g.get("license")),
             ("Competitions", ", ".join(g.get("competitions", [])) or "—"),
-            ("Repository", f'<a href="{esc(g.get("source_repo",""))}">{esc(g.get("source_repo",""))}</a>' if g.get("source_repo") else g.get("source_url", "—")),
+            ("Repository", (f'<a href="{esc(g["source_repo"])}">{esc(g["source_repo"])}</a>'
+                            if str(g.get("source_repo", "")).startswith("http") else esc(g.get("source_repo") or g.get("source_url") or "—"))),
             ("Pinned commit", g.get("source_commit")), ("Pinned git tree", g.get("source_tree")),
             ("Seed", g.get("seed")), ("Notes", g.get("notes")), ("Licence note", g.get("license_note"))]
     dl = "".join(f"<dt>{esc(k)}</dt><dd>{v if k in ('Repository',) else esc(v)}</dd>" for k, v in meta if v)
@@ -194,14 +224,15 @@ def generator_page(g: dict, rankings: dict) -> str:
     counts = defaultdict(int)
     for r in g["references"]:
         counts[r["level"] or "not checked"] += 1
-    summary = " · ".join(f"{n} {LEVEL_LABEL.get(lvl, lvl)}" for lvl, n in sorted(counts.items()))
+    summary = " · ".join(f"{n} with the {LEVEL_LABEL[lvl]}" if lvl in LEVEL_LABEL else f"{n} {lvl}"
+                         for lvl, n in sorted(counts.items()))
     rows = []
     for r in g["references"]:
         fam = r["family"]
         famlink = f'<a href="../families/{slug(fam)}.html">{esc(fam)}</a>' if fam != "unknown" else "—"
         rows.append(f"""<tr><td>{esc(r['instance'])}</td><td>{famlink}</td>
 <td><code>{esc(' '.join(r['args']))}</code></td>
-<td><a href="{GBD_URL}/file/{esc(r['gbdhash'])}" title="download this instance from GBD">{esc(r['gbdhash'][:12])}…</a></td>
+<td>{gbd_link(r['gbdhash'], r.get('size'))}{"".join('<br>' + gbd_link(a['gbdhash'], a.get('size'), a['provenance']) + f' <span class="tag">{esc(a["provenance"][:40])}…</span>' for a in r.get('alternates', []))}</td>
 <td>{level_badge(r['level'])}{(' <span class="tag">' + esc(r['matched']) + '</span>') if r.get('matched') else ''}</td></tr>""")
     notes = {r["note"] for r in g["references"] if r.get("note")}
     body = f"""<div class="crumbs"><a href="../index.html">Overview</a> · <a href="../generators.html">Generators</a></div>
@@ -209,7 +240,7 @@ def generator_page(g: dict, rankings: dict) -> str:
 <div class="section"><h2>What it is</h2><dl>{dl}</dl></div>
 <div class="section"><h2>Build it and run it</h2><pre>{esc(build)}</pre>
 <p class="legend">{"The image can be published: the licence allows it." if g.get('publish_image') else "The image is not published: the generator declares no licence, so only this recipe is distributed. Building it locally is fine."}</p></div>
-<div class="section"><h2>Reference instances</h2><p class="legend">{esc(summary)}. Each line regenerates one instance used by a competition; the level says how close the result is. See <a href="../verification.html">verification</a>.</p>
+<div class="section"><h2>Reference instances</h2><p class="legend">{esc(summary)}. Each line regenerates one known instance, from a competition or from the set its author published; the level says how close the result is. See <a href="../verification.html">verification</a>.</p>
 <div class="tablewrap"><table><tr><th>Instance</th><th>Family</th><th>Command arguments</th><th>GBD hash</th><th>Level</th></tr>{"".join(rows)}</table></div></div>
 {('<div class="section"><h2>Notes</h2><ul>' + "".join(f"<li>{esc(n)}</li>" for n in sorted(notes)) + "</ul></div>") if notes else ""}"""
     return page(g["name"], body, 1)

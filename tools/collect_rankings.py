@@ -13,6 +13,7 @@ from collections import defaultdict
 from pathlib import Path
 
 GBD_DB = "https://benchmark-database.de/getdatabase"
+GBD_FILE = "https://benchmark-database.de/file"
 SOURCES = {
     "2023": {"zip": "https://satcompetition.github.io/2023/downloads/sc2023-detailed-results.zip",
              "member": "results_main_detailed.csv", "meta": "bench_meta.csv", "timeout": 5000.0},
@@ -29,6 +30,16 @@ KEEP_SOLVERS = 12      # solvers kept per family in the data file
 def fetch(url: str) -> bytes:
     with urllib.request.urlopen(url, timeout=600) as r:
         return r.read()
+
+
+def gbd_file_size(h: str):
+    """Size in bytes of the compressed instance GBD serves, or None when it has none."""
+    req = urllib.request.Request(f"{GBD_FILE}/{h}", method="HEAD")
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return int(r.headers.get("content-length", 0)) or None
+    except Exception:
+        return None
 
 
 def gbd_families(cache: Path) -> dict:
@@ -128,12 +139,22 @@ def main(argv=None) -> int:
         doc["years"][year] = {"instances": len(data), "timeout": spec["timeout"], "families": rank(data, meta, spec["timeout"])}
         print(f"{year}: {len(data)} instances, {len(doc['years'][year]['families']) - 1} families kept", file=sys.stderr)
 
-    # the families of the instances our own generators reproduce
+    # the families of the instances our own generators reproduce, and the size of
+    # the file GBD serves for them: a hash GBD does not know has no download link
+    doc["instance_file"] = {}
+    wanted = []
     for ref in sorted(Path("references").glob("*.json")):
         for entry in json.load(open(ref))["references"]:
             fam = families.get(entry["gbdhash"])
             if fam:
                 doc["instance_family"][entry["gbdhash"]] = list(fam)
+            wanted.append(entry["gbdhash"])
+            wanted += [a["gbdhash"] for a in entry.get("alternates", [])]
+    for h in sorted(set(wanted)):
+        size = gbd_file_size(h)
+        if size is not None:
+            doc["instance_file"][h] = size
+    print(f"{len(doc['instance_file'])} of {len(set(wanted))} referenced instances are served by GBD", file=sys.stderr)
     Path(args.output).parent.mkdir(parents=True, exist_ok=True)
     json.dump(doc, open(args.output, "w"), indent=1, sort_keys=True)
     print(f"wrote {args.output}", file=sys.stderr)
