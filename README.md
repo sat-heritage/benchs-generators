@@ -155,8 +155,9 @@ Every image writes the CNF on standard output.
 
 Your generator belongs here if it writes CNF (or AIG, or SMT that a pinned tool
 turns into CNF) and takes parameters. It does not have to come from a
-competition, and it does not have to be beautiful: `sgen1` is one C file from
-2009, and it works.
+competition, and it does not have to be a beautiful well coded project. We know
+what is like to produce benchs in a rush. We have some generators that are just
+one big C file and it is fine. This is a start and people can benefit from it!
 
 **The short way.** Open an issue with a link to the code and one example command
 line. We do the rest and send you the page for checking.
