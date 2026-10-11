@@ -151,6 +151,124 @@ Every image writes the CNF on standard output.
   `random` module does not promise identical draws across versions; a fixed
   seed gives identical output from run to run.
 
+## Adding a generator
+
+Your generator belongs here if it writes CNF (or AIG, or SMT that a pinned tool
+turns into CNF) and takes parameters. It does not have to come from a
+competition, and it does not have to be beautiful: `sgen1` is one C file from
+2009, and it works.
+
+**The short way.** Open an issue with a link to the code and one example command
+line. We do the rest and send you the page for checking.
+
+**The whole thing, four files.** Say your generator is called `wombat`:
+
+    wombat/Dockerfile          how to build it
+    wombat/wombat-gen.sh       optional, when the tool needs a wrapper
+    generators.json            one entry describing it
+    references/wombat.json     optional, the instances it should reproduce
+
+**1. The recipe.** Copy an existing `Dockerfile`; they all follow the same
+shape. The first stage clones your repository at one commit and checks the git
+tree hash, which is git's own content digest, so the build fails if the files
+ever change under us:
+
+```dockerfile
+FROM debian:bookworm-slim AS fetch
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates git \
+    && rm -rf /var/lib/apt/lists/*
+ARG SOURCE_REPO=https://github.com/you/wombat.git
+ARG SOURCE_COMMIT=<the full commit sha>
+ARG SOURCE_TREE=<git rev-parse <commit>^{tree}>
+RUN git clone -q "$SOURCE_REPO" /src && cd /src && git checkout -q "$SOURCE_COMMIT" \
+    && test "$(git rev-parse HEAD^{tree})" = "$SOURCE_TREE" && rm -rf .git
+
+FROM debian:bookworm-slim AS build
+RUN apt-get update && apt-get install -y --no-install-recommends gcc libc6-dev make \
+    && rm -rf /var/lib/apt/lists/*
+COPY --from=fetch /src /src
+WORKDIR /src
+RUN make
+
+FROM debian:bookworm-slim
+COPY --from=build /src/wombat /usr/local/bin/
+WORKDIR /data
+ENTRYPOINT ["/usr/local/bin/wombat"]
+```
+
+**2. One rule for the interface:** the image writes the CNF on standard output
+and nothing else, so that `docker run --rm satex-gen/wombat:2026 40 7 > x.cnf`
+is all a user needs. If your tool writes to a file, or prints a report first,
+add a three-line wrapper like `cruxmiter/crux-gen.sh` and make it the entry
+point.
+
+**3. Pin whatever decides the output.** The compiler version, the interpreter
+version, every tool in the chain. Python's `random` does not promise the same
+draws across versions, and a C library's `rand` differs across platforms: pin
+the image, not just the sources. If your generator seeds itself from the clock,
+say so, and add an option for an explicit seed if you can.
+
+**4. Describe it** in `generators.json`:
+
+```json
+"wombat": {
+  "name": "Wombat", "authors": "Your Name", "authors_source": "your repository",
+  "year": 2026, "competitions": ["SAT Competition 2026"], "language": "C",
+  "license": "MIT", "publish_image": true,
+  "source_repo": "https://github.com/you/wombat.git",
+  "source_commit": "...", "source_tree": "...",
+  "image": "satex-gen/wombat:2026",
+  "usage": "wombat SIZE SEED",
+  "seed": "the second argument"
+}
+```
+
+`license` and `publish_image` are the two that matter to you: with a licence we
+build and publish the image, without one we publish only the recipe, and
+readers build it themselves. Adding a licence file to your repository is the
+single most useful thing you can do for us.
+
+**5. Reference instances, if you have any.** They are what turns a recipe into a
+checked one. List the instances your generator should reproduce, with the
+arguments that produce them and their GBD hash, in `references/wombat.json`:
+
+```json
+{"generator": "wombat",
+ "source": "where these hashes come from",
+ "references": [
+   {"instance": "wombat-40-7.cnf", "gbdhash": "…", "args": ["40", "7"],
+    "note": "parameters read from the file name"}
+ ]}
+```
+
+The hash is the GBD identifier, the MD5 of the normalised CNF. Compute it with
+the tool image of this repository:
+
+```sh
+docker build -t satex-gen/gbd:0.4.2 tools/gbd
+docker run --rm -v "$PWD:/data" satex-gen/gbd:0.4.2 wombat-40-7.cnf
+```
+
+If your instances are in the competitions, their hashes are already in
+[GBD](https://benchmark-database.de) and we can look them up from the file
+names. If they are not, send the files and we hash them, as was done for the
+230 CRUX miters.
+
+**6. Check it:**
+
+```sh
+docker build -t satex-gen/wombat:2026 wombat
+python3 tools/verify.py wombat
+```
+
+One line per instance, from `N1`, the same GBD hash, down to `--`. Anything
+below `N1` is worth reading rather than hiding: it usually means an archived
+copy was shuffled or a tool changed, which is exactly what this repository is
+for.
+
+Then open a pull request. The site rebuilds itself and your generator gets its
+page.
+
 ## Website
 
 `tools/build_site.py` writes a static site from the repository: an overview, one
