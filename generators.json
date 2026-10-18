@@ -15,7 +15,8 @@
     "usage": "sgen1 -n VARIABLES (-sat | -unsat) [-s SEED] [-m MODEL_FILE] [-min-variables] [-reorder]",
     "seed": "-s, default 1; the generator uses its own linear congruential generator",
     "notes": "main() always returns 1, even on success; the verifier ignores the exit status and checks the output instead",
-    "publish_image": false
+    "publish_image": false,
+    "kind": "generator"
   },
   "cnfgen": {
     "name": "CNFgen",
@@ -30,7 +31,8 @@
     "usage": "cnfgen FAMILY PARAMETERS...; cnfgen --help lists the families",
     "seed": "random families take a seed option; Python's random module does not promise identical draws across Python versions",
     "publish_image": true,
-    "license_note": "GPL-3.0: the image is publishable provided its sources travel with it, which the pinned PyPI release and the recorded version give"
+    "license_note": "GPL-3.0: the image is publishable provided its sources travel with it, which the pinned PyPI release and the recorded version give",
+    "kind": "generator"
   },
   "lockchart": {
     "name": "lockchart-to-cnf",
@@ -49,7 +51,8 @@
     "image": "satex-gen/lockchart:2025",
     "usage": "lockchart-gen -l LOCKS [-p POSITIONS] [-d DEPTHS] [-r DENSITY]",
     "seed": "none; with -r the lock-chart is randomised from the clock and cannot be reproduced",
-    "notes": "the script draws the lock-chart after writing the formula, which needs LaTeX and fails in the image; the formula is already complete at that point"
+    "notes": "the script draws the lock-chart after writing the formula, which needs LaTeX and fails in the image; the formula is already complete at that point",
+    "kind": "generator"
   },
   "oddball": {
     "name": "Oddball",
@@ -68,7 +71,8 @@
     "source_tree": "227f5e953c1cb858d91e8191e2fef9db71e97792",
     "image": "satex-gen/oddball:2025",
     "usage": "oddball-gen BALLS WEIGHINGS [--strategy NAME]",
-    "seed": "none; the formula is built through z3 and is deterministic"
+    "seed": "none; the formula is built through z3 and is deterministic",
+    "kind": "generator"
   },
   "commattach": {
     "name": "Community Attachment",
@@ -88,7 +92,8 @@
     "source_tree": "9f9623a8bb35245dc9a6d6c2b16c192457abb3e1",
     "image": "satex-gen/commattach:2015",
     "usage": "commAttach -n VARIABLES -m CLAUSES -k CLAUSE_LENGTH -c COMMUNITIES -Q MODULARITY -s SEED",
-    "seed": "-s, mandatory for reproducibility; the repository also builds a plain random k-CNF generator"
+    "seed": "-s, mandatory for reproducibility; the repository also builds a plain random k-CNF generator",
+    "kind": "generator"
   },
   "mdp": {
     "name": "mdp-benchmark",
@@ -106,7 +111,8 @@
     "source_tree": "61abbdd6b0cde3f001040e8f2e9a4e9ff3614977",
     "image": "satex-gen/mdp:2022",
     "usage": "mdp-gen -n BITS -t THRESHOLD -s SEED",
-    "seed": "-s; the repository ships src/generate.sh, the script that produced the submitted instances"
+    "seed": "-s; the repository ships src/generate.sh, the script that produced the submitted instances",
+    "kind": "generator"
   },
   "roundrobin": {
     "name": "Round-robin tournament scheduling",
@@ -125,7 +131,8 @@
     "image": "satex-gen/roundrobin:2025",
     "usage": "rr-gen rr TEAMS ROUNDS | rr-gen mv TEAMS ROUNDS VENUES",
     "seed": "none, the encoding is deterministic",
-    "notes": "the submitted scripts keep their instance list at the top of the file; the entry point substitutes the single instance asked for and runs the encoder verbatim"
+    "notes": "the submitted scripts keep their instance list at the top of the file; the entry point substitutes the single instance asked for and runs the encoder verbatim",
+    "kind": "generator"
   },
   "genxormiter": {
     "name": "genxormiter",
@@ -142,7 +149,8 @@
     "image": "satex-gen/genxormiter:2025",
     "usage": "genxormiter [-l | -s | -r | -v] INPUTS [SEED]",
     "seed": "the second positional argument; without it the generator seeds itself from the clock and the instance cannot be reproduced",
-    "notes": "the miter between two parity circuits over shared inputs: solvable by XOR reasoning, trivially with -s, and still solvable with -r; -l disables the randomisation of the variable order. Beware of the seed: in this version parse_seed assigns instead of accumulating, so only the last digit of a multi-digit seed is used, and 2, 42, 12 and 102 all give the same instance. Use single-digit seeds until it is fixed upstream."
+    "notes": "the miter between two parity circuits over shared inputs: solvable by XOR reasoning, trivially with -s, and still solvable with -r; -l disables the randomisation of the variable order. Beware of the seed: in this version parse_seed assigns instead of accumulating, so only the last digit of a multi-digit seed is used, and 2, 42, 12 and 102 all give the same instance. Use single-digit seeds until it is fixed upstream.",
+    "kind": "generator"
   },
   "cruxmiter": {
     "name": "CRUX miters",
@@ -160,6 +168,28 @@
     "image": "satex-gen/cruxmiter:2021",
     "usage": "crux-gen SIZE SEED",
     "seed": "the second argument; the generator seeds the C library random generator, so the same seed gives the same formula on the same C library",
-    "notes": "a miter between two trees of bit-vector adders over the same inputs, added in a random order on each side: hard for resolution, and used beyond the competitions, in work on distributed cube and conquer and on tuning for cubing. The chain needs Boolector with the normalisation of adders disabled and the aiger of May 2021: at its default rewriting level Boolector proves the miter away, and a later aigtocnf writes smaller, different formulas"
+    "notes": "a miter between two trees of bit-vector adders over the same inputs, added in a random order on each side: hard for resolution, and used beyond the competitions, in work on distributed cube and conquer and on tuning for cubing. The chain needs Boolector with the normalisation of adders disabled and the aiger of May 2021: at its default rewriting level Boolector proves the miter away, and a later aigtocnf writes smaller, different formulas",
+    "kind": "generator"
+  },
+  "aiger": {
+    "kind": "bridge",
+    "name": "AIGER bridge",
+    "authors": "Armin Biere",
+    "authors_source": "repository arminbiere/aiger",
+    "year": 2021,
+    "competitions": [
+      "SAT Competition 2011 and later, as unrolled model checking instances"
+    ],
+    "language": "C",
+    "license": "MIT",
+    "publish_image": true,
+    "source_repo": "https://github.com/arminbiere/aiger.git",
+    "source_commit": "5f8ce5ca5fc42a06e5d713309f99195a740ac2b4",
+    "source_tree": "7a9f000b9718b50d15bd9b7ab3cf7b889c50ddad",
+    "image": "satex-gen/aiger:2021",
+    "usage": "aiger-bridge unroll K MODEL.aig | aiger-bridge cnf MODEL.aig | aiger-bridge miter A.aig B.aig",
+    "upstream": "hwmcc10",
+    "seed": "none: a bridge encodes a given circuit, it invents nothing",
+    "notes": "a bridge rather than a generator: it encodes the circuits another competition distributes. The models are fetched into a local cache by tools/fetch_upstream.py and never kept here. The number of time frames is the parameter that makes the family scale. Open question: the 31 unrolled instances of the SAT competitions are not reproduced exactly. The model and the depth are right, and the circuit is identical in the 2010 and the 2011 AIGER distributions, but our Tseitin encoding of bobsm5378d2 at depth 45 has 82006 variables and 223815 clauses where the submitted file has 82007 and 241364. Neither aiger of 2011 nor of 2021, nor ABC's frames command, reproduces it: the encoder used in 2011 is still unidentified."
   }
 }

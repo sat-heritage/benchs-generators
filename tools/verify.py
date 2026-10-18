@@ -15,6 +15,9 @@ which keeps a run short when a family has very large instances.
 import json, lzma, os, subprocess, sys, tempfile, urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import fetch_upstream
+
 ROOT = Path(__file__).resolve().parent.parent
 GBD_IMAGE = "satex-gen/gbd:0.4.2"
 
@@ -74,9 +77,19 @@ def main(gen, only=None):
         names = []
         for i, r in enumerate(refs):
             name = f"out{i}.cnf"
+            # a bridge starts from an artefact another competition distributes: it is
+            # fetched into the local cache and mounted, never kept in this repository
+            mount, args = [], list(r["args"])
+            if "upstream" in r:
+                files = fetch_upstream.ensure(r["upstream"]["collection"])
+                member = next(files.rglob(r["upstream"]["file"]), None)
+                if member is None:
+                    sys.exit(f"{gen}: {r['upstream']['file']} is not in the {r['upstream']['collection']} collection")
+                mount = ["-v", f"{member.parent}:/data:ro"]
+                args = [a.replace("{file}", member.name) for a in args]
             with open(tmp / name, "w") as f:
                 # the exit status is not checked: sgen1, for one, always returns 1
-                subprocess.run(["docker", "run", "--rm", meta["image"], *r["args"]], stdout=f)
+                subprocess.run(["docker", "run", "--rm", *mount, meta["image"], *args], stdout=f)
             if not any(line.startswith("p cnf") for line in open(tmp / name)):
                 sys.exit(f"{gen}: no CNF produced for {r['instance']}")
             names.append(name)
@@ -103,7 +116,9 @@ def main(gen, only=None):
                     level = "N3"
                 elif (g["variables"], g["clauses"]) == (refcounts["variables"], refcounts["clauses"]):
                     level = "N4"
-            results.append({"instance": r["instance"], "args": r["args"], "expected": r["gbdhash"],
+            results.append({"instance": r["instance"], "args": r["args"],
+                            **({"upstream": r["upstream"]} if "upstream" in r else {}),
+                            "expected": r["gbdhash"],
                             "got": g["gbdhash"], "level": level or "--",
                             **({"matched": matched} if level == "N1" and matched != "GBD" else {})})
     (ROOT / "results").mkdir(exist_ok=True)

@@ -1,0 +1,15 @@
+{
+  "collection": "hwmcc10",
+  "name": "Hardware Model Checking Competition 2010 benchmarks",
+  "organizers": "Armin Biere, Keijo Heljanko, Toni Jussila, Barbara Jobstmann and the HWMCC organisers",
+  "homepage": "https://fmv.jku.at/hwmcc10/benchmarks.html",
+  "archive": {
+    "url": "http://fmv.jku.at/hwmcc/hwmcc10-except-intel-aiger1.7z",
+    "format": "7z",
+    "bytes": 3491044,
+    "sha256": null
+  },
+  "terms": "distributed by the competition; the Intel models are excluded from this archive for licence reasons",
+  "redistribute": false,
+  "note": "818 models in AIGER 1.7 format. This repository keeps the manifest and the checksums, never the models: tools/fetch_upstream.py downloads the archive into a local cache."
+}

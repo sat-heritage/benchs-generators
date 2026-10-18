@@ -270,6 +270,46 @@ for.
 Then open a pull request. The site rebuilds itself and your generator gets its
 page.
 
+## Bridges
+
+A generator makes an instance out of parameters. A **bridge** starts from an
+artefact that another competition distributes, a circuit of the Hardware Model
+Checking Competition for instance, and encodes it into CNF with a pinned
+toolchain. Hundreds of SAT competition instances come from such artefacts, and
+the parameter of the encoding, the number of time frames of an unrolling, is
+what lets the family scale.
+
+We do not redistribute the benchmarks of another competition. `upstream/` keeps
+one manifest per collection: where the archive lives, its checksum, its terms,
+and the checksum of every member. `tools/fetch_upstream.py` downloads it into a
+cache outside the repository:
+
+```sh
+tools/fetch_upstream.py hwmcc10            # into ~/.cache/satex-benchs by default
+tools/fetch_upstream.py hwmcc10 --record   # write the checksums back into the manifest
+docker run --rm -v "$CACHE/hwmcc10/files:/data:ro" satex-gen/aiger:2021 unroll 45 bobsm5378d2.aig > x.cnf
+```
+
+A reference instance of a bridge names the upstream file it starts from, and
+the verifier fetches and mounts it:
+
+```json
+{"instance": "hwmcc10-timeframe-expansion-k45-bobsm5378d2-tseitin.cnf",
+ "gbdhash": "f7d34470d887c8fd66afeb28ba2911d3",
+ "upstream": {"collection": "hwmcc10", "file": "bobsm5378d2.aig"},
+ "args": ["unroll", "45", "{file}"]}
+```
+
+**The first bridge, and an open question.** `bridges/aiger` builds the AIGER
+toolbox and unrolls the HWMCC 2010 models. It produces the right family at any
+depth, but it does not reproduce the 31 unrolled instances the SAT competitions
+used. The model is identical in the 2010 and 2011 AIGER distributions and the
+depth is right, yet for `bobsm5378d2` at depth 45 our encoding has 82006
+variables and 223815 clauses where the submitted file has 82007 and 241364.
+Neither the 2011 nor the 2021 `aigtocnf`, nor ABC's `frames` command,
+reproduces it. If you know which tool did the timeframe expansion for those
+submissions, please tell us.
+
 ## Website
 
 `tools/build_site.py` writes a static site from the repository: an overview, one

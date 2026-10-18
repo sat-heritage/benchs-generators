@@ -35,7 +35,13 @@ def slug(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", str(name).lower()).strip("-") or "unnamed"
 
 
+UPSTREAM = {}
+
+
 def load(root: Path):
+    for path in sorted((root / "upstream").glob("*.json")) if (root / "upstream").exists() else []:
+        m = json.load(open(path))
+        UPSTREAM[m["collection"]] = m
     gens = json.load(open(root / "generators.json"))
     rankings = json.load(open(root / "data" / "rankings.json"))
     fam_of = {h: tuple(v) for h, v in rankings["instance_family"].items()}
@@ -166,10 +172,11 @@ def level_badge(level: str) -> str:
 def gen_card(g: dict) -> str:
     exact, checked = len(g["exact"]), len(g["checked"])
     pub = "image published" if g.get("publish_image") else "recipe only, licence unknown"
+    kind = '<span class="tag cap">bridge</span>' if g.get("kind") == "bridge" else ""
     return f"""<a class="card" href="generators/{esc(g['key'])}.html">
 <h3>{esc(g['name'])}</h3>
 <div class="meta">{esc(g.get('authors',''))} · {esc(g.get('year',''))}</div>
-<div class="tags"><span class="tag">{esc(g.get('language',''))}</span><span class="tag">{esc(g.get('license',''))}</span><span class="tag cap">{esc(pub)}</span></div>
+<div class="tags">{kind}<span class="tag">{esc(g.get('language',''))}</span><span class="tag">{esc(g.get('license',''))}</span><span class="tag cap">{esc(pub)}</span></div>
 <div class="tags">{f'<span class="badge ok">{exact} of {checked} instances exact</span>' if checked else '<span class="badge none">no competition instance to check against</span>' if not g['references'] else f'<span class="badge warn">{exact} of {checked} instances exact</span>'}{"".join(f'<span class="tag">{esc(f)}</span>' for f in g['families'][:3])}</div>
 </a>"""
 
@@ -190,8 +197,11 @@ def overview_page(gens: dict, rankings: dict) -> str:
 <div class="stat"><div class="n">{published}</div><div class="l">images publishable, the others lack a licence</div></div>
 <div class="stat"><div class="n">{len(covered)}</div><div class="l">competition families with a generator here</div></div>
 <div class="stat"><div class="n">{sum(1 for g in gens.values() if not g.get("competitions"))}</div><div class="l">generators whose families never went to a competition</div></div>
+<div class="stat"><div class="n">{sum(1 for g in gens.values() if g.get("kind") == "bridge")}</div><div class="l">bridges: they encode what another competition distributes</div></div>
 </div>
 <h2>Generators</h2><div class="grid">{"".join(gen_card(g) for g in sorted(gens.values(), key=lambda g: g['name'].lower()))}</div>
+<div class="section"><h2>Generators and bridges</h2>
+<p>A generator makes an instance out of parameters alone. A bridge starts from an artefact another competition distributes, a circuit of the hardware model checking competition for instance, and encodes it into CNF with a pinned toolchain. We keep the manifest of each upstream collection, with its checksums and its terms, and fetch the files into a local cache: the benchmarks of another competition are never redistributed here.</p></div>
 <div class="section"><h2>Where the rankings come from</h2>
 <p>For the years whose detailed results are published, every solver's runtime on every instance is known, keyed by the same GBD hash we use. That gives, for each benchmark family, the ranking the solvers would have had on that family alone, which is regularly not the overall ranking. See the <a href="families.html">families</a>.</p>
 <p class="legend">Years covered: {", ".join(sorted(rankings["years"]))} · {len(all_fams)} families with at least eight instances · measure: {esc(rankings["measure"])}.</p></div>"""
@@ -218,8 +228,11 @@ def generator_page(g: dict, rankings: dict) -> str:
             ("Repository", (f'<a href="{esc(g["source_repo"])}">{esc(g["source_repo"])}</a>'
                             if str(g.get("source_repo", "")).startswith("http") else esc(g.get("source_repo") or g.get("source_url") or "—"))),
             ("Pinned commit", g.get("source_commit")), ("Pinned git tree", g.get("source_tree")),
-            ("Seed", g.get("seed")), ("Notes", g.get("notes")), ("Licence note", g.get("license_note"))]
-    dl = "".join(f"<dt>{esc(k)}</dt><dd>{v if k in ('Repository',) else esc(v)}</dd>" for k, v in meta if v)
+            ("Seed", g.get("seed")),
+            ("Upstream collection", (f'{esc(up["name"])} — {esc(up["terms"])}'
+                                     if (up := UPSTREAM.get(g.get("upstream"))) else None)),
+            ("Notes", g.get("notes")), ("Licence note", g.get("license_note"))]
+    dl = "".join(f"<dt>{esc(k)}</dt><dd>{v if k in ('Repository', 'Upstream collection') else esc(v)}</dd>" for k, v in meta if v)
     build = f"docker build -t {g['image']} {g['key']}\n{'docker run --rm ' + g['image'] + ' ...  > instance.cnf'}"
     counts = defaultdict(int)
     for r in g["references"]:
