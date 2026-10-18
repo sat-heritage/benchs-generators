@@ -1,0 +1,470 @@
+{
+ "sgen1": [
+  {
+   "label": "unsat, 61 variables",
+   "args": [
+    "-unsat",
+    "-n",
+    "61",
+    "-s",
+    "1"
+   ],
+   "variables": 61,
+   "clauses": 132,
+   "reproducible": true
+  },
+  {
+   "label": "unsat, 121 variables",
+   "args": [
+    "-unsat",
+    "-n",
+    "121",
+    "-s",
+    "1"
+   ],
+   "variables": 121,
+   "clauses": 252,
+   "reproducible": true
+  },
+  {
+   "label": "unsat, 181 variables",
+   "args": [
+    "-unsat",
+    "-n",
+    "181",
+    "-s",
+    "1"
+   ],
+   "variables": 181,
+   "clauses": 372,
+   "reproducible": true
+  },
+  {
+   "label": "sat, 100 variables",
+   "args": [
+    "-sat",
+    "-n",
+    "100",
+    "-s",
+    "1"
+   ],
+   "variables": 100,
+   "clauses": 240,
+   "reproducible": true
+  },
+  {
+   "label": "sat, 200 variables",
+   "args": [
+    "-sat",
+    "-n",
+    "200",
+    "-s",
+    "1"
+   ],
+   "variables": 200,
+   "clauses": 480,
+   "reproducible": true
+  },
+  {
+   "label": "sat, 300 variables",
+   "args": [
+    "-sat",
+    "-n",
+    "300",
+    "-s",
+    "1"
+   ],
+   "variables": 300,
+   "clauses": 720,
+   "reproducible": true
+  }
+ ],
+ "cnfgen": [
+  {
+   "label": "pigeonhole 10 on 9",
+   "args": [
+    "-S",
+    "1",
+    "php",
+    "10",
+    "9"
+   ],
+   "variables": 90,
+   "clauses": 415,
+   "reproducible": true
+  },
+  {
+   "label": "pigeonhole 14 on 13",
+   "args": [
+    "-S",
+    "1",
+    "php",
+    "14",
+    "13"
+   ],
+   "variables": 182,
+   "clauses": 1197,
+   "reproducible": true
+  },
+  {
+   "label": "pigeonhole 18 on 17",
+   "args": [
+    "-S",
+    "1",
+    "php",
+    "18",
+    "17"
+   ],
+   "variables": 306,
+   "clauses": 2619,
+   "reproducible": true
+  },
+  {
+   "label": "Tseitin, 4-regular, 40 vertices",
+   "args": [
+    "-S",
+    "1",
+    "tseitin",
+    "40",
+    "4"
+   ],
+   "variables": 80,
+   "clauses": 320,
+   "reproducible": true
+  },
+  {
+   "label": "Tseitin, 4-regular, 80 vertices",
+   "args": [
+    "-S",
+    "1",
+    "tseitin",
+    "80",
+    "4"
+   ],
+   "variables": 160,
+   "clauses": 640,
+   "reproducible": true
+  }
+ ],
+ "lockchart": [
+  {
+   "label": "11 locks, 4 positions, 3 depths",
+   "args": [
+    "-l",
+    "11",
+    "-p",
+    "4",
+    "-d",
+    "3"
+   ],
+   "variables": 3432,
+   "clauses": 6248,
+   "reproducible": true
+  },
+  {
+   "label": "15 locks, 4 positions, 3 depths",
+   "args": [
+    "-l",
+    "15",
+    "-p",
+    "4",
+    "-d",
+    "3"
+   ],
+   "variables": 5736,
+   "clauses": 10718,
+   "reproducible": true
+  },
+  {
+   "label": "20 locks, 4 positions, 3 depths",
+   "args": [
+    "-l",
+    "20",
+    "-p",
+    "4",
+    "-d",
+    "3"
+   ],
+   "variables": 9300,
+   "clauses": 17732,
+   "reproducible": true
+  }
+ ],
+ "commattach": [
+  {
+   "label": "1000 variables, modularity 0.8",
+   "args": [
+    "-n",
+    "1000",
+    "-m",
+    "4300",
+    "-k",
+    "3",
+    "-c",
+    "40",
+    "-Q",
+    "0.8",
+    "-s",
+    "1"
+   ],
+   "variables": 1000,
+   "clauses": 4300,
+   "reproducible": true
+  },
+  {
+   "label": "2200 variables, modularity 0.8",
+   "args": [
+    "-n",
+    "2200",
+    "-m",
+    "9460",
+    "-k",
+    "3",
+    "-c",
+    "40",
+    "-Q",
+    "0.8",
+    "-s",
+    "1"
+   ],
+   "variables": 2200,
+   "clauses": 9460,
+   "reproducible": true
+  },
+  {
+   "label": "4000 variables, modularity 0.8",
+   "args": [
+    "-n",
+    "4000",
+    "-m",
+    "17200",
+    "-k",
+    "3",
+    "-c",
+    "40",
+    "-Q",
+    "0.8",
+    "-s",
+    "1"
+   ],
+   "variables": 4000,
+   "clauses": 17200,
+   "reproducible": true
+  }
+ ],
+ "mdp": [
+  {
+   "label": "28 bits, satisfiable",
+   "args": [
+    "-n",
+    "28",
+    "-t",
+    "7",
+    "-s",
+    "1"
+   ],
+   "variables": 803,
+   "clauses": 4478,
+   "reproducible": true
+  },
+  {
+   "label": "36 bits, satisfiable",
+   "args": [
+    "-n",
+    "36",
+    "-t",
+    "9",
+    "-s",
+    "1"
+   ],
+   "variables": 1297,
+   "clauses": 7362,
+   "reproducible": true
+  },
+  {
+   "label": "44 bits, satisfiable",
+   "args": [
+    "-n",
+    "44",
+    "-t",
+    "11",
+    "-s",
+    "1"
+   ],
+   "variables": 1918,
+   "clauses": 11046,
+   "reproducible": true
+  }
+ ],
+ "roundrobin": [
+  {
+   "label": "15 teams, 13 rounds",
+   "args": [
+    "rr",
+    "15",
+    "13"
+   ],
+   "variables": 1365,
+   "clauses": 26040,
+   "reproducible": true
+  },
+  {
+   "label": "18 teams, 16 rounds",
+   "args": [
+    "rr",
+    "18",
+    "16"
+   ],
+   "variables": 2448,
+   "clauses": 57681,
+   "reproducible": true
+  },
+  {
+   "label": "21 teams, 19 rounds",
+   "args": [
+    "rr",
+    "21",
+    "19"
+   ],
+   "variables": 3990,
+   "clauses": 111930,
+   "reproducible": true
+  }
+ ],
+ "genxormiter": [
+  {
+   "label": "20 shared inputs",
+   "args": [
+    "20",
+    "7"
+   ],
+   "variables": 58,
+   "clauses": 154,
+   "reproducible": true
+  },
+  {
+   "label": "40 shared inputs",
+   "args": [
+    "40",
+    "7"
+   ],
+   "variables": 118,
+   "clauses": 314,
+   "reproducible": true
+  },
+  {
+   "label": "80 shared inputs",
+   "args": [
+    "80",
+    "7"
+   ],
+   "variables": 238,
+   "clauses": 634,
+   "reproducible": true
+  }
+ ],
+ "cruxmiter": [
+  {
+   "label": "12 input bits",
+   "args": [
+    "12",
+    "1"
+   ],
+   "variables": 176,
+   "clauses": 471,
+   "reproducible": true
+  },
+  {
+   "label": "20 input bits",
+   "args": [
+    "20",
+    "1"
+   ],
+   "variables": 345,
+   "clauses": 948,
+   "reproducible": true
+  },
+  {
+   "label": "28 input bits",
+   "args": [
+    "28",
+    "1"
+   ],
+   "variables": 480,
+   "clauses": 1329,
+   "reproducible": true
+  },
+  {
+   "label": "32 input bits",
+   "args": [
+    "32",
+    "1"
+   ],
+   "variables": 591,
+   "clauses": 1644,
+   "reproducible": true
+  }
+ ],
+ "aiger": [
+  {
+   "label": "bobsm5378d2 unrolled over 10 time frames",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "bobsm5378d2.aig"
+   },
+   "variables": 12848,
+   "clauses": 35428,
+   "reproducible": true
+  },
+  {
+   "label": "bobsm5378d2 unrolled over 25 time frames",
+   "args": [
+    "unroll",
+    "25",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "bobsm5378d2.aig"
+   },
+   "variables": 41227,
+   "clauses": 113038,
+   "reproducible": true
+  },
+  {
+   "label": "bobsm5378d2 unrolled over 45 time frames",
+   "args": [
+    "unroll",
+    "45",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "bobsm5378d2.aig"
+   },
+   "variables": 82006,
+   "clauses": 223815,
+   "reproducible": true
+  },
+  {
+   "label": "bobsm5378d2 unrolled over 70 time frames",
+   "args": [
+    "unroll",
+    "70",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "bobsm5378d2.aig"
+   },
+   "variables": 132981,
+   "clauses": 362290,
+   "reproducible": true
+  }
+ ]
+}

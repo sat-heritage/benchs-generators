@@ -16,7 +16,69 @@
     "seed": "-s, default 1; the generator uses its own linear congruential generator",
     "notes": "main() always returns 1, even on success; the verifier ignores the exit status and checks the output instead",
     "publish_image": false,
-    "kind": "generator"
+    "kind": "generator",
+    "samples": [
+      {
+        "args": [
+          "-unsat",
+          "-n",
+          "61",
+          "-s",
+          "1"
+        ],
+        "label": "unsat, 61 variables"
+      },
+      {
+        "args": [
+          "-unsat",
+          "-n",
+          "121",
+          "-s",
+          "1"
+        ],
+        "label": "unsat, 121 variables"
+      },
+      {
+        "args": [
+          "-unsat",
+          "-n",
+          "181",
+          "-s",
+          "1"
+        ],
+        "label": "unsat, 181 variables"
+      },
+      {
+        "args": [
+          "-sat",
+          "-n",
+          "100",
+          "-s",
+          "1"
+        ],
+        "label": "sat, 100 variables"
+      },
+      {
+        "args": [
+          "-sat",
+          "-n",
+          "200",
+          "-s",
+          "1"
+        ],
+        "label": "sat, 200 variables"
+      },
+      {
+        "args": [
+          "-sat",
+          "-n",
+          "300",
+          "-s",
+          "1"
+        ],
+        "label": "sat, 300 variables"
+      }
+    ]
   },
   "cnfgen": {
     "name": "CNFgen",
@@ -32,7 +94,59 @@
     "seed": "random families take a seed option; Python's random module does not promise identical draws across Python versions",
     "publish_image": true,
     "license_note": "GPL-3.0: the image is publishable provided its sources travel with it, which the pinned PyPI release and the recorded version give",
-    "kind": "generator"
+    "kind": "generator",
+    "samples": [
+      {
+        "args": [
+          "-S",
+          "1",
+          "php",
+          "10",
+          "9"
+        ],
+        "label": "pigeonhole 10 on 9"
+      },
+      {
+        "args": [
+          "-S",
+          "1",
+          "php",
+          "14",
+          "13"
+        ],
+        "label": "pigeonhole 14 on 13"
+      },
+      {
+        "args": [
+          "-S",
+          "1",
+          "php",
+          "18",
+          "17"
+        ],
+        "label": "pigeonhole 18 on 17"
+      },
+      {
+        "args": [
+          "-S",
+          "1",
+          "tseitin",
+          "40",
+          "4"
+        ],
+        "label": "Tseitin, 4-regular, 40 vertices"
+      },
+      {
+        "args": [
+          "-S",
+          "1",
+          "tseitin",
+          "80",
+          "4"
+        ],
+        "label": "Tseitin, 4-regular, 80 vertices"
+      }
+    ]
   },
   "lockchart": {
     "name": "lockchart-to-cnf",
@@ -52,7 +166,42 @@
     "usage": "lockchart-gen -l LOCKS [-p POSITIONS] [-d DEPTHS] [-r DENSITY]",
     "seed": "none; with -r the lock-chart is randomised from the clock and cannot be reproduced",
     "notes": "the script draws the lock-chart after writing the formula, which needs LaTeX and fails in the image; the formula is already complete at that point",
-    "kind": "generator"
+    "kind": "generator",
+    "samples": [
+      {
+        "args": [
+          "-l",
+          "11",
+          "-p",
+          "4",
+          "-d",
+          "3"
+        ],
+        "label": "11 locks, 4 positions, 3 depths"
+      },
+      {
+        "args": [
+          "-l",
+          "15",
+          "-p",
+          "4",
+          "-d",
+          "3"
+        ],
+        "label": "15 locks, 4 positions, 3 depths"
+      },
+      {
+        "args": [
+          "-l",
+          "20",
+          "-p",
+          "4",
+          "-d",
+          "3"
+        ],
+        "label": "20 locks, 4 positions, 3 depths"
+      }
+    ]
   },
   "oddball": {
     "name": "Oddball",
@@ -93,7 +242,60 @@
     "image": "satex-gen/commattach:2015",
     "usage": "commAttach -n VARIABLES -m CLAUSES -k CLAUSE_LENGTH -c COMMUNITIES -Q MODULARITY -s SEED",
     "seed": "-s, mandatory for reproducibility; the repository also builds a plain random k-CNF generator",
-    "kind": "generator"
+    "kind": "generator",
+    "samples": [
+      {
+        "args": [
+          "-n",
+          "1000",
+          "-m",
+          "4300",
+          "-k",
+          "3",
+          "-c",
+          "40",
+          "-Q",
+          "0.8",
+          "-s",
+          "1"
+        ],
+        "label": "1000 variables, modularity 0.8"
+      },
+      {
+        "args": [
+          "-n",
+          "2200",
+          "-m",
+          "9460",
+          "-k",
+          "3",
+          "-c",
+          "40",
+          "-Q",
+          "0.8",
+          "-s",
+          "1"
+        ],
+        "label": "2200 variables, modularity 0.8"
+      },
+      {
+        "args": [
+          "-n",
+          "4000",
+          "-m",
+          "17200",
+          "-k",
+          "3",
+          "-c",
+          "40",
+          "-Q",
+          "0.8",
+          "-s",
+          "1"
+        ],
+        "label": "4000 variables, modularity 0.8"
+      }
+    ]
   },
   "mdp": {
     "name": "mdp-benchmark",
@@ -112,7 +314,42 @@
     "image": "satex-gen/mdp:2022",
     "usage": "mdp-gen -n BITS -t THRESHOLD -s SEED",
     "seed": "-s; the repository ships src/generate.sh, the script that produced the submitted instances",
-    "kind": "generator"
+    "kind": "generator",
+    "samples": [
+      {
+        "args": [
+          "-n",
+          "28",
+          "-t",
+          "7",
+          "-s",
+          "1"
+        ],
+        "label": "28 bits, satisfiable"
+      },
+      {
+        "args": [
+          "-n",
+          "36",
+          "-t",
+          "9",
+          "-s",
+          "1"
+        ],
+        "label": "36 bits, satisfiable"
+      },
+      {
+        "args": [
+          "-n",
+          "44",
+          "-t",
+          "11",
+          "-s",
+          "1"
+        ],
+        "label": "44 bits, satisfiable"
+      }
+    ]
   },
   "roundrobin": {
     "name": "Round-robin tournament scheduling",
@@ -132,7 +369,33 @@
     "usage": "rr-gen rr TEAMS ROUNDS | rr-gen mv TEAMS ROUNDS VENUES",
     "seed": "none, the encoding is deterministic",
     "notes": "the submitted scripts keep their instance list at the top of the file; the entry point substitutes the single instance asked for and runs the encoder verbatim",
-    "kind": "generator"
+    "kind": "generator",
+    "samples": [
+      {
+        "args": [
+          "rr",
+          "15",
+          "13"
+        ],
+        "label": "15 teams, 13 rounds"
+      },
+      {
+        "args": [
+          "rr",
+          "18",
+          "16"
+        ],
+        "label": "18 teams, 16 rounds"
+      },
+      {
+        "args": [
+          "rr",
+          "21",
+          "19"
+        ],
+        "label": "21 teams, 19 rounds"
+      }
+    ]
   },
   "genxormiter": {
     "name": "genxormiter",
@@ -150,7 +413,30 @@
     "usage": "genxormiter [-l | -s | -r | -v] INPUTS [SEED]",
     "seed": "the second positional argument; without it the generator seeds itself from the clock and the instance cannot be reproduced",
     "notes": "the miter between two parity circuits over shared inputs: solvable by XOR reasoning, trivially with -s, and still solvable with -r; -l disables the randomisation of the variable order. Beware of the seed: in this version parse_seed assigns instead of accumulating, so only the last digit of a multi-digit seed is used, and 2, 42, 12 and 102 all give the same instance. Use single-digit seeds until it is fixed upstream.",
-    "kind": "generator"
+    "kind": "generator",
+    "samples": [
+      {
+        "args": [
+          "20",
+          "7"
+        ],
+        "label": "20 shared inputs"
+      },
+      {
+        "args": [
+          "40",
+          "7"
+        ],
+        "label": "40 shared inputs"
+      },
+      {
+        "args": [
+          "80",
+          "7"
+        ],
+        "label": "80 shared inputs"
+      }
+    ]
   },
   "cruxmiter": {
     "name": "CRUX miters",
@@ -169,7 +455,37 @@
     "usage": "crux-gen SIZE SEED",
     "seed": "the second argument; the generator seeds the C library random generator, so the same seed gives the same formula on the same C library",
     "notes": "a miter between two trees of bit-vector adders over the same inputs, added in a random order on each side: hard for resolution, and used beyond the competitions, in work on distributed cube and conquer and on tuning for cubing. The chain needs Boolector with the normalisation of adders disabled and the aiger of May 2021: at its default rewriting level Boolector proves the miter away, and a later aigtocnf writes smaller, different formulas",
-    "kind": "generator"
+    "kind": "generator",
+    "samples": [
+      {
+        "args": [
+          "12",
+          "1"
+        ],
+        "label": "12 input bits"
+      },
+      {
+        "args": [
+          "20",
+          "1"
+        ],
+        "label": "20 input bits"
+      },
+      {
+        "args": [
+          "28",
+          "1"
+        ],
+        "label": "28 input bits"
+      },
+      {
+        "args": [
+          "32",
+          "1"
+        ],
+        "label": "32 input bits"
+      }
+    ]
   },
   "aiger": {
     "kind": "bridge",
@@ -190,6 +506,56 @@
     "usage": "aiger-bridge unroll K MODEL.aig | aiger-bridge cnf MODEL.aig | aiger-bridge miter A.aig B.aig",
     "upstream": "hwmcc10",
     "seed": "none: a bridge encodes a given circuit, it invents nothing",
-    "notes": "a bridge rather than a generator: it encodes the circuits another competition distributes. The models are fetched into a local cache by tools/fetch_upstream.py and never kept here. The number of time frames is the parameter that makes the family scale. Open question: the 31 unrolled instances of the SAT competitions are not reproduced exactly. The model and the depth are right, and the circuit is identical in the 2010 and the 2011 AIGER distributions, but our Tseitin encoding of bobsm5378d2 at depth 45 has 82006 variables and 223815 clauses where the submitted file has 82007 and 241364. Neither aiger of 2011 nor of 2021, nor ABC's frames command, reproduces it: the encoder used in 2011 is still unidentified."
+    "notes": "a bridge rather than a generator: it encodes the circuits another competition distributes. The models are fetched into a local cache by tools/fetch_upstream.py and never kept here. The number of time frames is the parameter that makes the family scale. Open question: the 31 unrolled instances of the SAT competitions are not reproduced exactly. The model and the depth are right, and the circuit is identical in the 2010 and the 2011 AIGER distributions, but our Tseitin encoding of bobsm5378d2 at depth 45 has 82006 variables and 223815 clauses where the submitted file has 82007 and 241364. Neither aiger of 2011 nor of 2021, nor ABC's frames command, reproduces it: the encoder used in 2011 is still unidentified.",
+    "samples": [
+      {
+        "args": [
+          "unroll",
+          "10",
+          "{file}"
+        ],
+        "upstream": {
+          "collection": "hwmcc10",
+          "file": "bobsm5378d2.aig"
+        },
+        "label": "bobsm5378d2 unrolled over 10 time frames"
+      },
+      {
+        "args": [
+          "unroll",
+          "25",
+          "{file}"
+        ],
+        "upstream": {
+          "collection": "hwmcc10",
+          "file": "bobsm5378d2.aig"
+        },
+        "label": "bobsm5378d2 unrolled over 25 time frames"
+      },
+      {
+        "args": [
+          "unroll",
+          "45",
+          "{file}"
+        ],
+        "upstream": {
+          "collection": "hwmcc10",
+          "file": "bobsm5378d2.aig"
+        },
+        "label": "bobsm5378d2 unrolled over 45 time frames"
+      },
+      {
+        "args": [
+          "unroll",
+          "70",
+          "{file}"
+        ],
+        "upstream": {
+          "collection": "hwmcc10",
+          "file": "bobsm5378d2.aig"
+        },
+        "label": "bobsm5378d2 unrolled over 70 time frames"
+      }
+    ]
   }
 }

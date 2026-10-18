@@ -36,9 +36,12 @@ def slug(name: str) -> str:
 
 
 UPSTREAM = {}
+SAMPLES = {}
 
 
 def load(root: Path):
+    if (root / "data" / "samples.json").exists():
+        SAMPLES.update(json.load(open(root / "data" / "samples.json")))
     for path in sorted((root / "upstream").glob("*.json")) if (root / "upstream").exists() else []:
         m = json.load(open(path))
         UPSTREAM[m["collection"]] = m
@@ -200,6 +203,11 @@ def overview_page(gens: dict, rankings: dict) -> str:
 <div class="stat"><div class="n">{sum(1 for g in gens.values() if g.get("kind") == "bridge")}</div><div class="l">bridges: they encode what another competition distributes</div></div>
 </div>
 <h2>Generators</h2><div class="grid">{"".join(gen_card(g) for g in sorted(gens.values(), key=lambda g: g['name'].lower()))}</div>
+<div class="section"><h2>Instances nobody submitted</h2>
+<p>Reproducing what a competition used is one half of the work; making new instances is the other. Every
+generator page carries sample runs across its parameters, with the size of the formula each one produces, so
+that a family can be taken further than the dozen instances a competition happened to keep. Those instances
+are in no database, ours included: they are made on demand.</p></div>
 <div class="section"><h2>Generators and bridges</h2>
 <p>A generator makes an instance out of parameters alone. A bridge starts from an artefact another competition distributes, a circuit of the hardware model checking competition for instance, and encodes it into CNF with a pinned toolchain. We keep the manifest of each upstream collection, with its checksums and its terms, and fetch the files into a local cache: the benchmarks of another competition are never redistributed here.</p></div>
 <div class="section"><h2>Where the rankings come from</h2>
@@ -219,6 +227,25 @@ def generators_page(gens: dict) -> str:
     body = f"""<div class="hero"><h1>Generators</h1><p>One image per generator, built from the author's own sources at a pinned commit.</p></div>
 <div class="section tablewrap"><table><tr><th>Generator</th><th>Authors</th><th>Year</th><th>Language</th><th>Licence</th><th>Image published</th><th class="num">Exact / checked</th><th>Families</th></tr>{"".join(rows)}</table></div>"""
     return page("Generators", body, 0, "generators")
+
+
+def samples_section(g: dict) -> str:
+    """What this generator can produce, which is not limited to the instances a competition kept."""
+    rows = SAMPLES.get(g["key"])
+    if not rows:
+        return ""
+    worst = max(r["clauses"] for r in rows) or 1
+    body = "".join(
+        f"""<tr><td>{esc(r['label'])}</td><td><code>{esc(' '.join(r['args']))}</code></td>
+<td class="num">{r['variables']:,}</td><td class="num">{r['clauses']:,}</td>
+<td><span class="bar" style="width:{100 * r['clauses'] / worst:.0f}%"></span></td>
+<td>{'' if r['reproducible'] else '<span class="badge warn">not reproducible</span>'}</td></tr>"""
+        for r in rows)
+    return f"""<div class="section"><h2>What it can produce</h2>
+<p class="legend">A generator is not limited to the instances a competition happened to keep: these are sample
+runs across its parameters, measured on the built image. Each command was run twice, to see whether it gives
+the same formula every time.</p>
+<div class="tablewrap"><table><tr><th>Sample</th><th>Command arguments</th><th class="num">Variables</th><th class="num">Clauses</th><th></th><th></th></tr>{body}</table></div></div>"""
 
 
 def generator_page(g: dict, rankings: dict) -> str:
@@ -253,6 +280,7 @@ def generator_page(g: dict, rankings: dict) -> str:
 <div class="section"><h2>What it is</h2><dl>{dl}</dl></div>
 <div class="section"><h2>Build it and run it</h2><pre>{esc(build)}</pre>
 <p class="legend">{"The image can be published: the licence allows it." if g.get('publish_image') else "The image is not published: the generator declares no licence, so only this recipe is distributed. Building it locally is fine."}</p></div>
+{samples_section(g)}
 <div class="section"><h2>Reference instances</h2><p class="legend">{esc(summary)}. Each line regenerates one known instance, from a competition or from the set its author published; the level says how close the result is. See <a href="../verification.html">verification</a>.</p>
 <div class="tablewrap"><table><tr><th>Instance</th><th>Family</th><th>Command arguments</th><th>GBD hash</th><th>Level</th></tr>{"".join(rows)}</table></div></div>
 {('<div class="section"><h2>Notes</h2><ul>' + "".join(f"<li>{esc(n)}</li>" for n in sorted(notes)) + "</ul></div>") if notes else ""}"""

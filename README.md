@@ -270,6 +270,27 @@ for.
 Then open a pull request. The site rebuilds itself and your generator gets its
 page.
 
+## Instances nobody submitted
+
+Reproducing the instances a competition kept is one half of the point; making
+new ones is the other. A dozen files were submitted, the generator can make a
+thousand, at any size, and those instances are in no database, GBD included.
+
+`generators.json` can declare sample invocations across a generator's
+parameters, and `tools/sample_generators.py` runs each of them twice on the
+built image, records the size of the formula and checks that the same command
+gives the same formula:
+
+```sh
+python3 tools/sample_generators.py           # every generator that declares samples
+python3 tools/sample_generators.py aiger     # only this one
+```
+
+The result lands in `data/samples.json` and becomes the "What it can produce"
+table of each generator page. Today's 34 samples are all reproducible, and they
+span, for example, the unrolling of one model checking circuit from 35 thousand
+to 362 thousand clauses by changing one number.
+
 ## Bridges
 
 A generator makes an instance out of parameters. A **bridge** starts from an
