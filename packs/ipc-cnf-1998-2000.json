@@ -1,16 +1,15 @@
 {
-  "pack": "ipc-cnf",
-  "title": "The planning competitions as CNF",
+  "pack": "ipc-cnf-1998-2000",
+  "title": "The planning competitions of 1998 and 2000 as CNF",
   "why": "The planning competitions distribute PDDL, not formulas, so every SAT author who wants to work on planning rebuilds the same translation and the same encoding. This pack is those instances as CNF, at several plan lengths, produced by one pinned chain: Fast Downward's translator, then the freeLunch encoder. The plan length is what the published SAT competition instances fix to one or two values, and what a solver author needs to vary.",
-  "status": "proposed",
+  "status": "built",
   "generator": "freelunch",
   "items": {
     "kind": "pddl-grid",
     "upstream_collection": "ipc",
     "competitions": [
       "ipc-1998",
-      "ipc-2000",
-      "ipc-2002"
+      "ipc-2000"
     ],
     "instances_per_domain": 3,
     "method": "cr",
@@ -19,13 +18,25 @@
       10,
       14
     ],
-    "domains": "strips only: the encoder does not take the ADL domains"
+    "domains": "strips only: the encoder does not take the ADL domains",
+    "note": "the three smallest instances of each strips domain, by the number in their name"
   },
   "exclude_known": true,
   "permission": "to ask: the instances are collected and republished by the Potassco group from the planning competitions; the CNF is derived from them by a pinned chain",
   "size_note": "measured on a sample: a gripper instance at ten steps is 23 thousand clauses, a depots one 399 thousand, and a hundred-block task 61 million. A full pack needs the instances chosen with their size in mind.",
   "distribution": {
-    "github_release": null,
+    "github_release": "packs-2026",
+    "asset": "ipc-cnf-1998-2000.tar",
+    "sha256": "c8f249fee7ad6f9cdb5aebc644537317ad361c14837bb311ca8aca453fef4677",
+    "bytes": 67747840,
     "zenodo": null
+  },
+  "max_clauses": 3000000,
+  "built": {
+    "instances": 141,
+    "bytes": 67577984,
+    "not_encodable": 3,
+    "chain": "Fast Downward translator, then freeLunch compactReinforced",
+    "note": "each file carries its GBD hash in index.json; none of these instances is in GBD"
   }
 }

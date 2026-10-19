@@ -17,7 +17,7 @@ identified exactly like the competition ones.
 The files land outside the repository, ready for a release; the index, which is
 small, is written to data/packs/<name>.json.
 """
-import argparse, json, sqlite3, subprocess, sys, tempfile, urllib.request
+import argparse, json, re, sqlite3, subprocess, sys, tempfile, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -49,7 +49,11 @@ def items_of(spec: dict) -> list[dict]:
             for domain in sorted((files / comp / "domains").glob("*/")):
                 if not (domain / "domain.pddl").exists() or "adl" in domain.name:
                     continue
-                problems = sorted((domain / "instances").glob("*.pddl"))[:it.get("instances_per_domain", 3)]
+                # instance-2 before instance-100: a planning task numbers its size
+                def rank(path):
+                    m = re.search(r"(\d+)", path.stem)
+                    return (int(m.group(1)) if m else 0, path.stem)
+                problems = sorted((domain / "instances").glob("*.pddl"), key=rank)[:it.get("instances_per_domain", 3)]
                 for prob in problems:
                     for k in it["k"]:
                         out.append({"name": f"{comp}-{domain.name}-{prob.stem}-k{k}.cnf",
@@ -102,6 +106,7 @@ def main(argv=None) -> int:
     args = ap.parse_args(argv)
 
     spec = json.load(open(ROOT / "packs" / f"{args.pack}.json"))
+    limit_clauses = spec.get("max_clauses")
     meta = catalogue.one(spec["generator"])["meta"]
     cache = fetch_upstream.DEFAULT_CACHE
     known = set() if args.keep_known else gbd_hashes(cache)
@@ -125,6 +130,11 @@ def main(argv=None) -> int:
                 continue
             h, iso2, nv, nc = measure(tmp, [item["name"]])[item["name"]]
             done += 1
+            if limit_clauses and int(nc) > limit_clauses:   # a pack is meant to be downloaded
+                skipped.append({"name": item["name"], "args": item["args"], "clauses": int(nc),
+                                "reason": f"over the limit of {limit_clauses} clauses"})
+                path.unlink(missing_ok=True)
+                continue
             if h in known:          # GBD already serves it: link, do not copy
                 linked.append({"hash": h, "args": item["args"], "upstream": item.get("upstream"),
                                "gbd_url": f"{GBD_FILE}/{h}"})

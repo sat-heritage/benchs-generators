@@ -369,6 +369,24 @@ the task, from 23 thousand clauses for a gripper problem to 61 million for a
 hundred-block one, so a pack picks its instances rather than taking everything.
 `packs/ipc-cnf.json` is the spec of that one, still proposed.
 
+### The first pack
+
+`packs/ipc-cnf-1998-2000.json` is the first one built: the strips domains of
+the 1998 and 2000 planning competitions, their three smallest instances each,
+at plan lengths six, ten and fourteen.
+
+| | |
+|---|---|
+| Instances | 141, over 16 domains |
+| Size | 67.6 MB compressed |
+| Clauses | 284 at the smallest, 8 thousand in the median, 1.6 million at the largest |
+| Left out | 3 instances over the limit of 3 million clauses |
+| In GBD | none of them |
+
+The index of the pack carries, for every file, the same hash GBD uses, so an
+instance of a pack and an instance of a competition are identified the same
+way.
+
 ## Bridges
 
 A generator makes an instance out of parameters. A **bridge** starts from an
