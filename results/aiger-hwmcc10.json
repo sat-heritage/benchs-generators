@@ -1,5 +1,4 @@
 {
-  "generator": "aiger",
   "image": "satex-gen/aiger:2021",
   "subset": null,
   "results": [
@@ -468,5 +467,6 @@
       "got": "4151d9847379754f412c8aa0460ac247",
       "level": "--"
     }
-  ]
+  ],
+  "target": "aiger/hwmcc10"
 }

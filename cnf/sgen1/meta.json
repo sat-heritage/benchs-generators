@@ -1,0 +1,81 @@
+{
+  "name": "sgen1",
+  "authors": "Ivor Spence",
+  "authors_source": "author's page (eeecs.qub.ac.uk/~I.Spence/sgen) and the header of sgen1.c",
+  "year": 2009,
+  "competitions": [
+    "SAT Competition 2009"
+  ],
+  "language": "C",
+  "license": "none stated",
+  "license_note": "no licence in the source nor on the page: the recipe is published, the image is not, until the author agrees",
+  "source_url": "https://www.eeecs.qub.ac.uk/~I.Spence/sgen/sgen1.c",
+  "image": "satex-gen/sgen1:2009",
+  "usage": "sgen1 -n VARIABLES (-sat | -unsat) [-s SEED] [-m MODEL_FILE] [-min-variables] [-reorder]",
+  "seed": "-s, default 1; the generator uses its own linear congruential generator",
+  "notes": "main() always returns 1, even on success; the verifier ignores the exit status and checks the output instead",
+  "publish_image": false,
+  "kind": "generator",
+  "samples": [
+    {
+      "args": [
+        "-unsat",
+        "-n",
+        "61",
+        "-s",
+        "1"
+      ],
+      "label": "unsat, 61 variables"
+    },
+    {
+      "args": [
+        "-unsat",
+        "-n",
+        "121",
+        "-s",
+        "1"
+      ],
+      "label": "unsat, 121 variables"
+    },
+    {
+      "args": [
+        "-unsat",
+        "-n",
+        "181",
+        "-s",
+        "1"
+      ],
+      "label": "unsat, 181 variables"
+    },
+    {
+      "args": [
+        "-sat",
+        "-n",
+        "100",
+        "-s",
+        "1"
+      ],
+      "label": "sat, 100 variables"
+    },
+    {
+      "args": [
+        "-sat",
+        "-n",
+        "200",
+        "-s",
+        "1"
+      ],
+      "label": "sat, 200 variables"
+    },
+    {
+      "args": [
+        "-sat",
+        "-n",
+        "300",
+        "-s",
+        "1"
+      ],
+      "label": "sat, 300 variables"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "name": "CNFgen",
+  "authors": "Massimo Lauria and contributors",
+  "authors_source": "project page massimolauria.net/cnfgen and PyPI",
+  "year": 2013,
+  "competitions": [],
+  "language": "Python",
+  "license": "GPL-3.0",
+  "source_url": "https://pypi.org/project/cnfgen/0.9.6/",
+  "image": "satex-gen/cnfgen:0.9.6",
+  "usage": "cnfgen FAMILY PARAMETERS...; cnfgen --help lists the families",
+  "seed": "random families take a seed option; Python's random module does not promise identical draws across Python versions",
+  "publish_image": true,
+  "license_note": "GPL-3.0: the image is publishable provided its sources travel with it, which the pinned PyPI release and the recorded version give",
+  "kind": "generator",
+  "samples": [
+    {
+      "args": [
+        "-S",
+        "1",
+        "php",
+        "10",
+        "9"
+      ],
+      "label": "pigeonhole 10 on 9"
+    },
+    {
+      "args": [
+        "-S",
+        "1",
+        "php",
+        "14",
+        "13"
+      ],
+      "label": "pigeonhole 14 on 13"
+    },
+    {
+      "args": [
+        "-S",
+        "1",
+        "php",
+        "18",
+        "17"
+      ],
+      "label": "pigeonhole 18 on 17"
+    },
+    {
+      "args": [
+        "-S",
+        "1",
+        "tseitin",
+        "40",
+        "4"
+      ],
+      "label": "Tseitin, 4-regular, 40 vertices"
+    },
+    {
+      "args": [
+        "-S",
+        "1",
+        "tseitin",
+        "80",
+        "4"
+      ],
+      "label": "Tseitin, 4-regular, 80 vertices"
+    }
+  ]
+}

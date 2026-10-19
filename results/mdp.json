@@ -1,5 +1,4 @@
 {
-  "generator": "mdp",
   "image": "satex-gen/mdp:2022",
   "results": [
     {
@@ -422,5 +421,6 @@
       "got": "2a43c3327fb817d82496449265d6630d",
       "level": "N1"
     }
-  ]
+  ],
+  "target": "mdp"
 }

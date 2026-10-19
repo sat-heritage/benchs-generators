@@ -1,0 +1,74 @@
+{
+  "name": "Community Attachment",
+  "authors": "Jesus Giraldez-Cru, Jordi Levy",
+  "authors_source": "header printed by the generator and the IJCAI 2015 paper",
+  "year": 2015,
+  "competitions": [
+    "SAT Race 2015",
+    "SAT Competition 2016 and later, as the random-modularity family"
+  ],
+  "language": "C++",
+  "license": "none stated",
+  "publish_image": false,
+  "license_note": "the repository declares no licence: the recipe is published, the image is not, until the authors agree",
+  "source_repo": "https://github.com/jgirald/communityAttachment.git",
+  "source_commit": "3230fe8b7f3127f745d5c23fb494f7c1efae3642",
+  "source_tree": "9f9623a8bb35245dc9a6d6c2b16c192457abb3e1",
+  "image": "satex-gen/commattach:2015",
+  "usage": "commAttach -n VARIABLES -m CLAUSES -k CLAUSE_LENGTH -c COMMUNITIES -Q MODULARITY -s SEED",
+  "seed": "-s, mandatory for reproducibility; the repository also builds a plain random k-CNF generator",
+  "kind": "generator",
+  "samples": [
+    {
+      "args": [
+        "-n",
+        "1000",
+        "-m",
+        "4300",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "1"
+      ],
+      "label": "1000 variables, modularity 0.8"
+    },
+    {
+      "args": [
+        "-n",
+        "2200",
+        "-m",
+        "9460",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "1"
+      ],
+      "label": "2200 variables, modularity 0.8"
+    },
+    {
+      "args": [
+        "-n",
+        "4000",
+        "-m",
+        "17200",
+        "-k",
+        "3",
+        "-c",
+        "40",
+        "-Q",
+        "0.8",
+        "-s",
+        "1"
+      ],
+      "label": "4000 variables, modularity 0.8"
+    }
+  ]
+}

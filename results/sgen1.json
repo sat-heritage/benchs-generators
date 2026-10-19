@@ -1,5 +1,4 @@
 {
-  "generator": "sgen1",
   "image": "satex-gen/sgen1:2009",
   "results": [
     {
@@ -393,5 +392,6 @@
       "got": "56123e4cc587dc9731b8d7911d38fc88",
       "level": "N1"
     }
-  ]
+  ],
+  "target": "sgen1"
 }

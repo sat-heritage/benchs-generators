@@ -1,0 +1,55 @@
+{
+  "name": "lockchart-to-cnf",
+  "authors": "Nikolaus Riedl-Ehrenreich",
+  "authors_source": "repository nrilu/lockchart-to-cnf and the SAT Competition 2025 benchmark description",
+  "year": 2025,
+  "competitions": [
+    "SAT Competition 2025"
+  ],
+  "language": "Python",
+  "license": "CC0-1.0",
+  "publish_image": true,
+  "source_repo": "https://github.com/nrilu/lockchart-to-cnf.git",
+  "source_commit": "6ba6ec0539bab3e690c5e65419315d0dcebf917b",
+  "source_tree": "4b7926400c08ba03675770796777e5ec8253f22d",
+  "image": "satex-gen/lockchart:2025",
+  "usage": "lockchart-gen -l LOCKS [-p POSITIONS] [-d DEPTHS] [-r DENSITY]",
+  "seed": "none; with -r the lock-chart is randomised from the clock and cannot be reproduced",
+  "notes": "the script draws the lock-chart after writing the formula, which needs LaTeX and fails in the image; the formula is already complete at that point",
+  "kind": "generator",
+  "samples": [
+    {
+      "args": [
+        "-l",
+        "11",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "label": "11 locks, 4 positions, 3 depths"
+    },
+    {
+      "args": [
+        "-l",
+        "15",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "label": "15 locks, 4 positions, 3 depths"
+    },
+    {
+      "args": [
+        "-l",
+        "20",
+        "-p",
+        "4",
+        "-d",
+        "3"
+      ],
+      "label": "20 locks, 4 positions, 3 depths"
+    }
+  ]
+}

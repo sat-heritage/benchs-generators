@@ -143,8 +143,11 @@ def main(argv=None) -> int:
     # the file GBD serves for them: a hash GBD does not know has no download link
     doc["instance_file"] = {}
     wanted = []
-    for ref in sorted(Path("references").glob("*.json")):
-        for entry in json.load(open(ref))["references"]:
+    import catalogue
+    for target, entry_meta in catalogue.entries().items():
+        if entry_meta["references"] is None:
+            continue
+        for entry in json.load(open(entry_meta["references"]))["references"]:
             fam = families.get(entry["gbdhash"])
             if fam:
                 doc["instance_family"][entry["gbdhash"]] = list(fam)

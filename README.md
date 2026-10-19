@@ -124,14 +124,14 @@ repository move their generator from the second row to the first.
   must be the May 2021 one, since a later `aigtocnf` writes smaller, different
   formulas. The generator itself is not on any public repository: Armin Biere
   agreed in September 2026 that it be part of SAT Heritage, and it is kept under
-  `cruxmiter/upstream` with that notice, so the image stays unpublished.
+  `cnf/cruxmiter/vendor` with that notice, so the image stays unpublished.
 
 ## Building and running
 
 ```sh
 docker build -t satex-gen/gbd:0.4.2 tools/gbd
-docker build -t satex-gen/sgen1:2009 sgen1
-docker build -t satex-gen/cnfgen:0.9.6 cnfgen
+docker build -t satex-gen/sgen1:2009 cnf/sgen1
+docker build -t satex-gen/cnfgen:0.9.6 cnf/cnfgen
 docker run --rm satex-gen/sgen1:2009 -unsat -n 121 -s 100 > sgen1-unsat-121-100.cnf
 docker run --rm satex-gen/cnfgen:0.9.6 -S 1 rphp 20 20 19 > rphp_p20_r20.cnf
 python3 tools/verify.py sgen1
@@ -164,10 +164,13 @@ line. We do the rest and send you the page for checking.
 
 **The whole thing, four files.** Say your generator is called `wombat`:
 
-    wombat/Dockerfile          how to build it
-    wombat/wombat-gen.sh       optional, when the tool needs a wrapper
-    generators.json            one entry describing it
-    references/wombat.json     optional, the instances it should reproduce
+    cnf/wombat/Dockerfile        how to build it
+    cnf/wombat/wombat-gen.sh     optional, when the tool needs a wrapper
+    cnf/wombat/meta.json         what it is: authors, licence, usage, seed
+    cnf/wombat/references.json   optional, the instances it should reproduce
+
+Nothing outside that directory changes, so two contributors never meet in the
+same file.
 
 **1. The recipe.** Copy an existing `Dockerfile`; they all follow the same
 shape. The first stage clones your repository at one commit and checks the git
@@ -209,10 +212,10 @@ draws across versions, and a C library's `rand` differs across platforms: pin
 the image, not just the sources. If your generator seeds itself from the clock,
 say so, and add an option for an explicit seed if you can.
 
-**4. Describe it** in `generators.json`:
+**4. Describe it** in `cnf/wombat/meta.json`:
 
 ```json
-"wombat": {
+{
   "name": "Wombat", "authors": "Your Name", "authors_source": "your repository",
   "year": 2026, "competitions": ["SAT Competition 2026"], "language": "C",
   "license": "MIT", "publish_image": true,
@@ -231,7 +234,7 @@ single most useful thing you can do for us.
 
 **5. Reference instances, if you have any.** They are what turns a recipe into a
 checked one. List the instances your generator should reproduce, with the
-arguments that produce them and their GBD hash, in `references/wombat.json`:
+arguments that produce them and their GBD hash, in `cnf/wombat/references.json`:
 
 ```json
 {"generator": "wombat",
@@ -258,7 +261,7 @@ names. If they are not, send the files and we hash them, as was done for the
 **6. Check it:**
 
 ```sh
-docker build -t satex-gen/wombat:2026 wombat
+docker build -t satex-gen/wombat:2026 cnf/wombat
 python3 tools/verify.py wombat
 ```
 
@@ -300,7 +303,7 @@ toolchain. Hundreds of SAT competition instances come from such artefacts, and
 the parameter of the encoding, the number of time frames of an unrolling, is
 what lets the family scale.
 
-We do not redistribute the benchmarks of another competition. `upstream/` keeps
+We do not redistribute the benchmarks of another competition. `collections/` keeps
 one manifest per collection: where the archive lives, its checksum, its terms,
 and the checksum of every member. `tools/fetch_upstream.py` downloads it into a
 cache outside the repository:
@@ -351,8 +354,21 @@ up.
 
 ## Layout
 
-- `generators.json`: one entry per generator (authors and their source, licence, image, usage, seed)
-- `<generator>/Dockerfile`: the recipe; sources are downloaded and checked against a SHA-256
-- `references/<generator>.json`: reference instances with GBD hashes and parameters
-- `results/<generator>.json`: output of the last verification
-- `tools/gbd`: the GBD hash image; `tools/verify.py`: the verifier
+One recipe is one directory, and nothing is shared between recipes: adding a
+generator is adding a directory.
+
+- `cnf/<name>/`: a generator that writes CNF from parameters — `Dockerfile`,
+  `meta.json` (authors and their source, licence, image, usage, seed, samples)
+  and `references.json` when it has reference instances
+- `bridges/<name>/`: a bridge that encodes what another competition distributes —
+  the same files, plus one reference file per upstream collection under
+  `references/`
+- `collections/<name>.json`: the manifest of an upstream collection, with its
+  terms and checksums; never the benchmarks themselves
+- `packs/<name>.json`: the spec of a pack we distribute, and why it exists
+- `results/`, `data/`: produced by the tools, regenerated at will
+- `tools/`: `catalogue.py` reads the recipes, `verify.py` checks them,
+  `build_site.py` writes the site, `gbd/` is the hashing image
+
+A target names what the tools work on: a generator, `sgen1`, or a bridge and one
+of its collections, `aiger/hwmcc10`.

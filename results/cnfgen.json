@@ -1,5 +1,4 @@
 {
-  "generator": "cnfgen",
   "image": "satex-gen/cnfgen:0.9.6",
   "results": [
     {
@@ -333,5 +332,6 @@
       "got": "eaf2f0803dd2045f1b189ee834ef0c8f",
       "level": "N1"
     }
-  ]
+  ],
+  "target": "cnfgen"
 }

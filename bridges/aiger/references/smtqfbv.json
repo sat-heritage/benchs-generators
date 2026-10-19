@@ -1,0 +1,533 @@
+{
+  "generator": "aiger-qfbv",
+  "source": "GBD metadata; the circuits come from the SMT-LIB bit-vector AIGs published by the FMV group",
+  "references": [
+    {
+      "instance": "smtlib-qfbv-aigs-VS3-benchmark-S2-tseitin.cnf",
+      "gbdhash": "19821901aff6ef7b8b739c32eebe20de",
+      "isohash2": "11e1e6fb31685fe4",
+      "result": "unsat",
+      "family": "software-verification",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "VS3-benchmark-S2.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_eventlogadm_vc331235-tseitin.cnf",
+      "gbdhash": "b5997123626c2d12fa7e2ef8972d38e4",
+      "isohash2": "054c2ce8a3d78043",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_eventlogadm_vc331235.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_eventlogadm_vc344392-tseitin.cnf",
+      "gbdhash": "d73632fec32a7c578f7226e275146c53",
+      "isohash2": "a9b9501e57f216da",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_eventlogadm_vc344392.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_eventlogadm_vc352372-tseitin.cnf",
+      "gbdhash": "4622ccd57b5cfc2f13810e1e01bfbdb9",
+      "isohash2": "bdd157f2acad9d14",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_eventlogadm_vc352372.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libmsrpc_vc1225297-tseitin.cnf",
+      "gbdhash": "f0b8e11a9e420ba231cfa34e5e2e2ebc",
+      "isohash2": "c05dde448d2c84f0",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libmsrpc_vc1225297.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libmsrpc_vc1225336-tseitin.cnf",
+      "gbdhash": "a5841f9058a32893132e8583144db040",
+      "isohash2": "e47a5f3075528641",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libmsrpc_vc1225336.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libmsrpc_vc1228572-tseitin.cnf",
+      "gbdhash": "3becb154c60a9c36c323b6a29b9f8974",
+      "isohash2": "b2572a16535956ff",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libmsrpc_vc1228572.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbclient_vc1225238-tseitin.cnf",
+      "gbdhash": "20af7a90131ea05e1ef53ea3705088c9",
+      "isohash2": "4df8d13d847c3ae8",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbclient_vc1225238.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbclient_vc1225819-tseitin.cnf",
+      "gbdhash": "c2cd09b4537de6e215569560cf8646e4",
+      "isohash2": "1434ab7d99cb7d30",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbclient_vc1225819.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbclient_vc1228447-tseitin.cnf",
+      "gbdhash": "f0fb19c989586fbd0fe103711b168688",
+      "isohash2": "afd6ac4e937f8016",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbclient_vc1228447.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbclient_vc1228502-tseitin.cnf",
+      "gbdhash": "86cea065bb59135d390c70dc3df07719",
+      "isohash2": "5e1d7a75674a5efe",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbclient_vc1228502.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbsharemodes_vc4322-tseitin.cnf",
+      "gbdhash": "6ddb1d74448f67dbc7f9ce40023125df",
+      "isohash2": "2427507868f09a93",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbsharemodes_vc4322.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbsharemodes_vc5759-tseitin.cnf",
+      "gbdhash": "1698bc45adbd800076d24e622a227436",
+      "isohash2": "96f010e2195611b0",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbsharemodes_vc5759.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbsharemodes_vc6201-tseitin.cnf",
+      "gbdhash": "06326dd7bab63b892d2c147d5928468c",
+      "isohash2": "186556ba1815a7d7",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbsharemodes_vc6201.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbsharemodes_vc7701-tseitin.cnf",
+      "gbdhash": "d0261efd3e55848b11c1f71a22049a1e",
+      "isohash2": "2ea61bde21c99be8",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbsharemodes_vc7701.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-countbits128-tseitin-sc2011.cnf",
+      "gbdhash": "df0eb25039716a0cb1940f626f0ac542",
+      "isohash2": "761f57171d35c870",
+      "result": "unsat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "countbits128.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-countbits128-tseitin.cnf",
+      "gbdhash": "0294158664d9ada36bd23fbb652cb823",
+      "isohash2": "761f57171d35c870",
+      "result": "unsat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "countbits128.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-ext_con_032_008_0256-tseitin.cnf",
+      "gbdhash": "1ff076565e0d5898c7a659ca79752a88",
+      "isohash2": "35dcfd043b90adc3",
+      "result": "unsat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "ext_con_032_008_0256.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-innd_innd_vc33544-tseitin.cnf",
+      "gbdhash": "53fc1da0e1caf50d2e6e7b200850b51b",
+      "isohash2": "28bae883ccfd4204",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "innd_innd_vc33544.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-innfeed_innfeed_vc36608-tseitin.cnf",
+      "gbdhash": "a0bfed3e5f7b31720029e8b42a3865ac",
+      "isohash2": "5d43c3461d80fe81",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "innfeed_innfeed_vc36608.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-innfeed_innfeed_vc37051-tseitin.cnf",
+      "gbdhash": "3e4da63c0d1a7db66c58a26136b41582",
+      "isohash2": "b843eff3b9aebfe7",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "innfeed_innfeed_vc37051.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-lfsr_004_127_112-tseitin.cnf",
+      "gbdhash": "3073edda0f43dc631c798ab3307551ca",
+      "isohash2": "5147a3f4b4b8058d",
+      "result": "unsat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "lfsr_004_127_112.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-lfsr_008_063_080-tseitin.cnf",
+      "gbdhash": "f58feb98f29a7807fed9d9ff263c733a",
+      "isohash2": "d61dca6a98187f6a",
+      "result": "unsat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "lfsr_008_063_080.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-lfsr_008_079_112-tseitin.cnf",
+      "gbdhash": "9f418fa793e7b1e57a6d56e5aa6d7145",
+      "isohash2": "b48686ebeb98d1e9",
+      "result": "unsat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "lfsr_008_079_112.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-nlzbe256-tseitin.cnf",
+      "gbdhash": "b9a688ab96cb1847b4ab2288ad6354fb",
+      "isohash2": "fa44eb79199fb87f",
+      "result": "unsat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "nlzbe256.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-nnrpd_nnrpd_vc20413-tseitin.cnf",
+      "gbdhash": "fe9ada08d52a38c7d0e5a43fc10b44dc",
+      "isohash2": "bf8b9c7df397716b",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "nnrpd_nnrpd_vc20413.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-nnrpd_nnrpd_vc21221-tseitin.cnf",
+      "gbdhash": "dfc41ec2676465bee2cfb3bc766b0ff3",
+      "isohash2": "b607710cc28ede23",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "nnrpd_nnrpd_vc21221.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-rfunit_flat-64-tseitin.cnf",
+      "gbdhash": "fb3d56089d0e7b403190a3dc661f1293",
+      "isohash2": "64641493e7347757",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "rfunit_flat-64.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-servers_slapd_a_vc149789-tseitin.cnf",
+      "gbdhash": "3c632491064f8b7b52656d2762971a05",
+      "isohash2": "2c55f0e6473fb123",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "servers_slapd_a_vc149789.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-src_wget_vc17912-tseitin.cnf",
+      "gbdhash": "a8963c507ec3834e0be841b79a2b5edc",
+      "isohash2": "44a835fcefd0b56a",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "src_wget_vc17912.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-src_wget_vc18517-tseitin.cnf",
+      "gbdhash": "9212cf527f2a304414851dd6a8d7fc42",
+      "isohash2": "b377ae4fcf6b347d",
+      "result": "sat",
+      "family": "bitvector",
+      "author": "jarvisalo",
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "src_wget_vc18517.aig"
+      },
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "note": "the circuit name is read from the file name; the encoder is the plain Tseitin one of the aiger examples"
+    }
+  ]
+}

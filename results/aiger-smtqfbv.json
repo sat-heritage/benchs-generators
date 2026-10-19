@@ -1,0 +1,441 @@
+{
+  "image": "satex-gen/aiger:2021",
+  "subset": null,
+  "results": [
+    {
+      "instance": "smtlib-qfbv-aigs-VS3-benchmark-S2-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "VS3-benchmark-S2.aig"
+      },
+      "expected": "19821901aff6ef7b8b739c32eebe20de",
+      "got": "19821901aff6ef7b8b739c32eebe20de",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_eventlogadm_vc331235-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_eventlogadm_vc331235.aig"
+      },
+      "expected": "b5997123626c2d12fa7e2ef8972d38e4",
+      "got": "b5997123626c2d12fa7e2ef8972d38e4",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_eventlogadm_vc344392-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_eventlogadm_vc344392.aig"
+      },
+      "expected": "d73632fec32a7c578f7226e275146c53",
+      "got": "d73632fec32a7c578f7226e275146c53",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_eventlogadm_vc352372-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_eventlogadm_vc352372.aig"
+      },
+      "expected": "4622ccd57b5cfc2f13810e1e01bfbdb9",
+      "got": "4622ccd57b5cfc2f13810e1e01bfbdb9",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libmsrpc_vc1225297-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libmsrpc_vc1225297.aig"
+      },
+      "expected": "f0b8e11a9e420ba231cfa34e5e2e2ebc",
+      "got": "f0b8e11a9e420ba231cfa34e5e2e2ebc",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libmsrpc_vc1225336-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libmsrpc_vc1225336.aig"
+      },
+      "expected": "a5841f9058a32893132e8583144db040",
+      "got": "a5841f9058a32893132e8583144db040",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libmsrpc_vc1228572-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libmsrpc_vc1228572.aig"
+      },
+      "expected": "3becb154c60a9c36c323b6a29b9f8974",
+      "got": "3becb154c60a9c36c323b6a29b9f8974",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbclient_vc1225238-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbclient_vc1225238.aig"
+      },
+      "expected": "20af7a90131ea05e1ef53ea3705088c9",
+      "got": "20af7a90131ea05e1ef53ea3705088c9",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbclient_vc1225819-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbclient_vc1225819.aig"
+      },
+      "expected": "c2cd09b4537de6e215569560cf8646e4",
+      "got": "c2cd09b4537de6e215569560cf8646e4",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbclient_vc1228447-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbclient_vc1228447.aig"
+      },
+      "expected": "f0fb19c989586fbd0fe103711b168688",
+      "got": "f0fb19c989586fbd0fe103711b168688",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbclient_vc1228502-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbclient_vc1228502.aig"
+      },
+      "expected": "86cea065bb59135d390c70dc3df07719",
+      "got": "86cea065bb59135d390c70dc3df07719",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbsharemodes_vc4322-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbsharemodes_vc4322.aig"
+      },
+      "expected": "6ddb1d74448f67dbc7f9ce40023125df",
+      "got": "6ddb1d74448f67dbc7f9ce40023125df",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbsharemodes_vc5759-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbsharemodes_vc5759.aig"
+      },
+      "expected": "1698bc45adbd800076d24e622a227436",
+      "got": "1698bc45adbd800076d24e622a227436",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbsharemodes_vc6201-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbsharemodes_vc6201.aig"
+      },
+      "expected": "06326dd7bab63b892d2c147d5928468c",
+      "got": "06326dd7bab63b892d2c147d5928468c",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-bin_libsmbsharemodes_vc7701-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "bin_libsmbsharemodes_vc7701.aig"
+      },
+      "expected": "d0261efd3e55848b11c1f71a22049a1e",
+      "got": "d0261efd3e55848b11c1f71a22049a1e",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-countbits128-tseitin-sc2011.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "countbits128.aig"
+      },
+      "expected": "df0eb25039716a0cb1940f626f0ac542",
+      "got": "0294158664d9ada36bd23fbb652cb823",
+      "level": "N4"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-countbits128-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "countbits128.aig"
+      },
+      "expected": "0294158664d9ada36bd23fbb652cb823",
+      "got": "0294158664d9ada36bd23fbb652cb823",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-ext_con_032_008_0256-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "ext_con_032_008_0256.aig"
+      },
+      "expected": "1ff076565e0d5898c7a659ca79752a88",
+      "got": "1ff076565e0d5898c7a659ca79752a88",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-innd_innd_vc33544-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "innd_innd_vc33544.aig"
+      },
+      "expected": "53fc1da0e1caf50d2e6e7b200850b51b",
+      "got": "53fc1da0e1caf50d2e6e7b200850b51b",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-innfeed_innfeed_vc36608-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "innfeed_innfeed_vc36608.aig"
+      },
+      "expected": "a0bfed3e5f7b31720029e8b42a3865ac",
+      "got": "a0bfed3e5f7b31720029e8b42a3865ac",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-innfeed_innfeed_vc37051-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "innfeed_innfeed_vc37051.aig"
+      },
+      "expected": "3e4da63c0d1a7db66c58a26136b41582",
+      "got": "3e4da63c0d1a7db66c58a26136b41582",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-lfsr_004_127_112-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "lfsr_004_127_112.aig"
+      },
+      "expected": "3073edda0f43dc631c798ab3307551ca",
+      "got": "3073edda0f43dc631c798ab3307551ca",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-lfsr_008_063_080-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "lfsr_008_063_080.aig"
+      },
+      "expected": "f58feb98f29a7807fed9d9ff263c733a",
+      "got": "f58feb98f29a7807fed9d9ff263c733a",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-lfsr_008_079_112-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "lfsr_008_079_112.aig"
+      },
+      "expected": "9f418fa793e7b1e57a6d56e5aa6d7145",
+      "got": "9f418fa793e7b1e57a6d56e5aa6d7145",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-nlzbe256-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "nlzbe256.aig"
+      },
+      "expected": "b9a688ab96cb1847b4ab2288ad6354fb",
+      "got": "b9a688ab96cb1847b4ab2288ad6354fb",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-nnrpd_nnrpd_vc20413-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "nnrpd_nnrpd_vc20413.aig"
+      },
+      "expected": "fe9ada08d52a38c7d0e5a43fc10b44dc",
+      "got": "fe9ada08d52a38c7d0e5a43fc10b44dc",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-nnrpd_nnrpd_vc21221-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "nnrpd_nnrpd_vc21221.aig"
+      },
+      "expected": "dfc41ec2676465bee2cfb3bc766b0ff3",
+      "got": "dfc41ec2676465bee2cfb3bc766b0ff3",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-rfunit_flat-64-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "rfunit_flat-64.aig"
+      },
+      "expected": "fb3d56089d0e7b403190a3dc661f1293",
+      "got": "fb3d56089d0e7b403190a3dc661f1293",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-servers_slapd_a_vc149789-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "servers_slapd_a_vc149789.aig"
+      },
+      "expected": "3c632491064f8b7b52656d2762971a05",
+      "got": "3c632491064f8b7b52656d2762971a05",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-src_wget_vc17912-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "src_wget_vc17912.aig"
+      },
+      "expected": "a8963c507ec3834e0be841b79a2b5edc",
+      "got": "a8963c507ec3834e0be841b79a2b5edc",
+      "level": "N1"
+    },
+    {
+      "instance": "smtlib-qfbv-aigs-src_wget_vc18517-tseitin.cnf",
+      "args": [
+        "cnf",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "smtqfbv",
+        "file": "src_wget_vc18517.aig"
+      },
+      "expected": "9212cf527f2a304414851dd6a8d7fc42",
+      "got": "9212cf527f2a304414851dd6a8d7fc42",
+      "level": "N1"
+    }
+  ],
+  "target": "aiger/smtqfbv"
+}

@@ -40,20 +40,23 @@ SAMPLES = {}
 
 
 def load(root: Path):
+    sys.path.insert(0, str((root / "tools").resolve()))
+    import catalogue
     if (root / "data" / "samples.json").exists():
         SAMPLES.update(json.load(open(root / "data" / "samples.json")))
-    for path in sorted((root / "upstream").glob("*.json")) if (root / "upstream").exists() else []:
-        m = json.load(open(path))
-        UPSTREAM[m["collection"]] = m
-    gens = json.load(open(root / "generators.json"))
+    UPSTREAM.update(catalogue.collections(root))
     rankings = json.load(open(root / "data" / "rankings.json"))
     fam_of = {h: tuple(v) for h, v in rankings["instance_family"].items()}
     size_of = {h: n for h, n in rankings.get("instance_file", {}).items()}
-    for key, g in gens.items():
-        refs = json.load(open(root / "references" / f"{key}.json"))["references"] \
-            if (root / "references" / f"{key}.json").exists() else []
+    gens = {}
+    for key, entry in catalogue.entries(root).items():
+        g = dict(entry["meta"])
+        g["kind"], g["collection"] = entry["kind"], entry.get("collection")
+        g["dirpath"] = str(entry["dir"].relative_to(root))
+        gens[key] = g
+        refs = json.load(open(entry["references"]))["references"] if entry["references"] else []
         levels = {}
-        for path in sorted((root / "results").glob(f"{key}*.json")):
+        for path in sorted((root / "results").glob(f"{catalogue.slug(key)}*.json")):
             for r in json.load(open(path))["results"]:
                 levels[r["instance"]] = r
         for r in refs:
@@ -65,6 +68,7 @@ def load(root: Path):
             for a in r.get("alternates", []):
                 a["size"] = size_of.get(a["gbdhash"])
         g["key"] = key
+        g["slug"] = catalogue.slug(key)
         g["references"] = refs
         g["checked"] = [r for r in refs if r["level"]]
         g["exact"] = [r for r in refs if r["level"] == "N1"]
@@ -176,8 +180,8 @@ def gen_card(g: dict) -> str:
     exact, checked = len(g["exact"]), len(g["checked"])
     pub = "image published" if g.get("publish_image") else "recipe only, licence unknown"
     kind = '<span class="tag cap">bridge</span>' if g.get("kind") == "bridge" else ""
-    return f"""<a class="card" href="generators/{esc(g['key'])}.html">
-<h3>{esc(g['name'])}</h3>
+    return f"""<a class="card" href="generators/{esc(g['slug'])}.html">
+<h3>{esc(g['name'])}{(' · ' + esc(g['collection'])) if g.get('collection') else ''}</h3>
 <div class="meta">{esc(g.get('authors',''))} · {esc(g.get('year',''))}</div>
 <div class="tags">{kind}<span class="tag">{esc(g.get('language',''))}</span><span class="tag">{esc(g.get('license',''))}</span><span class="tag cap">{esc(pub)}</span></div>
 <div class="tags">{f'<span class="badge ok">{exact} of {checked} instances exact</span>' if checked else '<span class="badge none">no competition instance to check against</span>' if not g['references'] else f'<span class="badge warn">{exact} of {checked} instances exact</span>'}{"".join(f'<span class="tag">{esc(f)}</span>' for f in g['families'][:3])}</div>
@@ -219,7 +223,7 @@ are in no database, ours included: they are made on demand.</p></div>
 def generators_page(gens: dict) -> str:
     rows = []
     for g in sorted(gens.values(), key=lambda g: g["name"].lower()):
-        rows.append(f"""<tr><td><a href="generators/{esc(g['key'])}.html">{esc(g['name'])}</a></td>
+        rows.append(f"""<tr><td><a href="generators/{esc(g['slug'])}.html">{esc(g['name'])}</a></td>
 <td>{esc(g.get('authors',''))}</td><td>{esc(g.get('year',''))}</td><td>{esc(g.get('language',''))}</td>
 <td>{esc(g.get('license',''))}</td><td>{'yes' if g.get('publish_image') else 'no'}</td>
 <td class="num">{len(g['exact'])} / {len(g['checked'])}</td>
@@ -260,7 +264,7 @@ def generator_page(g: dict, rankings: dict) -> str:
                                      if (up := UPSTREAM.get(g.get("upstream"))) else None)),
             ("Notes", g.get("notes")), ("Licence note", g.get("license_note"))]
     dl = "".join(f"<dt>{esc(k)}</dt><dd>{v if k in ('Repository', 'Upstream collection') else esc(v)}</dd>" for k, v in meta if v)
-    build = f"docker build -t {g['image']} {g['key']}\n{'docker run --rm ' + g['image'] + ' ...  > instance.cnf'}"
+    build = f"docker build -t {g['image']} {g['dirpath']}\n{'docker run --rm ' + g['image'] + ' ...  > instance.cnf'}"
     counts = defaultdict(int)
     for r in g["references"]:
         counts[r["level"] or "not checked"] += 1
@@ -338,7 +342,7 @@ def family_page(fam: str, gens: dict, rankings: dict) -> str:
     gs = [g for g in gens.values() if fam in g["families"]]
     if gs:
         gl = "".join(f"""<div class="section"><h2>Generator: {esc(g['name'])}</h2>
-<p>{esc(g.get('usage',''))}</p><p class="legend">{len([r for r in g['references'] if r['family'] == fam and r['level'] == 'N1'])} of {len([r for r in g['references'] if r['family'] == fam])} instances of this family regenerated exactly. <a href="../generators/{esc(g['key'])}.html">Details and commands</a>.</p></div>""" for g in gs)
+<p>{esc(g.get('usage',''))}</p><p class="legend">{len([r for r in g['references'] if r['family'] == fam and r['level'] == 'N1'])} of {len([r for r in g['references'] if r['family'] == fam])} instances of this family regenerated exactly. <a href="../generators/{esc(g['slug'])}.html">Details and commands</a>.</p></div>""" for g in gs)
     else:
         gl = """<div class="section"><h2>No generator here yet</h2><p>We have not packaged a generator for this family. If you wrote it, or know where its code lives, a <a href="%s/issues">issue</a> is very welcome.</p></div>""" % REPO_URL
     body = f"""<div class="crumbs"><a href="../index.html">Overview</a> · <a href="../families.html">Families</a></div>
@@ -350,7 +354,7 @@ def family_page(fam: str, gens: dict, rankings: dict) -> str:
 def verification_page(gens: dict, rankings: dict) -> str:
     rows = "".join(f"<tr><td><b>{lvl}</b></td><td>{esc(LEVEL_LABEL[lvl])}</td></tr>" for lvl in LEVELS)
     per_gen = "".join(
-        f"<tr><td><a href='generators/{esc(g['key'])}.html'>{esc(g['name'])}</a></td>"
+        f"<tr><td><a href='generators/{esc(g['slug'])}.html'>{esc(g['name'])}</a></td>"
         f"<td class='num'>{len(g['references'])}</td><td class='num'>{len(g['checked'])}</td>"
         f"<td class='num'>{len(g['exact'])}</td></tr>"
         for g in sorted(gens.values(), key=lambda g: g["name"].lower()))
@@ -377,7 +381,7 @@ def build(root: Path, out: Path) -> int:
     (out / "verification.html").write_text(verification_page(gens, rankings))
     (out / "generators").mkdir(exist_ok=True)
     for g in gens.values():
-        (out / "generators" / f"{g['key']}.html").write_text(generator_page(g, rankings))
+        (out / "generators" / f"{g['slug']}.html").write_text(generator_page(g, rankings))
     (out / "families").mkdir(exist_ok=True)
     fams = {f for y in rankings["years"].values() for f in y["families"] if f != "ALL"}
     fams |= {f for g in gens.values() for f in g["families"]}

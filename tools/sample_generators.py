@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 GBD_IMAGE = "satex-gen/gbd:0.4.2"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import fetch_upstream
+import catalogue, fetch_upstream
 
 
 def measure(directory: Path, names: list[str]) -> dict:
@@ -66,14 +66,14 @@ def main(argv=None) -> int:
     ap.add_argument("generators", nargs="*")
     ap.add_argument("--output", default="data/samples.json")
     args = ap.parse_args(argv)
-    gens = json.load(open(ROOT / "generators.json"))
     doc = json.load(open(ROOT / args.output)) if (ROOT / args.output).exists() else {}
-    for gen, meta in gens.items():
-        if args.generators and gen not in args.generators:
+    for target, entry in catalogue.entries().items():
+        if args.generators and target not in args.generators:
             continue
-        if not meta.get("samples"):
+        samples = entry["meta"].get("samples")
+        if not samples:
             continue
-        doc[gen] = run(gen, meta, meta["samples"])
+        doc[target] = run(target, entry["meta"], samples)
     json.dump(doc, open(ROOT / args.output, "w"), indent=1)
     print(f"wrote {args.output}", file=sys.stderr)
     return 0

@@ -1,0 +1,46 @@
+{
+  "name": "Round-robin tournament scheduling",
+  "authors": "Joseph Reeves",
+  "authors_source": "repository Aeacu2/RR-Benchmarks and the SAT Competition 2025 benchmark description",
+  "year": 2025,
+  "competitions": [
+    "SAT Competition 2025"
+  ],
+  "language": "Python",
+  "license": "MIT",
+  "publish_image": true,
+  "source_repo": "https://github.com/Aeacu2/RR-Benchmarks.git",
+  "source_commit": "6735ee973a0f2b0489a2b13fabe3455e90042728",
+  "source_tree": "2e897d2a1e34376ac8a883176ca00368e9518cb1",
+  "image": "satex-gen/roundrobin:2025",
+  "usage": "rr-gen rr TEAMS ROUNDS | rr-gen mv TEAMS ROUNDS VENUES",
+  "seed": "none, the encoding is deterministic",
+  "notes": "the submitted scripts keep their instance list at the top of the file; the entry point substitutes the single instance asked for and runs the encoder verbatim",
+  "kind": "generator",
+  "samples": [
+    {
+      "args": [
+        "rr",
+        "15",
+        "13"
+      ],
+      "label": "15 teams, 13 rounds"
+    },
+    {
+      "args": [
+        "rr",
+        "18",
+        "16"
+      ],
+      "label": "18 teams, 16 rounds"
+    },
+    {
+      "args": [
+        "rr",
+        "21",
+        "19"
+      ],
+      "label": "21 teams, 19 rounds"
+    }
+  ]
+}

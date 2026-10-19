@@ -1,5 +1,4 @@
 {
-  "generator": "oddball",
   "image": "satex-gen/oddball:2025",
   "subset": "oddball_13_4",
   "results": [
@@ -15,5 +14,6 @@
       "got": "e7d3f698d527c8c06e00a6eefa9212ad",
       "level": "N1"
     }
-  ]
+  ],
+  "target": "oddball"
 }

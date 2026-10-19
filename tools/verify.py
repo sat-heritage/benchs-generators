@@ -7,8 +7,10 @@ Levels, from strongest to weakest:
   N3  same GBD isohash2: equal up to a renaming of the variables
   N4  same numbers of variables and clauses
   --  none of the above
-Usage: tools/verify.py GENERATOR [SUBSTRING]
-Reads references/GENERATOR.json and writes results/GENERATOR.json.  With a
+Usage: tools/verify.py TARGET [SUBSTRING]
+A target is a generator, "sgen1", or a bridge and one of its upstream
+collections, "aiger/hwmcc10".  The references come from the recipe's own
+directory and the outcome is written to results/<target>.json.  With a
 SUBSTRING, only the reference instances whose name contains it are checked,
 which keeps a run short when a family has very large instances.
 """
@@ -16,7 +18,7 @@ import json, lzma, os, subprocess, sys, tempfile, urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import fetch_upstream
+import catalogue, fetch_upstream
 
 ROOT = Path(__file__).resolve().parent.parent
 GBD_IMAGE = "satex-gen/gbd:0.4.2"
@@ -63,9 +65,12 @@ def reference_file(h, cache):
     return path
 
 
-def main(gen, only=None):
-    meta = json.load(open(ROOT / "generators.json"))[gen]
-    refs = json.load(open(ROOT / "references" / f"{gen}.json"))["references"]
+def main(target, only=None):
+    entry = catalogue.one(target)
+    meta, gen = entry["meta"], target
+    if entry["references"] is None:
+        sys.exit(f"{target}: no reference instances to check against")
+    refs = json.load(open(entry["references"]))["references"]
     if only:
         refs = [r for r in refs if only in r["instance"]]
         if not refs:
@@ -122,8 +127,9 @@ def main(gen, only=None):
                             "got": g["gbdhash"], "level": level or "--",
                             **({"matched": matched} if level == "N1" and matched != "GBD" else {})})
     (ROOT / "results").mkdir(exist_ok=True)
-    out = ROOT / "results" / (f"{gen}.json" if not only else f"{gen}-{only}.json")
-    json.dump({"generator": gen, "image": meta["image"], "subset": only, "results": results},
+    name = catalogue.slug(target) + (f"-{only}" if only else "")
+    out = ROOT / "results" / f"{name}.json"
+    json.dump({"target": target, "image": meta["image"], "subset": only, "results": results},
               open(out, "w"), indent=2)
     counts = {}
     for x in results:

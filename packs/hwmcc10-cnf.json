@@ -1,0 +1,30 @@
+{
+  "pack": "hwmcc10-cnf",
+  "title": "The HWMCC 2010 circuits as CNF",
+  "why": "A hardware verification competition distributes circuits, not formulas. Every SAT solver author who wants to work on them has to rebuild the same unrolling and the same encoding, and the handful of depths the SAT competitions kept are not enough to study how a solver scales with the depth. This pack is that collection in CNF, at several depths, produced by one pinned chain.",
+  "status": "proposed",
+  "generator": "aiger/hwmcc10",
+  "items": {
+    "kind": "grid",
+    "upstream_collection": "hwmcc10",
+    "models": "all",
+    "args": [
+      "unroll",
+      "{k}",
+      "{file}"
+    ],
+    "k": [
+      5,
+      10,
+      20,
+      40
+    ]
+  },
+  "exclude_known": true,
+  "permission": "to ask: the circuits are distributed by the competition, the CNF is derived from them by a pinned toolchain",
+  "distribution": {
+    "github_release": null,
+    "zenodo": null
+  },
+  "solver_note": "the depths worth keeping are the ones around the transition between unsatisfiable and satisfiable, which a bounded model checker finds; a blind grid produces mostly trivial or hopeless instances"
+}

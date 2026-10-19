@@ -1,5 +1,4 @@
 {
-  "generator": "cruxmiter",
   "image": "satex-gen/cruxmiter:2021",
   "subset": null,
   "results": [
@@ -2303,5 +2302,6 @@
       "got": "73bb304bddb3e9d54189fcfee9e1f012",
       "level": "N1"
     }
-  ]
+  ],
+  "target": "cruxmiter"
 }

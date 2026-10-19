@@ -1,0 +1,17 @@
+{
+  "collection": "smtqfbv",
+  "name": "AIGs of the SMT-LIB quantifier-free bit-vector benchmarks",
+  "organizers": "Armin Biere and the FMV group, from the SMT-LIB benchmarks",
+  "homepage": "https://fmv.jku.at/aiger/",
+  "archive": {
+    "url": "https://fmv.jku.at/aiger/smtqfbv-aigs.7z",
+    "format": "7z",
+    "bytes": 272161139,
+    "sha256": "aa79f28e8a0192936b98ade21e9439e16d3f1a3fe5ee5a0fb3362e7ff5b2f41f"
+  },
+  "members_count": 3672,
+  "unpacked_bytes": 2100000000,
+  "terms": "published by the FMV group next to the AIGER tools, derived from the SMT-LIB benchmarks",
+  "redistribute": false,
+  "note": "3672 circuits, 272 MB compressed and about 2.1 GB unpacked. Member checksums are not recorded here, only the archive's: the list would be longer than the repository. tools/fetch_upstream.py downloads it into a local cache."
+}

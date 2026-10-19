@@ -1,5 +1,4 @@
 {
-  "generator": "lockchart",
   "image": "satex-gen/lockchart:2025",
   "subset": "group3",
   "results": [
@@ -73,5 +72,6 @@
       "got": "eb87f593f609f19f76d2851589486ddd",
       "level": "N4"
     }
-  ]
+  ],
+  "target": "lockchart"
 }

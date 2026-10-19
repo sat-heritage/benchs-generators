@@ -1,0 +1,74 @@
+{
+  "kind": "bridge",
+  "name": "AIGER bridge",
+  "authors": "Armin Biere",
+  "authors_source": "repository arminbiere/aiger",
+  "year": 2021,
+  "competitions": [
+    "SAT Competition 2011 and later, as unrolled model checking and bit-vector instances"
+  ],
+  "language": "C",
+  "license": "MIT",
+  "publish_image": true,
+  "source_repo": "https://github.com/arminbiere/aiger.git",
+  "source_commit": "5f8ce5ca5fc42a06e5d713309f99195a740ac2b4",
+  "source_tree": "7a9f000b9718b50d15bd9b7ab3cf7b889c50ddad",
+  "image": "satex-gen/aiger:2021",
+  "usage": "aiger-bridge unroll K MODEL.aig | aiger-bridge cnf MODEL.aig | aiger-bridge miter A.aig B.aig",
+  "seed": "none: a bridge encodes a given circuit, it invents nothing",
+  "notes": "a bridge rather than a generator: it encodes the circuits another competition distributes. The models are fetched into a local cache by tools/fetch_upstream.py and never kept here. The number of time frames is the parameter that makes the family scale. The encoder is poormanaigtocnf, the plain Tseitin encoder of the aiger examples, which is what the 2011 submissions used: aigtocnf simplifies more and gives a different formula, which is why it is only available behind --optimised.",
+  "samples": [
+    {
+      "args": [
+        "unroll",
+        "10",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "hwmcc10",
+        "file": "bobsm5378d2.aig"
+      },
+      "label": "bobsm5378d2 unrolled over 10 time frames"
+    },
+    {
+      "args": [
+        "unroll",
+        "25",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "hwmcc10",
+        "file": "bobsm5378d2.aig"
+      },
+      "label": "bobsm5378d2 unrolled over 25 time frames"
+    },
+    {
+      "args": [
+        "unroll",
+        "45",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "hwmcc10",
+        "file": "bobsm5378d2.aig"
+      },
+      "label": "bobsm5378d2 unrolled over 45 time frames"
+    },
+    {
+      "args": [
+        "unroll",
+        "70",
+        "{file}"
+      ],
+      "upstream": {
+        "collection": "hwmcc10",
+        "file": "bobsm5378d2.aig"
+      },
+      "label": "bobsm5378d2 unrolled over 70 time frames"
+    }
+  ],
+  "collections": {
+    "hwmcc10": "circuits of the Hardware Model Checking Competition 2010, unrolled over k time frames",
+    "smtqfbv": "AIGs of the SMT-LIB quantifier-free bit-vector benchmarks, encoded as they are"
+  }
+}
