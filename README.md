@@ -387,6 +387,14 @@ The index of the pack carries, for every file, the same hash GBD uses, so an
 instance of a pack and an instance of a competition are identified the same
 way.
 
+It is published in the `packs-2026` release, one release per year as for the
+rescued sources:
+
+```sh
+curl -LO https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-1998-2000.tar
+tar xf ipc-cnf-1998-2000.tar     # the CNFs, compressed, and index.json
+```
+
 ## Bridges
 
 A generator makes an instance out of parameters. A **bridge** starts from an

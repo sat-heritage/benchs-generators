@@ -2,7 +2,7 @@
   "pack": "ipc-cnf-1998-2000",
   "title": "The planning competitions of 1998 and 2000 as CNF",
   "why": "The planning competitions distribute PDDL, not formulas, so every SAT author who wants to work on planning rebuilds the same translation and the same encoding. This pack is those instances as CNF, at several plan lengths, produced by one pinned chain: Fast Downward's translator, then the freeLunch encoder. The plan length is what the published SAT competition instances fix to one or two values, and what a solver author needs to vary.",
-  "status": "built",
+  "status": "published",
   "generator": "freelunch",
   "items": {
     "kind": "pddl-grid",
@@ -29,7 +29,8 @@
     "asset": "ipc-cnf-1998-2000.tar",
     "sha256": "c8f249fee7ad6f9cdb5aebc644537317ad361c14837bb311ca8aca453fef4677",
     "bytes": 67747840,
-    "zenodo": null
+    "zenodo": null,
+    "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-1998-2000.tar"
   },
   "max_clauses": 3000000,
   "built": {
