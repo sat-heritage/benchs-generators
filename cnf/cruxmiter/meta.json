@@ -9,8 +9,8 @@
   "language": "C, then Boolector and aiger",
   "license": "none stated",
   "publish_image": false,
-  "license_note": "the generator is not published in a public repository; Armin Biere agreed in September 2026 that it be part of SAT Heritage, and the sources are kept in cruxmiter/upstream with that notice. Ask him before reusing them elsewhere, and before publishing the image",
-  "source_repo": "sent by the author, kept in cruxmiter/upstream",
+  "license_note": "the generator is on no public repository; Armin Biere agreed in September 2026 that it be part of SAT Heritage, and his sources travel in the sources-2026 release of this repository, with a PROVENANCE.json recording how they reached us. Ask him before reusing them elsewhere, and before publishing the image",
+  "source_repo": "https://github.com/sat-heritage/benchs-generators/releases/download/sources-2026/cruxmiter-gencruxmitersmt-20211222.tar.gz",
   "image": "satex-gen/cruxmiter:2021",
   "usage": "crux-gen SIZE SEED",
   "seed": "the second argument; the generator seeds the C library random generator, so the same seed gives the same formula on the same C library",
@@ -45,5 +45,6 @@
       ],
       "label": "32 input bits"
     }
-  ]
+  ],
+  "source_sha256": "18fb318b74db1a28ac26a9bd3908e5e6ebccf482b078e6c35e1626b157df3c92"
 }

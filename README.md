@@ -294,6 +294,29 @@ table of each generator page. Today's 34 samples are all reproducible, and they
 span, for example, the unrolling of one model checking circuit from 35 thousand
 to 362 thousand clauses by changing one number.
 
+## Sources that exist nowhere else
+
+A few generators are on no public repository: their author wrote them, used
+them, and never published them. When one reaches us with the author's
+permission, it goes into a release of this repository rather than into git, so
+that every recipe keeps fetching and checking its sources the same way.
+
+One release per year, `sources-<year>`, one archive per tool, named after the
+date of the source rather than of the upload:
+
+```
+sources-2026/cruxmiter-gencruxmitersmt-20211222.tar.gz
+└── gencruxmitersmt/
+    ├── NOTICE           who wrote it, who allowed what, and when
+    ├── PROVENANCE.json  origin, permission, and the checksum of every file
+    ├── README.upstream  the author's own notes, untouched
+    └── src/             the files exactly as received
+```
+
+The recipe then pins the archive's SHA-256, exactly as another recipe pins a
+commit. If a newer version arrives, it becomes another archive with its own
+date, and the old one stays where it is.
+
 ## Bridges
 
 A generator makes an instance out of parameters. A **bridge** starts from an
