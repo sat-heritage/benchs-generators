@@ -37,6 +37,7 @@ def slug(name: str) -> str:
 
 UPSTREAM = {}
 SAMPLES = {}
+ROOT_DIR = Path(".")
 SOLVERS = {}
 
 
@@ -133,7 +134,7 @@ footer { color:var(--muted); font-size:13px; text-align:center; padding:20px 24p
 
 NAV = [("index.html", "Overview", "overview"), ("your-problem.html", "Your problem", "yours"),
        ("generators.html", "Generators", "generators"), ("bridges.html", "Bridges", "bridges"),
-       ("families.html", "Families", "families"), ("verification.html", "Verification", "verification")]
+       ("packs.html", "Packs", "packs"), ("families.html", "Families", "families"), ("verification.html", "Verification", "verification")]
 
 
 def page(title: str, body: str, depth: int, active: str = "") -> str:
@@ -216,6 +217,12 @@ def overview_page(gens: dict, rankings: dict) -> str:
 <h2 style="margin-top:26px">Bridges</h2>
 <p class="legend">They encode what another competition distributes, and never redistribute it. See <a href="bridges.html">bridges</a>.</p>
 <div class="grid">{"".join(gen_card(g) for g in sorted((g for g in gens.values() if g.get('kind') == 'bridge'), key=lambda g: (g['name'].lower(), g.get('collection') or '')))}</div>
+<div class="section"><h2>Where everything lives</h2>
+<p>Three kinds of content, three places, on purpose. The <b>recipes and the metadata</b> are in the repository,
+and nothing else is. The <b>sources of a generator that exists on no public repository</b> travel in a release,
+with their author's permission and a record of where they come from. The <b>instances we produce ourselves</b>
+travel in another release, as <a href="packs.html">packs</a>. The <b>benchmarks of other competitions</b> are
+never copied here at all: we keep their manifest and fetch them into a local cache when a bridge runs.</p></div>
 <div class="section"><h2>Instances nobody submitted</h2>
 <p>Reproducing what a competition used is one half of the work; making new instances is the other. Every
 generator page carries sample runs across its parameters, with the size of the formula each one produces, so
@@ -323,6 +330,46 @@ solver.</p>
 <p class="legend">If your problem resembles nothing there, that is interesting in itself: a new family is exactly
 what a competition is short of, and the <a href="{REPO_URL}/issues">issues</a> are the place to say so.</p></div>"""
     return page("Your problem", body, 0, "yours")
+
+
+def packs_page() -> str:
+    specs, built = [], []
+    for spec_path in sorted((ROOT_DIR / "packs").glob("*.json")):
+        s = json.load(open(spec_path))
+        index_path = ROOT_DIR / "data" / "packs" / f"{s['pack']}.json"
+        idx = json.load(open(index_path)) if index_path.exists() else None
+        (built if s.get("status") == "published" else specs).append((s, idx))
+    rows = []
+    for s, idx in built:
+        dist = s.get("distribution", {})
+        cl = [f["clauses"] for f in (idx or {}).get("files", [])] or [0]
+        rows.append(f"""<div class="section"><h2>{esc(s['title'])}</h2>
+<p>{esc(s['why'])}</p>
+<div class="stats">
+<div class="stat"><div class="n">{(idx or {}).get('instances', '—')}</div><div class="l">instances, none of them in GBD</div></div>
+<div class="stat"><div class="n">{((idx or {}).get('bytes', 0) / 1e6):.0f} MB</div><div class="l">compressed</div></div>
+<div class="stat"><div class="n">{min(cl):,}</div><div class="l">clauses in the smallest</div></div>
+<div class="stat"><div class="n">{max(cl):,}</div><div class="l">clauses in the largest</div></div>
+</div>
+<pre class="cmd">curl -LO {esc(dist.get('url', ''))}
+tar xf {esc(dist.get('asset', ''))}</pre>
+<p class="legend">Produced by {esc((idx or {}).get('chain') or s.get('built', {}).get('chain', ''))}, pinned in this
+repository. The archive carries an <code>index.json</code> giving, for every file, the hash GBD uses, the command
+that produced it and its size. {esc(s.get('size_note', ''))}</p></div>""")
+    for s, _ in specs:
+        rows.append(f"""<div class="section"><h2>{esc(s['title'])} <span class="badge none">proposed</span></h2>
+<p>{esc(s['why'])}</p><p class="legend">{esc(s.get('permission', ''))}</p></div>""")
+    body = f"""<div class="hero"><h1>Packs</h1>
+<p>A pack is a set of instances we produce and distribute ourselves, because nobody else does. It exists for a
+stated reason: a paper that needs them, or a collection worth having in CNF as a whole, such as every circuit of a
+hardware verification competition or every task of a planning one.</p></div>
+<div class="section"><h2>Two rules</h2>
+<p><b>We never republish what GBD already serves.</b> An instance whose hash is in GBD is linked, not copied. A
+pack holds what nobody else has: other parameters, other depths, other plan lengths.</p>
+<p><b>The hash is the one GBD uses</b>, the MD5 of the normalised CNF. An instance of a pack is named exactly as a
+competition instance is, which is what lets the two sit side by side.</p></div>
+{"".join(rows)}"""
+    return page("Packs", body, 0, "packs")
 
 
 def samples_section(g: dict) -> str:
@@ -486,6 +533,8 @@ python3 tools/verify.py sgen1</pre>
 
 
 def build(root: Path, out: Path) -> int:
+    global ROOT_DIR
+    ROOT_DIR = root
     gens, rankings = load(root)
     out.mkdir(parents=True, exist_ok=True)
     (out / "style.css").write_text(CSS)
@@ -493,6 +542,7 @@ def build(root: Path, out: Path) -> int:
     (out / "generators.html").write_text(generators_page(gens))
     (out / "bridges.html").write_text(bridges_page(gens, rankings))
     (out / "your-problem.html").write_text(your_problem_page(gens, rankings))
+    (out / "packs.html").write_text(packs_page())
     (out / "families.html").write_text(families_page(gens, rankings))
     (out / "verification.html").write_text(verification_page(gens, rankings))
     (out / "generators").mkdir(exist_ok=True)
