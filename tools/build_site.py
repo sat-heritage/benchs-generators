@@ -37,6 +37,7 @@ def slug(name: str) -> str:
 
 UPSTREAM = {}
 SAMPLES = {}
+SOLVERS = {}
 
 
 def load(root: Path):
@@ -44,6 +45,8 @@ def load(root: Path):
     import catalogue
     if (root / "data" / "samples.json").exists():
         SAMPLES.update(json.load(open(root / "data" / "samples.json")))
+    if (root / "data" / "solvers.json").exists():
+        SOLVERS.update(json.load(open(root / "data" / "solvers.json"))["years"])
     UPSTREAM.update(catalogue.collections(root))
     rankings = json.load(open(root / "data" / "rankings.json"))
     fam_of = {h: tuple(v) for h, v in rankings["instance_family"].items()}
@@ -128,8 +131,8 @@ svg.dl { width:13px; height:13px; align-self:center; stroke:currentColor; fill:n
 footer { color:var(--muted); font-size:13px; text-align:center; padding:20px 24px 28px; max-width:900px; margin:0 auto; }
 """
 
-NAV = [("index.html", "Overview", "overview"), ("generators.html", "Generators", "generators"),
-       ("bridges.html", "Bridges", "bridges"),
+NAV = [("index.html", "Overview", "overview"), ("your-problem.html", "Your problem", "yours"),
+       ("generators.html", "Generators", "generators"), ("bridges.html", "Bridges", "bridges"),
        ("families.html", "Families", "families"), ("verification.html", "Verification", "verification")]
 
 
@@ -254,12 +257,68 @@ def bridges_page(gens: dict, rankings: dict) -> str:
 <p>A bridge does not invent instances: it encodes artefacts that another competition distributes, a circuit of a
 hardware verification competition for example, with a pinned toolchain. The parameter of the encoding, the depth
 of an unrolling, is what lets the family scale beyond the handful of instances a SAT competition kept.</p></div>
+<div class="section"><h2>Your own files work too</h2>
+<p>A bridge reads whatever file of its format you give it: mount your directory on <code>/data</code> and it
+encodes your circuit, not only the ones a competition kept. See <a href="your-problem.html">your problem</a>.</p></div>
 <div class="section"><h2>What we never do</h2>
 <p>We do not redistribute the benchmarks of another competition. The repository keeps a manifest per collection,
 with its address, its checksum and its terms, and the files are fetched into a local cache when a bridge runs.
 The sizes below are what a download costs, not what this project stores.</p></div>
 <div class="section tablewrap"><table><tr><th>Bridge</th><th>Collection</th><th>Upstream distribution</th><th class="num">Archive</th><th class="num">Exact / checked</th><th>Terms</th></tr>{"".join(rows)}</table></div>"""
     return page("Bridges", body, 0, "bridges")
+
+
+ROUTES = [
+    ("A circuit in AIGER format, combinational", "ready",
+     "bridges/aiger", 'docker run --rm -v "$PWD:/data" satex-gen/aiger:2021 cnf mycircuit.aig > mine.cnf'),
+    ("A sequential model to unroll over k steps, bounded model checking", "ready",
+     "bridges/aiger", 'docker run --rm -v "$PWD:/data" satex-gen/aiger:2021 unroll 20 mymodel.aig > mine.cnf'),
+    ("Two circuits whose equivalence you want to check", "ready",
+     "bridges/aiger", 'docker run --rm -v "$PWD:/data" satex-gen/aiger:2021 miter a.aig b.aig > mine.cnf'),
+    ("A planning problem in PDDL", "planned",
+     "a bridge over freelunch, the encoder behind the planning families of the competitions", ""),
+    ("A constraint problem in XCSP3 or MiniZinc", "planned",
+     "a bridge over Savile Row or a Picat encoding", ""),
+    ("A bit-vector formula in SMT-LIB", "partly",
+     "the circuits of the SMT-LIB benchmarks are already there; encoding your own formula needs Boolector or "
+     "Bitwuzla in the chain, as the CRUX recipe does", ""),
+]
+
+
+def your_problem_page(gens: dict, rankings: dict) -> str:
+    rows = []
+    for what, state, how, cmd in ROUTES:
+        badge = {"ready": '<span class="badge ok">ready</span>',
+                 "partly": '<span class="badge warn">partly</span>',
+                 "planned": '<span class="badge none">planned</span>'}[state]
+        rows.append(f"""<tr><td>{esc(what)}</td><td>{badge}</td><td>{esc(how)}
+{f'<pre class="cmd">{esc(cmd)}</pre>' if cmd else ''}</td></tr>""")
+    year = sorted(rankings["years"])[-1]
+    best = rankings["years"][year]["families"]["ALL"]["solvers"][:3]
+    solvers = "".join(
+        f"""<tr><td>{esc(s['solver'])}</td><td class="num">{s['solved']} of {rankings['years'][year]['families']['ALL']['instances']}</td>
+<td>{(f'<pre class="cmd">docker run --rm -v "$PWD:/data" ' + esc((SOLVERS.get(year) or {}).get(s['solver'], {}).get('image', '')) + ' mine.cnf</pre>') if (SOLVERS.get(year) or {}).get(s['solver']) else '<span class="muted-inline">no image published</span>'}</td></tr>"""
+        for s in best)
+    body = f"""<div class="hero"><h1>You have a problem; what do you run?</h1>
+<p>The bridges here are not tied to the competitions: they encode any file of the formats they understand, yours
+included. Encode your problem, then pick the solver that does best on problems of that kind rather than the one
+that won overall.</p></div>
+<div class="section"><h2>Step one: turn it into CNF</h2>
+<div class="tablewrap"><table><tr><th>What you have</th><th></th><th>How</th></tr>{"".join(rows)}</table></div>
+<p class="legend">Mount the directory holding your file on <code>/data</code> and the image reads it there. Nothing
+is uploaded anywhere: the whole chain runs on your machine.</p></div>
+<div class="section"><h2>Step two: pick a solver</h2>
+<p class="legend">The best three of the SAT Competition {esc(year)} overall, as images of the companion project.</p>
+<div class="tablewrap"><table><tr><th>Solver</th><th class="num">Solved</th><th>Command</th></tr>{solvers}</table></div></div>
+<div class="section"><h2>Step three, the one that pays: find your family</h2>
+<p>A solver that wins overall is not the one to run on every kind of problem. On the Ascon cryptography family of
+2023, SeqFROST solved all twenty instances while the overall winner did not; on the 2024 scheduling family,
+AMSAT solved more than the winner. If your problem resembles one of the families of the competitions, the
+<a href="families.html">families</a> page gives the ranking on that family alone and the command for each
+solver.</p>
+<p class="legend">If your problem resembles nothing there, that is interesting in itself: a new family is exactly
+what a competition is short of, and the <a href="{REPO_URL}/issues">issues</a> are the place to say so.</p></div>"""
+    return page("Your problem", body, 0, "yours")
 
 
 def samples_section(g: dict) -> str:
@@ -353,6 +412,26 @@ def families_page(gens: dict, rankings: dict) -> str:
     return page("Families", body, 0, "families")
 
 
+def what_to_run(fam: str, rankings: dict) -> str:
+    """The solvers that did best on this family, as commands anyone can run."""
+    blocks = list(family_rows(fam, rankings))
+    if not blocks:
+        return ""
+    year, block = blocks[-1]
+    rows = []
+    for s in block["solvers"][:3]:
+        img = (SOLVERS.get(year) or {}).get(s["solver"])
+        cmd = (f'<pre class="cmd">docker run --rm -v "$PWD:/data" {esc(img["image"])} your-instance.cnf</pre>'
+               if img else '<span class="muted-inline">no image published for this solver yet</span>')
+        rows.append(f"""<tr><td>{esc(s['solver'])}</td><td class="num">{s['solved']} / {block['instances']}</td>
+<td>{cmd}</td></tr>""")
+    return f"""<div class="section"><h2>What to run on a problem of this kind</h2>
+<p class="legend">The solvers that did best on this family in the SAT Competition {esc(year)}, as images of the
+companion project. They are a better bet on such a problem than the overall winner of that year, which this
+family often disagrees with.</p>
+<div class="tablewrap"><table><tr><th>Solver</th><th class="num">Solved</th><th>Command</th></tr>{"".join(rows)}</table></div></div>"""
+
+
 def family_page(fam: str, gens: dict, rankings: dict) -> str:
     blocks = list(family_rows(fam, rankings))
     sections = []
@@ -376,7 +455,7 @@ def family_page(fam: str, gens: dict, rankings: dict) -> str:
         gl = """<div class="section"><h2>No generator here yet</h2><p>We have not packaged a generator for this family. If you wrote it, or know where its code lives, a <a href="%s/issues">issue</a> is very welcome.</p></div>""" % REPO_URL
     body = f"""<div class="crumbs"><a href="../index.html">Overview</a> · <a href="../families.html">Families</a></div>
 <div class="hero"><h1>{esc(fam)}</h1><p>Solver rankings on this family, and the generator that reproduces it.</p></div>
-{gl}{"".join(sections)}"""
+{what_to_run(fam, rankings)}{gl}{"".join(sections)}"""
     return page(fam, body, 1)
 
 
@@ -409,6 +488,7 @@ def build(root: Path, out: Path) -> int:
     (out / "index.html").write_text(overview_page(gens, rankings))
     (out / "generators.html").write_text(generators_page(gens))
     (out / "bridges.html").write_text(bridges_page(gens, rankings))
+    (out / "your-problem.html").write_text(your_problem_page(gens, rankings))
     (out / "families.html").write_text(families_page(gens, rankings))
     (out / "verification.html").write_text(verification_page(gens, rankings))
     (out / "generators").mkdir(exist_ok=True)

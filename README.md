@@ -298,6 +298,32 @@ table of each generator page. Today's 34 samples are all reproducible, and they
 span, for example, the unrolling of one model checking circuit from 35 thousand
 to 362 thousand clauses by changing one number.
 
+## Your own problem
+
+The bridges are not tied to the competitions. A bridge reads any file of the
+format it understands, so a circuit of yours goes through the same chain as one
+the organisers distributed:
+
+```sh
+docker run --rm -v "$PWD:/data" satex-gen/aiger:2021 cnf mycircuit.aig > mine.cnf
+docker run --rm -v "$PWD:/data" satex-gen/aiger:2021 unroll 20 mymodel.aig > mine.cnf
+```
+
+Nothing leaves the machine: the directory you mount is the only thing the image
+sees.
+
+Then comes the part that is worth more than the encoding: **which solver to
+run**. The winner of a competition is not the best choice on every kind of
+problem. On the Ascon cryptography family of 2023, SeqFROST solved all twenty
+instances while the overall winner did not; on the 2024 scheduling family,
+AMSAT solved more than the winner did. `tools/collect_solvers.py` matches the
+solvers of the detailed results with the images of the companion project, and
+each family page then carries the ranking on that family alone with the command
+that runs each solver.
+
+The website gathers this as a three-step page: turn your problem into CNF, pick
+a solver, and find the family your problem resembles.
+
 ## Sources that exist nowhere else
 
 A few generators are on no public repository: their author wrote them, used

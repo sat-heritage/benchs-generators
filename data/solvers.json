@@ -1,0 +1,243 @@
+{
+ "note": "competition solver names matched with the images of sat-heritage/docker-images",
+ "years": {
+  "2023": {
+   "AMSAT_": null,
+   "BreakID-kissat-low.sh": null,
+   "CaDiCaL_vivinst": {
+    "image": "satex/cadical-vivinst:2023",
+    "repository": "cadical-vivinst"
+   },
+   "Cadical_ESA": {
+    "image": "satex/cadical-esa:2023",
+    "repository": "cadical-esa"
+   },
+   "Cadical_rel_1.5.3.Scavel": null,
+   "Kissat_MAB_Binary": {
+    "image": "satex/kissat-mab-binary:2023",
+    "repository": "kissat-mab-binary"
+   },
+   "Kissat_MAB_Conflict": {
+    "image": "satex/kissat-mab-conflict:2023",
+    "repository": "kissat-mab-conflict"
+   },
+   "Kissat_MAB_Conflict+": null,
+   "Kissat_MAB_Rephases": {
+    "image": "satex/kissat-mab-rephases:2023",
+    "repository": "kissat-mab-rephases"
+   },
+   "Kissat_MAB_prop": {
+    "image": "satex/kissat-mab-prop:2023",
+    "repository": "kissat-mab-prop"
+   },
+   "Kissat_MAB_prop-no_sym": null,
+   "Kissat_MAB_prop_pr-no_sym": null,
+   "MapleCaDiCaL_LBD-990_500": {
+    "image": "satex/maplecadical-lbd-990-500:2023",
+    "repository": "maplecadical-lbd-990-500"
+   },
+   "MapleCaDiCaL_PPD-500_500": {
+    "image": "satex/maplecadical-ppd-500-500:2023",
+    "repository": "maplecadical-ppd-500-500"
+   },
+   "MapleCaDiCaL_PPD-950_950": {
+    "image": "satex/maplecadical-ppd-950-950:2023",
+    "repository": "maplecadical-ppd-950-950"
+   },
+   "MergeSat-bve_gates": {
+    "image": "satex/mergesat-bve-gates:2023",
+    "repository": "mergesat-bve-gates"
+   },
+   "MergeSat-bve_semgates": {
+    "image": "satex/mergesat-bve-semgates:2023",
+    "repository": "mergesat-bve-semgates"
+   },
+   "MergeSat-thread1": {
+    "image": "satex/mergesat-thread1:2023",
+    "repository": "mergesat-thread1"
+   },
+   "MiniSat+XorEngine": null,
+   "PReLearn-kissat-PReLearn-kissat.sh": null,
+   "PReLearn-kissat-PReLearn-tern-kissat.sh": null,
+   "ReEncode-kissat-ReEncode-pair-kissat.sh": null,
+   "SBVA-sbva_cadical": {
+    "image": "satex/sbva-cadical:2023",
+    "repository": "sbva-cadical"
+   },
+   "SBVA-sbva_kissat": null,
+   "SeqFROST": {
+    "image": "satex/seqfrost:2023",
+    "repository": "seqfrost"
+   },
+   "SeqFROST-ERE-All": {
+    "image": "satex/seqfrost-ere-all:2023",
+    "repository": "seqfrost-ere-all"
+   },
+   "SeqFROST-NoExtend": {
+    "image": "satex/seqfrost-noextend:2023",
+    "repository": "seqfrost-noextend"
+   },
+   "hKis-psids": {
+    "image": "satex/hkis-psids:2023",
+    "repository": "hkis-psids"
+   },
+   "hKis-unsat": {
+    "image": "satex/hkis-unsat:2023",
+    "repository": "hkis-unsat"
+   },
+   "hKissatInc-unsat": {
+    "image": "satex/hkissatinc-unsat:2023",
+    "repository": "hkissatinc-unsat"
+   },
+   "kissat-3.1.0": {
+    "image": "satex/kissat-3.1.0:2023",
+    "repository": "kissat-3.1.0"
+   },
+   "kissat-hywalk-exp": {
+    "image": "satex/kissat-hywalk-exp:2023",
+    "repository": "kissat-hywalk-exp"
+   },
+   "kissat-hywalk-gb": {
+    "image": "satex/kissat-hywalk-gb:2023",
+    "repository": "kissat-hywalk-gb"
+   },
+   "tabularasat-1.0.0": {
+    "image": "satex/tabularasat:2023",
+    "repository": "tabularasat"
+   }
+  },
+  "2024": {
+   "AMSAT": {
+    "image": "satex/amsat:2024",
+    "repository": "amsat"
+   },
+   "AMSAT_RGC": {
+    "image": "satex/amsat-rgc:2024",
+    "repository": "amsat-rgc"
+   },
+   "BreakID-Kissat": {
+    "image": "satex/breakid-kissat:2024",
+    "repository": "breakid-kissat"
+   },
+   "CaDiCaL": {
+    "image": "satex/cadical:2024",
+    "repository": "cadical"
+   },
+   "Cadical_ESA": {
+    "image": "satex/cadical-esa:2024",
+    "repository": "cadical-esa"
+   },
+   "IsaSAT": {
+    "image": "satex/isasat:2024",
+    "repository": "isasat"
+   },
+   "Kissat_MAB-DC": {
+    "image": "satex/kissat-mab-dc:2024",
+    "repository": "kissat-mab-dc"
+   },
+   "Kissat_MAB_Binary": {
+    "image": "satex/kissat-mab-binary:2024",
+    "repository": "kissat-mab-binary"
+   },
+   "Kissat_MAB_ESA": {
+    "image": "satex/kissat-mab-esa:2024",
+    "repository": "kissat-mab-esa"
+   },
+   "hCaD-bva": {
+    "image": "satex/hcad-bva:2024",
+    "repository": "hcad-bva"
+   },
+   "hCaD-pbva": {
+    "image": "satex/hcad-pbva:2024",
+    "repository": "hcad-pbva"
+   },
+   "hKis-bva": {
+    "image": "satex/hkis-bva:2024",
+    "repository": "hkis-bva"
+   },
+   "hKis-pbva": {
+    "image": "satex/hkis-pbva:2024",
+    "repository": "hkis-pbva"
+   },
+   "kissat-sc2024": {
+    "image": "satex/kissat-sc2024:2024",
+    "repository": "kissat-sc2024"
+   }
+  },
+  "2026": {
+   "anders_satsuma-iter-ae-kissat-mab": {
+    "image": "satex/satsuma-iter-ae-kissat-mab:2026",
+    "repository": "satsuma-iter-ae-kissat-mab"
+   },
+   "anders_satsuma-iter-kissat": {
+    "image": "satex/satsuma-iter-kissat:2026",
+    "repository": "satsuma-iter-kissat"
+   },
+   "biere_cadical3": {
+    "image": "satex/cadical3:2026",
+    "repository": "cadical3"
+   },
+   "biere_isasat": {
+    "image": "satex/isasat:2026",
+    "repository": "isasat"
+   },
+   "biere_kissat-biere": null,
+   "guo_kissat-ae-eg": {
+    "image": "satex/kissat-ae-eg:2026",
+    "repository": "kissat-ae-eg"
+   },
+   "guo_kissat-ae-hucb": {
+    "image": "satex/kissat-ae-hucb:2026",
+    "repository": "kissat-ae-hucb"
+   },
+   "liang_kissat-lr-ds": {
+    "image": "satex/kissat-lr-ds:2026",
+    "repository": "kissat-lr-ds"
+   },
+   "liang_kissat-mab-da": {
+    "image": "satex/kissat-mab-da:2026",
+    "repository": "kissat-mab-da"
+   },
+   "oertel_satsuma-lex-ae-kissat-mab": {
+    "image": "satex/satsuma-lex-ae-kissat-mab:2026",
+    "repository": "satsuma-lex-ae-kissat-mab"
+   },
+   "oertel_satsuma-lex-kissat": {
+    "image": "satex/satsuma-lex-kissat:2026",
+    "repository": "satsuma-lex-kissat"
+   },
+   "reeves_cadical-xlc-freeze": {
+    "image": "satex/cadical-xlc-freeze:2026",
+    "repository": "cadical-xlc-freeze"
+   },
+   "yalun_kissat-eda-1": {
+    "image": "satex/kissat-eda-1:2026",
+    "repository": "kissat-eda-1"
+   },
+   "yalun_kissat-eda-2": {
+    "image": "satex/kissat-eda-2:2026",
+    "repository": "kissat-eda-2"
+   },
+   "yalun_kissat-eda-3": {
+    "image": "satex/kissat-eda-3:2026",
+    "repository": "kissat-eda-3"
+   },
+   "yalun_kissat-eda-4": {
+    "image": "satex/kissat-eda-4:2026",
+    "repository": "kissat-eda-4"
+   },
+   "zheng_kissat-mab-hypre": {
+    "image": "satex/kissat-mab-hypre:2026",
+    "repository": "kissat-mab-hypre"
+   },
+   "zheng_kissat-mab-hypre-v2": {
+    "image": "satex/kissat-mab-hypre-v2:2026",
+    "repository": "kissat-mab-hypre-v2"
+   },
+   "zhenwei_mergesat": {
+    "image": "satex/mergesat:2026",
+    "repository": "mergesat"
+   }
+  }
+ }
+}
