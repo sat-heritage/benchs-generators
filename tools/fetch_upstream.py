@@ -2,7 +2,7 @@
 """Fetch an upstream benchmark collection into a local cache.
 
 This repository never redistributes the benchmarks of another competition: it
-keeps a manifest in upstream/<collection>.json, with the address of the archive
+keeps a manifest in collections/<collection>.json, with the address of the archive
 and its checksum, and this tool downloads it into a cache directory outside the
 repository.  With --record it writes back the checksums it observed, so that a
 later run can verify them.
@@ -57,7 +57,7 @@ def collection_dir(name: str, cache: Path) -> Path:
 
 
 def ensure(name: str, cache: Path = DEFAULT_CACHE, record: bool = False) -> Path:
-    manifest_path = ROOT / "upstream" / f"{name}.json"
+    manifest_path = ROOT / "collections" / f"{name}.json"
     manifest = json.load(open(manifest_path))
     spec = manifest["archive"]
     here = collection_dir(name, cache)

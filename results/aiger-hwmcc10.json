@@ -1,4 +1,5 @@
 {
+  "target": "aiger/hwmcc10",
   "image": "satex-gen/aiger:2021",
   "subset": null,
   "results": [
@@ -14,8 +15,8 @@
         "file": "bc57sensorsp1.aig"
       },
       "expected": "50888c8b378ab340bfd136a1bb04a1c2",
-      "got": "60178dfc638fe4cd4416c3b8340b02ae",
-      "level": "--"
+      "got": "50888c8b378ab340bfd136a1bb04a1c2",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-bobsm5378d2-tseitin.cnf",
@@ -29,8 +30,8 @@
         "file": "bobsm5378d2.aig"
       },
       "expected": "f7d34470d887c8fd66afeb28ba2911d3",
-      "got": "a17e0fb94d49d07a03885a8a6bcea2ff",
-      "level": "--"
+      "got": "f7d34470d887c8fd66afeb28ba2911d3",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-bobsmhdlc2-tseitin.cnf",
@@ -44,8 +45,8 @@
         "file": "bobsmhdlc2.aig"
       },
       "expected": "52aa6129cbf1fc57bd9fce305257d9b9",
-      "got": "f131ef01c1d954b03ea5ca250c0c7342",
-      "level": "--"
+      "got": "52aa6129cbf1fc57bd9fce305257d9b9",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-nusmvguidancep9-tseitin.cnf",
@@ -59,8 +60,8 @@
         "file": "nusmvguidancep9.aig"
       },
       "expected": "71dbf7ab78ef93c3d491c67752f03fd1",
-      "got": "b160799cb7be830f78bb85ad5f6f1105",
-      "level": "--"
+      "got": "71dbf7ab78ef93c3d491c67752f03fd1",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-nusmvreactorp2-tseitin.cnf",
@@ -74,8 +75,8 @@
         "file": "nusmvreactorp2.aig"
       },
       "expected": "6f2faf436943d36f61e82324e2acc7f3",
-      "got": "147ec884d134ce286ca1f2bc73abd902",
-      "level": "--"
+      "got": "6f2faf436943d36f61e82324e2acc7f3",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-nusmvtcastp2-tseitin.cnf",
@@ -89,8 +90,8 @@
         "file": "nusmvtcastp2.aig"
       },
       "expected": "8fa68e4ae4dc0395c853cb7d4dafdb35",
-      "got": "71c60d67443ec4fe015f2b39fcb6529e",
-      "level": "--"
+      "got": "8fa68e4ae4dc0395c853cb7d4dafdb35",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-pdtpmsgoodbakery-tseitin.cnf",
@@ -104,8 +105,8 @@
         "file": "pdtpmsgoodbakery.aig"
       },
       "expected": "42bae687b8c0f3061b135ddc21b24d7a",
-      "got": "6b8d5c1e1217939f87f50239639ffea2",
-      "level": "--"
+      "got": "42bae687b8c0f3061b135ddc21b24d7a",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-pdtpmspalu-tseitin-sc2011.cnf",
@@ -119,8 +120,8 @@
         "file": "pdtpmspalu.aig"
       },
       "expected": "20b1b9f69fa22ad64883cbf85cacf071",
-      "got": "d3b66f1b1f42c00d2c080ad3a43a1f1c",
-      "level": "--"
+      "got": "25cd3af99e41fffd8980180ea1d49b53",
+      "level": "N4"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-pdtpmspalu-tseitin.cnf",
@@ -134,8 +135,8 @@
         "file": "pdtpmspalu.aig"
       },
       "expected": "25cd3af99e41fffd8980180ea1d49b53",
-      "got": "d3b66f1b1f42c00d2c080ad3a43a1f1c",
-      "level": "--"
+      "got": "25cd3af99e41fffd8980180ea1d49b53",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-pdtswvqis10x6p1-tseitin.cnf",
@@ -149,8 +150,8 @@
         "file": "pdtswvqis10x6p1.aig"
       },
       "expected": "c1f81da93570d40213a53412d33b62ba",
-      "got": "83c2bf512a73952163057990802dcf70",
-      "level": "--"
+      "got": "c1f81da93570d40213a53412d33b62ba",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-pdtswvqis8x8p2-tseitin.cnf",
@@ -164,8 +165,8 @@
         "file": "pdtswvqis8x8p2.aig"
       },
       "expected": "701c96dc91c057c23026454520da2054",
-      "got": "38452840fb694f79ab3ba3ad15ae4fe8",
-      "level": "--"
+      "got": "701c96dc91c057c23026454520da2054",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-pdtswvrod6x8p1-tseitin.cnf",
@@ -179,8 +180,8 @@
         "file": "pdtswvrod6x8p1.aig"
       },
       "expected": "c7e1c685f8ea6134f621b7bd7c22c823",
-      "got": "7fbc638667e5a3f865e82a94053252b9",
-      "level": "--"
+      "got": "c7e1c685f8ea6134f621b7bd7c22c823",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-pdtswvtms14x8p1-tseitin.cnf",
@@ -194,8 +195,8 @@
         "file": "pdtswvtms14x8p1.aig"
       },
       "expected": "54ff7ae09469921a47c6971a12e5b805",
-      "got": "fac16ec812be44b69d7c10a4282403a5",
-      "level": "--"
+      "got": "54ff7ae09469921a47c6971a12e5b805",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-pdtviseisenberg1-tseitin.cnf",
@@ -209,8 +210,8 @@
         "file": "pdtviseisenberg1.aig"
       },
       "expected": "a662280908a6cf1ce7279f58a495d748",
-      "got": "55d717b99ded2c136a5362fc955b38f8",
-      "level": "--"
+      "got": "a662280908a6cf1ce7279f58a495d748",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-pdtvisns3p02-tseitin.cnf",
@@ -224,8 +225,8 @@
         "file": "pdtvisns3p02.aig"
       },
       "expected": "b5cab29563ae86ab38829f58a895a180",
-      "got": "1eb34af0573ac7083bbcd864427ba996",
-      "level": "--"
+      "got": "b5cab29563ae86ab38829f58a895a180",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k45-pdtvissoap1-tseitin.cnf",
@@ -239,8 +240,8 @@
         "file": "pdtvissoap1.aig"
       },
       "expected": "4e476731d6c65e9195b3ed81b1636384",
-      "got": "f5eaf5030da0812279ff422ae7ae0756",
-      "level": "--"
+      "got": "4e476731d6c65e9195b3ed81b1636384",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-bc57sensorsp0neg-tseitin.cnf",
@@ -254,8 +255,8 @@
         "file": "bc57sensorsp0neg.aig"
       },
       "expected": "7449b6a70e4da8e8e488c184352797a6",
-      "got": "c82c52043192793bf81a47e7933db927",
-      "level": "--"
+      "got": "7449b6a70e4da8e8e488c184352797a6",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-bc57sensorsp2-tseitin.cnf",
@@ -269,8 +270,8 @@
         "file": "bc57sensorsp2.aig"
       },
       "expected": "5697a40866ca0bdd9888c7c1e71ec5ae",
-      "got": "14a3c0f5eb9fd710d71fce244d25bd66",
-      "level": "--"
+      "got": "5697a40866ca0bdd9888c7c1e71ec5ae",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-bc57sensorsp3-tseitin.cnf",
@@ -284,8 +285,8 @@
         "file": "bc57sensorsp3.aig"
       },
       "expected": "97b5d13f253ebdb6043b1339838c7e25",
-      "got": "cd9fd0f0a5635b9a21724ef2a5267741",
-      "level": "--"
+      "got": "97b5d13f253ebdb6043b1339838c7e25",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-bjrb07amba2andenv-tseitin.cnf",
@@ -299,8 +300,8 @@
         "file": "bjrb07amba2andenv.aig"
       },
       "expected": "af92393bfacc2b077e845b934c703282",
-      "got": "e43ad5408d84b519ad9dd41333fe626e",
-      "level": "--"
+      "got": "af92393bfacc2b077e845b934c703282",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-eijkbs6669-tseitin.cnf",
@@ -314,8 +315,8 @@
         "file": "eijkbs6669.aig"
       },
       "expected": "bd48327b552374d6a65e02cd349ce834",
-      "got": "845fc8f0311d4fe88a185c74b9dcccc7",
-      "level": "--"
+      "got": "bd48327b552374d6a65e02cd349ce834",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-nusmvguidancep1-tseitin.cnf",
@@ -329,8 +330,8 @@
         "file": "nusmvguidancep1.aig"
       },
       "expected": "737cf0a935c8a03e609770c53e200e09",
-      "got": "84c80c0f0667e069449f4f357fbb540b",
-      "level": "--"
+      "got": "737cf0a935c8a03e609770c53e200e09",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-nusmvreactorp4-tseitin.cnf",
@@ -344,8 +345,8 @@
         "file": "nusmvreactorp4.aig"
       },
       "expected": "48108995c886d103feda7b3ce8d790b3",
-      "got": "09537fcdacbb1763c21d8bf56205bf6e",
-      "level": "--"
+      "got": "48108995c886d103feda7b3ce8d790b3",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-pdtpmsns2-tseitin.cnf",
@@ -359,8 +360,8 @@
         "file": "pdtpmsns2.aig"
       },
       "expected": "421961af41f33ec0e116e482dcd82b3a",
-      "got": "dd731f8c47459ff9ef93d69f75e53228",
-      "level": "--"
+      "got": "421961af41f33ec0e116e482dcd82b3a",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-pdtswvqis8x8p1-tseitin.cnf",
@@ -374,8 +375,8 @@
         "file": "pdtswvqis8x8p1.aig"
       },
       "expected": "1ebf4009339b90c3575cf9d1dec33b45",
-      "got": "ff47cde5e7167f42764eb566a59d9db3",
-      "level": "--"
+      "got": "1ebf4009339b90c3575cf9d1dec33b45",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-pdtswvrod6x8p2-tseitin.cnf",
@@ -389,8 +390,8 @@
         "file": "pdtswvrod6x8p2.aig"
       },
       "expected": "ff2f06af479a72c3ccba0294766b6c03",
-      "got": "f693a2239ec423c04c5a388fa2665236",
-      "level": "--"
+      "got": "ff2f06af479a72c3ccba0294766b6c03",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-pdtswvsam6x8p3-tseitin.cnf",
@@ -404,8 +405,8 @@
         "file": "pdtswvsam6x8p3.aig"
       },
       "expected": "c748c7d0cdf2459ff9d9ab2243da79a1",
-      "got": "314f0df727b820adaffe2b55f7ba157a",
-      "level": "--"
+      "got": "c748c7d0cdf2459ff9d9ab2243da79a1",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-pdtviseisenberg2-tseitin.cnf",
@@ -419,8 +420,8 @@
         "file": "pdtviseisenberg2.aig"
       },
       "expected": "8c0e6f2c46fe8768b0d88b44dc500adf",
-      "got": "9e6beb716eacae0e88cb1b15fe4ef2f6",
-      "level": "--"
+      "got": "8c0e6f2c46fe8768b0d88b44dc500adf",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-pdtvisns2p3-tseitin.cnf",
@@ -434,8 +435,8 @@
         "file": "pdtvisns2p3.aig"
       },
       "expected": "78bb5dc48b6b5cd47feb6c5eab421d9b",
-      "got": "101252e1032bb0a462fe604c08b0b693",
-      "level": "--"
+      "got": "78bb5dc48b6b5cd47feb6c5eab421d9b",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-pdtvisns3p00-tseitin.cnf",
@@ -449,8 +450,8 @@
         "file": "pdtvisns3p00.aig"
       },
       "expected": "f12494e0d35f59381afa1924004d7b43",
-      "got": "9ea62c73e95b541f004147b0f6f78018",
-      "level": "--"
+      "got": "f12494e0d35f59381afa1924004d7b43",
+      "level": "N1"
     },
     {
       "instance": "hwmcc10-timeframe-expansion-k50-viscoherencep3-tseitin.cnf",
@@ -464,9 +465,8 @@
         "file": "viscoherencep3.aig"
       },
       "expected": "fd3707aae353ab7884723e887844ceaf",
-      "got": "4151d9847379754f412c8aa0460ac247",
-      "level": "--"
+      "got": "fd3707aae353ab7884723e887844ceaf",
+      "level": "N1"
     }
-  ],
-  "target": "aiger/hwmcc10"
+  ]
 }
