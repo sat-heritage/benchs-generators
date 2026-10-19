@@ -1,5 +1,7 @@
 {
+  "target": "mdp",
   "image": "satex-gen/mdp:2022",
+  "subset": null,
   "results": [
     {
       "instance": "mdp-28-10-sat.cnf",
@@ -421,6 +423,5 @@
       "got": "2a43c3327fb817d82496449265d6630d",
       "level": "N1"
     }
-  ],
-  "target": "mdp"
+  ]
 }

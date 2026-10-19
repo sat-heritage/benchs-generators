@@ -394,9 +394,11 @@ def verification_page(gens: dict, rankings: dict) -> str:
 <div class="section tablewrap"><h2>Where we stand</h2><table><tr><th>Generator</th><th class="num">References</th><th class="num">Checked</th><th class="num">Exact</th></tr>{per_gen}</table></div>
 <div class="section"><h2>Reproduce it yourself</h2><pre>git clone {REPO_URL}.git
 cd benchs-generators
+python3 tools/check_repo.py                  # no Docker needed: the recipes hold together
 docker build -t satex-gen/gbd:0.4.2 tools/gbd
+docker build -t satex-gen/sgen1:2009 cnf/sgen1
 python3 tools/verify.py sgen1</pre>
-<p class="legend">The verifier builds the image, regenerates every reference instance and prints one line per instance. Hashes are computed with the official <code>gbdc</code> package of <a href="{GBD_URL}">GBD</a>.</p></div>"""
+<p class="legend">The verifier regenerates every reference instance of the target and prints one line per instance. Hashes are computed with the official <code>gbdc</code> package of <a href="{GBD_URL}">GBD</a>.</p></div>"""
     return page("Verification", body, 0, "verification")
 
 

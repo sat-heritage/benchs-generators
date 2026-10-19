@@ -1,5 +1,7 @@
 {
+  "target": "roundrobin",
   "image": "satex-gen/roundrobin:2025",
+  "subset": null,
   "results": [
     {
       "instance": "MVRoundRobin_n12_d10_v2.cnf",
@@ -231,6 +233,5 @@
       "got": "a09eb02bbaa7a0ae171123a782c2164d",
       "level": "N1"
     }
-  ],
-  "target": "roundrobin"
+  ]
 }

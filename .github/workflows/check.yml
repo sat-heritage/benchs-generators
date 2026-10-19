@@ -1,0 +1,19 @@
+name: check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: The recipes hold together
+        run: python tools/check_repo.py
+      - name: The site builds
+        run: python tools/build_site.py --output _site

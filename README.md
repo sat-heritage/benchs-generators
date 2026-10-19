@@ -60,17 +60,21 @@ repository move their generator from the second row to the first.
 
 ## Results
 
-| Generator | Image | References | N1 | N3 |
+| Generator or bridge | Image | References | Exact | Up to renaming |
 |---|---|---|---|---|
 | sgen1 | `satex-gen/sgen1:2009` | 30 | 28 | 2 |
 | CNFgen | `satex-gen/cnfgen:0.9.6` | 24 | 24 | 0 |
 | mdp-benchmark | `satex-gen/mdp:2022` | 30 | 28 | 0 |
 | Round-robin | `satex-gen/roundrobin:2025` | 20 | 20 | 0 |
-| lockchart-to-cnf | `satex-gen/lockchart:2025` | 20 (5 checked) | 3 | 0 |
+| lockchart-to-cnf | `satex-gen/lockchart:2025` | 5 (5 small ones checked) | 3 | 0 |
 | Oddball | `satex-gen/oddball:2025` | 40 | 40 | 0 |
 | Community Attachment | `satex-gen/commattach:2015` | 56 | 54 | 1 |
-| genxormiter | `satex-gen/genxormiter:2025` | none | — | — |
 | CRUX miters | `satex-gen/cruxmiter:2021` | 230 | 230 | 0 |
+| AIGER bridge, model checking circuits | `satex-gen/aiger:2021` | 31 | 30 | 0 |
+| AIGER bridge, bit-vector circuits | `satex-gen/aiger:2021` | 31 | 30 | 0 |
+| genxormiter | `satex-gen/genxormiter:2025` | none | — | — |
+
+487 of 497 reference instances are regenerated exactly, every image rebuilt from its recipe before the check.
 
 - **sgen1**: 27 instances match their GBD hash. The GBD copy of
   `sgen1-sat-140-100` lacks one clause, (-25 -23), of the author's file; the

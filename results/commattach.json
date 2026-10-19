@@ -1,4 +1,5 @@
 {
+  "target": "commattach",
   "image": "satex-gen/commattach:2015",
   "subset": null,
   "results": [
@@ -1122,6 +1123,5 @@
       "got": "8ce5c7def256797660d94fe1326a2cf8",
       "level": "N1"
     }
-  ],
-  "target": "commattach"
+  ]
 }

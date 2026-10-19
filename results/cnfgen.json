@@ -1,5 +1,7 @@
 {
+  "target": "cnfgen",
   "image": "satex-gen/cnfgen:0.9.6",
+  "subset": null,
   "results": [
     {
       "instance": "bphp_p23_h22.sanitized.cnf",
@@ -332,6 +334,5 @@
       "got": "eaf2f0803dd2045f1b189ee834ef0c8f",
       "level": "N1"
     }
-  ],
-  "target": "cnfgen"
+  ]
 }
