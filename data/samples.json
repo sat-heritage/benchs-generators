@@ -466,5 +466,43 @@
    "clauses": 362290,
    "reproducible": true
   }
+ ],
+ "freelunch": [
+  {
+   "label": "barman, a plan of 5 steps",
+   "args": [
+    "--builtin",
+    "barman-pfile06-022.sas",
+    "cr",
+    "5"
+   ],
+   "variables": 16410,
+   "clauses": 585379,
+   "reproducible": true
+  },
+  {
+   "label": "barman, a plan of 7 steps",
+   "args": [
+    "--builtin",
+    "barman-pfile06-022.sas",
+    "cr",
+    "7"
+   ],
+   "variables": 21880,
+   "clauses": 780591,
+   "reproducible": true
+  },
+  {
+   "label": "barman, a plan of 9 steps",
+   "args": [
+    "--builtin",
+    "barman-pfile06-022.sas",
+    "cr",
+    "9"
+   ],
+   "variables": 27350,
+   "clauses": 975803,
+   "reproducible": true
+  }
  ]
 }

@@ -31,7 +31,7 @@ def main() -> int:
             problems.append(f"{target}: meta.json does not say whether the image may be published")
         if not (d / "Dockerfile").exists():
             problems.append(f"{target}: no Dockerfile in {d}")
-        if entry["kind"] == "bridge" and entry.get("collection") not in cols:
+        if entry["kind"] == "bridge" and entry.get("collection") and entry["collection"] not in cols:
             problems.append(f"{target}: collection {entry.get('collection')!r} has no manifest in collections/")
         if entry["references"]:
             refs = json.load(open(entry["references"]))["references"]

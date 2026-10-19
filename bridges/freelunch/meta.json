@@ -1,0 +1,49 @@
+{
+  "kind": "bridge",
+  "name": "freeLunch bridge",
+  "authors": "Tomas Balyo and Vojtech Bardiovsky",
+  "authors_source": "the headers of the freeLunch sources and the repository biotomas/freelunch",
+  "year": 2022,
+  "competitions": [
+    "SAT Competition 2016 and 2017, as the planning family of Tomas Balyo"
+  ],
+  "language": "Java, with the Fast Downward translator in Python",
+  "license": "GPL-3.0",
+  "publish_image": true,
+  "source_repo": "https://github.com/biotomas/freelunch.git",
+  "source_commit": "4f2c89ac3af95408baae4724028ed9d533bb3524",
+  "source_tree": "3f08fc32c58205df94eceaa52c8c6ecd4e15af2f",
+  "image": "satex-gen/freelunch:2022",
+  "usage": "freelunch-bridge DOMAIN.pddl PROBLEM.pddl METHOD MAKESPAN | freelunch-bridge TASK.sas METHOD MAKESPAN | freelunch-bridge --list",
+  "seed": "none: the encoding of a given task at a given makespan is deterministic, and two runs give the same formula",
+  "notes": "takes a planning problem and asks whether a plan of a given length exists. Give it two PDDL files and Fast Downward's translator turns them into the SAS+ format first; give it a SAS+ task and it encodes it directly. The makespan is the parameter that makes the family scale, as the depth does for an unrolling: on the gripper problem it goes from 1649 clauses at four steps to 4313 at twelve. Methods: the competition instances use exist, written ex in their names, and compactReinforced, written cr. Open question: the planning instances of the competitions cannot be reproduced here. Their tasks were submitted in 2016 and 2017, the public history of freeLunch starts in December 2017, and the exist encoder of the current code fails on the three tasks we have with a null pointer. The compactReinforced encoder works, but no competition instance uses it on a task the repository carries.",
+  "samples": [
+    {
+      "args": [
+        "--builtin",
+        "barman-pfile06-022.sas",
+        "cr",
+        "5"
+      ],
+      "label": "barman, a plan of 5 steps"
+    },
+    {
+      "args": [
+        "--builtin",
+        "barman-pfile06-022.sas",
+        "cr",
+        "7"
+      ],
+      "label": "barman, a plan of 7 steps"
+    },
+    {
+      "args": [
+        "--builtin",
+        "barman-pfile06-022.sas",
+        "cr",
+        "9"
+      ],
+      "label": "barman, a plan of 9 steps"
+    }
+  ]
+}

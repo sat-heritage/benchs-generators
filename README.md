@@ -377,6 +377,25 @@ the verifier fetches and mounts it:
  "args": ["unroll", "45", "{file}"]}
 ```
 
+**The second bridge takes a planning problem.** `bridges/freelunch` carries
+freeLunch, the encoder of Tomas Balyo and Vojtech Bardiovsky, and Fast
+Downward's translator, so two PDDL files go in and a CNF comes out:
+
+```sh
+docker run --rm -v "$PWD:/data" satex-gen/freelunch:2022 domain.pddl problem.pddl cr 12 > mine.cnf
+```
+
+The makespan, the number of steps the plan may take, is what makes the family
+scale: on the gripper problem it goes from 1649 clauses at four steps to 4313
+at twelve, and on a barman task from 585 thousand at five steps to 976 thousand
+at nine. The same command twice gives the same formula.
+
+It comes with its own open question. The planning instances of the competitions
+cannot be reproduced: their tasks were submitted in 2016 and 2017, the public
+history of freeLunch starts in December 2017, and its `exist` encoder fails on
+the three tasks we have. The `compactReinforced` encoder works, but no
+competition instance uses it on a task the repository carries.
+
 **The first bridge, and an open question.** `bridges/aiger` builds the AIGER
 toolbox and unrolls the HWMCC 2010 models. It produces the right family at any
 depth, but it does not reproduce the 31 unrolled instances the SAT competitions
