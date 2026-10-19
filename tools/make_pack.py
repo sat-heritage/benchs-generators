@@ -42,6 +42,21 @@ def items_of(spec: dict) -> list[dict]:
     it = spec["items"]
     if it["kind"] == "list":
         return it["entries"]
+    if it["kind"] == "pddl-grid":
+        files = fetch_upstream.ensure(it["upstream_collection"])
+        out = []
+        for comp in it["competitions"]:
+            for domain in sorted((files / comp / "domains").glob("*/")):
+                if not (domain / "domain.pddl").exists() or "adl" in domain.name:
+                    continue
+                problems = sorted((domain / "instances").glob("*.pddl"))[:it.get("instances_per_domain", 3)]
+                for prob in problems:
+                    for k in it["k"]:
+                        out.append({"name": f"{comp}-{domain.name}-{prob.stem}-k{k}.cnf",
+                                    "args": ["domain.pddl", f"instances/{prob.name}", it.get("method", "cr"), str(k)],
+                                    "upstream": {"collection": it["upstream_collection"],
+                                                 "dir": str(domain.relative_to(files))}})
+        return out
     if it["kind"] != "grid":
         sys.exit(f"unknown item kind: {it['kind']}")
     files = fetch_upstream.ensure(it["upstream_collection"])
@@ -58,7 +73,10 @@ def items_of(spec: dict) -> list[dict]:
 
 def produce(meta: dict, item: dict, dest: Path) -> None:
     mount, args = [], list(item["args"])
-    if "upstream" in item:
+    if "upstream" in item and "dir" in item["upstream"]:      # a directory, as a planning domain needs
+        files = fetch_upstream.ensure(item["upstream"]["collection"])
+        mount = ["-v", f"{files / item['upstream']['dir']}:/data:ro"]
+    elif "upstream" in item:
         files = fetch_upstream.ensure(item["upstream"]["collection"])
         member = next(files.rglob(item["upstream"]["file"]), None)
         if member is None:
@@ -93,11 +111,18 @@ def main(argv=None) -> int:
 
     out = Path(args.out).expanduser() / args.pack
     out.mkdir(parents=True, exist_ok=True)
-    index, linked, done = [], [], 0
+    index, linked, skipped, done = [], [], [], 0
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         for item in items:
             produce(meta, item, tmp)
+            path = tmp / item["name"]
+            # an encoder refuses some inputs, an ADL domain for instance: note and move on
+            if not path.exists() or not any(l.startswith("p cnf") for l in open(path, errors="replace")):
+                skipped.append({"name": item["name"], "args": item["args"], "upstream": item.get("upstream")})
+                path.unlink(missing_ok=True)
+                done += 1
+                continue
             h, iso2, nv, nc = measure(tmp, [item["name"]])[item["name"]]
             done += 1
             if h in known:          # GBD already serves it: link, do not copy
@@ -117,10 +142,12 @@ def main(argv=None) -> int:
 
     doc = {"pack": args.pack, "title": spec["title"], "why": spec["why"], "generator": spec["generator"],
            "image": meta["image"], "instances": len(index), "bytes": sum(e["bytes"] for e in index),
-           "linked_to_gbd": len(linked), "files": index, "linked": linked}
+           "linked_to_gbd": len(linked), "not_encodable": len(skipped),
+           "files": index, "linked": linked, "skipped": skipped}
     (ROOT / "data" / "packs").mkdir(parents=True, exist_ok=True)
     json.dump(doc, open(ROOT / "data" / "packs" / f"{args.pack}.json", "w"), indent=1)
-    print(f"{len(index)} instances kept ({doc['bytes'] / 1e6:.1f} MB), {len(linked)} left to GBD -> {out}",
+    print(f"{len(index)} instances kept ({doc['bytes'] / 1e6:.1f} MB), {len(linked)} left to GBD, "
+          f"{len(skipped)} the encoder refused -> {out}",
           file=sys.stderr)
     return 0
 

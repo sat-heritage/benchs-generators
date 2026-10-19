@@ -347,6 +347,28 @@ The recipe then pins the archive's SHA-256, exactly as another recipe pins a
 commit. If a newer version arrives, it becomes another archive with its own
 date, and the old one stays where it is.
 
+## Old competitions, encoded today
+
+A planning competition distributes PDDL, a hardware verification competition
+distributes circuits; neither distributes formulas. The collections are
+declared in `collections/`, fetched into a local cache, and encoded on demand:
+
+```sh
+tools/fetch_upstream.py ipc        # the planning competitions, 1998 to 2014
+docker run --rm -v "$CACHE/ipc/files/ipc-1998/domains/gripper-round-1-strips:/data:ro" \
+  satex-gen/freelunch:2022 domain.pddl instances/instance-10.pddl cr 10 > gripper.cnf
+```
+
+A collection may be an archive or a repository: `collections/ipc.json` pins a
+commit and its git tree, the same digest the recipes use, so the instances
+cannot change under us.
+
+Measured on fifteen instances of the 1998 competition at three plan lengths:
+339 thousand clauses in the median, 8.9 MB compressed. Sizes vary wildly with
+the task, from 23 thousand clauses for a gripper problem to 61 million for a
+hundred-block one, so a pack picks its instances rather than taking everything.
+`packs/ipc-cnf.json` is the spec of that one, still proposed.
+
 ## Bridges
 
 A generator makes an instance out of parameters. A **bridge** starts from an

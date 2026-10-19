@@ -1,0 +1,285 @@
+{
+ "pack": "ipc-cnf",
+ "title": "The planning competitions as CNF",
+ "why": "The planning competitions distribute PDDL, not formulas, so every SAT author who wants to work on planning rebuilds the same translation and the same encoding. This pack is those instances as CNF, at several plan lengths, produced by one pinned chain: Fast Downward's translator, then the freeLunch encoder. The plan length is what the published SAT competition instances fix to one or two values, and what a solver author needs to vary.",
+ "generator": "freelunch",
+ "image": "satex-gen/freelunch:2022",
+ "instances": 15,
+ "bytes": 8929696,
+ "linked_to_gbd": 0,
+ "not_encodable": 0,
+ "files": [
+  {
+   "file": "ipc-1998-grid-round-2-strips-instance-1-k6.cnf.xz",
+   "bytes": 434272,
+   "hash": "08842ea871cb0496df524971a96e37bb",
+   "isohash2": "d2d88c05d933fc46",
+   "variables": 24346,
+   "clauses": 215386,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/grid-round-2-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-grid-round-2-strips-instance-1-k10.cnf.xz",
+   "bytes": 751660,
+   "hash": "619f8057fed22e9f507f58bf7fff0cb5",
+   "isohash2": "f9dda92016ff21b7",
+   "variables": 38258,
+   "clauses": 338486,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/grid-round-2-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-grid-round-2-strips-instance-1-k14.cnf.xz",
+   "bytes": 354316,
+   "hash": "3aefcf6a4d7f5bf36976ca81bd69a6a8",
+   "isohash2": "859ab7e64cc63397",
+   "variables": 52170,
+   "clauses": 461586,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "14"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/grid-round-2-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-grid-round-2-strips-instance-2-k6.cnf.xz",
+   "bytes": 876596,
+   "hash": "fa1b9ad9c2a431208b3421e00c91212e",
+   "isohash2": "d0cf5388a35b1e88",
+   "variables": 40866,
+   "clauses": 413347,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/grid-round-2-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-grid-round-2-strips-instance-2-k10.cnf.xz",
+   "bytes": 1418048,
+   "hash": "5a365bf2a9c103ef5715f422d9c8983d",
+   "isohash2": "4f2df645d2e57cd2",
+   "variables": 64218,
+   "clauses": 649567,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/grid-round-2-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-grid-round-2-strips-instance-2-k14.cnf.xz",
+   "bytes": 752628,
+   "hash": "77a32bf80a3b1b72c463d02d298150e0",
+   "isohash2": "34063adcb6102c94",
+   "variables": 87570,
+   "clauses": 885787,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "14"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/grid-round-2-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-grid-round-2-strips-instance-3-k6.cnf.xz",
+   "bytes": 1229580,
+   "hash": "caf33207b5beb474b243729d7cb5c606",
+   "isohash2": "d16be0016f74d652",
+   "variables": 64512,
+   "clauses": 734508,
+   "args": [
+    "domain.pddl",
+    "instances/instance-3.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/grid-round-2-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-grid-round-2-strips-instance-3-k10.cnf.xz",
+   "bytes": 1737576,
+   "hash": "3801e966cce5c7ba0793726a0e85cc8a",
+   "isohash2": "cf6d628861432783",
+   "variables": 101376,
+   "clauses": 1154252,
+   "args": [
+    "domain.pddl",
+    "instances/instance-3.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/grid-round-2-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-grid-round-2-strips-instance-3-k14.cnf.xz",
+   "bytes": 1272540,
+   "hash": "518eaf5febeaab5ab03489eae6deaecd",
+   "isohash2": "1c128439e97e4fd0",
+   "variables": 138240,
+   "clauses": 1573996,
+   "args": [
+    "domain.pddl",
+    "instances/instance-3.pddl",
+    "cr",
+    "14"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/grid-round-2-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-gripper-round-1-strips-instance-1-k6.cnf.xz",
+   "bytes": 4212,
+   "hash": "5cbbb33467107e270d95a7066db83f47",
+   "isohash2": "6cfec5ea4eeed5bb",
+   "variables": 812,
+   "clauses": 2315,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/gripper-round-1-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-gripper-round-1-strips-instance-1-k10.cnf.xz",
+   "bytes": 6072,
+   "hash": "a39c34534d9514b8864f7cec50f9671b",
+   "isohash2": "87d25d7475e9fb95",
+   "variables": 1276,
+   "clauses": 3647,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/gripper-round-1-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-gripper-round-1-strips-instance-1-k14.cnf.xz",
+   "bytes": 7172,
+   "hash": "4fc331c4629a6df375fa5e6b9e0e9486",
+   "isohash2": "628f61150c2df53e",
+   "variables": 1740,
+   "clauses": 4979,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "14"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/gripper-round-1-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-gripper-round-1-strips-instance-10-k6.cnf.xz",
+   "bytes": 25148,
+   "hash": "75b0b15d38396fcbed9c4ac4d49a9141",
+   "isohash2": "d71d6c9c61265394",
+   "variables": 4088,
+   "clauses": 14861,
+   "args": [
+    "domain.pddl",
+    "instances/instance-10.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/gripper-round-1-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-gripper-round-1-strips-instance-10-k10.cnf.xz",
+   "bytes": 30780,
+   "hash": "5efcbf2b63ccc7aea1f25b7241678448",
+   "isohash2": "1a68f71c7106acc7",
+   "variables": 6424,
+   "clauses": 23393,
+   "args": [
+    "domain.pddl",
+    "instances/instance-10.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/gripper-round-1-strips"
+   }
+  },
+  {
+   "file": "ipc-1998-gripper-round-1-strips-instance-10-k14.cnf.xz",
+   "bytes": 29096,
+   "hash": "953eda7544a63dbaf9bd622574bfe138",
+   "isohash2": "5af578b2a26417e7",
+   "variables": 8760,
+   "clauses": 31925,
+   "args": [
+    "domain.pddl",
+    "instances/instance-10.pddl",
+    "cr",
+    "14"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-1998/domains/gripper-round-1-strips"
+   }
+  }
+ ],
+ "linked": [],
+ "skipped": []
+}

@@ -56,11 +56,31 @@ def collection_dir(name: str, cache: Path) -> Path:
     return cache / name
 
 
+def clone(spec: dict, into: Path) -> None:
+    """A collection that lives in a repository rather than in an archive: pin the
+    commit and check git's own content digest, as every recipe here does."""
+    if into.exists() and any(into.iterdir()):
+        return
+    into.parent.mkdir(parents=True, exist_ok=True)
+    print(f"cloning {spec['url']}", file=sys.stderr)
+    subprocess.run(["git", "clone", "-q", spec["url"], str(into)], check=True)
+    subprocess.run(["git", "-C", str(into), "checkout", "-q", spec["commit"]], check=True)
+    got = subprocess.run(["git", "-C", str(into), "rev-parse", "HEAD^{tree}"],
+                         check=True, capture_output=True, text=True).stdout.strip()
+    if spec.get("tree") and got != spec["tree"]:
+        sys.exit(f"the repository changed upstream\n  expected {spec['tree']}\n  found    {got}")
+    shutil.rmtree(into / ".git", ignore_errors=True)
+
+
 def ensure(name: str, cache: Path = DEFAULT_CACHE, record: bool = False) -> Path:
     manifest_path = ROOT / "collections" / f"{name}.json"
     manifest = json.load(open(manifest_path))
     spec = manifest["archive"]
     here = collection_dir(name, cache)
+    if spec.get("kind") == "git":
+        files = here / "files"
+        clone(spec, files)
+        return files
     archive = here / Path(spec["url"]).name
     if not archive.exists():
         download(spec["url"], archive)

@@ -1,0 +1,17 @@
+{
+  "collection": "ipc",
+  "name": "Instances of the International Planning Competitions, 1998 to 2014",
+  "organizers": "the IPC organisers, collected by the Potassco group",
+  "homepage": "https://github.com/potassco/pddl-instances",
+  "archive": {
+    "kind": "git",
+    "url": "https://github.com/potassco/pddl-instances.git",
+    "commit": "cf19edf7c53d1540ddbb396c642595e0926ee552",
+    "tree": "76712632bda8d1cc95b55cd17131b7e58e027fbd",
+    "bytes": 64000000
+  },
+  "layout": "<competition>/domains/<domain>/domain.pddl and <competition>/domains/<domain>/instances/*.pddl",
+  "terms": "the instances of the planning competitions, as collected and republished by the Potassco group; no licence file in the collection",
+  "redistribute": false,
+  "note": "eight competitions, from 1998 to 2014. This repository keeps the manifest and the pinned commit, never the instances: tools/fetch_upstream.py clones it into a local cache. The CNF encodings are produced on demand by the freeLunch bridge."
+}
