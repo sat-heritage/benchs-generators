@@ -353,6 +353,7 @@ def packs_page() -> str:
 </div>
 <pre class="cmd">curl -LO {esc(dist.get('url', ''))}
 tar xf {esc(dist.get('asset', ''))}</pre>
+{f'<p class="legend">{esc(s["example_note"])}</p><p>Make your own, at the size you need:</p><pre class="cmd">{esc(s["regenerate"])}</pre>' if s.get('regenerate') else ''}
 <p class="legend">Produced by {esc((idx or {}).get('chain') or s.get('built', {}).get('chain', ''))}, pinned in this
 repository. The archive carries an <code>index.json</code> giving, for every file, the hash GBD uses, the command
 that produced it and its size. {esc(s.get('size_note', ''))}</p></div>""")
@@ -363,6 +364,11 @@ that produced it and its size. {esc(s.get('size_note', ''))}</p></div>""")
 <p>A pack is a set of instances we produce and distribute ourselves, because nobody else does. It exists for a
 stated reason: a paper that needs them, or a collection worth having in CNF as a whole, such as every circuit of a
 hardware verification competition or every task of a planning one.</p></div>
+<div class="warning"><b>These formulas are examples, not a benchmark suite.</b> A pack holds small instances, so
+that anyone can look at one, check it, and see what the encoding does. The sizes a solver author actually wants
+are made on demand: take the same pinned chain, change the plan length or the unrolling depth, pick a bigger
+task, and you have as many as you like. Every pack below says the command that regenerates it, and the
+<a href="your-problem.html">your problem</a> page says how to run the chain on a file of your own.</div>
 <div class="section"><h2>Two rules</h2>
 <p><b>We never republish what GBD already serves.</b> An instance whose hash is in GBD is linked, not copied. A
 pack holds what nobody else has: other parameters, other depths, other plan lengths.</p>

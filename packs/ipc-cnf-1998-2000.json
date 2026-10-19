@@ -32,12 +32,15 @@
     "zenodo": null,
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-1998-2000.tar"
   },
-  "max_clauses": 3000000,
+  "max_clauses": 300000,
   "built": {
     "instances": 141,
     "bytes": 67577984,
     "not_encodable": 3,
     "chain": "Fast Downward translator, then freeLunch compactReinforced",
     "note": "each file carries its GBD hash in index.json; none of these instances is in GBD"
-  }
+  },
+  "nature": "examples",
+  "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by changing the plan length or picking another task",
+  "regenerate": "tools/fetch_upstream.py ipc && docker run --rm -v \"$CACHE/ipc/files/ipc-1998/domains/gripper-round-1-strips:/data:ro\" satex-gen/freelunch:2022 domain.pddl instances/instance-10.pddl cr 10"
 }

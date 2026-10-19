@@ -387,6 +387,11 @@ The index of the pack carries, for every file, the same hash GBD uses, so an
 instance of a pack and an instance of a competition are identified the same
 way.
 
+**These formulas are examples, not a benchmark suite.** A pack holds small
+instances so that anyone can look at one and check what the encoding does. The
+sizes a solver author wants are made on demand: same pinned chain, another plan
+length, another task. Each spec records the command that regenerates it.
+
 It is published in the `packs-2026` release, one release per year as for the
 rescued sources:
 
