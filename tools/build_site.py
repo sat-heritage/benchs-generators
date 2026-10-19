@@ -129,6 +129,7 @@ footer { color:var(--muted); font-size:13px; text-align:center; padding:20px 24p
 """
 
 NAV = [("index.html", "Overview", "overview"), ("generators.html", "Generators", "generators"),
+       ("bridges.html", "Bridges", "bridges"),
        ("families.html", "Families", "families"), ("verification.html", "Verification", "verification")]
 
 
@@ -206,7 +207,12 @@ def overview_page(gens: dict, rankings: dict) -> str:
 <div class="stat"><div class="n">{sum(1 for g in gens.values() if not g.get("competitions"))}</div><div class="l">generators whose families never went to a competition</div></div>
 <div class="stat"><div class="n">{sum(1 for g in gens.values() if g.get("kind") == "bridge")}</div><div class="l">bridges: they encode what another competition distributes</div></div>
 </div>
-<h2>Generators</h2><div class="grid">{"".join(gen_card(g) for g in sorted(gens.values(), key=lambda g: g['name'].lower()))}</div>
+<h2>Generators</h2>
+<p class="legend">They make instances out of parameters alone.</p>
+<div class="grid">{"".join(gen_card(g) for g in sorted((g for g in gens.values() if g.get('kind') != 'bridge'), key=lambda g: g['name'].lower()))}</div>
+<h2 style="margin-top:26px">Bridges</h2>
+<p class="legend">They encode what another competition distributes, and never redistribute it. See <a href="bridges.html">bridges</a>.</p>
+<div class="grid">{"".join(gen_card(g) for g in sorted((g for g in gens.values() if g.get('kind') == 'bridge'), key=lambda g: (g['name'].lower(), g.get('collection') or '')))}</div>
 <div class="section"><h2>Instances nobody submitted</h2>
 <p>Reproducing what a competition used is one half of the work; making new instances is the other. Every
 generator page carries sample runs across its parameters, with the size of the formula each one produces, so
@@ -222,15 +228,38 @@ are in no database, ours included: they are made on demand.</p></div>
 
 def generators_page(gens: dict) -> str:
     rows = []
-    for g in sorted(gens.values(), key=lambda g: g["name"].lower()):
+    for g in sorted((g for g in gens.values() if g.get("kind") != "bridge"), key=lambda g: g["name"].lower()):
         rows.append(f"""<tr><td><a href="generators/{esc(g['slug'])}.html">{esc(g['name'])}</a></td>
 <td>{esc(g.get('authors',''))}</td><td>{esc(g.get('year',''))}</td><td>{esc(g.get('language',''))}</td>
 <td>{esc(g.get('license',''))}</td><td>{'yes' if g.get('publish_image') else 'no'}</td>
 <td class="num">{len(g['exact'])} / {len(g['checked'])}</td>
 <td>{", ".join(esc(f) for f in g['families']) or '<span class="tag">no competition family recorded</span>'}</td></tr>""")
-    body = f"""<div class="hero"><h1>Generators</h1><p>One image per generator, built from the author's own sources at a pinned commit.</p></div>
+    body = f"""<div class="hero"><h1>Generators</h1><p>A generator makes an instance out of parameters alone. One image each, built from the author's own sources at a pinned commit. The programs that start from someone else's artefacts are on the <a href="bridges.html">bridges</a> page.</p></div>
 <div class="section tablewrap"><table><tr><th>Generator</th><th>Authors</th><th>Year</th><th>Language</th><th>Licence</th><th>Image published</th><th class="num">Exact / checked</th><th>Families</th></tr>{"".join(rows)}</table></div>"""
     return page("Generators", body, 0, "generators")
+
+
+def bridges_page(gens: dict, rankings: dict) -> str:
+    rows = []
+    for g in sorted((g for g in gens.values() if g.get("kind") == "bridge"),
+                    key=lambda g: (g["name"].lower(), g.get("collection") or "")):
+        up = UPSTREAM.get(g.get("collection")) or {}
+        size = f"{up['archive']['bytes'] / 1e6:.0f} MB" if up.get("archive", {}).get("bytes") else "—"
+        rows.append(f"""<tr><td><a href="generators/{esc(g['slug'])}.html">{esc(g['name'])}</a></td>
+<td>{esc(g.get('collection') or '—')}</td>
+<td>{(f'<a href="{esc(up["homepage"])}">' + esc(up['name']) + '</a>') if up.get('homepage') else esc(up.get('name', '—'))}</td>
+<td class="num">{size}</td><td class="num">{len(g['exact'])} / {len(g['checked'])}</td>
+<td>{esc(up.get('terms', ''))}</td></tr>""")
+    body = f"""<div class="hero"><h1>Bridges</h1>
+<p>A bridge does not invent instances: it encodes artefacts that another competition distributes, a circuit of a
+hardware verification competition for example, with a pinned toolchain. The parameter of the encoding, the depth
+of an unrolling, is what lets the family scale beyond the handful of instances a SAT competition kept.</p></div>
+<div class="section"><h2>What we never do</h2>
+<p>We do not redistribute the benchmarks of another competition. The repository keeps a manifest per collection,
+with its address, its checksum and its terms, and the files are fetched into a local cache when a bridge runs.
+The sizes below are what a download costs, not what this project stores.</p></div>
+<div class="section tablewrap"><table><tr><th>Bridge</th><th>Collection</th><th>Upstream distribution</th><th class="num">Archive</th><th class="num">Exact / checked</th><th>Terms</th></tr>{"".join(rows)}</table></div>"""
+    return page("Bridges", body, 0, "bridges")
 
 
 def samples_section(g: dict) -> str:
@@ -377,6 +406,7 @@ def build(root: Path, out: Path) -> int:
     (out / "style.css").write_text(CSS)
     (out / "index.html").write_text(overview_page(gens, rankings))
     (out / "generators.html").write_text(generators_page(gens))
+    (out / "bridges.html").write_text(bridges_page(gens, rankings))
     (out / "families.html").write_text(families_page(gens, rankings))
     (out / "verification.html").write_text(verification_page(gens, rankings))
     (out / "generators").mkdir(exist_ok=True)
