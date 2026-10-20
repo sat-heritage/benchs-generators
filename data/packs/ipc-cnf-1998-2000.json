@@ -4,10 +4,10 @@
  "why": "The planning competitions distribute PDDL, not formulas, so every SAT author who wants to work on planning rebuilds the same translation and the same encoding. This pack is those instances as CNF, at several plan lengths, produced by one pinned chain: Fast Downward's translator, then the freeLunch encoder. The plan length is what the published SAT competition instances fix to one or two values, and what a solver author needs to vary.",
  "generator": "freelunch",
  "image": "satex-gen/freelunch:2022",
- "instances": 141,
- "bytes": 67577984,
+ "instances": 47,
+ "bytes": 2829132,
  "linked_to_gbd": 0,
- "not_encodable": 3,
+ "not_encodable": 17,
  "files": [
   {
    "file": "ipc-1998-grid-round-2-strips-instance-1-k6.cnf.xz",
@@ -21,150 +21,6 @@
     "instances/instance-1.pddl",
     "cr",
     "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/grid-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-grid-round-2-strips-instance-1-k10.cnf.xz",
-   "bytes": 751660,
-   "hash": "619f8057fed22e9f507f58bf7fff0cb5",
-   "isohash2": "f9dda92016ff21b7",
-   "variables": 38258,
-   "clauses": 338486,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/grid-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-grid-round-2-strips-instance-1-k14.cnf.xz",
-   "bytes": 354316,
-   "hash": "3aefcf6a4d7f5bf36976ca81bd69a6a8",
-   "isohash2": "859ab7e64cc63397",
-   "variables": 52170,
-   "clauses": 461586,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/grid-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-grid-round-2-strips-instance-2-k6.cnf.xz",
-   "bytes": 876596,
-   "hash": "fa1b9ad9c2a431208b3421e00c91212e",
-   "isohash2": "d0cf5388a35b1e88",
-   "variables": 40866,
-   "clauses": 413347,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/grid-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-grid-round-2-strips-instance-2-k10.cnf.xz",
-   "bytes": 1418048,
-   "hash": "5a365bf2a9c103ef5715f422d9c8983d",
-   "isohash2": "4f2df645d2e57cd2",
-   "variables": 64218,
-   "clauses": 649567,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/grid-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-grid-round-2-strips-instance-2-k14.cnf.xz",
-   "bytes": 752628,
-   "hash": "77a32bf80a3b1b72c463d02d298150e0",
-   "isohash2": "34063adcb6102c94",
-   "variables": 87570,
-   "clauses": 885787,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/grid-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-grid-round-2-strips-instance-3-k6.cnf.xz",
-   "bytes": 1229580,
-   "hash": "caf33207b5beb474b243729d7cb5c606",
-   "isohash2": "d16be0016f74d652",
-   "variables": 64512,
-   "clauses": 734508,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/grid-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-grid-round-2-strips-instance-3-k10.cnf.xz",
-   "bytes": 1737576,
-   "hash": "3801e966cce5c7ba0793726a0e85cc8a",
-   "isohash2": "cf6d628861432783",
-   "variables": 101376,
-   "clauses": 1154252,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/grid-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-grid-round-2-strips-instance-3-k14.cnf.xz",
-   "bytes": 1272540,
-   "hash": "518eaf5febeaab5ab03489eae6deaecd",
-   "isohash2": "1c128439e97e4fd0",
-   "variables": 138240,
-   "clauses": 1573996,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
    ],
    "upstream": {
     "collection": "ipc",
@@ -208,24 +64,6 @@
    }
   },
   {
-   "file": "ipc-1998-gripper-round-1-strips-instance-1-k14.cnf.xz",
-   "bytes": 7172,
-   "hash": "4fc331c4629a6df375fa5e6b9e0e9486",
-   "isohash2": "628f61150c2df53e",
-   "variables": 1740,
-   "clauses": 4979,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/gripper-round-1-strips"
-   }
-  },
-  {
    "file": "ipc-1998-gripper-round-1-strips-instance-2-k6.cnf.xz",
    "bytes": 6824,
    "hash": "7e26020ce56833757310461c34e0ad9b",
@@ -255,78 +93,6 @@
     "instances/instance-2.pddl",
     "cr",
     "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/gripper-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-gripper-round-1-strips-instance-2-k14.cnf.xz",
-   "bytes": 10144,
-   "hash": "9a218d1df1d331b2fb32d51e077ae333",
-   "isohash2": "096b705ceb67c9d6",
-   "variables": 2520,
-   "clauses": 7493,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/gripper-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-gripper-round-1-strips-instance-3-k6.cnf.xz",
-   "bytes": 9936,
-   "hash": "3865d04e14fc588139cd701b258e95ee",
-   "isohash2": "6312924ce3c64bb3",
-   "variables": 1540,
-   "clauses": 4711,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/gripper-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-gripper-round-1-strips-instance-3-k10.cnf.xz",
-   "bytes": 11388,
-   "hash": "760c588a25f26d74a5c66d6fca16eecf",
-   "isohash2": "99eb9f24e1c4e5ed",
-   "variables": 2420,
-   "clauses": 7419,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/gripper-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-gripper-round-1-strips-instance-3-k14.cnf.xz",
-   "bytes": 12984,
-   "hash": "7752499ceb66a5ccc2a727b85b1adfb7",
-   "isohash2": "d5b6c89fd22f97c9",
-   "variables": 3300,
-   "clauses": 10127,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
    ],
    "upstream": {
     "collection": "ipc",
@@ -370,24 +136,6 @@
    }
   },
   {
-   "file": "ipc-1998-logistics-round-1-strips-instance-1-k14.cnf.xz",
-   "bytes": 46592,
-   "hash": "607143e82cb01f924733e31f69c80a68",
-   "isohash2": "90e8f68785e942cc",
-   "variables": 15120,
-   "clauses": 50006,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/logistics-round-1-strips"
-   }
-  },
-  {
    "file": "ipc-1998-logistics-round-1-strips-instance-2-k6.cnf.xz",
    "bytes": 72660,
    "hash": "8a915fe120858230ee8153867af2abd1",
@@ -417,78 +165,6 @@
     "instances/instance-2.pddl",
     "cr",
     "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/logistics-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-logistics-round-1-strips-instance-2-k14.cnf.xz",
-   "bytes": 88176,
-   "hash": "c64a3a8dfd0e45a380d0c9a26ca0c5ba",
-   "isohash2": "2fe17bb651c8e3ea",
-   "variables": 36300,
-   "clauses": 122994,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/logistics-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-logistics-round-1-strips-instance-3-k6.cnf.xz",
-   "bytes": 157572,
-   "hash": "76af14289dad713307872ed4dd2295ba",
-   "isohash2": "7cd00aa6a741cf12",
-   "variables": 37828,
-   "clauses": 171097,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/logistics-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-logistics-round-1-strips-instance-3-k10.cnf.xz",
-   "bytes": 322448,
-   "hash": "cedb25e4fdf61376e22068e9d7afad3a",
-   "isohash2": "7de238593817f22a",
-   "variables": 59444,
-   "clauses": 268929,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/logistics-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-logistics-round-1-strips-instance-3-k14.cnf.xz",
-   "bytes": 190948,
-   "hash": "1ae1cd5151ccd4de7ae1632ec7ac4ac9",
-   "isohash2": "2a40762fd14d9a83",
-   "variables": 81060,
-   "clauses": 366761,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
    ],
    "upstream": {
     "collection": "ipc",
@@ -532,24 +208,6 @@
    }
   },
   {
-   "file": "ipc-1998-logistics-round-2-strips-instance-1-k14.cnf.xz",
-   "bytes": 18284,
-   "hash": "90bffa3dbcd8673ff74b0df5cf51e871",
-   "isohash2": "5907f664f6753ef0",
-   "variables": 7230,
-   "clauses": 21665,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/logistics-round-2-strips"
-   }
-  },
-  {
    "file": "ipc-1998-logistics-round-2-strips-instance-2-k6.cnf.xz",
    "bytes": 11540,
    "hash": "18dcb53aca702fbb3c0ca2404fd31577",
@@ -579,78 +237,6 @@
     "instances/instance-2.pddl",
     "cr",
     "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/logistics-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-logistics-round-2-strips-instance-2-k14.cnf.xz",
-   "bytes": 13264,
-   "hash": "0e55d2394df9220b3c51f512e2b2dc46",
-   "isohash2": "be0278eddeba1c0d",
-   "variables": 4860,
-   "clauses": 13883,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/logistics-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-logistics-round-2-strips-instance-3-k6.cnf.xz",
-   "bytes": 26500,
-   "hash": "652316e13a032c2ed3de9f45ec2f32dd",
-   "isohash2": "39b78cd46583f102",
-   "variables": 6314,
-   "clauses": 19675,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/logistics-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-logistics-round-2-strips-instance-3-k10.cnf.xz",
-   "bytes": 37524,
-   "hash": "6502d87fc7c5a0f8f3d6416a2571aaa4",
-   "isohash2": "1e3c3a89d7855bfa",
-   "variables": 9922,
-   "clauses": 30943,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/logistics-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-logistics-round-2-strips-instance-3-k14.cnf.xz",
-   "bytes": 36148,
-   "hash": "8d85e4045c38391dbec9e996bfb80f04",
-   "isohash2": "9f06ed3209ce401d",
-   "variables": 13530,
-   "clauses": 42211,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
    ],
    "upstream": {
     "collection": "ipc",
@@ -694,24 +280,6 @@
    }
   },
   {
-   "file": "ipc-1998-movie-round-1-strips-instance-1-k14.cnf.xz",
-   "bytes": 3384,
-   "hash": "642b4953ce49e774da271b33f6244a4a",
-   "isohash2": "7f9aa17f864d9083",
-   "variables": 945,
-   "clauses": 2145,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/movie-round-1-strips"
-   }
-  },
-  {
    "file": "ipc-1998-movie-round-1-strips-instance-2-k6.cnf.xz",
    "bytes": 2680,
    "hash": "272779b670a4c2adb388785299344492",
@@ -741,78 +309,6 @@
     "instances/instance-2.pddl",
     "cr",
     "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/movie-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-movie-round-1-strips-instance-2-k14.cnf.xz",
-   "bytes": 3928,
-   "hash": "2fc8879eaeb61a9ae9917acd796b5297",
-   "isohash2": "a165cc3014e2e064",
-   "variables": 1020,
-   "clauses": 2595,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/movie-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-movie-round-1-strips-instance-3-k6.cnf.xz",
-   "bytes": 2900,
-   "hash": "cbeb8e34f729bb91bc4369e63d5737ed",
-   "isohash2": "5e66c9c5ed02b034",
-   "variables": 511,
-   "clauses": 1456,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/movie-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-movie-round-1-strips-instance-3-k10.cnf.xz",
-   "bytes": 3548,
-   "hash": "a4464aa432251c895e0d467651a615d3",
-   "isohash2": "3602b80cb745e99f",
-   "variables": 803,
-   "clauses": 2288,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/movie-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-movie-round-1-strips-instance-3-k14.cnf.xz",
-   "bytes": 4232,
-   "hash": "637aacf1b7fe8ff61e4a3b9a7e228cd7",
-   "isohash2": "a0453574752fc421",
-   "variables": 1095,
-   "clauses": 3120,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
    ],
    "upstream": {
     "collection": "ipc",
@@ -856,186 +352,6 @@
    }
   },
   {
-   "file": "ipc-1998-mystery-prime-round-1-strips-instance-1-k14.cnf.xz",
-   "bytes": 535704,
-   "hash": "f7f62a5ac638843ee9cc1778a2a5ea96",
-   "isohash2": "1987ddcd899f5996",
-   "variables": 20370,
-   "clauses": 374328,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-prime-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-prime-round-1-strips-instance-2-k6.cnf.xz",
-   "bytes": 1006012,
-   "hash": "72de6dfe179fede82da9588fd9804044",
-   "isohash2": "c3a3df86e91914af",
-   "variables": 42434,
-   "clauses": 459640,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-prime-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-prime-round-1-strips-instance-2-k10.cnf.xz",
-   "bytes": 1398624,
-   "hash": "c854b566ac2fdffd174aee1a94a4fed3",
-   "isohash2": "11445d1aa75899d1",
-   "variables": 66682,
-   "clauses": 722372,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-prime-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-prime-round-1-strips-instance-2-k14.cnf.xz",
-   "bytes": 1062884,
-   "hash": "7e938b833c0531fa5102c9d8f905b6ba",
-   "isohash2": "821be43a7994205d",
-   "variables": 90930,
-   "clauses": 985104,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-prime-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-prime-round-1-strips-instance-3-k6.cnf.xz",
-   "bytes": 1153956,
-   "hash": "a93b8b81235de9ef3013ccd6fa162449",
-   "isohash2": "80b2b7e4ef67a49b",
-   "variables": 31906,
-   "clauses": 519078,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-prime-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-prime-round-1-strips-instance-3-k10.cnf.xz",
-   "bytes": 1990348,
-   "hash": "d5d645a373ce536887b949f5a43937ef",
-   "isohash2": "bdd591b3adf718bc",
-   "variables": 50138,
-   "clauses": 815746,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-prime-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-prime-round-1-strips-instance-3-k14.cnf.xz",
-   "bytes": 992404,
-   "hash": "b32a4ff09f30cbbf61f4361efcd1791f",
-   "isohash2": "1e7b2f411b77d60f",
-   "variables": 68370,
-   "clauses": 1112414,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-prime-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-prime-round-2-strips-instance-1-k6.cnf.xz",
-   "bytes": 837324,
-   "hash": "c21a5664cf1fdd744712d0924d4c0604",
-   "isohash2": "e514b48cc53c6bdb",
-   "variables": 60634,
-   "clauses": 427017,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-prime-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-prime-round-2-strips-instance-1-k10.cnf.xz",
-   "bytes": 1183764,
-   "hash": "ed2a19e81e9d4d0892532b9c96e451a1",
-   "isohash2": "c3e28deb9e787e09",
-   "variables": 95282,
-   "clauses": 671121,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-prime-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-prime-round-2-strips-instance-1-k14.cnf.xz",
-   "bytes": 849368,
-   "hash": "1b5c25115a65f0aa9127bff48e1d4ec5",
-   "isohash2": "fd43a389e1a7308a",
-   "variables": 129930,
-   "clauses": 915225,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-prime-round-2-strips"
-   }
-  },
-  {
    "file": "ipc-1998-mystery-prime-round-2-strips-instance-2-k6.cnf.xz",
    "bytes": 312328,
    "hash": "e6cce00af3b7c790aeace2a5a3e83093",
@@ -1065,24 +381,6 @@
     "instances/instance-2.pddl",
     "cr",
     "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-prime-round-2-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-prime-round-2-strips-instance-2-k14.cnf.xz",
-   "bytes": 314528,
-   "hash": "b8754c5a9929db7d51ca64e0e4c37dfa",
-   "isohash2": "6531772c8433e7bb",
-   "variables": 43260,
-   "clauses": 318404,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
    ],
    "upstream": {
     "collection": "ipc",
@@ -1126,132 +424,6 @@
    }
   },
   {
-   "file": "ipc-1998-mystery-round-1-strips-instance-1-k14.cnf.xz",
-   "bytes": 16008,
-   "hash": "77e30cce2eae2dcd4c804456ddcde9b0",
-   "isohash2": "43372024c226a65e",
-   "variables": 5130,
-   "clauses": 15863,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-round-1-strips-instance-2-k6.cnf.xz",
-   "bytes": 760572,
-   "hash": "f82f2276c2f38ab40911e5bb8bea7d3a",
-   "isohash2": "d92c2111d8eafead",
-   "variables": 37975,
-   "clauses": 345481,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-round-1-strips-instance-2-k10.cnf.xz",
-   "bytes": 1435596,
-   "hash": "85ef6643a90964cba0f0648575a03919",
-   "isohash2": "3b7936790044ae0b",
-   "variables": 59675,
-   "clauses": 542977,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-round-1-strips-instance-2-k14.cnf.xz",
-   "bytes": 811832,
-   "hash": "354f9593ae3e17730da58d0daf6af137",
-   "isohash2": "d0d331b4bc21ba64",
-   "variables": 81375,
-   "clauses": 740473,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-round-1-strips-instance-3-k6.cnf.xz",
-   "bytes": 212992,
-   "hash": "e21b9d5b0ddfd091f16af5f260e5323e",
-   "isohash2": "1ed65d8991328269",
-   "variables": 20629,
-   "clauses": 105786,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-round-1-strips-instance-3-k10.cnf.xz",
-   "bytes": 297580,
-   "hash": "663e763e8d113ebe8aa422ee62398664",
-   "isohash2": "a42c8437eaacc7cb",
-   "variables": 32417,
-   "clauses": 166282,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-round-1-strips"
-   }
-  },
-  {
-   "file": "ipc-1998-mystery-round-1-strips-instance-3-k14.cnf.xz",
-   "bytes": 218796,
-   "hash": "687c37df7a05919649ce46a2eebd233c",
-   "isohash2": "a4fea67e14d90ee2",
-   "variables": 44205,
-   "clauses": 226778,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-1998/domains/mystery-round-1-strips"
-   }
-  },
-  {
    "file": "ipc-2000-blocks-strips-typed-instance-1-k6.cnf.xz",
    "bytes": 7844,
    "hash": "02250982eb4282428c887b0f92b99b02",
@@ -1281,24 +453,6 @@
     "instances/instance-1.pddl",
     "cr",
     "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-blocks-strips-typed-instance-1-k14.cnf.xz",
-   "bytes": 13624,
-   "hash": "3433d1c4e811827415bc689d0418cddb",
-   "isohash2": "f5f8ebb482ec0473",
-   "variables": 2010,
-   "clauses": 7995,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
    ],
    "upstream": {
     "collection": "ipc",
@@ -1342,78 +496,6 @@
    }
   },
   {
-   "file": "ipc-2000-blocks-strips-typed-instance-2-k14.cnf.xz",
-   "bytes": 14588,
-   "hash": "b768c3d7c83aeb2139e70b2960b7c6fc",
-   "isohash2": "d1dfbe3bacb2991c",
-   "variables": 2010,
-   "clauses": 7998,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-blocks-strips-typed-instance-3-k6.cnf.xz",
-   "bytes": 9064,
-   "hash": "a8ce1380142bc22ee7b58b765f57f6be",
-   "isohash2": "e2304242c2ac0cb7",
-   "variables": 938,
-   "clauses": 3724,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-blocks-strips-typed-instance-3-k10.cnf.xz",
-   "bytes": 9640,
-   "hash": "f697a0a7650a7fd4e41dbf522827e4a6",
-   "isohash2": "b0ed379473efdb61",
-   "variables": 1474,
-   "clauses": 5860,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-blocks-strips-typed-instance-3-k14.cnf.xz",
-   "bytes": 14256,
-   "hash": "735a227ba0d2ca089ab0ecd03ce2b9e0",
-   "isohash2": "b6a0279390f6f38a",
-   "variables": 2010,
-   "clauses": 7996,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-typed"
-   }
-  },
-  {
    "file": "ipc-2000-blocks-strips-untyped-instance-1-k6.cnf.xz",
    "bytes": 7844,
    "hash": "02250982eb4282428c887b0f92b99b02",
@@ -1443,24 +525,6 @@
     "instances/instance-1.pddl",
     "cr",
     "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-blocks-strips-untyped-instance-1-k14.cnf.xz",
-   "bytes": 13624,
-   "hash": "3433d1c4e811827415bc689d0418cddb",
-   "isohash2": "f5f8ebb482ec0473",
-   "variables": 2010,
-   "clauses": 7995,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
    ],
    "upstream": {
     "collection": "ipc",
@@ -1504,78 +568,6 @@
    }
   },
   {
-   "file": "ipc-2000-blocks-strips-untyped-instance-2-k14.cnf.xz",
-   "bytes": 14588,
-   "hash": "b768c3d7c83aeb2139e70b2960b7c6fc",
-   "isohash2": "d1dfbe3bacb2991c",
-   "variables": 2010,
-   "clauses": 7998,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-blocks-strips-untyped-instance-3-k6.cnf.xz",
-   "bytes": 9064,
-   "hash": "a8ce1380142bc22ee7b58b765f57f6be",
-   "isohash2": "e2304242c2ac0cb7",
-   "variables": 938,
-   "clauses": 3724,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-blocks-strips-untyped-instance-3-k10.cnf.xz",
-   "bytes": 9640,
-   "hash": "f697a0a7650a7fd4e41dbf522827e4a6",
-   "isohash2": "b0ed379473efdb61",
-   "variables": 1474,
-   "clauses": 5860,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-blocks-strips-untyped-instance-3-k14.cnf.xz",
-   "bytes": 14256,
-   "hash": "735a227ba0d2ca089ab0ecd03ce2b9e0",
-   "isohash2": "b6a0279390f6f38a",
-   "variables": 2010,
-   "clauses": 7996,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-untyped"
-   }
-  },
-  {
    "file": "ipc-2000-elevator-strips-simple-typed-instance-1-k6.cnf.xz",
    "bytes": 820,
    "hash": "30af3075d4ce2a8fbab9dd25621fcb11",
@@ -1605,24 +597,6 @@
     "instances/instance-1.pddl",
     "cr",
     "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-elevator-strips-simple-typed-instance-1-k14.cnf.xz",
-   "bytes": 1396,
-   "hash": "fd08022a2005441e64264af6957301a0",
-   "isohash2": "c8407fcb30a460dd",
-   "variables": 315,
-   "clauses": 612,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
    ],
    "upstream": {
     "collection": "ipc",
@@ -1666,78 +640,6 @@
    }
   },
   {
-   "file": "ipc-2000-elevator-strips-simple-typed-instance-2-k14.cnf.xz",
-   "bytes": 1400,
-   "hash": "9458ce12b3f9078f3ccfea56a0f0f96a",
-   "isohash2": "919ed6e00e1866fd",
-   "variables": 315,
-   "clauses": 612,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-elevator-strips-simple-typed-instance-3-k6.cnf.xz",
-   "bytes": 820,
-   "hash": "30af3075d4ce2a8fbab9dd25621fcb11",
-   "isohash2": "d791a6ddc33368ea",
-   "variables": 147,
-   "clauses": 284,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-elevator-strips-simple-typed-instance-3-k10.cnf.xz",
-   "bytes": 1004,
-   "hash": "90f11632d4344a663e8aeb98c189cf0b",
-   "isohash2": "dedf4e5e32276972",
-   "variables": 231,
-   "clauses": 448,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-elevator-strips-simple-typed-instance-3-k14.cnf.xz",
-   "bytes": 1396,
-   "hash": "fd08022a2005441e64264af6957301a0",
-   "isohash2": "c8407fcb30a460dd",
-   "variables": 315,
-   "clauses": 612,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-typed"
-   }
-  },
-  {
    "file": "ipc-2000-elevator-strips-simple-untyped-instance-1-k6.cnf.xz",
    "bytes": 820,
    "hash": "30af3075d4ce2a8fbab9dd25621fcb11",
@@ -1767,24 +669,6 @@
     "instances/instance-1.pddl",
     "cr",
     "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-elevator-strips-simple-untyped-instance-1-k14.cnf.xz",
-   "bytes": 1396,
-   "hash": "fd08022a2005441e64264af6957301a0",
-   "isohash2": "c8407fcb30a460dd",
-   "variables": 315,
-   "clauses": 612,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
    ],
    "upstream": {
     "collection": "ipc",
@@ -1828,402 +712,6 @@
    }
   },
   {
-   "file": "ipc-2000-elevator-strips-simple-untyped-instance-2-k14.cnf.xz",
-   "bytes": 1400,
-   "hash": "9458ce12b3f9078f3ccfea56a0f0f96a",
-   "isohash2": "919ed6e00e1866fd",
-   "variables": 315,
-   "clauses": 612,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-elevator-strips-simple-untyped-instance-3-k6.cnf.xz",
-   "bytes": 820,
-   "hash": "30af3075d4ce2a8fbab9dd25621fcb11",
-   "isohash2": "d791a6ddc33368ea",
-   "variables": 147,
-   "clauses": 284,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-elevator-strips-simple-untyped-instance-3-k10.cnf.xz",
-   "bytes": 1004,
-   "hash": "90f11632d4344a663e8aeb98c189cf0b",
-   "isohash2": "dedf4e5e32276972",
-   "variables": 231,
-   "clauses": 448,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-elevator-strips-simple-untyped-instance-3-k14.cnf.xz",
-   "bytes": 1396,
-   "hash": "fd08022a2005441e64264af6957301a0",
-   "isohash2": "c8407fcb30a460dd",
-   "variables": 315,
-   "clauses": 612,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-typed-instance-1-k6.cnf.xz",
-   "bytes": 1673668,
-   "hash": "742e696cf306ec7155ef02067f3e8bb3",
-   "isohash2": "9d702342012287ed",
-   "variables": 26208,
-   "clauses": 617933,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-typed-instance-1-k10.cnf.xz",
-   "bytes": 3002464,
-   "hash": "92f195905713ed44a1c1c4769e2dd5f1",
-   "isohash2": "57c032325f7e3f85",
-   "variables": 41184,
-   "clauses": 971073,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-typed-instance-1-k14.cnf.xz",
-   "bytes": 1676684,
-   "hash": "90fa32b27a2534b6cb2f8157a7420805",
-   "isohash2": "8f1883615edb06f7",
-   "variables": 56160,
-   "clauses": 1324213,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-typed-instance-2-k6.cnf.xz",
-   "bytes": 1797300,
-   "hash": "9fdb61962e7bdcdeb734cc4fd43aa895",
-   "isohash2": "cba1d5afe5472afc",
-   "variables": 25970,
-   "clauses": 602818,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-typed-instance-2-k10.cnf.xz",
-   "bytes": 2939436,
-   "hash": "0511d3029f88a9a0402c17bafd7c36cc",
-   "isohash2": "af5b771dc0f899ee",
-   "variables": 40810,
-   "clauses": 947318,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-typed-instance-2-k14.cnf.xz",
-   "bytes": 1897800,
-   "hash": "f45cbf88c87880c103dd3547e62ca21e",
-   "isohash2": "caedea9b55ec4f3e",
-   "variables": 55650,
-   "clauses": 1291818,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-typed-instance-3-k6.cnf.xz",
-   "bytes": 1913356,
-   "hash": "dcd7c071c135bc21f8afff22457805ab",
-   "isohash2": "6d2d935d41f00211",
-   "variables": 26152,
-   "clauses": 637628,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-typed-instance-3-k10.cnf.xz",
-   "bytes": 3096916,
-   "hash": "200d26125cb567217821f8016fa02a9c",
-   "isohash2": "cb7fe4ed495ab0a5",
-   "variables": 41096,
-   "clauses": 1002016,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-typed-instance-3-k14.cnf.xz",
-   "bytes": 2034068,
-   "hash": "41fcf82e239914874904fcf8d866668e",
-   "isohash2": "fdea8c43f7ac779b",
-   "variables": 56040,
-   "clauses": 1366404,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-untyped-instance-1-k6.cnf.xz",
-   "bytes": 1673668,
-   "hash": "742e696cf306ec7155ef02067f3e8bb3",
-   "isohash2": "9d702342012287ed",
-   "variables": 26208,
-   "clauses": 617933,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-untyped-instance-1-k10.cnf.xz",
-   "bytes": 3002464,
-   "hash": "92f195905713ed44a1c1c4769e2dd5f1",
-   "isohash2": "57c032325f7e3f85",
-   "variables": 41184,
-   "clauses": 971073,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-untyped-instance-1-k14.cnf.xz",
-   "bytes": 1676684,
-   "hash": "90fa32b27a2534b6cb2f8157a7420805",
-   "isohash2": "8f1883615edb06f7",
-   "variables": 56160,
-   "clauses": 1324213,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-untyped-instance-2-k6.cnf.xz",
-   "bytes": 1797300,
-   "hash": "9fdb61962e7bdcdeb734cc4fd43aa895",
-   "isohash2": "cba1d5afe5472afc",
-   "variables": 25970,
-   "clauses": 602818,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-untyped-instance-2-k10.cnf.xz",
-   "bytes": 2939436,
-   "hash": "0511d3029f88a9a0402c17bafd7c36cc",
-   "isohash2": "af5b771dc0f899ee",
-   "variables": 40810,
-   "clauses": 947318,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-untyped-instance-2-k14.cnf.xz",
-   "bytes": 1897800,
-   "hash": "f45cbf88c87880c103dd3547e62ca21e",
-   "isohash2": "caedea9b55ec4f3e",
-   "variables": 55650,
-   "clauses": 1291818,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-untyped-instance-3-k6.cnf.xz",
-   "bytes": 1913356,
-   "hash": "dcd7c071c135bc21f8afff22457805ab",
-   "isohash2": "6d2d935d41f00211",
-   "variables": 26152,
-   "clauses": 637628,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-untyped-instance-3-k10.cnf.xz",
-   "bytes": 3096916,
-   "hash": "200d26125cb567217821f8016fa02a9c",
-   "isohash2": "cb7fe4ed495ab0a5",
-   "variables": 41096,
-   "clauses": 1002016,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-freecell-strips-untyped-instance-3-k14.cnf.xz",
-   "bytes": 2034068,
-   "hash": "41fcf82e239914874904fcf8d866668e",
-   "isohash2": "fdea8c43f7ac779b",
-   "variables": 56040,
-   "clauses": 1366404,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/freecell-strips-untyped"
-   }
-  },
-  {
    "file": "ipc-2000-logistics-strips-typed-instance-1-k6.cnf.xz",
    "bytes": 5832,
    "hash": "af20f65d64c3e126b454bc983081abd2",
@@ -2253,24 +741,6 @@
     "instances/instance-1.pddl",
     "cr",
     "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-typed-instance-1-k14.cnf.xz",
-   "bytes": 8064,
-   "hash": "685e6a4813c929e1bcbde53f0505b0a4",
-   "isohash2": "8285590ad6655e26",
-   "variables": 2640,
-   "clauses": 6785,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
    ],
    "upstream": {
     "collection": "ipc",
@@ -2314,78 +784,6 @@
    }
   },
   {
-   "file": "ipc-2000-logistics-strips-typed-instance-2-k14.cnf.xz",
-   "bytes": 7804,
-   "hash": "7261cb0e64a77aff3adc28ece84ad3fa",
-   "isohash2": "bc44627fa1adce16",
-   "variables": 2640,
-   "clauses": 6785,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-typed-instance-3-k6.cnf.xz",
-   "bytes": 5708,
-   "hash": "6d864ed98a3fa3e26eebb7d4580fd151",
-   "isohash2": "50bb2e704559df64",
-   "variables": 1232,
-   "clauses": 3161,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-typed-instance-3-k10.cnf.xz",
-   "bytes": 6860,
-   "hash": "10a01ba3586eb509aa19afb327255121",
-   "isohash2": "3cb39b4172ef939b",
-   "variables": 1936,
-   "clauses": 4973,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-typed-instance-3-k14.cnf.xz",
-   "bytes": 7956,
-   "hash": "e649d3c00e1eab1a8238adf4711bfa0f",
-   "isohash2": "981d0de24233dc5f",
-   "variables": 2640,
-   "clauses": 6785,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-typed"
-   }
-  },
-  {
    "file": "ipc-2000-logistics-strips-untyped-instance-1-k6.cnf.xz",
    "bytes": 5832,
    "hash": "af20f65d64c3e126b454bc983081abd2",
@@ -2415,24 +813,6 @@
     "instances/instance-1.pddl",
     "cr",
     "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-untyped-instance-1-k14.cnf.xz",
-   "bytes": 8064,
-   "hash": "685e6a4813c929e1bcbde53f0505b0a4",
-   "isohash2": "8285590ad6655e26",
-   "variables": 2640,
-   "clauses": 6785,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "14"
    ],
    "upstream": {
     "collection": "ipc",
@@ -2474,114 +854,196 @@
     "collection": "ipc",
     "dir": "ipc-2000/domains/logistics-strips-untyped"
    }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-untyped-instance-2-k14.cnf.xz",
-   "bytes": 7804,
-   "hash": "7261cb0e64a77aff3adc28ece84ad3fa",
-   "isohash2": "bc44627fa1adce16",
-   "variables": 2640,
-   "clauses": 6785,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-untyped-instance-3-k6.cnf.xz",
-   "bytes": 5708,
-   "hash": "6d864ed98a3fa3e26eebb7d4580fd151",
-   "isohash2": "50bb2e704559df64",
-   "variables": 1232,
-   "clauses": 3161,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-untyped-instance-3-k10.cnf.xz",
-   "bytes": 6860,
-   "hash": "10a01ba3586eb509aa19afb327255121",
-   "isohash2": "3cb39b4172ef939b",
-   "variables": 1936,
-   "clauses": 4973,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-untyped-instance-3-k14.cnf.xz",
-   "bytes": 7956,
-   "hash": "e649d3c00e1eab1a8238adf4711bfa0f",
-   "isohash2": "981d0de24233dc5f",
-   "variables": 2640,
-   "clauses": 6785,
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "14"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-untyped"
-   }
   }
  ],
  "linked": [],
  "skipped": [
   {
-   "name": "ipc-1998-mystery-prime-round-2-strips-instance-3-k6.cnf",
+   "name": "ipc-1998-grid-round-2-strips-instance-1-k10.cnf",
    "args": [
     "domain.pddl",
-    "instances/instance-3.pddl",
-    "cr",
-    "6"
-   ],
-   "clauses": 4050554,
-   "reason": "over the limit of 3000000 clauses"
-  },
-  {
-   "name": "ipc-1998-mystery-prime-round-2-strips-instance-3-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-3.pddl",
+    "instances/instance-1.pddl",
     "cr",
     "10"
    ],
-   "clauses": 6365330,
-   "reason": "over the limit of 3000000 clauses"
+   "clauses": 338486,
+   "reason": "over the limit of 300000 clauses"
   },
   {
-   "name": "ipc-1998-mystery-prime-round-2-strips-instance-3-k14.cnf",
+   "name": "ipc-1998-grid-round-2-strips-instance-2-k6.cnf",
    "args": [
     "domain.pddl",
-    "instances/instance-3.pddl",
+    "instances/instance-2.pddl",
     "cr",
-    "14"
+    "6"
    ],
-   "clauses": 8680106,
-   "reason": "over the limit of 3000000 clauses"
+   "clauses": 413347,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-1998-grid-round-2-strips-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 649567,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-1998-mystery-prime-round-1-strips-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 459640,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-1998-mystery-prime-round-1-strips-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 722372,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-1998-mystery-prime-round-2-strips-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 427017,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-1998-mystery-prime-round-2-strips-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 671121,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-1998-mystery-round-1-strips-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 345481,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-1998-mystery-round-1-strips-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 542977,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2000-freecell-strips-typed-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 617933,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2000-freecell-strips-typed-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 971073,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2000-freecell-strips-typed-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 602818,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2000-freecell-strips-typed-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 947318,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2000-freecell-strips-untyped-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 617933,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2000-freecell-strips-untyped-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 971073,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2000-freecell-strips-untyped-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 602818,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2000-freecell-strips-untyped-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 947318,
+   "reason": "over the limit of 300000 clauses"
   }
  ]
 }

@@ -17,7 +17,8 @@
       10
     ],
     "domains": "strips only: the encoder does not take the ADL domains",
-    "note": "the three smallest instances of each strips domain, by the number in their name"
+    "note": "classical strips domains only: the chain translates classical planning, so the temporal, numeric, metric and preference variants of a competition are left out rather than tried and refused",
+    "exclude_domains": "adl|temporal|numeric|metric|time|preferences|complex|float|soft|mixed"
   },
   "exclude_known": true,
   "permission": "to ask: the instances are collected and republished by the Potassco group from the planning competitions; the CNF is derived from them by a pinned chain",
@@ -25,20 +26,21 @@
   "distribution": {
     "github_release": "packs-2026",
     "asset": "ipc-cnf-2004.tar",
-    "zenodo": null,
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-2004.tar",
-    "sha256": "536c8a1ee2e7e8146368847f0db81ea9c04a2c415cb821554e422766e48e2cbb"
+    "sha256": "ff2b66fb4009a3b42a06ed3d9b1b22f4dc4144c939567dbfba956b7a91470966",
+    "zenodo": null
   },
   "max_clauses": 300000,
   "nature": "examples",
   "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by changing the plan length or picking another task",
   "regenerate": "tools/fetch_upstream.py ipc && docker run --rm -v \"$CACHE/ipc/files/ipc-2004/domains/<domain>:/data:ro\" satex-gen/freelunch:2022 domain.pddl instances/<instance>.pddl cr <plan length>",
   "built": {
-    "instances": 12,
-    "bytes": 299992,
-    "refused_by_encoder": 48,
-    "over_the_clause_limit": 0,
+    "instances": 4,
+    "bytes": 21976,
+    "left_out": {
+      "not classical planning": 4
+    },
     "chain": "Fast Downward translator, then freeLunch compactReinforced"
   },
-  "coverage_note": "freeLunch refuses 48 of the 60 tasks tried here, and 0 more are past the clause limit of a pack of examples. The refusals are the encoder's own limitation, not a choice: it fails on domains the translator accepts. Until that is understood, these packs show what the chain does rather than cover the competition."
+  "coverage_note": "classical strips domains only. Of the tasks tried, 4 were left out because not classical planning. A formula past the limit is a choice, a refusal by the translator means the domain is not classical planning, and a failure of the encoder is its own."
 }

@@ -24,21 +24,30 @@ if [ $# -eq 4 ]; then
     [ -f "$1" ] && [ -f "$2" ] || { echo "freelunch-bridge: $1 or $2 is not a file" >&2; exit 2; }
     tmp=$(mktemp -d)
     dom=$(readlink -f "$1"); prob=$(readlink -f "$2")
-    (cd "$tmp" && PYTHONPATH=/opt/downward/translate python3 -m fast_downward.translate "$dom" "$prob" >/dev/null)
+    # exit 3: the translator refuses the domain, which happens for every temporal,
+    # numeric or preference domain, since this chain is for classical planning only.
+    # exit 4: the translation worked and the encoder is the one that failed.
+    if ! (cd "$tmp" && PYTHONPATH=/opt/downward/translate python3 -m fast_downward.translate \
+            "$dom" "$prob" >/dev/null 2>"$tmp/translate.err"); then
+        echo "freelunch-bridge: not a classical planning domain, the translator refused it:" >&2
+        tail -3 "$tmp/translate.err" >&2
+        exit 3
+    fi
     task=$(ls "$tmp"/*.sas 2>/dev/null | head -1)
-    [ -n "$task" ] || { echo "freelunch-bridge: the PDDL could not be translated" >&2; exit 3; }
+    [ -n "$task" ] || { echo "freelunch-bridge: the translator produced no task" >&2; exit 3; }
     shift
 fi
 [ $# -eq 3 ] || { echo "usage: freelunch-bridge TASK.sas METHOD MAKESPAN" >&2; exit 2; }
 [ -f "$task" ] || { echo "freelunch-bridge: no such task: $2" >&2; exit 2; }
 case "$2" in ex) method=exist ;; cr) method=compactReinforced ;; *) method="$2" ;; esac
 d=$(mktemp -d)
-java -Xmx8g -cp "$CP" freelunch.planning.cmdline.Translator encode "$task" "$method" "$3" > "$d/out.cnf"
+java -Xmx8g -cp "$CP" freelunch.planning.cmdline.Translator encode "$task" "$method" "$3" > "$d/out.cnf" \
+    || { echo "freelunch-bridge: the encoder failed on a task the translator accepted" >&2; exit 4; }
 if grep -q "^p cnf" "$d/out.cnf"; then
     cat "$d/out.cnf"
 else                                  # some versions write the file next to the task
     f=$(ls "$d"/*.cnf 2>/dev/null | grep -v out.cnf | head -1)
-    [ -n "$f" ] || { echo "freelunch-bridge: the translator produced no formula" >&2; exit 3; }
+    [ -n "$f" ] || { echo "freelunch-bridge: the encoder produced no formula" >&2; exit 4; }
     cat "$f"
 fi
 rm -rf "$d"

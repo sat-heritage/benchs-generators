@@ -47,7 +47,9 @@ def items_of(spec: dict) -> list[dict]:
         out = []
         for comp in it["competitions"]:
             for domain in sorted((files / comp / "domains").glob("*/")):
-                if not (domain / "domain.pddl").exists() or "adl" in domain.name:
+                if not (domain / "domain.pddl").exists():
+                    continue
+                if re.search(it.get("exclude_domains", "adl"), domain.name):
                     continue
                 # instance-2 before instance-100: a planning task numbers its size
                 def rank(path):
@@ -75,7 +77,7 @@ def items_of(spec: dict) -> list[dict]:
     return out
 
 
-def produce(meta: dict, item: dict, dest: Path) -> None:
+def produce(meta: dict, item: dict, dest: Path) -> int:
     mount, args = [], list(item["args"])
     if "upstream" in item and "dir" in item["upstream"]:      # a directory, as a planning domain needs
         files = fetch_upstream.ensure(item["upstream"]["collection"])
@@ -88,7 +90,8 @@ def produce(meta: dict, item: dict, dest: Path) -> None:
         mount = ["-v", f"{member.parent}:/src:ro"]
         args = [a.replace("{file}", f"/src/{member.name}") for a in args]
     with open(dest / item["name"], "w") as f:
-        subprocess.run(["docker", "run", "--rm", *mount, meta["image"], *args], stdout=f)
+        return subprocess.run(["docker", "run", "--rm", *mount, meta["image"], *args],
+                              stdout=f, stderr=subprocess.DEVNULL).returncode
 
 
 def measure(directory: Path, names: list[str]) -> dict:
@@ -120,11 +123,14 @@ def main(argv=None) -> int:
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         for item in items:
-            produce(meta, item, tmp)
+            code = produce(meta, item, tmp)
             path = tmp / item["name"]
             # an encoder refuses some inputs, an ADL domain for instance: note and move on
             if not path.exists() or not any(l.startswith("p cnf") for l in open(path, errors="replace")):
-                skipped.append({"name": item["name"], "args": item["args"], "upstream": item.get("upstream")})
+                why = {3: "not a classical planning domain: the translator refused it",
+                       4: "the encoder failed on a task the translator accepted"}.get(code, f"exit {code}")
+                skipped.append({"name": item["name"], "args": item["args"],
+                                "upstream": item.get("upstream"), "reason": why})
                 path.unlink(missing_ok=True)
                 done += 1
                 continue

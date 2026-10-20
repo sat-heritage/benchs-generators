@@ -11,15 +11,15 @@
       "ipc-1998",
       "ipc-2000"
     ],
-    "instances_per_domain": 3,
+    "instances_per_domain": 2,
     "method": "cr",
     "k": [
       6,
-      10,
-      14
+      10
     ],
     "domains": "strips only: the encoder does not take the ADL domains",
-    "note": "the three smallest instances of each strips domain, by the number in their name"
+    "note": "classical strips domains only: the chain translates classical planning, so the temporal, numeric, metric and preference variants of a competition are left out rather than tried and refused",
+    "exclude_domains": "adl|temporal|numeric|metric|time|preferences|complex|float|soft|mixed"
   },
   "exclude_known": true,
   "permission": "to ask: the instances are collected and republished by the Potassco group from the planning competitions; the CNF is derived from them by a pinned chain",
@@ -27,20 +27,21 @@
   "distribution": {
     "github_release": "packs-2026",
     "asset": "ipc-cnf-1998-2000.tar",
-    "sha256": "c8f249fee7ad6f9cdb5aebc644537317ad361c14837bb311ca8aca453fef4677",
-    "bytes": 67747840,
-    "zenodo": null,
-    "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-1998-2000.tar"
+    "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-1998-2000.tar",
+    "sha256": "33a8f2c090e1a911a6e39b106c3663b6870f988e5fc64aad0eb9fcae116af28c",
+    "zenodo": null
   },
   "max_clauses": 300000,
   "built": {
-    "instances": 141,
-    "bytes": 67577984,
-    "not_encodable": 3,
-    "chain": "Fast Downward translator, then freeLunch compactReinforced",
-    "note": "each file carries its GBD hash in index.json; none of these instances is in GBD"
+    "instances": 47,
+    "bytes": 2829132,
+    "left_out": {
+      "over the clause limit": 17
+    },
+    "chain": "Fast Downward translator, then freeLunch compactReinforced"
   },
   "nature": "examples",
   "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by changing the plan length or picking another task",
-  "regenerate": "tools/fetch_upstream.py ipc && docker run --rm -v \"$CACHE/ipc/files/ipc-1998/domains/gripper-round-1-strips:/data:ro\" satex-gen/freelunch:2022 domain.pddl instances/instance-10.pddl cr 10"
+  "regenerate": "tools/fetch_upstream.py ipc && docker run --rm -v \"$CACHE/ipc/files/ipc-1998/domains/gripper-round-1-strips:/data:ro\" satex-gen/freelunch:2022 domain.pddl instances/instance-10.pddl cr 10",
+  "coverage_note": "classical strips domains only. Of the tasks tried, 17 were left out because over the clause limit. A formula past the limit is a choice, a refusal by the translator means the domain is not classical planning, and a failure of the encoder is its own."
 }

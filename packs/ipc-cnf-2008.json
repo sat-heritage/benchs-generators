@@ -17,7 +17,8 @@
       10
     ],
     "domains": "strips only: the encoder does not take the ADL domains",
-    "note": "the three smallest instances of each strips domain, by the number in their name"
+    "note": "classical strips domains only: the chain translates classical planning, so the temporal, numeric, metric and preference variants of a competition are left out rather than tried and refused",
+    "exclude_domains": "adl|temporal|numeric|metric|time|preferences|complex|float|soft|mixed"
   },
   "exclude_known": true,
   "permission": "to ask: the instances are collected and republished by the Potassco group from the planning competitions; the CNF is derived from them by a pinned chain",
@@ -25,9 +26,9 @@
   "distribution": {
     "github_release": "packs-2026",
     "asset": "ipc-cnf-2008.tar",
-    "zenodo": null,
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-2008.tar",
-    "sha256": "051c3cf6ee99de669ffa081f091c09263895e51686f6e8d5715f98e42c0a908e"
+    "sha256": "20300f6c1365fc5616c9125e0c41be767ed23fab770b7be63409cc935feb9891",
+    "zenodo": null
   },
   "max_clauses": 300000,
   "nature": "examples",
@@ -36,9 +37,10 @@
   "built": {
     "instances": 48,
     "bytes": 2013704,
-    "refused_by_encoder": 60,
-    "over_the_clause_limit": 0,
+    "left_out": {
+      "not classical planning": 12
+    },
     "chain": "Fast Downward translator, then freeLunch compactReinforced"
   },
-  "coverage_note": "freeLunch refuses 60 of the 108 tasks tried here, and 0 more are past the clause limit of a pack of examples. The refusals are the encoder's own limitation, not a choice: it fails on domains the translator accepts. Until that is understood, these packs show what the chain does rather than cover the competition."
+  "coverage_note": "classical strips domains only. Of the tasks tried, 12 were left out because not classical planning. A formula past the limit is a choice, a refusal by the translator means the domain is not classical planning, and a failure of the encoder is its own."
 }

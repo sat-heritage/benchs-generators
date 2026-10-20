@@ -369,58 +369,33 @@ the task, from 23 thousand clauses for a gripper problem to 61 million for a
 hundred-block one, so a pack picks its instances rather than taking everything.
 `packs/ipc-cnf.json` is the spec of that one, still proposed.
 
-### The first pack
+### The packs of the planning competitions
 
-`packs/ipc-cnf-1998-2000.json` is the first one built: the strips domains of
-the 1998 and 2000 planning competitions, their three smallest instances each,
-at plan lengths six, ten and fourteen.
+Seven packs, one per competition, all built the same way: classical strips
+domains only, two instances each, plan lengths six and ten, nothing past 300
+thousand clauses.
 
-| | |
-|---|---|
-| Instances | 141, over 16 domains |
-| Size | 67.6 MB compressed |
-| Clauses | 284 at the smallest, 8 thousand in the median, 1.6 million at the largest |
-| Left out | 3 instances over the limit of 3 million clauses |
-| In GBD | none of them |
+| Competition | Instances | Left out | Size |
+|---|---|---|---|
+| 1998 and 2000 | 47 | 17 over the clause limit | 2.8 MB |
+| 2002 | 29 | 11 over the limit, 4 by the encoder | 2.2 MB |
+| 2004 | 4 | 4 refused by the translator | 0.04 MB |
+| 2006 | 16 | 8 by the encoder | 0.1 MB |
+| 2008 | 48 | 12 refused by the translator | 2.0 MB |
+| 2011 | 82 | 46 over the limit, 16 by the encoder | 6.4 MB |
+| 2014 | 79 | 107 over the limit, 22 by the encoder | 9.9 MB |
 
-The index of the pack carries, for every file, the same hash GBD uses, so an
-instance of a pack and an instance of a competition are identified the same
-way.
+305 formulas, 23 MB in all, in the `packs-2026` release, with an `index.json`
+in each archive giving the GBD hash of every file and the command that made it.
 
-**These formulas are examples, not a benchmark suite.** A pack holds small
-instances so that anyone can look at one and check what the encoding does. The
-sizes a solver author wants are made on demand: same pinned chain, another plan
-length, another task. Each spec records the command that regenerates it.
-
-It is published in the `packs-2026` release, one release per year as for the
-rescued sources:
-
-```sh
-curl -LO https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-1998-2000.tar
-tar xf ipc-cnf-1998-2000.tar     # the CNFs, compressed, and index.json
-```
-
-### The planning competitions, 2002 to 2014
-
-Six more packs, one per competition, built with the same chain but with the
-settings of an example: two instances per strips domain, plan lengths six and
-ten, nothing past 300 thousand clauses.
-
-| Competition | Instances | Refused by the encoder | Past the limit | Size |
-|---|---|---|---|---|
-| 2002 | 29 | 152 | 11 | 2.2 MB |
-| 2004 | 12 | 48 | 0 | 0.3 MB |
-| 2006 | 16 | 136 | 0 | 0.1 MB |
-| 2008 | 48 | 60 | 0 | 2.0 MB |
-| 2011 | 82 | 56 | 46 | 6.4 MB |
-| 2014 | 79 | 63 | 106 | 9.9 MB |
-
-**A limitation worth stating plainly.** freeLunch refuses 515 of the 781 tasks
-tried over those competitions, with errors of its own on domains Fast Downward
-translates without complaint. The packs of 2004 and 2006 are therefore a dozen
-formulas out of more than a thousand instances, and they show what the chain
-does rather than cover the competition. The cause is not understood yet; when
-it is, the packs can be rebuilt from the same specs.
+**What is left out, and why it matters which.** A domain that is temporal,
+numeric, metric or carries preferences is not classical planning: Fast
+Downward's translator refuses it, and the packs now exclude those domains
+instead of trying them. A formula past the clause limit is a deliberate choice,
+since a pack holds examples. What remains, 50 tasks over the seven packs, is
+freeLunch failing on a task the translator accepted; those are recorded one by
+one in the indexes. The first run of these packs reported 515 refusals in one
+undifferentiated heap, which told nobody anything.
 
 ## Bridges
 

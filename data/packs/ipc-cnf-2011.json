@@ -7,7 +7,7 @@
  "instances": 82,
  "bytes": 6444892,
  "linked_to_gbd": 0,
- "not_encodable": 102,
+ "not_encodable": 62,
  "files": [
   {
    "file": "ipc-2011-barman-sequential-optimal-instance-1-k6.cnf.xz",
@@ -1577,58 +1577,6 @@
    "reason": "over the limit of 300000 clauses"
   },
   {
-   "name": "ipc-2011-crew-planning-temporal-satisficing-instance-1-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/crew-planning-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-crew-planning-temporal-satisficing-instance-1-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/crew-planning-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-crew-planning-temporal-satisficing-instance-2-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/crew-planning-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-crew-planning-temporal-satisficing-instance-2-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/crew-planning-temporal-satisficing"
-   }
-  },
-  {
    "name": "ipc-2011-elevator-sequential-multi-core-instance-1-k10.cnf",
    "args": [
     "domain.pddl",
@@ -1695,162 +1643,6 @@
    "reason": "over the limit of 300000 clauses"
   },
   {
-   "name": "ipc-2011-elevator-temporal-satisficing-instance-1-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/elevator-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-elevator-temporal-satisficing-instance-1-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/elevator-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-elevator-temporal-satisficing-instance-2-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/elevator-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-elevator-temporal-satisficing-instance-2-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/elevator-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-floor-tile-temporal-satisficing-instance-1-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/floor-tile-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-floor-tile-temporal-satisficing-instance-1-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/floor-tile-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-floor-tile-temporal-satisficing-instance-2-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/floor-tile-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-floor-tile-temporal-satisficing-instance-2-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/floor-tile-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-match-cellar-temporal-satisficing-instance-1-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/match-cellar-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-match-cellar-temporal-satisficing-instance-1-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/match-cellar-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-match-cellar-temporal-satisficing-instance-2-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/match-cellar-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-match-cellar-temporal-satisficing-instance-2-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/match-cellar-temporal-satisficing"
-   }
-  },
-  {
    "name": "ipc-2011-parking-sequential-multi-core-instance-1-k6.cnf",
    "args": [
     "domain.pddl",
@@ -1861,7 +1653,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/parking-sequential-multi-core"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-parking-sequential-multi-core-instance-1-k10.cnf",
@@ -1874,7 +1667,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/parking-sequential-multi-core"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-parking-sequential-multi-core-instance-2-k6.cnf",
@@ -1887,7 +1681,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/parking-sequential-multi-core"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-parking-sequential-multi-core-instance-2-k10.cnf",
@@ -1900,7 +1695,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/parking-sequential-multi-core"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-parking-sequential-optimal-instance-1-k6.cnf",
@@ -1957,7 +1753,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/parking-sequential-satisficing"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-parking-sequential-satisficing-instance-1-k10.cnf",
@@ -1970,7 +1767,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/parking-sequential-satisficing"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-parking-sequential-satisficing-instance-2-k6.cnf",
@@ -1983,7 +1781,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/parking-sequential-satisficing"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-parking-sequential-satisficing-instance-2-k10.cnf",
@@ -1996,111 +1795,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/parking-sequential-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-parking-temporal-satisficing-instance-1-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/parking-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-parking-temporal-satisficing-instance-1-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/parking-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-parking-temporal-satisficing-instance-2-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/parking-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-parking-temporal-satisficing-instance-2-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/parking-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-peg-solitaire-temporal-satisficing-instance-1-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/peg-solitaire-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-peg-solitaire-temporal-satisficing-instance-1-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/peg-solitaire-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-peg-solitaire-temporal-satisficing-instance-2-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/peg-solitaire-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-peg-solitaire-temporal-satisficing-instance-2-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/peg-solitaire-temporal-satisficing"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-scanalyzer-3d-sequential-multi-core-instance-1-k6.cnf",
@@ -2191,162 +1887,6 @@
    "reason": "over the limit of 300000 clauses"
   },
   {
-   "name": "ipc-2011-sokoban-temporal-satisficing-instance-1-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/sokoban-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-sokoban-temporal-satisficing-instance-1-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/sokoban-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-sokoban-temporal-satisficing-instance-2-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/sokoban-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-sokoban-temporal-satisficing-instance-2-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/sokoban-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-storage-temporal-satisficing-instance-1-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/storage-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-storage-temporal-satisficing-instance-1-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/storage-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-storage-temporal-satisficing-instance-2-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/storage-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-storage-temporal-satisficing-instance-2-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/storage-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-temporal-machine-shop-temporal-satisficing-instance-1-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/temporal-machine-shop-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-temporal-machine-shop-temporal-satisficing-instance-1-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/temporal-machine-shop-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-temporal-machine-shop-temporal-satisficing-instance-2-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/temporal-machine-shop-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-temporal-machine-shop-temporal-satisficing-instance-2-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/temporal-machine-shop-temporal-satisficing"
-   }
-  },
-  {
    "name": "ipc-2011-tidybot-sequential-multi-core-instance-1-k6.cnf",
    "args": [
     "domain.pddl",
@@ -2357,7 +1897,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/tidybot-sequential-multi-core"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-tidybot-sequential-multi-core-instance-1-k10.cnf",
@@ -2370,7 +1911,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/tidybot-sequential-multi-core"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-tidybot-sequential-multi-core-instance-2-k6.cnf",
@@ -2383,7 +1925,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/tidybot-sequential-multi-core"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-tidybot-sequential-multi-core-instance-2-k10.cnf",
@@ -2396,7 +1939,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/tidybot-sequential-multi-core"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-tidybot-sequential-optimal-instance-1-k6.cnf",
@@ -2453,7 +1997,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/tidybot-sequential-satisficing"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-tidybot-sequential-satisficing-instance-1-k10.cnf",
@@ -2466,7 +2011,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/tidybot-sequential-satisficing"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-tidybot-sequential-satisficing-instance-2-k6.cnf",
@@ -2479,7 +2025,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/tidybot-sequential-satisficing"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-tidybot-sequential-satisficing-instance-2-k10.cnf",
@@ -2492,7 +2039,8 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2011/domains/tidybot-sequential-satisficing"
-   }
+   },
+   "reason": "the encoder failed on a task the translator accepted"
   },
   {
    "name": "ipc-2011-transport-sequential-multi-core-instance-1-k6.cnf",
@@ -2581,58 +2129,6 @@
    ],
    "clauses": 3836151,
    "reason": "over the limit of 300000 clauses"
-  },
-  {
-   "name": "ipc-2011-turn-and-open-temporal-satisficing-instance-1-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/turn-and-open-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-turn-and-open-temporal-satisficing-instance-1-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/turn-and-open-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-turn-and-open-temporal-satisficing-instance-2-k6.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/turn-and-open-temporal-satisficing"
-   }
-  },
-  {
-   "name": "ipc-2011-turn-and-open-temporal-satisficing-instance-2-k10.cnf",
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2011/domains/turn-and-open-temporal-satisficing"
-   }
   },
   {
    "name": "ipc-2011-woodworking-sequential-multi-core-instance-1-k6.cnf",

@@ -17,7 +17,8 @@
       10
     ],
     "domains": "strips only: the encoder does not take the ADL domains",
-    "note": "the three smallest instances of each strips domain, by the number in their name"
+    "note": "classical strips domains only: the chain translates classical planning, so the temporal, numeric, metric and preference variants of a competition are left out rather than tried and refused",
+    "exclude_domains": "adl|temporal|numeric|metric|time|preferences|complex|float|soft|mixed"
   },
   "exclude_known": true,
   "permission": "to ask: the instances are collected and republished by the Potassco group from the planning competitions; the CNF is derived from them by a pinned chain",
@@ -25,9 +26,9 @@
   "distribution": {
     "github_release": "packs-2026",
     "asset": "ipc-cnf-2006.tar",
-    "zenodo": null,
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-2006.tar",
-    "sha256": "0051f455b6e83c0ed02a3c6d094cb25304a3ea8dbb3be5edbf6a221e75b4ea6e"
+    "sha256": "3ab1f51ae07442c4546b485fe3a0f8ffd6cca28f18fa940a98421ae53ec6adc5",
+    "zenodo": null
   },
   "max_clauses": 300000,
   "nature": "examples",
@@ -36,9 +37,10 @@
   "built": {
     "instances": 16,
     "bytes": 147020,
-    "refused_by_encoder": 136,
-    "over_the_clause_limit": 0,
+    "left_out": {
+      "the encoder failed": 8
+    },
     "chain": "Fast Downward translator, then freeLunch compactReinforced"
   },
-  "coverage_note": "freeLunch refuses 136 of the 152 tasks tried here, and 0 more are past the clause limit of a pack of examples. The refusals are the encoder's own limitation, not a choice: it fails on domains the translator accepts. Until that is understood, these packs show what the chain does rather than cover the competition."
+  "coverage_note": "classical strips domains only. Of the tasks tried, 8 were left out because the encoder failed. A formula past the limit is a choice, a refusal by the translator means the domain is not classical planning, and a failure of the encoder is its own."
 }

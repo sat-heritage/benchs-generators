@@ -17,7 +17,8 @@
       10
     ],
     "domains": "strips only: the encoder does not take the ADL domains",
-    "note": "the three smallest instances of each strips domain, by the number in their name"
+    "note": "classical strips domains only: the chain translates classical planning, so the temporal, numeric, metric and preference variants of a competition are left out rather than tried and refused",
+    "exclude_domains": "adl|temporal|numeric|metric|time|preferences|complex|float|soft|mixed"
   },
   "exclude_known": true,
   "permission": "to ask: the instances are collected and republished by the Potassco group from the planning competitions; the CNF is derived from them by a pinned chain",
@@ -25,9 +26,9 @@
   "distribution": {
     "github_release": "packs-2026",
     "asset": "ipc-cnf-2002.tar",
-    "zenodo": null,
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-2002.tar",
-    "sha256": "c0bfe79ee2a6ddda29426ae12d9ba985c580918290b1df721c26bb7ee26bd151"
+    "sha256": "f6d618c708eb7f2db5f5a64b046c5f85a308bb355363436ac3837c8a541c28d5",
+    "zenodo": null
   },
   "max_clauses": 300000,
   "nature": "examples",
@@ -36,9 +37,11 @@
   "built": {
     "instances": 29,
     "bytes": 2211340,
-    "refused_by_encoder": 152,
-    "over_the_clause_limit": 11,
+    "left_out": {
+      "the encoder failed": 4,
+      "over the clause limit": 11
+    },
     "chain": "Fast Downward translator, then freeLunch compactReinforced"
   },
-  "coverage_note": "freeLunch refuses 152 of the 192 tasks tried here, and 11 more are past the clause limit of a pack of examples. The refusals are the encoder's own limitation, not a choice: it fails on domains the translator accepts. Until that is understood, these packs show what the chain does rather than cover the competition."
+  "coverage_note": "classical strips domains only. Of the tasks tried, 11 were left out because over the clause limit, 4 were left out because the encoder failed. A formula past the limit is a choice, a refusal by the translator means the domain is not classical planning, and a failure of the encoder is its own."
 }

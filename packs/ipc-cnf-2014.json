@@ -17,7 +17,8 @@
       10
     ],
     "domains": "strips only: the encoder does not take the ADL domains",
-    "note": "the three smallest instances of each strips domain, by the number in their name"
+    "note": "classical strips domains only: the chain translates classical planning, so the temporal, numeric, metric and preference variants of a competition are left out rather than tried and refused",
+    "exclude_domains": "adl|temporal|numeric|metric|time|preferences|complex|float|soft|mixed"
   },
   "exclude_known": true,
   "permission": "to ask: the instances are collected and republished by the Potassco group from the planning competitions; the CNF is derived from them by a pinned chain",
@@ -25,9 +26,9 @@
   "distribution": {
     "github_release": "packs-2026",
     "asset": "ipc-cnf-2014.tar",
-    "zenodo": null,
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-2014.tar",
-    "sha256": "d3b505240734cc79ece5e32bd5ed0daf3af1f03687e5b55470d70d1ecb312c7e"
+    "sha256": "97f38aa1eada91dfae8845ef3ff08a619d378b8edbab081b6109a61240e8fb2c",
+    "zenodo": null
   },
   "max_clauses": 300000,
   "nature": "examples",
@@ -36,9 +37,11 @@
   "built": {
     "instances": 79,
     "bytes": 9873404,
-    "refused_by_encoder": 63,
-    "over_the_clause_limit": 106,
+    "left_out": {
+      "over the clause limit": 107,
+      "the encoder failed": 22
+    },
     "chain": "Fast Downward translator, then freeLunch compactReinforced"
   },
-  "coverage_note": "freeLunch refuses 63 of the 248 tasks tried here, and 106 more are past the clause limit of a pack of examples. The refusals are the encoder's own limitation, not a choice: it fails on domains the translator accepts. Until that is understood, these packs show what the chain does rather than cover the competition."
+  "coverage_note": "classical strips domains only. Of the tasks tried, 107 were left out because over the clause limit, 22 were left out because the encoder failed. A formula past the limit is a choice, a refusal by the translator means the domain is not classical planning, and a failure of the encoder is its own."
 }
