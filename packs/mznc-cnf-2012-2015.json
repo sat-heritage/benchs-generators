@@ -2,7 +2,7 @@
   "pack": "mznc-cnf-2012-2015",
   "title": "The MiniZinc Challenge 2012 to 2015 as CNF, examples",
   "why": "The constraint programming competition distributes MiniZinc models and their data, not formulas, so every SAT author who wants to work on constraint problems rebuilds the same flattening and the same encoding. This pack is the editions of 2012 to 2015 as CNF, one instance per problem, produced by one pinned chain: the MiniZinc compiler 2.10.1, then Picat's SAT module. The most recent edition has its own pack, with two instances per problem; the history is grouped by four years so that a pack stays a handful of examples.",
-  "status": "proposed",
+  "status": "published",
   "generator": "minizinc",
   "items": {
     "kind": "mzn-grid",
@@ -23,10 +23,36 @@
   "timeout_seconds": 300,
   "nature": "examples",
   "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by taking another data file of the same problem",
+  "distribution": {
+    "github_release": "packs-2026",
+    "asset": "mznc-cnf-2012-2015.tar",
+    "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/mznc-cnf-2012-2015.tar",
+    "sha256": "989b31424149055ab3238ea150b792c5702d66786e9b67cc221a3f5f13714a90",
+    "zenodo": null
+  },
   "skip_reasons": {
     "3": "the model does not compile with MiniZinc 2.10.1, the version pinned here",
     "4": "PicatSAT could not encode the flattened model",
     "5": "PicatSAT settled it by propagation while reading the FlatZinc, so no formula was written"
   },
-  "regenerate": "tools/fetch_upstream.py mznc && docker run --rm -v \"$CACHE/mznc/files/<year>/<problem>:/data:ro\" satex-gen/minizinc:2.10.1 <model>.mzn <data file>"
+  "regenerate": "tools/fetch_upstream.py mznc && docker run --rm -v \"$CACHE/mznc/files/<year>/<problem>:/data:ro\" satex-gen/minizinc:2.10.1 <model>.mzn <data file>",
+  "built": {
+    "instances": 60,
+    "problems": 60,
+    "bytes": 9253184,
+    "archive_bytes": 9328640,
+    "clauses": {
+      "min": 2571,
+      "median": 26780,
+      "max": 290827
+    },
+    "left_out": {
+      "over the clause limit": 16,
+      "an empty formula": 2,
+      "the encoder failed": 1
+    },
+    "chain": "MiniZinc 2.10.1 compiler, then Picat's SAT module through the dump option",
+    "sha256": "989b31424149055ab3238ea150b792c5702d66786e9b67cc221a3f5f13714a90"
+  },
+  "coverage_note": "60 instances, one per problem of the four editions. Sixteen are left out as past the clause limit, our own choice; two flatten to an empty formula, a model with nothing left to decide, which is also what made the hasher crash until it was guarded; and one the encoder could not take."
 }

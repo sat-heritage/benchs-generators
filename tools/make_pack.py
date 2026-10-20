@@ -169,7 +169,27 @@ def main(argv=None) -> int:
                 path.unlink(missing_ok=True)
                 done += 1
                 continue
-            h, iso2, nv, nc = measure(tmp, [item["name"]])[item["name"]]
+            # an empty formula is a model with nothing to decide, and the hasher
+            # segfaults on it rather than refusing it
+            header = next((l.split() for l in open(path, errors="replace") if l.startswith("p cnf")), [])
+            if len(header) == 4 and header[3] == "0":
+                skipped.append({"name": item["name"], "args": item["args"], "clauses": 0,
+                                "upstream": item.get("upstream"),
+                                "reason": "an empty formula: the flattened model has nothing to decide"})
+                path.unlink(missing_ok=True)
+                done += 1
+                continue
+            try:
+                h, iso2, nv, nc = measure(tmp, [item["name"]])[item["name"]]
+            except (subprocess.CalledProcessError, KeyError, ValueError) as e:
+                # the hash is what names an instance, so one we cannot hash is one
+                # we cannot publish: note it and keep going rather than lose the pack
+                skipped.append({"name": item["name"], "args": item["args"],
+                                "upstream": item.get("upstream"),
+                                "reason": f"the hasher could not read the formula ({type(e).__name__})"})
+                path.unlink(missing_ok=True)
+                done += 1
+                continue
             done += 1
             if limit_clauses and int(nc) > limit_clauses:   # a pack is meant to be downloaded
                 skipped.append({"name": item["name"], "args": item["args"], "clauses": int(nc),

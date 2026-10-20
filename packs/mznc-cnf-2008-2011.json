@@ -2,7 +2,7 @@
   "pack": "mznc-cnf-2008-2011",
   "title": "The MiniZinc Challenge 2008 to 2011 as CNF, examples",
   "why": "The constraint programming competition distributes MiniZinc models and their data, not formulas, so every SAT author who wants to work on constraint problems rebuilds the same flattening and the same encoding. This pack is the editions of 2008 to 2011 as CNF, one instance per problem, produced by one pinned chain: the MiniZinc compiler 2.10.1, then Picat's SAT module. The most recent edition has its own pack, with two instances per problem; the history is grouped by four years so that a pack stays a handful of examples.",
-  "status": "proposed",
+  "status": "published",
   "generator": "minizinc",
   "items": {
     "kind": "mzn-grid",
@@ -23,10 +23,35 @@
   "timeout_seconds": 300,
   "nature": "examples",
   "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by taking another data file of the same problem",
+  "distribution": {
+    "github_release": "packs-2026",
+    "asset": "mznc-cnf-2008-2011.tar",
+    "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/mznc-cnf-2008-2011.tar",
+    "sha256": "752c6640104eb4bac2dc38a67f5e297e13e576a044fa901bf32903b2eefc7373",
+    "zenodo": null
+  },
   "skip_reasons": {
     "3": "the model does not compile with MiniZinc 2.10.1, the version pinned here",
     "4": "PicatSAT could not encode the flattened model",
     "5": "PicatSAT settled it by propagation while reading the FlatZinc, so no formula was written"
   },
-  "regenerate": "tools/fetch_upstream.py mznc && docker run --rm -v \"$CACHE/mznc/files/<year>/<problem>:/data:ro\" satex-gen/minizinc:2.10.1 <model>.mzn <data file>"
+  "regenerate": "tools/fetch_upstream.py mznc && docker run --rm -v \"$CACHE/mznc/files/<year>/<problem>:/data:ro\" satex-gen/minizinc:2.10.1 <model>.mzn <data file>",
+  "built": {
+    "instances": 25,
+    "problems": 25,
+    "bytes": 3298832,
+    "archive_bytes": 3338240,
+    "clauses": {
+      "min": 5035,
+      "median": 38470,
+      "max": 143425
+    },
+    "left_out": {
+      "does not compile with MiniZinc 2.10.1": 24,
+      "over the clause limit": 3
+    },
+    "chain": "MiniZinc 2.10.1 compiler, then Picat's SAT module through the dump option",
+    "sha256": "752c6640104eb4bac2dc38a67f5e297e13e576a044fa901bf32903b2eefc7373"
+  },
+  "coverage_note": "25 instances, one per problem of the four editions, and the pack documents a drift as much as it holds formulas: 24 of the 52 models do not compile with MiniZinc 2.10.1 at all. The 2009 edition compiles nowhere, 2008 keeps two problems of ten, 2010 six of eleven, and 2011 all seventeen. The models of the early editions use the search annotations of MiniZinc 1.x, for instance int_search with four arguments, which the modern compiler refuses. Reaching them needs the compiler of their year, which the challenge archive names edition by edition; that is a second pinned compiler, not a fix to this one. The three other exclusions are formulas past the clause limit, which is our choice."
 }

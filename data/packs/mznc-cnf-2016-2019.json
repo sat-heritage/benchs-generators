@@ -1,0 +1,1122 @@
+{
+ "pack": "mznc-cnf-2016-2019",
+ "title": "The MiniZinc Challenge 2016 to 2019 as CNF, examples",
+ "why": "The constraint programming competition distributes MiniZinc models and their data, not formulas, so every SAT author who wants to work on constraint problems rebuilds the same flattening and the same encoding. This pack is the editions of 2016 to 2019 as CNF, one instance per problem, produced by one pinned chain: the MiniZinc compiler 2.10.1, then Picat's SAT module. The most recent edition has its own pack, with two instances per problem; the history is grouped by four years so that a pack stays a handful of examples.",
+ "generator": "minizinc",
+ "image": "satex-gen/minizinc:2.10.1",
+ "instances": 54,
+ "bytes": 7353496,
+ "linked_to_gbd": 0,
+ "not_encodable": 26,
+ "files": [
+  {
+   "file": "mznc2016-celar-CELAR6-SUB0.cnf.xz",
+   "bytes": 201028,
+   "hash": "a5aa64a63e94b1de3042c0a35e17c6a3",
+   "isohash2": "1a6500405d41527d",
+   "variables": 6127,
+   "clauses": 53621,
+   "args": [
+    "celar.mzn",
+    "CELAR6-SUB0.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/celar"
+   }
+  },
+  {
+   "file": "mznc2016-depot-placement-rat99_5.cnf.xz",
+   "bytes": 41792,
+   "hash": "89a943f41fc209dbdd5989171085c2a6",
+   "isohash2": "340a974b379c1439",
+   "variables": 795,
+   "clauses": 15543,
+   "args": [
+    "depot_placement.mzn",
+    "rat99_5.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/depot-placement"
+   }
+  },
+  {
+   "file": "mznc2016-diameterc-mst-s_v20_a50_d4.cnf.xz",
+   "bytes": 32020,
+   "hash": "cbb980c3626684d9c6267d3c99ff4e1d",
+   "isohash2": "8dc1d5f331bfcf36",
+   "variables": 1915,
+   "clauses": 13728,
+   "args": [
+    "dcmst.mzn",
+    "s_v20_a50_d4.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/diameterc-mst"
+   }
+  },
+  {
+   "file": "mznc2016-filters-fir_1_4.cnf.xz",
+   "bytes": 28716,
+   "hash": "e4f1d9300e3ec94c1df7fffaa4128e11",
+   "isohash2": "5a892b0f8b0a64c2",
+   "variables": 1955,
+   "clauses": 11679,
+   "args": [
+    "filter.mzn",
+    "fir_1_4.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/filters"
+   }
+  },
+  {
+   "file": "mznc2016-gbac-reduced_UD10-gbac.cnf.xz",
+   "bytes": 318592,
+   "hash": "cda470a021b0b880c82fa18548552a3d",
+   "isohash2": "4cdfe19dd4f7d3e5",
+   "variables": 13987,
+   "clauses": 98013,
+   "args": [
+    "gbac.mzn",
+    "reduced_UD10-gbac.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/gbac"
+   }
+  },
+  {
+   "file": "mznc2016-gfd-schedule-n25f5d20m10k3.cnf.xz",
+   "bytes": 121704,
+   "hash": "5cee0fb6d8eedf813b7661759aa4d531",
+   "isohash2": "7d35ff30ee6adccf",
+   "variables": 10621,
+   "clauses": 54852,
+   "args": [
+    "gfd-schedule2.mzn",
+    "n25f5d20m10k3.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/gfd-schedule"
+   }
+  },
+  {
+   "file": "mznc2016-java-auto-gen-plusexample_6.cnf.xz",
+   "bytes": 18644,
+   "hash": "e1ec559b05f169deb9d1ae6524e376cd",
+   "isohash2": "4ab97acad58890da",
+   "variables": 727,
+   "clauses": 6021,
+   "args": [
+    "plusexample_6.mzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/java-auto-gen"
+   }
+  },
+  {
+   "file": "mznc2016-mapping-mesh2x2_1.cnf.xz",
+   "bytes": 150512,
+   "hash": "ee6044e05b57a9f42d2c4c89121ae52c",
+   "isohash2": "475f9e56c9b5ab6a",
+   "variables": 6380,
+   "clauses": 41855,
+   "args": [
+    "mapping.mzn",
+    "mesh2x2_1.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/mapping"
+   }
+  },
+  {
+   "file": "mznc2016-maximum-dag-25_04.cnf.xz",
+   "bytes": 17932,
+   "hash": "331b07235db861b9976d124632d411c1",
+   "isohash2": "2b5f8ea052e4aa80",
+   "variables": 1446,
+   "clauses": 6643,
+   "args": [
+    "maximum-dag.mzn",
+    "25_04.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/maximum-dag"
+   }
+  },
+  {
+   "file": "mznc2016-nfc-12_2_10.cnf.xz",
+   "bytes": 13292,
+   "hash": "d2066371e75f5fc9dfe7434550f7539b",
+   "isohash2": "28c2d0ab73ea778a",
+   "variables": 497,
+   "clauses": 3530,
+   "args": [
+    "nfc.mzn",
+    "12_2_10.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/nfc"
+   }
+  },
+  {
+   "file": "mznc2016-prize-collecting-28-4-7-1.cnf.xz",
+   "bytes": 66740,
+   "hash": "c47e5e134a7705ac3c9d7f37cb1abf33",
+   "isohash2": "923d995a31294fc7",
+   "variables": 3214,
+   "clauses": 29726,
+   "args": [
+    "pc.mzn",
+    "28-4-7-1.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/prize-collecting"
+   }
+  },
+  {
+   "file": "mznc2016-rcpsp-wet-j30_27_5-wet.cnf.xz",
+   "bytes": 95268,
+   "hash": "453023eaebc6868c558f341b375ee66b",
+   "isohash2": "e0b29bde904ecde5",
+   "variables": 5526,
+   "clauses": 35546,
+   "args": [
+    "rcpsp-wet.mzn",
+    "j30_27_5-wet.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/rcpsp-wet"
+   }
+  },
+  {
+   "file": "mznc2016-solbat-sb_13_13_5_5.cnf.xz",
+   "bytes": 137260,
+   "hash": "535cfc077f313b80a50feb772d2f76e8",
+   "isohash2": "6c8cf9e7c1c04abf",
+   "variables": 9226,
+   "clauses": 63001,
+   "args": [
+    "sb.mzn",
+    "sb_13_13_5_5.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/solbat"
+   }
+  },
+  {
+   "file": "mznc2016-tpp-tpp_5_3_30_1.cnf.xz",
+   "bytes": 43644,
+   "hash": "a11fecf318549fa3ab04d4ff201a751c",
+   "isohash2": "ee51836f855019c3",
+   "variables": 1975,
+   "clauses": 17234,
+   "args": [
+    "tpp.mzn",
+    "tpp_5_3_30_1.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/tpp"
+   }
+  },
+  {
+   "file": "mznc2016-zephyrus-12__8__6__3.cnf.xz",
+   "bytes": 100836,
+   "hash": "0842da90860f8ab8d226e9e336893142",
+   "isohash2": "72629af5e2760f7c",
+   "variables": 7371,
+   "clauses": 38937,
+   "args": [
+    "zephyrus.mzn",
+    "12__8__6__3.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/zephyrus"
+   }
+  },
+  {
+   "file": "mznc2017-city-position-city-5-05.cnf.xz",
+   "bytes": 63768,
+   "hash": "93cea70017f6c3b85d174b0f3adf8b1c",
+   "isohash2": "3e234a7c9888199d",
+   "variables": 2310,
+   "clauses": 17484,
+   "args": [
+    "city-position.mzn",
+    "city-5-05.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2017/city-position"
+   }
+  },
+  {
+   "file": "mznc2017-community-detection-Strike.s2.k8.cnf.xz",
+   "bytes": 64976,
+   "hash": "0fb4ca471667743c04984bd5edb2e61c",
+   "isohash2": "9b2444d06a4d4040",
+   "variables": 3022,
+   "clauses": 21977,
+   "args": [
+    "community-detection.mzn",
+    "Strike.s2.k8.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2017/community-detection"
+   }
+  },
+  {
+   "file": "mznc2017-gbac-reduced_UD4-gbac.cnf.xz",
+   "bytes": 366104,
+   "hash": "73337d42479127ecbf2a345f28d6e817",
+   "isohash2": "353fedb7b5d76fb9",
+   "variables": 16044,
+   "clauses": 114589,
+   "args": [
+    "gbac.mzn",
+    "reduced_UD4-gbac.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2017/gbac"
+   }
+  },
+  {
+   "file": "mznc2017-hrc-exp1-1-5670.cnf.xz",
+   "bytes": 201904,
+   "hash": "d7302d94e1ff8abad1698e4e694c84b1",
+   "isohash2": "c9133b534ec8ada7",
+   "variables": 13337,
+   "clauses": 78477,
+   "args": [
+    "hrc.mzn",
+    "exp1-1-5670.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2017/hrc"
+   }
+  },
+  {
+   "file": "mznc2017-jp-encoding-data200.cnf.xz",
+   "bytes": 107244,
+   "hash": "a29f2faaabeeffb8ebaf6f2b3f3d3b25",
+   "isohash2": "c4ee18b24e2fee2d",
+   "variables": 7573,
+   "clauses": 38530,
+   "args": [
+    "jp-encoding.mzn",
+    "data200.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2017/jp-encoding"
+   }
+  },
+  {
+   "file": "mznc2017-mario-mario_medium_1.cnf.xz",
+   "bytes": 126580,
+   "hash": "1b8c9be8f6ffabadb81736ff875a8c37",
+   "isohash2": "9c6fc78c5c2e50d2",
+   "variables": 4684,
+   "clauses": 56466,
+   "args": [
+    "mario.mzn",
+    "mario_medium_1.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2017/mario"
+   }
+  },
+  {
+   "file": "mznc2017-opt-cryptanalysis-r5.cnf.xz",
+   "bytes": 79204,
+   "hash": "f08a1ff0917814813007df3cbd9dff21",
+   "isohash2": "7d71f2f7bcf59628",
+   "variables": 1454,
+   "clauses": 27230,
+   "args": [
+    "mznc2017_aes_opt.mzn",
+    "r5.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2017/opt-cryptanalysis"
+   }
+  },
+  {
+   "file": "mznc2017-rcpsp-wet-j30_1_3-wet.cnf.xz",
+   "bytes": 63492,
+   "hash": "6e9352d41925740ad8a979c06fc65165",
+   "isohash2": "4e730edc2156be7e",
+   "variables": 3478,
+   "clauses": 23794,
+   "args": [
+    "rcpsp-wet.mzn",
+    "j30_1_3-wet.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2017/rcpsp-wet"
+   }
+  },
+  {
+   "file": "mznc2017-rel2onto-3_9.cnf.xz",
+   "bytes": 215512,
+   "hash": "54c17cced1aca68aa6fc1d6ab1d8db12",
+   "isohash2": "3dfad2699179e5b1",
+   "variables": 13330,
+   "clauses": 145185,
+   "args": [
+    "rel2onto.mzn",
+    "3_9.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2017/rel2onto"
+   }
+  },
+  {
+   "file": "mznc2017-tc-graph-color-k5_05.cnf.xz",
+   "bytes": 37860,
+   "hash": "7c19a5d33cde7e909832321337387df1",
+   "isohash2": "20a089cce60bb6af",
+   "variables": 2173,
+   "clauses": 16452,
+   "args": [
+    "tcgc2.mzn",
+    "k5_05.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2017/tc-graph-color"
+   }
+  },
+  {
+   "file": "mznc2017-traveling-tppv-circ8dbal.cnf.xz",
+   "bytes": 73928,
+   "hash": "e5191faffa1f30dc02be0f550fbd1cc2",
+   "isohash2": "4c37990eb0696e03",
+   "variables": 3224,
+   "clauses": 26380,
+   "args": [
+    "ttppv.mzn",
+    "circ8dbal.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2017/traveling-tppv"
+   }
+  },
+  {
+   "file": "mznc2018-concert-hall-cap-concert-cap.mznc2018.02.cnf.xz",
+   "bytes": 17988,
+   "hash": "8ed720561a65b6c93f01e757b14cb985",
+   "isohash2": "7299f10a601941a4",
+   "variables": 957,
+   "clauses": 7303,
+   "args": [
+    "concert-hall-cap.mzn",
+    "concert-cap.mznc2018.02.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/concert-hall-cap"
+   }
+  },
+  {
+   "file": "mznc2018-gfd-schedule-n65f2d50m20k10.cnf.xz",
+   "bytes": 463056,
+   "hash": "94c20dc7f88a7579a37301a8a9d70e34",
+   "isohash2": "0e46ac73c9832c6e",
+   "variables": 33552,
+   "clauses": 193491,
+   "args": [
+    "gfd-schedule2.mzn",
+    "n65f2d50m20k10.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/gfd-schedule"
+   }
+  },
+  {
+   "file": "mznc2018-mapping-full2x2_mp3.cnf.xz",
+   "bytes": 282968,
+   "hash": "4f76fef75fa5479dae5fb97632c6230a",
+   "isohash2": "f5fe4173677ebec6",
+   "variables": 12607,
+   "clauses": 79521,
+   "args": [
+    "mapping.mzn",
+    "full2x2_mp3.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/mapping"
+   }
+  },
+  {
+   "file": "mznc2018-neighbours-neighbours9.cnf.xz",
+   "bytes": 19708,
+   "hash": "da67e2fb66d687b9e04521ef31ece401",
+   "isohash2": "83cff990ab923369",
+   "variables": 1321,
+   "clauses": 7472,
+   "args": [
+    "neighbours-rect.mzn",
+    "neighbours9.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/neighbours"
+   }
+  },
+  {
+   "file": "mznc2018-on-call-rostering-2s-200d.cnf.xz",
+   "bytes": 60760,
+   "hash": "fa9ae791331278ea507298fa469e147b",
+   "isohash2": "3280d52600bc4074",
+   "variables": 3430,
+   "clauses": 20940,
+   "args": [
+    "oc-roster.mzn",
+    "2s-200d.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/on-call-rostering"
+   }
+  },
+  {
+   "file": "mznc2018-opt-cryptanalysis-r6.cnf.xz",
+   "bytes": 96620,
+   "hash": "3579e3c183e85404270a9aa9b41a2d0c",
+   "isohash2": "0c8462e62a179c05",
+   "variables": 1734,
+   "clauses": 33316,
+   "args": [
+    "mznc2017_aes_opt.mzn",
+    "r6.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/opt-cryptanalysis"
+   }
+  },
+  {
+   "file": "mznc2018-racp-j30_14_7_1.25.cnf.xz",
+   "bytes": 433984,
+   "hash": "6173dda8cc81af1eb9181c36001df5ff",
+   "isohash2": "bb0056f3a5ebf752",
+   "variables": 15744,
+   "clauses": 140730,
+   "args": [
+    "racp.mzn",
+    "j30_14_7_1.25.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/racp"
+   }
+  },
+  {
+   "file": "mznc2018-seat-moving-sm-10-12-00.cnf.xz",
+   "bytes": 89688,
+   "hash": "16c23935eafea20e9f3dad9bb0a539e8",
+   "isohash2": "fa93179a2dea00f4",
+   "variables": 5260,
+   "clauses": 46057,
+   "args": [
+    "seat-moving.mzn",
+    "sm-10-12-00.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/seat-moving"
+   }
+  },
+  {
+   "file": "mznc2018-soccer-computational-xIGData_22_17_16_1.cnf.xz",
+   "bytes": 283792,
+   "hash": "62676a50ad3d14f8fc9610717733a86d",
+   "isohash2": "3877148e72aee2a3",
+   "variables": 15511,
+   "clauses": 111451,
+   "args": [
+    "ecp.mzn",
+    "xIGData_22_17_16_1.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/soccer-computational"
+   }
+  },
+  {
+   "file": "mznc2018-steiner-tree-es10fst03.stp.cnf.xz",
+   "bytes": 41520,
+   "hash": "567436dd0105ab20f0e4845c4c1ee513",
+   "isohash2": "5253c02229e6a1ee",
+   "variables": 2415,
+   "clauses": 17566,
+   "args": [
+    "steiner-tree.mzn",
+    "es10fst03.stp.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/steiner-tree"
+   }
+  },
+  {
+   "file": "mznc2018-team-assignment-data2_5_6.cnf.xz",
+   "bytes": 68452,
+   "hash": "5bb79ca27328fa6fd1630a7c56ff0345",
+   "isohash2": "44f434d92b485d20",
+   "variables": 3589,
+   "clauses": 21786,
+   "args": [
+    "model.mzn",
+    "data2_5_6.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/team-assignment"
+   }
+  },
+  {
+   "file": "mznc2018-test-scheduling-t30m10r3-15.cnf.xz",
+   "bytes": 652504,
+   "hash": "8ea25d9f2e88cd5068adac75b042413d",
+   "isohash2": "95a3fba8ec9ca28c",
+   "variables": 48097,
+   "clauses": 287303,
+   "args": [
+    "test-scheduling.mzn",
+    "t30m10r3-15.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/test-scheduling"
+   }
+  },
+  {
+   "file": "mznc2018-train-instance.17.cnf.xz",
+   "bytes": 69640,
+   "hash": "92d2f62d7f2e83f6fff8bcef4658a1ff",
+   "isohash2": "8dd08316dc320235",
+   "variables": 3123,
+   "clauses": 20260,
+   "args": [
+    "train.mzn",
+    "instance.17.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/train"
+   }
+  },
+  {
+   "file": "mznc2018-vrplc-vrplc9_5_10_s3.cnf.xz",
+   "bytes": 176320,
+   "hash": "735733ca83b69ccffa97c3683e927614",
+   "isohash2": "75d8c1e94c30b3fd",
+   "variables": 6731,
+   "clauses": 79363,
+   "args": [
+    "vrplc_service.mzn",
+    "vrplc9_5_10_s3.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/vrplc"
+   }
+  },
+  {
+   "file": "mznc2019-accap-accap_instance3.cnf.xz",
+   "bytes": 285904,
+   "hash": "8cc4f8c7046f12e5f841333b5cb0f4ef",
+   "isohash2": "72d46e4101d7055c",
+   "variables": 2364,
+   "clauses": 120469,
+   "args": [
+    "accap.mzn",
+    "accap_instance3.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/accap"
+   }
+  },
+  {
+   "file": "mznc2019-amaze-2012-03-19.cnf.xz",
+   "bytes": 20936,
+   "hash": "4dd18305e48834a120a1cf8d0d8a108a",
+   "isohash2": "8b814e1207aaa172",
+   "variables": 1592,
+   "clauses": 7537,
+   "args": [
+    "amaze3.mzn",
+    "2012-03-19.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/amaze"
+   }
+  },
+  {
+   "file": "mznc2019-fox-geese-corn-foxgeesecorn_13.cnf.xz",
+   "bytes": 215900,
+   "hash": "92a9c158bc6fcbf180b070eb57a413f8",
+   "isohash2": "63ad375975f29d5d",
+   "variables": 5953,
+   "clauses": 84973,
+   "args": [
+    "foxgeesecorn.mzn",
+    "foxgeesecorn_13.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/fox-geese-corn"
+   }
+  },
+  {
+   "file": "mznc2019-hrc-exp1-1-5460.cnf.xz",
+   "bytes": 234620,
+   "hash": "5d094d58e6263cf92fdbc035995e86ad",
+   "isohash2": "2ab33b947f3b01f0",
+   "variables": 14662,
+   "clauses": 91416,
+   "args": [
+    "hrc.mzn",
+    "exp1-1-5460.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/hrc"
+   }
+  },
+  {
+   "file": "mznc2019-kidney-exchange-3_20_0.40_3.cnf.xz",
+   "bytes": 38612,
+   "hash": "5937233558614e4c7172ba7e5a1d1092",
+   "isohash2": "34199fc35667c4f3",
+   "variables": 1514,
+   "clauses": 17666,
+   "args": [
+    "ccmcp.mzn",
+    "3_20_0.40_3.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/kidney-exchange"
+   }
+  },
+  {
+   "file": "mznc2019-liner-sf-repositioning-fm3_0.cnf.xz",
+   "bytes": 148144,
+   "hash": "cf83263053e27581f47c4095bc6fd143",
+   "isohash2": "a11036a8c699eb68",
+   "variables": 7123,
+   "clauses": 104450,
+   "args": [
+    "fm3_0.mzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/liner-sf-repositioning"
+   }
+  },
+  {
+   "file": "mznc2019-lot-sizing-pigment30b.psp.cnf.xz",
+   "bytes": 141648,
+   "hash": "d668f05bdd94ad973aeb61a60799989b",
+   "isohash2": "10c66592b7bbd08d",
+   "variables": 4649,
+   "clauses": 51126,
+   "args": [
+    "lot_sizing_cp.mzn",
+    "pigment30b.psp.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/lot-sizing"
+   }
+  },
+  {
+   "file": "mznc2019-median-string-p2_2_20-2.cnf.xz",
+   "bytes": 169864,
+   "hash": "3c945c9c8e98ffdab29b028ac1b99c5d",
+   "isohash2": "47ff031d86ea143c",
+   "variables": 12415,
+   "clauses": 56040,
+   "args": [
+    "median_string_dp.mzn",
+    "p2_2_20-2.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/median-string"
+   }
+  },
+  {
+   "file": "mznc2019-multi-knapsack-mknap1-5.cnf.xz",
+   "bytes": 48820,
+   "hash": "73fb43912a13c51456b63fb9bbb98167",
+   "isohash2": "a5a3e0fa23645ac6",
+   "variables": 1842,
+   "clauses": 13565,
+   "args": [
+    "mknapsack_global.mzn",
+    "mknap1-5.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/multi-knapsack"
+   }
+  },
+  {
+   "file": "mznc2019-ptv-pax_period_20_2b.cnf.xz",
+   "bytes": 297412,
+   "hash": "2b4390e0f77144287c421ffb06d59b08",
+   "isohash2": "d34b38c5d5895b8b",
+   "variables": 14358,
+   "clauses": 108370,
+   "args": [
+    "pax_model.mzn",
+    "pax_period_20_2b.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/ptv"
+   }
+  },
+  {
+   "file": "mznc2019-stack-cuttingstock-d3.cnf.xz",
+   "bytes": 23500,
+   "hash": "3d1851af6e72d0c389c1b3bfffec1782",
+   "isohash2": "cc5e15352d310d73",
+   "variables": 1171,
+   "clauses": 6906,
+   "args": [
+    "stack-cutstock-cumu.mzn",
+    "d3.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/stack-cuttingstock"
+   }
+  },
+  {
+   "file": "mznc2019-stochastic-vrp-vrp-s4-v2-c3_svrp-v2-c3_det.cnf.xz",
+   "bytes": 28144,
+   "hash": "bd89e613225ccd776a7376b19c59eaf0",
+   "isohash2": "b16c762aaa60f7a6",
+   "variables": 1382,
+   "clauses": 10390,
+   "args": [
+    "vrp-s4-v2-c3_svrp-v2-c3_det.mzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/stochastic-vrp"
+   }
+  },
+  {
+   "file": "mznc2019-triangular-n23.cnf.xz",
+   "bytes": 53604,
+   "hash": "017241d0c9b29f797fee0118757f5bd2",
+   "isohash2": "4442e0882ae722e6",
+   "variables": 1166,
+   "clauses": 19695,
+   "args": [
+    "triangular.mzn",
+    "n23.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/triangular"
+   }
+  },
+  {
+   "file": "mznc2019-zephyrus-12__8__6__3.cnf.xz",
+   "bytes": 100836,
+   "hash": "0842da90860f8ab8d226e9e336893142",
+   "isohash2": "72629af5e2760f7c",
+   "variables": 7371,
+   "clauses": 38937,
+   "args": [
+    "zephyrus.mzn",
+    "12__8__6__3.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/zephyrus"
+   }
+  }
+ ],
+ "linked": [],
+ "skipped": [
+  {
+   "name": "mznc2016-carpet-cutting-mzn_rnd_test.02.cnf",
+   "args": [
+    "cc_base.mzn",
+    "mzn_rnd_test.02.dzn"
+   ],
+   "clauses": 1833580,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2016-cryptanalysis-kb128_n5_obj16.cnf",
+   "args": [
+    "step1_aes.mzn",
+    "kb128_n5_obj16.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/cryptanalysis"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2016-elitserien-handball20.cnf",
+   "args": [
+    "handball.mzn",
+    "handball20.dzn"
+   ],
+   "clauses": 478397,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2016-mrcpsp-j30_15_5.cnf",
+   "args": [
+    "mrcpsp.mzn",
+    "j30_15_5.dzn"
+   ],
+   "clauses": 1223203,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2016-oocsp_racks-oocsp_racks_030_f7_cc.cnf",
+   "args": [
+    "oocsp_racks.mzn",
+    "oocsp_racks_030_f7_cc.dzn"
+   ],
+   "clauses": 319111,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2017-cargo-challenge01_0s_1913.cnf",
+   "args": [
+    "cargo_coarsePiles.mzn",
+    "challenge01_0s_1913.dzn"
+   ],
+   "clauses": 456980,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2017-crosswords-grid-23.10_dict-35.cnf",
+   "args": [
+    "crossword_opt.mzn",
+    "grid-23.10_dict-35.dzn"
+   ],
+   "clauses": 7532528,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2017-groupsplitter-u5g1pref0.cnf",
+   "args": [
+    "group.mzn",
+    "u5g1pref0.dzn"
+   ],
+   "clauses": 4557671,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2017-ma-path-finding-ins_g16_p20_a20.cnf",
+   "args": [
+    "mapf.mzn",
+    "ins_g16_p20_a20.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2017/ma-path-finding"
+   },
+   "reason": "over the time limit of 300 seconds"
+  },
+  {
+   "name": "mznc2017-opd-flener_et_al_15_350_100.cnf",
+   "args": [
+    "opd.mzn",
+    "flener_et_al_15_350_100.dzn"
+   ],
+   "clauses": 1358942,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2017-road-cons-road_17.cnf",
+   "args": [
+    "road_naive.mzn",
+    "road_17.dzn"
+   ],
+   "clauses": 10178507,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2017-routing-flexible-routing_GCM_0001.cnf",
+   "args": [
+    "routing_GCM_0001.mzn"
+   ],
+   "clauses": 417588,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2017-steelmillslab-bench_13_0.cnf",
+   "args": [
+    "steelmillslab.mzn",
+    "bench_13_0.dzn"
+   ],
+   "clauses": 946172,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2017-tdtsp-inst_10_35_20.cnf",
+   "args": [
+    "tdtsp.mzn",
+    "inst_10_35_20.dzn"
+   ],
+   "clauses": 328057,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2018-cargo-challenge24.cnf",
+   "args": [
+    "cargo_coarsePiles.mzn",
+    "challenge24.dzn"
+   ],
+   "clauses": 461325,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2018-elitserien-handball15.cnf",
+   "args": [
+    "handball.mzn",
+    "handball15.dzn"
+   ],
+   "clauses": 478692,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2018-largescheduling-instance-0100-4.cnf",
+   "args": [
+    "largecumulative.mzn",
+    "instance-0100-4.dzn"
+   ],
+   "clauses": 2724586,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2018-oocsp_racks-oocsp_racks_030_mii8_cc.cnf",
+   "args": [
+    "oocsp_racks.mzn",
+    "oocsp_racks_030_mii8_cc.dzn"
+   ],
+   "clauses": 329264,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2018-proteindesign12-1PGB.11p.9aa.usingEref_self_x.cnf",
+   "args": [
+    "wcsp.mzn",
+    "1PGB.11p.9aa.usingEref_self_x.dzn"
+   ],
+   "clauses": 1762366,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2018-rotating-workforce-Example593.cnf",
+   "args": [
+    "rotating-workforce.mzn",
+    "Example593.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/rotating-workforce"
+   },
+   "reason": "PicatSAT could not encode the flattened model"
+  },
+  {
+   "name": "mznc2019-code-generator-mips_gobmk.patterns.autohelperpat1114.cnf",
+   "args": [
+    "unison.mzn",
+    "mips_gobmk.patterns.autohelperpat1114.dzn"
+   ],
+   "clauses": 8269420,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2019-groupsplitter-u6g1pref1.cnf",
+   "args": [
+    "group.mzn",
+    "u6g1pref1.dzn"
+   ],
+   "clauses": 5425608,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2019-nside-HARD_200_50.cnf",
+   "args": [
+    "full.mzn",
+    "HARD_200_50.dzn"
+   ],
+   "clauses": 7377168,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2019-rcpsp-wet-diverse-j30_27_5-wet-diverse-3.cnf",
+   "args": [
+    "rcpsp-wet-diverse.mzn",
+    "j30_27_5-wet-diverse-3.dzn"
+   ],
+   "clauses": 491483,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2019-rotating-workforce-Example1174.cnf",
+   "args": [
+    "rotating-workforce.mzn",
+    "Example1174.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/rotating-workforce"
+   },
+   "reason": "PicatSAT could not encode the flattened model"
+  },
+  {
+   "name": "mznc2019-steelmillslab-bench_2_19.cnf",
+   "args": [
+    "steelmillslab.mzn",
+    "bench_2_19.dzn"
+   ],
+   "clauses": 935902,
+   "reason": "over the limit of 300000 clauses"
+  }
+ ]
+}

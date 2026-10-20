@@ -2,7 +2,7 @@
   "pack": "mznc-cnf-2020-2023",
   "title": "The MiniZinc Challenge 2020 to 2023 as CNF, examples",
   "why": "The constraint programming competition distributes MiniZinc models and their data, not formulas, so every SAT author who wants to work on constraint problems rebuilds the same flattening and the same encoding. This pack is the editions of 2020 to 2023 as CNF, one instance per problem, produced by one pinned chain: the MiniZinc compiler 2.10.1, then Picat's SAT module. The most recent edition has its own pack, with two instances per problem; the history is grouped by four years so that a pack stays a handful of examples.",
-  "status": "proposed",
+  "status": "published",
   "generator": "minizinc",
   "items": {
     "kind": "mzn-grid",
@@ -23,10 +23,38 @@
   "timeout_seconds": 300,
   "nature": "examples",
   "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by taking another data file of the same problem",
+  "distribution": {
+    "github_release": "packs-2026",
+    "asset": "mznc-cnf-2020-2023.tar",
+    "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/mznc-cnf-2020-2023.tar",
+    "sha256": "d445135207dd599c8f63204ad64cf5050416c13f1f7e09197e525292e8a125f0",
+    "zenodo": null
+  },
   "skip_reasons": {
     "3": "the model does not compile with MiniZinc 2.10.1, the version pinned here",
     "4": "PicatSAT could not encode the flattened model",
     "5": "PicatSAT settled it by propagation while reading the FlatZinc, so no formula was written"
   },
-  "regenerate": "tools/fetch_upstream.py mznc && docker run --rm -v \"$CACHE/mznc/files/<year>/<problem>:/data:ro\" satex-gen/minizinc:2.10.1 <model>.mzn <data file>"
+  "regenerate": "tools/fetch_upstream.py mznc && docker run --rm -v \"$CACHE/mznc/files/<year>/<problem>:/data:ro\" satex-gen/minizinc:2.10.1 <model>.mzn <data file>",
+  "built": {
+    "instances": 46,
+    "problems": 46,
+    "bytes": 6504636,
+    "archive_bytes": 6574080,
+    "clauses": {
+      "min": 1528,
+      "median": 34426,
+      "max": 272607
+    },
+    "left_out": {
+      "over the clause limit": 18,
+      "settled by propagation, no formula": 8,
+      "does not compile with MiniZinc 2.10.1": 6,
+      "over the time limit": 1,
+      "the encoder failed": 1
+    },
+    "chain": "MiniZinc 2.10.1 compiler, then Picat's SAT module through the dump option",
+    "sha256": "d445135207dd599c8f63204ad64cf5050416c13f1f7e09197e525292e8a125f0"
+  },
+  "coverage_note": "46 instances, one per problem of the four editions. Eighteen are past the clause limit and one past the five-minute limit, our choices; eight are settled by PicatSAT's propagation while it reads the FlatZinc, so there is no formula to write; six no longer compile with 2.10.1; one the encoder could not take."
 }

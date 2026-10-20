@@ -400,35 +400,45 @@ freeLunch failing on a task the translator accepted; those are recorded one by
 one in the indexes. The first run of these packs reported 515 refusals in one
 undifferentiated heap, which told nobody anything.
 
-### The pack of the constraint competition
+### The packs of the constraint competition
 
-One pack so far, the 2024 edition of the MiniZinc Challenge: the organisers'
-own models and data, through the MiniZinc compiler 2.10.1 and Picat's SAT
-module, two instances per problem, nothing past 300 thousand clauses and five
+Five packs: one per four editions of the MiniZinc Challenge from 2008 to 2023,
+one instance per problem, and the 2024 edition on its own with two instances per
+problem. The organisers' own models and data, through the MiniZinc compiler
+2.10.1 and Picat's SAT module, nothing past 300 thousand clauses and five
 minutes per instance.
 
-| | |
-|---|---|
-| Problems covered | 16 of the 21 of the edition |
-| Instances | 29, 6.6 MB |
-| Clauses | 469 at the smallest, 53 thousand median, 299 thousand at the largest |
-| Left out | 4 over the clause limit, 3 over the time limit, 2 settled by propagation, 2 that no longer compile |
+| Editions | Instances | Left out | Size |
+|---|---|---|---|
+| 2008 to 2011 | 25 | 24 do not compile with 2.10.1, 3 over the clause limit | 3.3 MB |
+| 2012 to 2015 | 60 | 16 over the limit, 2 empty formulas, 1 by the encoder | 9.3 MB |
+| 2016 to 2019 | 54 | 22 over the limit, 2 by the encoder, 1 over time, 1 does not compile | 7.4 MB |
+| 2020 to 2023 | 46 | 18 over the limit, 8 settled by propagation, 6 do not compile, 1 over time, 1 by the encoder | 6.5 MB |
+| 2024 | 29 | 4 over the limit, 3 over time, 2 settled by propagation, 2 do not compile | 6.6 MB |
+
+214 formulas, 33 MB in all, in the `packs-2026` release beside the planning
+packs, with an `index.json` in each archive giving the GBD hash of every file
+and the command that made it.
 
 ```sh
 curl -LO https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/mznc-cnf-2024.tar
 tar xf mznc-cnf-2024.tar
 ```
 
-**What is left out, and why it matters which.** A formula past the clause limit
-or an instance past the time limit is our choice, since a pack holds examples:
-the aircraft disassembly instance is 2.5 million clauses, and one monitor
-placement instance was still inside the MiniZinc compiler after twenty minutes.
-Two instances are settled by PicatSAT's propagation while it reads the
-FlatZinc, so there is no formula to write and the bridge says so with its own
-exit code. And two models of the edition no longer compile: the competition
-flattened them with MiniZinc 2.8.5 in 2024, and 2.10.1 refuses a string
-interpolation they use. Every exclusion is recorded instance by instance in the
-index of the pack.
+**What is left out, and the drift it uncovered.** A formula past the clause
+limit or an instance past the five minutes is our choice, since a pack holds
+examples. Two other reasons are the chain's: PicatSAT settles some instances by
+propagation while it reads the FlatZinc, so there is no formula to write, and it
+refuses a few flattened models outright. The third is the interesting one. **31
+models of the archive no longer compile with MiniZinc 2.10.1**, almost all of
+them in the early editions: the 2009 edition compiles nowhere, 2008 keeps two
+problems of ten, 2010 six of eleven, and 2011 all seventeen. Those models use
+the search annotations of MiniZinc 1.x, `int_search` with four arguments for
+instance, which the modern compiler refuses. The competition's own archive has
+drifted away from the competition's own compiler, and reaching the early
+editions means pinning the compiler of their year as well: the challenge
+archive names the version it used edition by edition, from 2.9.3 in 2025 back to
+the 1.x of the first years.
 
 ## Bridges
 

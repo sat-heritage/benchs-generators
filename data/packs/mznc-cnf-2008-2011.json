@@ -1,0 +1,729 @@
+{
+ "pack": "mznc-cnf-2008-2011",
+ "title": "The MiniZinc Challenge 2008 to 2011 as CNF, examples",
+ "why": "The constraint programming competition distributes MiniZinc models and their data, not formulas, so every SAT author who wants to work on constraint problems rebuilds the same flattening and the same encoding. This pack is the editions of 2008 to 2011 as CNF, one instance per problem, produced by one pinned chain: the MiniZinc compiler 2.10.1, then Picat's SAT module. The most recent edition has its own pack, with two instances per problem; the history is grouped by four years so that a pack stays a handful of examples.",
+ "generator": "minizinc",
+ "image": "satex-gen/minizinc:2.10.1",
+ "instances": 25,
+ "bytes": 3298832,
+ "linked_to_gbd": 0,
+ "not_encodable": 27,
+ "files": [
+  {
+   "file": "mznc2008-shortest_path-05.cnf.xz",
+   "bytes": 38996,
+   "hash": "8441a96422d60a6d2c6a6f7b21e6b4dc",
+   "isohash2": "c773641b63d851e4",
+   "variables": 1331,
+   "clauses": 12845,
+   "args": [
+    "shortest_path.mzn",
+    "05.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2008/shortest_path"
+   }
+  },
+  {
+   "file": "mznc2008-slow_convergence-0200.cnf.xz",
+   "bytes": 136008,
+   "hash": "5f678bde8b4a20783899aea66f8a2225",
+   "isohash2": "816fde940c090119",
+   "variables": 9415,
+   "clauses": 62464,
+   "args": [
+    "slow_convergence.mzn",
+    "0200.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2008/slow_convergence"
+   }
+  },
+  {
+   "file": "mznc2010-bacp-bacp-21.cnf.xz",
+   "bytes": 88476,
+   "hash": "eaf57fea009ffb7d2766e50b1343fd99",
+   "isohash2": "8bd71ce5c427c5b8",
+   "variables": 3930,
+   "clauses": 28308,
+   "args": [
+    "bacp-21.mzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2010/bacp"
+   }
+  },
+  {
+   "file": "mznc2010-costas_array-14.cnf.xz",
+   "bytes": 175284,
+   "hash": "f57c11eae5a37d6866ff24f64323f9e0",
+   "isohash2": "3ba2d84af7f8d379",
+   "variables": 3064,
+   "clauses": 51706,
+   "args": [
+    "CostasArray.mzn",
+    "14.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2010/costas_array"
+   }
+  },
+  {
+   "file": "mznc2010-filters-fir_2_2.cnf.xz",
+   "bytes": 30520,
+   "hash": "41743f9a09b2823ecf7e80111f8a6e5a",
+   "isohash2": "cfbc4ffacd52540f",
+   "variables": 2119,
+   "clauses": 12949,
+   "args": [
+    "filter.mzn",
+    "fir_2_2.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2010/filters"
+   }
+  },
+  {
+   "file": "mznc2010-grid_colouring-7_8.cnf.xz",
+   "bytes": 15044,
+   "hash": "1af82691fefe83e05df020e07c1b25a4",
+   "isohash2": "541227f6ef5a0944",
+   "variables": 899,
+   "clauses": 5769,
+   "args": [
+    "GridColoring.mzn",
+    "7_8.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2010/grid_colouring"
+   }
+  },
+  {
+   "file": "mznc2010-solbat-sb_12_12_5_2.cnf.xz",
+   "bytes": 116712,
+   "hash": "ee4fe13d1e00c9e8c7ebb9a66e715c71",
+   "isohash2": "28a810915442b90f",
+   "variables": 7759,
+   "clauses": 52659,
+   "args": [
+    "sb.mzn",
+    "sb_12_12_5_2.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2010/solbat"
+   }
+  },
+  {
+   "file": "mznc2010-sugiyama-g3_8_8_2.cnf.xz",
+   "bytes": 14076,
+   "hash": "a7103e6b559c0fb4fb4ba5abeb2ac6b3",
+   "isohash2": "df46c6597f198b6f",
+   "variables": 717,
+   "clauses": 5035,
+   "args": [
+    "sugiyama2.mzn",
+    "g3_8_8_2.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2010/sugiyama"
+   }
+  },
+  {
+   "file": "mznc2011-bacp-bacp-28.cnf.xz",
+   "bytes": 60388,
+   "hash": "d1bbcbf8c5bea6c092900db05524b891",
+   "isohash2": "dc1ad098a00fcacb",
+   "variables": 3067,
+   "clauses": 20036,
+   "args": [
+    "bacp-28.mzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/bacp"
+   }
+  },
+  {
+   "file": "mznc2011-black-hole-9.cnf.xz",
+   "bytes": 274512,
+   "hash": "b6770b1ee55d794332d33db9da1dec2c",
+   "isohash2": "cba795741cd235da",
+   "variables": 14066,
+   "clauses": 143425,
+   "args": [
+    "black-hole.mzn",
+    "9.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/black-hole"
+   }
+  },
+  {
+   "file": "mznc2011-costas-array-18.cnf.xz",
+   "bytes": 391916,
+   "hash": "57d8b3287c5f499c3df52067f4db995b",
+   "isohash2": "5284689c8812db72",
+   "variables": 6960,
+   "clauses": 117473,
+   "args": [
+    "CostasArray.mzn",
+    "18.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/costas-array"
+   }
+  },
+  {
+   "file": "mznc2011-cyclic-rcpsp-easy_4.cnf.xz",
+   "bytes": 109736,
+   "hash": "8ab47f665d8bb363ad0f66a46a714b65",
+   "isohash2": "ed3616ecbe317595",
+   "variables": 5200,
+   "clauses": 38470,
+   "args": [
+    "rcmsp.mzn",
+    "easy_4.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/cyclic-rcpsp"
+   }
+  },
+  {
+   "file": "mznc2011-depot-placement-rat99_5.cnf.xz",
+   "bytes": 41840,
+   "hash": "4919a8e1cdec97e5b861de27ede37fcb",
+   "isohash2": "d963bef5962f0c0b",
+   "variables": 795,
+   "clauses": 15537,
+   "args": [
+    "depot_placement.mzn",
+    "rat99_5.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/depot-placement"
+   }
+  },
+  {
+   "file": "mznc2011-fast-food-ff71.cnf.xz",
+   "bytes": 160864,
+   "hash": "23ba386c0c10942cf20e0a518d5d0c14",
+   "isohash2": "47b4cfce5c790ab3",
+   "variables": 11933,
+   "clauses": 53900,
+   "args": [
+    "fastfood.mzn",
+    "ff71.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/fast-food"
+   }
+  },
+  {
+   "file": "mznc2011-fillomino-08.cnf.xz",
+   "bytes": 30236,
+   "hash": "593211b014c7b9c3c71efbe7231b07ba",
+   "isohash2": "8123ba5722fd5edb",
+   "variables": 1583,
+   "clauses": 11459,
+   "args": [
+    "fillomino.mzn",
+    "08.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/fillomino"
+   }
+  },
+  {
+   "file": "mznc2011-grid-colouring-7_8.cnf.xz",
+   "bytes": 15044,
+   "hash": "1af82691fefe83e05df020e07c1b25a4",
+   "isohash2": "541227f6ef5a0944",
+   "variables": 899,
+   "clauses": 5769,
+   "args": [
+    "GridColoring.mzn",
+    "7_8.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/grid-colouring"
+   }
+  },
+  {
+   "file": "mznc2011-open-stacks-problem_10_20_1.cnf.xz",
+   "bytes": 72724,
+   "hash": "eaacdad186f7675255a6a8c57c0693b1",
+   "isohash2": "7ee6576d6c28c15f",
+   "variables": 2509,
+   "clauses": 32386,
+   "args": [
+    "open_stacks_01.mzn",
+    "problem_10_20_1.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/open-stacks"
+   }
+  },
+  {
+   "file": "mznc2011-pattern-set-mining-hepatitis-k2.cnf.xz",
+   "bytes": 211836,
+   "hash": "05b5729bc948f98367d30da546222d38",
+   "isohash2": "4a694543864cbd2a",
+   "variables": 9567,
+   "clauses": 84835,
+   "args": [
+    "pattern_set_mining.mzn",
+    "hepatitis-k2.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/pattern-set-mining"
+   }
+  },
+  {
+   "file": "mznc2011-prize-collecting-25-5-5-9.cnf.xz",
+   "bytes": 58488,
+   "hash": "2fe4a4960c97e0f71237a76b6a532b72",
+   "isohash2": "54f3f01344d05852",
+   "variables": 2632,
+   "clauses": 24698,
+   "args": [
+    "pc.mzn",
+    "25-5-5-9.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/prize-collecting"
+   }
+  },
+  {
+   "file": "mznc2011-roster-chicroster_dataset_large_16.cnf.xz",
+   "bytes": 110232,
+   "hash": "1c8036fae3591ec825ffb61fb4f4fdae",
+   "isohash2": "5722c01bde9fed6d",
+   "variables": 9007,
+   "clauses": 45755,
+   "args": [
+    "roster_model.mzn",
+    "chicroster_dataset_large_16.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/roster"
+   }
+  },
+  {
+   "file": "mznc2011-ship-schedule-4Ships.cnf.xz",
+   "bytes": 301152,
+   "hash": "5e4d689390875ceebc105602caef7ed9",
+   "isohash2": "7fd444ca7afa7c70",
+   "variables": 9478,
+   "clauses": 137742,
+   "args": [
+    "ship-schedule.cp.mzn",
+    "4Ships.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/ship-schedule"
+   }
+  },
+  {
+   "file": "mznc2011-solbat-sb_12_12_5_3.cnf.xz",
+   "bytes": 131636,
+   "hash": "c4e036b4b9d25e4be92788a455c1353c",
+   "isohash2": "fea55232c66b398e",
+   "variables": 8817,
+   "clauses": 57614,
+   "args": [
+    "sb.mzn",
+    "sb_12_12_5_3.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/solbat"
+   }
+  },
+  {
+   "file": "mznc2011-table-layout-en-1000-1615-line479.cnf.xz",
+   "bytes": 60528,
+   "hash": "0fbb075457531ba28df06cb4a69a972d",
+   "isohash2": "56017340d56a92cc",
+   "variables": 3557,
+   "clauses": 19923,
+   "args": [
+    "TableLayout.mzn",
+    "en-1000-1615-line479.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/table-layout"
+   }
+  },
+  {
+   "file": "mznc2011-vrp-A-n32-k5.vrp.cnf.xz",
+   "bytes": 303332,
+   "hash": "4f8ab7307d4191888314eadb90df62bf",
+   "isohash2": "7b941ebd2377c175",
+   "variables": 18656,
+   "clauses": 112263,
+   "args": [
+    "vrp.mzn",
+    "A-n32-k5.vrp.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/vrp"
+   }
+  },
+  {
+   "file": "mznc2011-wwtpp-real-ex04020_2400_100.cnf.xz",
+   "bytes": 349252,
+   "hash": "675a8766cb8e285864addd1b3df23535",
+   "isohash2": "f2f97880a764a7e8",
+   "variables": 16462,
+   "clauses": 99106,
+   "args": [
+    "wwtpp.mzn",
+    "ex04020_2400_100.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/wwtpp-real"
+   }
+  }
+ ],
+ "linked": [],
+ "skipped": [
+  {
+   "name": "mznc2008-debruijn_binary-04_06.cnf",
+   "args": [
+    "debruijn_binary.mzn",
+    "04_06.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2008/debruijn_binary"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2008-nmseq-040.cnf",
+   "args": [
+    "nmseq.mzn",
+    "040.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2008/nmseq"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2008-pentominoes-int-01.cnf",
+   "args": [
+    "pentominoes-int.mzn",
+    "01.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2008/pentominoes-int"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2008-quasigroup7-07.cnf",
+   "args": [
+    "quasigroup7.mzn",
+    "07.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2008/quasigroup7"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2008-radiation-01.cnf",
+   "args": [
+    "radiation.mzn",
+    "01.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2008/radiation"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2008-rcpsp-00.cnf",
+   "args": [
+    "rcpsp.mzn",
+    "00.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2008/rcpsp"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2008-search_stress-08_04.cnf",
+   "args": [
+    "search_stress.mzn",
+    "08_04.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2008/search_stress"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2008-trucking-01.cnf",
+   "args": [
+    "trucking.mzn",
+    "01.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2008/trucking"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2009-black-hole-07.cnf",
+   "args": [
+    "black-hole.mzn",
+    "07.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2009/black-hole"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2009-fillomino-08.cnf",
+   "args": [
+    "fillomino.mzn",
+    "08.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2009/fillomino"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2009-nonogram-non_fast_1.cnf",
+   "args": [
+    "non.mzn",
+    "non_fast_1.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2009/nonogram"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2009-open_stacks-problem_20_10_1.cnf",
+   "args": [
+    "open_stacks_01.mzn",
+    "problem_20_10_1.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2009/open_stacks"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2009-p1f-07.cnf",
+   "args": [
+    "p1f.mzn",
+    "07.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2009/p1f"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2009-prop_stress-0200.cnf",
+   "args": [
+    "prop_stress.mzn",
+    "0200.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2009/prop_stress"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2009-rectangle-packing-rpp05_true.cnf",
+   "args": [
+    "rect_packing.mzn",
+    "rpp05_true.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2009/rectangle-packing"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2009-roster-chicroster_dataset_5.cnf",
+   "args": [
+    "roster_model.mzn",
+    "chicroster_dataset_5.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2009/roster"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2009-search_stress2-06_06.cnf",
+   "args": [
+    "search_stress2.mzn",
+    "06_06.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2009/search_stress2"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2009-still_life-still_life_7.cnf",
+   "args": [
+    "still_life.mzn",
+    "still_life_7.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2009/still_life"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2009-vrp-P-n19-k2.vrp.cnf",
+   "args": [
+    "vrp.mzn",
+    "P-n19-k2.vrp.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2009/vrp"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2010-depot_placement-rat99_4.cnf",
+   "args": [
+    "depot_placement.mzn",
+    "rat99_4.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2010/depot_placement"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2010-ghoulomb-4-8-16.cnf",
+   "args": [
+    "ghoulomb.mzn",
+    "4-8-16.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2010/ghoulomb"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2010-rcpsp_max-psp_j20_34.cnf",
+   "args": [
+    "rcpsp_max.mzn",
+    "psp_j20_34.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2010/rcpsp_max"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2010-wwtp_random-ex05100_2600_100.cnf",
+   "args": [
+    "wwtpp.mzn",
+    "ex05100_2600_100.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2010/wwtp_random"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2010-wwtp_real-ex07120_2400_100.cnf",
+   "args": [
+    "wwtpp.mzn",
+    "ex07120_2400_100.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2010/wwtp_real"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2011-carpet-cutting-mzn_rnd_test.04.cnf",
+   "args": [
+    "cc_base.mzn",
+    "mzn_rnd_test.04.dzn"
+   ],
+   "clauses": 6747258,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2011-nonogram-non_fast_3.cnf",
+   "args": [
+    "non.mzn",
+    "non_fast_3.dzn"
+   ],
+   "clauses": 393760,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2011-pentominoes-02.cnf",
+   "args": [
+    "pentominoes-int.mzn",
+    "02.dzn"
+   ],
+   "clauses": 3986318,
+   "reason": "over the limit of 300000 clauses"
+  }
+ ]
+}
