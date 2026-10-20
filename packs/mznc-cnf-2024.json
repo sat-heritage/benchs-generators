@@ -2,7 +2,7 @@
   "pack": "mznc-cnf-2024",
   "title": "The MiniZinc Challenge 2024 as CNF, examples",
   "why": "The constraint programming competition distributes MiniZinc models and their data, not formulas, so every SAT author who wants to work on constraint problems rebuilds the same flattening and the same encoding. This pack is those instances as CNF, produced by one pinned chain: the MiniZinc compiler 2.10.1, then Picat's SAT module. The competition's own data files are the parameters, and any other size is produced on demand with the same chain.",
-  "status": "proposed",
+  "status": "built, not yet published",
   "generator": "minizinc",
   "items": {
     "kind": "mzn-grid",
@@ -15,7 +15,7 @@
   },
   "exclude_known": true,
   "permission": "to ask: the models and their data are archived by the MiniZinc Challenge organisers; the CNF is derived from them by a pinned chain",
-  "size_note": "measured on the twenty problems of the edition, at the smallest data file of each: from 469 clauses for a monitor placement instance to 2.5 million for an aircraft disassembly one, with a median around 60 thousand. Flattening alone can grind: one monitor placement instance was still in the MiniZinc compiler after twenty minutes, so the pack gives each instance five minutes and records the ones that go past it.",
+  "size_note": "measured on the whole edition: from 469 clauses for a monitor placement instance to 2.5 million for an aircraft disassembly one, with a median of 53 thousand in what the pack keeps. Flattening alone can grind: one monitor placement instance was still in the MiniZinc compiler after twenty minutes, so the pack gives each instance five minutes and records the ones that go past it.",
   "max_clauses": 300000,
   "timeout_seconds": 300,
   "nature": "examples",
@@ -25,5 +25,26 @@
     "4": "PicatSAT could not encode the flattened model",
     "5": "PicatSAT settled it by propagation while reading the FlatZinc, so no formula was written"
   },
-  "regenerate": "tools/fetch_upstream.py mznc && docker run --rm -v \"$CACHE/mznc/files/2024/<problem>:/data:ro\" satex-gen/minizinc:2.10.1 <problem>.mzn <data file>"
+  "regenerate": "tools/fetch_upstream.py mznc && docker run --rm -v \"$CACHE/mznc/files/2024/<problem>:/data:ro\" satex-gen/minizinc:2.10.1 <problem>.mzn <data file>",
+  "built": {
+    "instances": 29,
+    "problems": 16,
+    "problems_in_the_edition": 21,
+    "bytes": 6537652,
+    "archive_bytes": 6584320,
+    "clauses": {
+      "min": 469,
+      "median": 53748,
+      "max": 299419
+    },
+    "left_out": {
+      "over the clause limit": 4,
+      "over the time limit": 3,
+      "settled by propagation, no formula": 2,
+      "does not compile with MiniZinc 2.10.1": 2
+    },
+    "chain": "MiniZinc 2.10.1 compiler, then Picat's SAT module through the dump option",
+    "sha256": "e82618de134e370480f2f05f24b11c80a36e32fd1d6d179e6a39fd5a20a718e4"
+  },
+  "coverage_note": "16 of the 21 problems of the edition are in the pack. Of the eleven instances left out, four are past the clause limit and three past the time limit, which are our choices; two are settled by PicatSAT's propagation while it reads the FlatZinc, so there is no formula to write; and two are models the competition compiled with MiniZinc 2.8.5 in 2024 that no longer compile with 2.10.1, a string interpolation the newer compiler refuses. Every exclusion is recorded instance by instance in the index."
 }

@@ -1,0 +1,598 @@
+{
+ "pack": "mznc-cnf-2024",
+ "title": "The MiniZinc Challenge 2024 as CNF, examples",
+ "why": "The constraint programming competition distributes MiniZinc models and their data, not formulas, so every SAT author who wants to work on constraint problems rebuilds the same flattening and the same encoding. This pack is those instances as CNF, produced by one pinned chain: the MiniZinc compiler 2.10.1, then Picat's SAT module. The competition's own data files are the parameters, and any other size is produced on demand with the same chain.",
+ "generator": "minizinc",
+ "image": "satex-gen/minizinc:2.10.1",
+ "instances": 29,
+ "bytes": 6537652,
+ "linked_to_gbd": 0,
+ "not_encodable": 11,
+ "files": [
+  {
+   "file": "mznc2024-accap-accap_a3_f20_t10.cnf.xz",
+   "bytes": 295744,
+   "hash": "10fde076e31739c27d8f9b0adb726ed7",
+   "isohash2": "f31b3410f8923953",
+   "variables": 2169,
+   "clauses": 125239,
+   "args": [
+    "accap.mzn",
+    "accap_a3_f20_t10.json"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/accap"
+   }
+  },
+  {
+   "file": "mznc2024-accap-accap_a8_f50_t30.cnf.xz",
+   "bytes": 204408,
+   "hash": "fe076932df6948d1784ab35b4e2a7664",
+   "isohash2": "38f90f6fb8f206f5",
+   "variables": 10212,
+   "clauses": 68456,
+   "args": [
+    "accap.mzn",
+    "accap_a8_f50_t30.json"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/accap"
+   }
+  },
+  {
+   "file": "mznc2024-cable-tree-wiring-A041.cnf.xz",
+   "bytes": 548756,
+   "hash": "73c03629ffd23d785f64501b221f5908",
+   "isohash2": "241f194c34f70f1d",
+   "variables": 28335,
+   "clauses": 229652,
+   "args": [
+    "ctw.mzn",
+    "A041.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/cable-tree-wiring"
+   }
+  },
+  {
+   "file": "mznc2024-community-detection-Zakhary.s12.k4.cnf.xz",
+   "bytes": 99100,
+   "hash": "78232799b1f399722df0ad65bf284a32",
+   "isohash2": "5f7d7bbdb23faaf9",
+   "variables": 4364,
+   "clauses": 33314,
+   "args": [
+    "community-detection.mzn",
+    "Zakhary.s12.k4.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/community-detection"
+   }
+  },
+  {
+   "file": "mznc2024-community-detection-Zakhary.s12.k3.cnf.xz",
+   "bytes": 88704,
+   "hash": "14605df7d78cc937dda80a14665de5e7",
+   "isohash2": "ffdd0cca3950fb37",
+   "variables": 3722,
+   "clauses": 29293,
+   "args": [
+    "community-detection.mzn",
+    "Zakhary.s12.k3.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/community-detection"
+   }
+  },
+  {
+   "file": "mznc2024-compression-bin_7.cnf.xz",
+   "bytes": 27672,
+   "hash": "7dcb3d40843ed7c17fe6282e7b20bf97",
+   "isohash2": "eb11a81e57893266",
+   "variables": 1596,
+   "clauses": 10035,
+   "args": [
+    "compression.mzn",
+    "bin_7.json"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/compression"
+   }
+  },
+  {
+   "file": "mznc2024-compression-bin_8.cnf.xz",
+   "bytes": 37900,
+   "hash": "02ba79c7c4105d52fd52e6754f970f93",
+   "isohash2": "0669732c2875baa9",
+   "variables": 2196,
+   "clauses": 14124,
+   "args": [
+    "compression.mzn",
+    "bin_8.json"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/compression"
+   }
+  },
+  {
+   "file": "mznc2024-concert-hall-cap-concert-cap.mznc2018.04.cnf.xz",
+   "bytes": 20772,
+   "hash": "d2bb426fe05e28f39a484b2a162a2466",
+   "isohash2": "eb2812051fce4764",
+   "variables": 1170,
+   "clauses": 7771,
+   "args": [
+    "concert-hall-cap.mzn",
+    "concert-cap.mznc2018.04.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/concert-hall-cap"
+   }
+  },
+  {
+   "file": "mznc2024-concert-hall-cap-concert_60_50.cnf.xz",
+   "bytes": 443776,
+   "hash": "76fd725d51eeba1571927b25a9befc6d",
+   "isohash2": "e2e24737c53c60db",
+   "variables": 9855,
+   "clauses": 210295,
+   "args": [
+    "concert-hall-cap.mzn",
+    "concert_60_50.json"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/concert-hall-cap"
+   }
+  },
+  {
+   "file": "mznc2024-fox-geese-corn-fgc_06_26_08_00.cnf.xz",
+   "bytes": 209904,
+   "hash": "1fe3648a470ccf7a7720fc6db65fe154",
+   "isohash2": "6ab5a9405188a331",
+   "variables": 6659,
+   "clauses": 67526,
+   "args": [
+    "foxgeesecorn.mzn",
+    "fgc_06_26_08_00.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/fox-geese-corn"
+   }
+  },
+  {
+   "file": "mznc2024-fox-geese-corn-foxgeesecorn_61.cnf.xz",
+   "bytes": 224152,
+   "hash": "da27e12b99e27b02c58b6b47218eab3c",
+   "isohash2": "2cd7f9c1e1036f6d",
+   "variables": 8839,
+   "clauses": 62068,
+   "args": [
+    "foxgeesecorn.mzn",
+    "foxgeesecorn_61.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/fox-geese-corn"
+   }
+  },
+  {
+   "file": "mznc2024-graph-clear-planar_n20_seed2022_16.cnf.xz",
+   "bytes": 271000,
+   "hash": "69f4ff2b88d88b0fcffc4fb98d271b8d",
+   "isohash2": "0ff1ebef72ceb471",
+   "variables": 13833,
+   "clauses": 109693,
+   "args": [
+    "graph_clear_cp.mzn",
+    "planar_n20_seed2022_16.json"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/graph-clear"
+   }
+  },
+  {
+   "file": "mznc2024-graph-clear-planar_n20_seed2022_15.cnf.xz",
+   "bytes": 271036,
+   "hash": "f62f53fb388cf6ed0c3324a6fe701d7f",
+   "isohash2": "594c5b9f268ee58b",
+   "variables": 13557,
+   "clauses": 111081,
+   "args": [
+    "graph_clear_cp.mzn",
+    "planar_n20_seed2022_15.json"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/graph-clear"
+   }
+  },
+  {
+   "file": "mznc2024-hoist-benchmark-PU_2_8_4.cnf.xz",
+   "bytes": 550168,
+   "hash": "b94243d5e406882cadd8d3448776a19d",
+   "isohash2": "def1348443b9d163",
+   "variables": 29357,
+   "clauses": 184792,
+   "args": [
+    "hoist-benchmark.mzn",
+    "PU_2_8_4.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/hoist-benchmark"
+   }
+  },
+  {
+   "file": "mznc2024-monitor-placement-1id-hop_counting_based_zoo_Forthnet.cnf.xz",
+   "bytes": 1396,
+   "hash": "cc7ce741b61f7fdd90fa6c66dd0e1d3a",
+   "isohash2": "90b60871f7e91106",
+   "variables": 96,
+   "clauses": 469,
+   "args": [
+    "monitor_1id.mzn",
+    "hop_counting_based_zoo_Forthnet.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/monitor-placement-1id"
+   }
+  },
+  {
+   "file": "mznc2024-monitor-placement-1id-igp_weight_based_rocketfuel_rf1755_real_hard.cnf.xz",
+   "bytes": 23988,
+   "hash": "8fa6c698a3a8dbf20022db2fe151b71b",
+   "isohash2": "fc24e349e3f0cb4d",
+   "variables": 1898,
+   "clauses": 6507,
+   "args": [
+    "monitor_1id.mzn",
+    "igp_weight_based_rocketfuel_rf1755_real_hard.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/monitor-placement-1id"
+   }
+  },
+  {
+   "file": "mznc2024-neighbours-neightbours-new-6.cnf.xz",
+   "bytes": 16204,
+   "hash": "ddbd7b250ff2c95c5b43745d35e18410",
+   "isohash2": "ccfc6529a830baf1",
+   "variables": 1055,
+   "clauses": 5980,
+   "args": [
+    "neighbours-rect.mzn",
+    "neightbours-new-6.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/neighbours"
+   }
+  },
+  {
+   "file": "mznc2024-neighbours-neightbours-new-2.cnf.xz",
+   "bytes": 3856,
+   "hash": "a88a37bedac7262cd501d7252066d706",
+   "isohash2": "92669b50502a83b9",
+   "variables": 235,
+   "clauses": 1324,
+   "args": [
+    "neighbours-rect.mzn",
+    "neightbours-new-2.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/neighbours"
+   }
+  },
+  {
+   "file": "mznc2024-network_50_cstr-MODEL1507180022.cnf.xz",
+   "bytes": 1006892,
+   "hash": "d0426a34d29dab77f0b9e9c8c501b66d",
+   "isohash2": "15f5d1f77cdb6b07",
+   "variables": 43639,
+   "clauses": 289861,
+   "args": [
+    "efm_cstr.mzn",
+    "MODEL1507180022.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/network_50_cstr"
+   }
+  },
+  {
+   "file": "mznc2024-network_50_cstr-MODEL2204190004.cnf.xz",
+   "bytes": 1032736,
+   "hash": "e2ca9fe724cba21d0a625eff33d37e16",
+   "isohash2": "c8453ed443f978f3",
+   "variables": 46738,
+   "clauses": 299419,
+   "args": [
+    "efm_cstr.mzn",
+    "MODEL2204190004.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/network_50_cstr"
+   }
+  },
+  {
+   "file": "mznc2024-peacable_queens-pq_n7.cnf.xz",
+   "bytes": 67724,
+   "hash": "b2ee99e451a9d22a9371a8735c4e3d6c",
+   "isohash2": "5335f613791c0d94",
+   "variables": 4621,
+   "clauses": 24332,
+   "args": [
+    "peaceable_queens_mznc2021.mzn",
+    "pq_n7.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/peacable_queens"
+   }
+  },
+  {
+   "file": "mznc2024-peacable_queens-pq_n9.cnf.xz",
+   "bytes": 116272,
+   "hash": "1ff9773d87fff1d10dedcf3553f0b28d",
+   "isohash2": "380f512f90d63209",
+   "variables": 8048,
+   "clauses": 42447,
+   "args": [
+    "peaceable_queens_mznc2021.mzn",
+    "pq_n9.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/peacable_queens"
+   }
+  },
+  {
+   "file": "mznc2024-portal-small_3.cnf.xz",
+   "bytes": 205376,
+   "hash": "5d3650c3a816cb0bbb2f6a360f3dc990",
+   "isohash2": "0a4e27dac92e7db6",
+   "variables": 8891,
+   "clauses": 61165,
+   "args": [
+    "portal.mzn",
+    "small_3.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/portal"
+   }
+  },
+  {
+   "file": "mznc2024-portal-random_10_9_10.cnf.xz",
+   "bytes": 90760,
+   "hash": "ef36606778a428abf3f2b786858571cc",
+   "isohash2": "2e25f73bcbf3599c",
+   "variables": 3467,
+   "clauses": 27057,
+   "args": [
+    "portal.mzn",
+    "random_10_9_10.json"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/portal"
+   }
+  },
+  {
+   "file": "mznc2024-tiny-cvrp-easy_instance_04.cnf.xz",
+   "bytes": 93764,
+   "hash": "6a4f30dafc2ccf0e834a453025ca82d8",
+   "isohash2": "a1826b90d5ad51e2",
+   "variables": 6690,
+   "clauses": 29861,
+   "args": [
+    "TinyCVRP_ExactlyOneSolution.mzn",
+    "easy_instance_04.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/tiny-cvrp"
+   }
+  },
+  {
+   "file": "mznc2024-tiny-cvrp-medium_instance_13.cnf.xz",
+   "bytes": 208284,
+   "hash": "ad2e33fd289d6874c6fe6f67740dbe62",
+   "isohash2": "74c7b3faa42982e5",
+   "variables": 14488,
+   "clauses": 64882,
+   "args": [
+    "TinyCVRP_ExactlyOneSolution.mzn",
+    "medium_instance_13.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/tiny-cvrp"
+   }
+  },
+  {
+   "file": "mznc2024-triangular-n9.cnf.xz",
+   "bytes": 4276,
+   "hash": "d8c328c6a15a303001a0851d16d608b1",
+   "isohash2": "d88c180c315fbe2b",
+   "variables": 178,
+   "clauses": 1367,
+   "args": [
+    "triangular.mzn",
+    "n9.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/triangular"
+   }
+  },
+  {
+   "file": "mznc2024-triangular-n31.cnf.xz",
+   "bytes": 129668,
+   "hash": "875dc4f2e8a8516a91f7f88dd42e6bab",
+   "isohash2": "e2c97ccf90a3e846",
+   "variables": 2107,
+   "clauses": 53748,
+   "args": [
+    "triangular.mzn",
+    "n31.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/triangular"
+   }
+  },
+  {
+   "file": "mznc2024-word-equations-word_equations_02_track_8-int.cnf.xz",
+   "bytes": 243364,
+   "hash": "dbd66ae7add2b41eb2e3b4a058b87eb6",
+   "isohash2": "28dd5b5571c57a09",
+   "variables": 15838,
+   "clauses": 146106,
+   "args": [
+    "word_equations_02_track_8-int.mzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/word-equations"
+   }
+  }
+ ],
+ "linked": [],
+ "skipped": [
+  {
+   "name": "mznc2024-aircraft-disassembly-B737NG-600-01-Anon.json.cnf",
+   "args": [
+    "aircraft.mzn",
+    "B737NG-600-01-Anon.json.dzn"
+   ],
+   "clauses": 2482988,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2024-aircraft-disassembly-B737NG-600-02-Anon.json.cnf",
+   "args": [
+    "aircraft.mzn",
+    "B737NG-600-02-Anon.json.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/aircraft-disassembly"
+   },
+   "reason": "over the time limit of 300 seconds"
+  },
+  {
+   "name": "mznc2024-cable-tree-wiring-A022.cnf",
+   "args": [
+    "ctw.mzn",
+    "A022.dzn"
+   ],
+   "clauses": 681231,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2024-harmony-twinkle.cnf",
+   "args": [
+    "harmony.mzn",
+    "twinkle.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/harmony"
+   },
+   "reason": "PicatSAT settled it by propagation while reading the FlatZinc, so no formula was written"
+  },
+  {
+   "name": "mznc2024-harmony-ode.cnf",
+   "args": [
+    "harmony.mzn",
+    "ode.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/harmony"
+   },
+   "reason": "PicatSAT settled it by propagation while reading the FlatZinc, so no formula was written"
+  },
+  {
+   "name": "mznc2024-hoist-benchmark-PU_3_4_3.cnf",
+   "args": [
+    "hoist-benchmark.mzn",
+    "PU_3_4_3.dzn"
+   ],
+   "clauses": 418025,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2024-train-scheduling-trains05.cnf",
+   "args": [
+    "trains.mzn",
+    "trains05.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/train-scheduling"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2024-train-scheduling-trains12.cnf",
+   "args": [
+    "trains.mzn",
+    "trains12.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/train-scheduling"
+   },
+   "reason": "the model does not compile with MiniZinc 2.10.1, the version pinned here"
+  },
+  {
+   "name": "mznc2024-word-equations-word_equations_03_track_133-int.cnf",
+   "args": [
+    "word_equations_03_track_133-int.mzn"
+   ],
+   "clauses": 373123,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2024-yumi-dynamic-p_7_SSSS_SSS_yumi_grid_setup_3_3_zones.cnf",
+   "args": [
+    "yumi-dynamic.mzn",
+    "p_7_SSSS_SSS_yumi_grid_setup_3_3_zones.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/yumi-dynamic"
+   },
+   "reason": "over the time limit of 300 seconds"
+  },
+  {
+   "name": "mznc2024-yumi-dynamic-p_5_GSS_SG_yumi_grid_setup_3_4_zones.cnf",
+   "args": [
+    "yumi-dynamic.mzn",
+    "p_5_GSS_SG_yumi_grid_setup_3_4_zones.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/yumi-dynamic"
+   },
+   "reason": "over the time limit of 300 seconds"
+  }
+ ]
+}

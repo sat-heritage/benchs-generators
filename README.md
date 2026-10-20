@@ -400,6 +400,31 @@ freeLunch failing on a task the translator accepted; those are recorded one by
 one in the indexes. The first run of these packs reported 515 refusals in one
 undifferentiated heap, which told nobody anything.
 
+### The pack of the constraint competition
+
+One pack so far, the 2024 edition of the MiniZinc Challenge: the organisers'
+own models and data, through the MiniZinc compiler 2.10.1 and Picat's SAT
+module, two instances per problem, nothing past 300 thousand clauses and five
+minutes per instance.
+
+| | |
+|---|---|
+| Problems covered | 16 of the 21 of the edition |
+| Instances | 29, 6.6 MB |
+| Clauses | 469 at the smallest, 53 thousand median, 299 thousand at the largest |
+| Left out | 4 over the clause limit, 3 over the time limit, 2 settled by propagation, 2 that no longer compile |
+
+**What is left out, and why it matters which.** A formula past the clause limit
+or an instance past the time limit is our choice, since a pack holds examples:
+the aircraft disassembly instance is 2.5 million clauses, and one monitor
+placement instance was still inside the MiniZinc compiler after twenty minutes.
+Two instances are settled by PicatSAT's propagation while it reads the
+FlatZinc, so there is no formula to write and the bridge says so with its own
+exit code. And two models of the edition no longer compile: the competition
+flattened them with MiniZinc 2.8.5 in 2024, and 2.10.1 refuses a string
+interpolation they use. Every exclusion is recorded instance by instance in the
+index of the pack.
+
 ## Bridges
 
 A generator makes an instance out of parameters. A **bridge** starts from an
