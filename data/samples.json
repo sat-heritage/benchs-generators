@@ -884,5 +884,52 @@
    "clauses": 2575,
    "reproducible": true
   }
+ ],
+ "dubois": [
+  {
+   "label": "degree 4",
+   "args": [
+    "4"
+   ],
+   "variables": 12,
+   "clauses": 32,
+   "reproducible": true
+  },
+  {
+   "label": "degree 20, the classic dubois20",
+   "args": [
+    "20"
+   ],
+   "variables": 60,
+   "clauses": 160,
+   "reproducible": true
+  },
+  {
+   "label": "degree 50",
+   "args": [
+    "50"
+   ],
+   "variables": 150,
+   "clauses": 400,
+   "reproducible": true
+  },
+  {
+   "label": "degree 100",
+   "args": [
+    "100"
+   ],
+   "variables": 300,
+   "clauses": 800,
+   "reproducible": true
+  },
+  {
+   "label": "degree 400, past anything the old suites carry",
+   "args": [
+    "400"
+   ],
+   "variables": 1200,
+   "clauses": 3200,
+   "reproducible": true
+  }
  ]
 }

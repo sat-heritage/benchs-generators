@@ -27,6 +27,18 @@ listed in `references/GENERATOR.json` and grades it:
 | N4 | same numbers of variables and clauses |
 | -- | none of the above |
 
+**N3 has a limit, and we ran into it.** The Dubois family, 2d exclusive ors of
+three variables chained into one contradiction, has very little structure for an
+isomorphism hash to work with. Seventeen instances of the SAT competitions, in
+the families `tseitin-formulas` and `random-graph-xorsat` and submitted by five
+different authors, carry the same `isohash2` as a Dubois instance of the same
+size — and they are not the same formula under any renaming: a Dubois instance
+has four of its exclusive ors sharing two variables with a neighbour, where
+those competition instances have none. Same size, same clause shape, same
+parity class, different structure, one hash. So N3 is evidence on most families
+and no evidence at all on exclusive-or systems; only N1 and N2 are conclusive,
+and a structural check is worth doing before claiming a family is reproduced.
+
 Hashes are computed with the official `gbdc` 0.4.2 package, in the
 `satex-gen/gbd` image built from `tools/gbd`. The reference lists come from the
 GBD metadata shipped with the SAT Competition 2026 benchmark compilation script.
@@ -276,6 +288,25 @@ for.
 
 Then open a pull request. The site rebuilds itself and your generator gets its
 page.
+
+## A generator found by following a bridge
+
+The `dubois` family sits in every early benchmark suite and had no generator
+here: nobody we asked had the code. The XCSP competitions turned out to carry a
+`Dubois.py` model, and following it back led to the contributed directory of the
+Second DIMACS Implementation Challenge, where Olivier Dubois' own
+`gensathard.c` has been sitting since 1993. `cnf/dubois` builds it, from the
+copy kept with its provenance in our `old-sources` release, and reproduces
+exactly what those sources produce:
+
+```sh
+docker run --rm satex-gen/dubois:1993 20 > dubois20.cnf     # 60 variables, 160 clauses
+docker run --rm satex-gen/dubois:1993 400 > big.cnf         # as far as you like
+```
+
+The files carry no licence, as a 1993 contribution to a challenge, so the recipe
+is published and the image is not. The XCSP3 bridge produces the same formulas
+from the competition's own model, which is how the two met.
 
 ## Instances nobody submitted
 

@@ -1,0 +1,27 @@
+{
+  "name": "Dubois hard 3-SAT",
+  "authors": "Olivier Dubois, with Pascal André, Yacine Boufkhad and Jacques Carlier",
+  "authors_source": "the README and dubois.tex of the DIMACS contributed directory, and its INDEX, which gives dubois@laforia.ibp.fr as the address of 1993",
+  "year": 1993,
+  "competitions": [
+    "Second DIMACS Implementation Challenge 1993, and the dubois family that the early benchmark suites carry"
+  ],
+  "language": "C",
+  "license": "unknown: contributed to the DIMACS challenge with no licence statement",
+  "license_note": "the files were contributed to the Second DIMACS Implementation Challenge and carry no licence. The recipe is published here; the image is not, until an author or a holder of the DIMACS archive says a word. The sources themselves are kept byte for byte, with their provenance, in the old-sources release of sat-heritage/docker-images.",
+  "publish_image": false,
+  "source_url": "https://github.com/sat-heritage/docker-images/releases/download/old-sources/dimacs-1993-dubois.tar.gz",
+  "source_sha256": "943faa68d1f782c2d6109b4be2b38c65d090ecf4430024ba056d0c1a97fb7db1",
+  "source_origin": "https://archive.dimacs.rutgers.edu/pub/challenge/satisfiability/contributed/dubois/",
+  "image": "satex-gen/dubois:1993",
+  "usage": "dubois-gen D | dubois-gen --random N P R",
+  "seed": "none: the hard family is fully determined by its degree, and two runs give the same formula. The random generator of the same directory takes no seed either, which is why it is only there for completeness",
+  "notes": "the generator behind the dubois family, found while looking at the constraint bridges: the XCSP competitions carry a Dubois.py model, and following it back led to the DIMACS directory where the original sources sit. Given a degree d it writes 3d variables and 8d clauses: 2d exclusive ors of three variables, chained so that one parity cannot hold, which is why every instance is unsatisfiable and why resolution has a hard time. d is the parameter that makes the family scale, from 32 clauses at d=4 to 800 at d=100 and as far as one wants. The image reproduces exactly what the 1993 sources produce, and the XCSP3 bridge produces the same formulas from the competition's own PyCSP3 model. A warning about the checking that goes with it: 17 instances of the SAT competitions, in the families tseitin-formulas and random-graph-xorsat, have the same GBD isohash2 as instances of this family, and they are not the same formulas. A Dubois instance has four of its exclusive ors sharing two variables with a neighbour, where those competition instances have none, so no renaming maps one to the other. The isomorphism hash cannot separate exclusive-or systems of equal size, and level N3 of the ladder here should not be trusted on this kind of formula.",
+  "samples": [
+    {"args": ["4"], "label": "degree 4"},
+    {"args": ["20"], "label": "degree 20, the classic dubois20"},
+    {"args": ["50"], "label": "degree 50"},
+    {"args": ["100"], "label": "degree 100"},
+    {"args": ["400"], "label": "degree 400, past anything the old suites carry"}
+  ]
+}
