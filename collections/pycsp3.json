@@ -1,0 +1,17 @@
+{
+  "collection": "pycsp3",
+  "name": "The models and data of the XCSP competitions, as PyCSP3 models",
+  "organizers": "Christophe Lecoutre and Olivier Roussel, CRIL",
+  "homepage": "https://github.com/xcsp3team/PyCSP3-models",
+  "archive": {
+    "kind": "git",
+    "url": "https://github.com/xcsp3team/PyCSP3-models.git",
+    "commit": "86af0998eeaaa4e49ee49d9ebafb5f448ef3471f",
+    "tree": "f3f31e0db181c8436a6dae59c1fa59ea898e6d95",
+    "bytes": 18500000
+  },
+  "layout": "<kind>/<Problem>/<Problem>.py, with its data under <Problem>/data/*.json when it has any; kinds are academic, crafted, realistic, recreational and single",
+  "terms": "MIT, as the LICENSE file of the repository states",
+  "redistribute": false,
+  "note": "the problems of the XCSP competitions are written as PyCSP3 models with their data, and compiled from there to the XCSP3 instances the competition distributes. This repository keeps the manifest and the pinned commit, never the instances: tools/fetch_upstream.py clones it into a local cache. The CNF encodings are produced on demand by the XCSP3 bridge, which compiles the model with the pinned PyCSP3 and encodes the instance with Picat's SAT module."
+}

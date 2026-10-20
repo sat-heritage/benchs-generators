@@ -1,0 +1,35 @@
+% Write the CNF that PicatSAT would solve for an XCSP3 instance.
+%
+% The interpreter of Neng-Fa Zhou (github.com/nfzhou/xcsp) parses an XCSP3
+% instance, posts its constraints to Picat's SAT module, and then solves it: its
+% parse_sections/4 does the posting, and its solve_xcsp/3 does the solving.  This
+% program calls the first and replaces the second, so that the formula is written
+% instead of solved.  The interpreter is loaded as it is published, not modified:
+% its predicates are called dynamically, which is why they go through call/N.
+import sat, util.
+
+main([XmlFile, CnfFile]) ?=>
+    cl("/opt/xcsp3/interpreter/xcsp"),
+    bp.c_set_eolcom_flag(0),                  % the interpreter treats % as a token
+    S = open(XmlFile, read),
+    VarMap = new_map(),
+    call(read_next_key_token, S, Token),
+    once(call(parse_sections, S, Token, VarMap, Objs)),
+    (var(Objs) -> Objs1 = [] ; Objs1 = Objs),
+    close(S),
+    bp.c_set_eolcom_flag(1),
+    AllVars = vars([Val : (_Key = Val) in VarMap]),
+    DVars = [Var : Var in AllVars, dvar(Var)],
+    % the objective, when there is one, stays in the option list: the formula is
+    % then the one the first step of the branch and bound is given
+    solve([$dump(CnfFile) | Objs1], DVars).
+% Posting a constraint can fail on the spot, as an all-different over more
+% variables than values does: the parser then fails, there is nothing to encode,
+% and the answer is already known.  The interpreter says this the same way.
+main([_, _]) =>
+    println("c failed before solving."),
+    println("s UNSATISFIABLE"),
+    halt(5).
+main(Args) =>
+    printf("usage: picat xcsp-dump.pi INSTANCE.xml OUT.cnf (got %w)%n", Args),
+    halt(2).

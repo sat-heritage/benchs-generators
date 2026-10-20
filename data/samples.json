@@ -740,5 +740,149 @@
    "clauses": 7303,
    "reproducible": true
   }
+ ],
+ "xcsp3": [
+  {
+   "label": "8 queens",
+   "args": [
+    "--builtin",
+    "queens",
+    "8"
+   ],
+   "variables": 104,
+   "clauses": 872,
+   "reproducible": true
+  },
+  {
+   "label": "20 queens",
+   "args": [
+    "--builtin",
+    "queens",
+    "20"
+   ],
+   "variables": 620,
+   "clauses": 15180,
+   "reproducible": true
+  },
+  {
+   "label": "30 queens",
+   "args": [
+    "--builtin",
+    "queens",
+    "30"
+   ],
+   "variables": 1710,
+   "clauses": 29440,
+   "reproducible": true
+  },
+  {
+   "label": "12 pigeons in 11 holes, unsatisfiable",
+   "args": [
+    "--builtin",
+    "pigeonhole",
+    "11"
+   ],
+   "variables": 48,
+   "clauses": 1080,
+   "reproducible": true
+  },
+  {
+   "label": "all-interval series, n=8",
+   "args": [
+    "AllInterval.py",
+    "-data=8"
+   ],
+   "upstream": {
+    "collection": "pycsp3",
+    "dir": "academic/AllInterval"
+   },
+   "variables": 201,
+   "clauses": 2763,
+   "reproducible": true
+  },
+  {
+   "label": "all-interval series, n=12",
+   "args": [
+    "AllInterval.py",
+    "-data=12"
+   ],
+   "upstream": {
+    "collection": "pycsp3",
+    "dir": "academic/AllInterval"
+   },
+   "variables": 457,
+   "clauses": 4147,
+   "reproducible": true
+  },
+  {
+   "label": "all-interval series, n=16",
+   "args": [
+    "AllInterval.py",
+    "-data=16"
+   ],
+   "upstream": {
+    "collection": "pycsp3",
+    "dir": "academic/AllInterval"
+   },
+   "variables": 867,
+   "clauses": 7067,
+   "reproducible": true
+  },
+  {
+   "label": "Dubois, degree 20, the family of the 1993 DIMACS challenge",
+   "args": [
+    "Dubois.py",
+    "-data=20"
+   ],
+   "upstream": {
+    "collection": "pycsp3",
+    "dir": "academic/Dubois"
+   },
+   "variables": 60,
+   "clauses": 160,
+   "reproducible": true
+  },
+  {
+   "label": "a Golomb ruler with 8 marks",
+   "args": [
+    "GolombRuler.py",
+    "-data=8"
+   ],
+   "upstream": {
+    "collection": "pycsp3",
+    "dir": "academic/GolombRuler"
+   },
+   "variables": 3260,
+   "clauses": 24856,
+   "reproducible": true
+  },
+  {
+   "label": "Costas array of order 14",
+   "args": [
+    "CostasArray.py",
+    "-data=14"
+   ],
+   "upstream": {
+    "collection": "pycsp3",
+    "dir": "academic/CostasArray"
+   },
+   "variables": 4665,
+   "clauses": 37581,
+   "reproducible": true
+  },
+  {
+   "label": "a balanced incomplete block design",
+   "args": [
+    "BIBD.py",
+    "-data=[7,7,3,3,1]"
+   ],
+   "upstream": {
+    "collection": "pycsp3",
+    "dir": "academic/BIBD"
+   },
+   "variables": 436,
+   "clauses": 2575,
+   "reproducible": true
+  }
  ]
 }

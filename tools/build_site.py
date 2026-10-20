@@ -294,8 +294,14 @@ ROUTES = [
     ("A FlatZinc file, already flattened", "ready",
      "bridges/minizinc, PicatSAT alone",
      'docker run --rm -v "$PWD:/data" satex-gen/minizinc:2.10.1 --fzn model.fzn > mine.cnf'),
-    ("A constraint problem in XCSP3", "planned",
-     "a bridge over Savile Row, or XCSP3 translated to MiniZinc first", ""),
+    ("A constraint instance in XCSP3, .xml or .xml.lzma", "partly",
+     "bridges/xcsp3, through Picat's SAT module. The interpreter it uses carries no licence, "
+     "so no image is published: build the recipe yourself with "
+     "docker build -t satex-gen/xcsp3:2023 bridges/xcsp3",
+     'docker run --rm -v "$PWD:/data" satex-gen/xcsp3:2023 instance.xml > mine.cnf'),
+    ("A constraint problem as a PyCSP3 model and its data", "partly",
+     "bridges/xcsp3, which compiles the model with the pinned PyCSP3 first",
+     'docker run --rm -v "$PWD:/data" satex-gen/xcsp3:2023 Model.py -data=12 > mine.cnf'),
     ("A bit-vector formula in SMT-LIB", "partly",
      "the circuits of the SMT-LIB benchmarks are already there; encoding your own formula needs Boolector or "
      "Bitwuzla in the chain, as the CRUX recipe does", ""),

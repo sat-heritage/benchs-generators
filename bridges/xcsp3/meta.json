@@ -1,0 +1,37 @@
+{
+  "kind": "bridge",
+  "name": "XCSP3 and PicatSAT bridge",
+  "authors": "Neng-Fa Zhou for the XCSP3 interpreter and Picat, Christophe Lecoutre and Nicolas Szczepanski for PyCSP3",
+  "authors_source": "the header of xcsp.pi in the repository nfzhou/xcsp, and the PyPI metadata of pycsp3",
+  "year": 2023,
+  "competitions": [
+    "XCSP competitions, as the instances they distribute and the PyCSP3 models they are built from"
+  ],
+  "language": "Picat, with PyCSP3 in Python for the model side",
+  "license": "unknown for the XCSP3 interpreter; MPL-2.0 for Picat, MIT for PyCSP3",
+  "license_note": "the XCSP3 interpreter, github.com/nfzhou/xcsp, carries no licence file, so the recipe is published here but the image is not. Its author, Neng-Fa Zhou, also wrote Picat, which is MPL-2.0; a word from him would settle it. PyCSP3 is MIT and Picat MPL-2.0, both publishable.",
+  "publish_image": false,
+  "source_repo": "https://github.com/nfzhou/xcsp.git",
+  "source_commit": "6951243a8772b5c64379b2b8996a7b3c0e695ef2",
+  "source_tree": "bd1106ca8bd51d2a0787bec510a2903675915afb",
+  "image": "satex-gen/xcsp3:2023",
+  "usage": "xcsp3-bridge INSTANCE.xml | xcsp3-bridge INSTANCE.xml.lzma | xcsp3-bridge MODEL.py -data=12 | xcsp3-bridge --builtin queens 12 | xcsp3-bridge --list",
+  "seed": "none: the encoding of an instance is deterministic, and two runs give the same formula",
+  "notes": "the second constraint programming bridge, for the format of the XCSP competitions. An instance of that competition comes two ways: as an XCSP3 file, which this reads directly, compressed or not, and as a PyCSP3 model with its data, which is how the organisers write their problems, compiled here by the pinned PyCSP3 and then encoded. The parameters of the model make the family scale: all-interval goes from 2763 clauses at n=8 to 7067 at n=16. Neng-Fa Zhou's interpreter posts the constraints of an instance to Picat's SAT module and then solves; it has no option to write the formula, so the bridge adds one in a Picat program of its own that loads the interpreter, calls its parser, and calls the solver itself with the dump option. The interpreter is not modified, nor even patched: its predicates are reached through call/N after cl/1. Two outcomes are not failures and have their own exit codes: posting a constraint can fail on the spot, as an all-different over more variables than values does, and then the answer is known before any encoding (exit 5). The same encoder is behind the MiniZinc bridge, and the two agree where they overlap: pigeonhole at n=9 is 40 variables and 750 clauses through either road.",
+  "collections": {
+    "pycsp3": "the models and data of the XCSP competitions, compiled to XCSP3 and encoded"
+  },
+  "samples": [
+    {"args": ["--builtin", "queens", "8"], "label": "8 queens"},
+    {"args": ["--builtin", "queens", "20"], "label": "20 queens"},
+    {"args": ["--builtin", "queens", "30"], "label": "30 queens"},
+    {"args": ["--builtin", "pigeonhole", "11"], "label": "12 pigeons in 11 holes, unsatisfiable"},
+    {"args": ["AllInterval.py", "-data=8"], "upstream": {"collection": "pycsp3", "dir": "academic/AllInterval"}, "label": "all-interval series, n=8"},
+    {"args": ["AllInterval.py", "-data=12"], "upstream": {"collection": "pycsp3", "dir": "academic/AllInterval"}, "label": "all-interval series, n=12"},
+    {"args": ["AllInterval.py", "-data=16"], "upstream": {"collection": "pycsp3", "dir": "academic/AllInterval"}, "label": "all-interval series, n=16"},
+    {"args": ["Dubois.py", "-data=20"], "upstream": {"collection": "pycsp3", "dir": "academic/Dubois"}, "label": "Dubois, degree 20, the family of the 1993 DIMACS challenge"},
+    {"args": ["GolombRuler.py", "-data=8"], "upstream": {"collection": "pycsp3", "dir": "academic/GolombRuler"}, "label": "a Golomb ruler with 8 marks"},
+    {"args": ["CostasArray.py", "-data=14"], "upstream": {"collection": "pycsp3", "dir": "academic/CostasArray"}, "label": "Costas array of order 14"},
+    {"args": ["BIBD.py", "-data=[7,7,3,3,1]"], "upstream": {"collection": "pycsp3", "dir": "academic/BIBD"}, "label": "a balanced incomplete block design"}
+  ]
+}

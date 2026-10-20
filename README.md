@@ -470,6 +470,29 @@ the verifier fetches and mounts it:
  "args": ["unroll", "45", "{file}"]}
 ```
 
+**The fourth bridge takes an XCSP3 instance.** `bridges/xcsp3` carries Neng-Fa
+Zhou's XCSP3 interpreter and the same Picat encoder, so the format of the XCSP
+competitions goes in and a CNF comes out, either as an instance or as the
+PyCSP3 model and data the organisers write their problems in:
+
+```sh
+docker run --rm -v "$PWD:/data" satex-gen/xcsp3:2023 instance.xml > mine.cnf
+docker run --rm -v "$PWD:/data" satex-gen/xcsp3:2023 Model.py -data=12 > mine.cnf
+docker run --rm satex-gen/xcsp3:2023 --builtin queens 30 > queens30.cnf
+```
+
+The interpreter posts the constraints of an instance to Picat's SAT module and
+then solves; it has no option to write the formula. So the bridge adds one in a
+Picat program of its own, which loads the interpreter, calls its parser and
+calls the solver itself with the `dump` option: nothing upstream is modified,
+not even patched, since its predicates are reached through `call/N` after
+`cl/1`. The two constraint bridges agree where they overlap: pigeonhole at n=9
+is 40 variables and 750 clauses through either road.
+
+The interpreter carries no licence file, so the recipe is published here and the
+image is not. Its author also wrote Picat, which is MPL-2.0; a word from him
+would settle it.
+
 **The third bridge takes a constraint model.** `bridges/minizinc` carries the
 MiniZinc compiler and PicatSAT, so a model in the language the CP competition is
 written in goes in and a CNF comes out:
