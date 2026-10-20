@@ -427,6 +427,32 @@ the verifier fetches and mounts it:
  "args": ["unroll", "45", "{file}"]}
 ```
 
+**The third bridge takes a constraint model.** `bridges/minizinc` carries the
+MiniZinc compiler and PicatSAT, so a model in the language the CP competition is
+written in goes in and a CNF comes out:
+
+```sh
+docker run --rm -v "$PWD:/data" satex-gen/minizinc:2.10.1 mymodel.mzn mydata.dzn > mine.cnf
+docker run --rm -v "$PWD:/data" satex-gen/minizinc:2.10.1 mymodel.mzn -D "n=25" > mine.cnf
+docker run --rm satex-gen/minizinc:2.10.1 --builtin queens 30 > queens30.cnf
+docker run --rm satex-gen/minizinc:2.10.1 --list
+```
+
+The model's own parameters make the family scale: n queens goes from 1208
+clauses at n=8 to 13950 at n=20 and 28915 at n=30, with the same encoder
+throughout. Four small models of ours are built in, behind `--builtin`, to show
+the chain without any file; everything else is the user's model.
+
+Two things are worth knowing. PicatSAT's FlatZinc front end can write the Picat
+program it would run, but has no option to write the CNF, so the bridge adds the
+`dump` option of `solve/2` to that generated program — one line of `awk`, and
+nothing upstream is modified. And Picat writes the whole formula before it
+starts solving it, so the bridge stops it as soon as the file holds the clauses
+its header announces. For a model with an objective, the formula is the
+satisfaction problem Picat encodes first, with no bound on the objective: to get
+the usual "is there a solution of cost at most k" family, put that bound in the
+model and let k be the parameter.
+
 **The second bridge takes a planning problem.** `bridges/freelunch` carries
 freeLunch, the encoder of Tomas Balyo and Vojtech Bardiovsky, and Fast
 Downward's translator, so two PDDL files go in and a CNF comes out:

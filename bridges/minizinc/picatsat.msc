@@ -1,0 +1,14 @@
+{
+  "id": "org.picat.sat",
+  "name": "PicatSAT",
+  "description": "Picat's SAT module. The bridge only uses this configuration to flatten a model to standard FlatZinc; the encoding to CNF is driven by minizinc-bridge, not by the MiniZinc driver.",
+  "version": "3.9",
+  "mznlib": "",
+  "executable": "/picat/emu/picat",
+  "tags": ["cp", "int"],
+  "stdFlags": [],
+  "supportsMzn": false,
+  "supportsFzn": true,
+  "needsSolns2Out": true,
+  "isGUIApplication": false
+}

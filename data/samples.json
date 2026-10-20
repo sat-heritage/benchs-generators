@@ -504,5 +504,73 @@
    "clauses": 975803,
    "reproducible": true
   }
+ ],
+ "minizinc": [
+  {
+   "label": "8 queens",
+   "args": [
+    "--builtin",
+    "queens",
+    "8"
+   ],
+   "variables": 32,
+   "clauses": 1208,
+   "reproducible": true
+  },
+  {
+   "label": "20 queens",
+   "args": [
+    "--builtin",
+    "queens",
+    "20"
+   ],
+   "variables": 480,
+   "clauses": 13950,
+   "reproducible": true
+  },
+  {
+   "label": "30 queens",
+   "args": [
+    "--builtin",
+    "queens",
+    "30"
+   ],
+   "variables": 1020,
+   "clauses": 28915,
+   "reproducible": true
+  },
+  {
+   "label": "12 pigeons in 11 holes, unsatisfiable",
+   "args": [
+    "--builtin",
+    "pigeonhole",
+    "11"
+   ],
+   "variables": 48,
+   "clauses": 1080,
+   "reproducible": true
+  },
+  {
+   "label": "a magic square of order 4",
+   "args": [
+    "--builtin",
+    "magicsquare",
+    "4"
+   ],
+   "variables": 490,
+   "clauses": 4240,
+   "reproducible": true
+  },
+  {
+   "label": "a Golomb ruler with 8 marks",
+   "args": [
+    "--builtin",
+    "golomb",
+    "8"
+   ],
+   "variables": 8687,
+   "clauses": 68835,
+   "reproducible": true
+  }
  ]
 }

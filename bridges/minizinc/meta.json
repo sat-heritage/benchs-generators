@@ -1,0 +1,29 @@
+{
+  "kind": "bridge",
+  "name": "MiniZinc and PicatSAT bridge",
+  "authors": "Neng-Fa Zhou and Hakan Kjellerstrand for PicatSAT, the MiniZinc team at Monash University for the compiler",
+  "authors_source": "the headers of the Picat sources and the repository picat-lang/Picat, and the AUTHORS file of MiniZinc/libminizinc",
+  "year": 2026,
+  "competitions": [
+    "MiniZinc Challenge, as the constraint models it distributes, encoded to CNF"
+  ],
+  "language": "Picat and C for PicatSAT, C++ for the MiniZinc compiler",
+  "license": "MPL-2.0 for both Picat and libminizinc",
+  "license_note": "Picat's C sources and the MiniZinc compiler are both under the Mozilla Public License 2.0, which lets us distribute the image as long as the source form stays available: the Dockerfile fetches both at a pinned commit, so it is.",
+  "publish_image": true,
+  "source_repo": "https://github.com/picat-lang/Picat.git",
+  "source_commit": "f76c0094bae9bc5a74455817b56533062191ae16",
+  "source_tree": "7cbdf9060b7e0dfc2aff84211a750f76c3c4f20b",
+  "image": "satex-gen/minizinc:2.10.1",
+  "usage": "minizinc-bridge MODEL.mzn [DATA.dzn ...] [-D \"n=20\"] | minizinc-bridge --fzn MODEL.fzn | minizinc-bridge --builtin queens 12 | minizinc-bridge --list",
+  "seed": "none: the encoding of a model is deterministic, and two runs give the same formula",
+  "notes": "the constraint-programming bridge. It takes a MiniZinc model, the language the CP competition is written in, flattens it to FlatZinc with the MiniZinc compiler, and encodes the FlatZinc to CNF with Picat's SAT module. The model's own parameters make the family scale: n queens goes from 1208 clauses at n=8 to 2632 at n=12 and 28915 at n=30, with the same encoder throughout. It works on anyone's model, not only on ours: mount a directory and name a .mzn file, with a data file or -D as usual, which is the point of a bridge. Four small models of our own are built in, behind --builtin, to show the chain without any file. Two things are worth knowing. PicatSAT's FlatZinc front end can write the Picat program it would run but has no option to write the CNF, so the bridge adds the dump option of solve/2 to that generated program, one line of awk; nothing upstream is modified. And Picat writes the whole formula before it starts solving it, so the bridge stops it as soon as the file holds the clauses its header announces. For a model with an objective, the formula is the satisfaction problem Picat encodes first, without a bound on the objective: to get the usual 'is there a solution of cost at most k' family, put that bound in the model and let k be the parameter. MiniZinc is pinned at 2.10.1, commit c3448c48e7f05f13805616cfd1b9e94972eef58c, tree 930fcc3f46ff71224883251bc398e2bc7be1b8a4, and built from source rather than taken from the release tarball, which carries the IDE and the whole of Qt.",
+  "samples": [
+    {"args": ["--builtin", "queens", "8"], "label": "8 queens"},
+    {"args": ["--builtin", "queens", "20"], "label": "20 queens"},
+    {"args": ["--builtin", "queens", "30"], "label": "30 queens"},
+    {"args": ["--builtin", "pigeonhole", "11"], "label": "12 pigeons in 11 holes, unsatisfiable"},
+    {"args": ["--builtin", "magicsquare", "4"], "label": "a magic square of order 4"},
+    {"args": ["--builtin", "golomb", "8"], "label": "a Golomb ruler with 8 marks"}
+  ]
+}
