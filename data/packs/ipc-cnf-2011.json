@@ -1,0 +1,2726 @@
+{
+ "pack": "ipc-cnf-2011",
+ "title": "The planning competition of 2011 as CNF, examples",
+ "why": "The planning competitions distribute PDDL, not formulas, so every SAT author who wants to work on planning rebuilds the same translation and the same encoding. This pack is those instances as CNF, at several plan lengths, produced by one pinned chain: Fast Downward's translator, then the freeLunch encoder. The plan length is what the published SAT competition instances fix to one or two values, and what a solver author needs to vary.",
+ "generator": "freelunch",
+ "image": "satex-gen/freelunch:2022",
+ "instances": 82,
+ "bytes": 6444892,
+ "linked_to_gbd": 0,
+ "not_encodable": 102,
+ "files": [
+  {
+   "file": "ipc-2011-barman-sequential-optimal-instance-1-k6.cnf.xz",
+   "bytes": 89964,
+   "hash": "3ce935db9f9916b1f424485d72eb8792",
+   "isohash2": "d892c673b7198893",
+   "variables": 5369,
+   "clauses": 59310,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/barman-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-barman-sequential-optimal-instance-1-k10.cnf.xz",
+   "bytes": 126908,
+   "hash": "4d464e83e0f16bde89e5082eb3af4d53",
+   "isohash2": "d27178a19d3c40ef",
+   "variables": 8437,
+   "clauses": 93250,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/barman-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-barman-sequential-optimal-instance-2-k6.cnf.xz",
+   "bytes": 94356,
+   "hash": "e4ce5d53d42ecd9a822d20234f2862b3",
+   "isohash2": "8db83b421cd84f44",
+   "variables": 5369,
+   "clauses": 59310,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/barman-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-barman-sequential-optimal-instance-2-k10.cnf.xz",
+   "bytes": 124772,
+   "hash": "cb21514ba2d7b6de9f9c74c75b690042",
+   "isohash2": "310dc55430b64aee",
+   "variables": 8437,
+   "clauses": 93250,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/barman-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-elevator-sequential-multi-core-instance-1-k6.cnf.xz",
+   "bytes": 472476,
+   "hash": "998d690c7821823085b6caec184f0707",
+   "isohash2": "47f9eecbcecdf7f2",
+   "variables": 31444,
+   "clauses": 225761,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/elevator-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-elevator-sequential-optimal-instance-1-k6.cnf.xz",
+   "bytes": 27164,
+   "hash": "a7b100b1c6a91acb41de7790b7db8560",
+   "isohash2": "9716c5d382279c96",
+   "variables": 5236,
+   "clauses": 17379,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/elevator-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-elevator-sequential-optimal-instance-1-k10.cnf.xz",
+   "bytes": 37824,
+   "hash": "68d775b08c8aba460907ee24cddf3ae4",
+   "isohash2": "146f8ff40c7d3bce",
+   "variables": 8228,
+   "clauses": 27327,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/elevator-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-elevator-sequential-optimal-instance-2-k6.cnf.xz",
+   "bytes": 31612,
+   "hash": "19a0fbcb30008f6ab0fea03b36ad0cd8",
+   "isohash2": "23efc768d00448f3",
+   "variables": 5824,
+   "clauses": 19665,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/elevator-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-elevator-sequential-optimal-instance-2-k10.cnf.xz",
+   "bytes": 40576,
+   "hash": "8bbf66e7481938e90adb6ce8a6721267",
+   "isohash2": "7d907b75c2731dba",
+   "variables": 9152,
+   "clauses": 30921,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/elevator-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-elevator-sequential-satisficing-instance-1-k6.cnf.xz",
+   "bytes": 472476,
+   "hash": "998d690c7821823085b6caec184f0707",
+   "isohash2": "47f9eecbcecdf7f2",
+   "variables": 31444,
+   "clauses": 225761,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/elevator-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-floor-tile-sequential-multi-core-instance-1-k6.cnf.xz",
+   "bytes": 22360,
+   "hash": "f902ff5fc770dca2143869c9c9ff9bfa",
+   "isohash2": "dd13c615e9d42d60",
+   "variables": 3696,
+   "clauses": 13931,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-floor-tile-sequential-multi-core-instance-1-k10.cnf.xz",
+   "bytes": 29624,
+   "hash": "6657c96c9d0cc9967b41013af06493bd",
+   "isohash2": "2ab15542054738a5",
+   "variables": 5808,
+   "clauses": 21923,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-floor-tile-sequential-multi-core-instance-2-k6.cnf.xz",
+   "bytes": 22540,
+   "hash": "10ff0969c9acf560a794b58e24be6328",
+   "isohash2": "689518e6db187679",
+   "variables": 3696,
+   "clauses": 13931,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-floor-tile-sequential-multi-core-instance-2-k10.cnf.xz",
+   "bytes": 28604,
+   "hash": "3a21e743e334c81b62831ebf9ec8a662",
+   "isohash2": "9352ff27ad5476d8",
+   "variables": 5808,
+   "clauses": 21923,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-floor-tile-sequential-optimal-instance-1-k6.cnf.xz",
+   "bytes": 22360,
+   "hash": "f902ff5fc770dca2143869c9c9ff9bfa",
+   "isohash2": "dd13c615e9d42d60",
+   "variables": 3696,
+   "clauses": 13931,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-floor-tile-sequential-optimal-instance-1-k10.cnf.xz",
+   "bytes": 29624,
+   "hash": "6657c96c9d0cc9967b41013af06493bd",
+   "isohash2": "2ab15542054738a5",
+   "variables": 5808,
+   "clauses": 21923,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-floor-tile-sequential-optimal-instance-2-k6.cnf.xz",
+   "bytes": 22540,
+   "hash": "10ff0969c9acf560a794b58e24be6328",
+   "isohash2": "689518e6db187679",
+   "variables": 3696,
+   "clauses": 13931,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-floor-tile-sequential-optimal-instance-2-k10.cnf.xz",
+   "bytes": 28604,
+   "hash": "3a21e743e334c81b62831ebf9ec8a662",
+   "isohash2": "9352ff27ad5476d8",
+   "variables": 5808,
+   "clauses": 21923,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-floor-tile-sequential-satisficing-instance-1-k6.cnf.xz",
+   "bytes": 22360,
+   "hash": "f902ff5fc770dca2143869c9c9ff9bfa",
+   "isohash2": "dd13c615e9d42d60",
+   "variables": 3696,
+   "clauses": 13931,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-floor-tile-sequential-satisficing-instance-1-k10.cnf.xz",
+   "bytes": 29624,
+   "hash": "6657c96c9d0cc9967b41013af06493bd",
+   "isohash2": "2ab15542054738a5",
+   "variables": 5808,
+   "clauses": 21923,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-floor-tile-sequential-satisficing-instance-2-k6.cnf.xz",
+   "bytes": 22540,
+   "hash": "10ff0969c9acf560a794b58e24be6328",
+   "isohash2": "689518e6db187679",
+   "variables": 3696,
+   "clauses": 13931,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-floor-tile-sequential-satisficing-instance-2-k10.cnf.xz",
+   "bytes": 28604,
+   "hash": "3a21e743e334c81b62831ebf9ec8a662",
+   "isohash2": "9352ff27ad5476d8",
+   "variables": 5808,
+   "clauses": 21923,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-no-mystery-sequential-multi-core-instance-1-k6.cnf.xz",
+   "bytes": 82596,
+   "hash": "7f37a0cfa659da5ec75d91a25f747046",
+   "isohash2": "ce7b3becd01dc908",
+   "variables": 15771,
+   "clauses": 59192,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/no-mystery-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-no-mystery-sequential-multi-core-instance-1-k10.cnf.xz",
+   "bytes": 194528,
+   "hash": "75d124aceec884f9347d5a59e625e768",
+   "isohash2": "3b2b7bfebb6accc0",
+   "variables": 24783,
+   "clauses": 93028,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/no-mystery-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-no-mystery-sequential-multi-core-instance-2-k6.cnf.xz",
+   "bytes": 101636,
+   "hash": "e3d3993d03fdafca9a61c1b86177f6cb",
+   "isohash2": "22f533a1d71774e9",
+   "variables": 19726,
+   "clauses": 75853,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/no-mystery-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-no-mystery-sequential-multi-core-instance-2-k10.cnf.xz",
+   "bytes": 135176,
+   "hash": "bb76fe416fbc80212cc34c64df682842",
+   "isohash2": "2dfe135c6942f2de",
+   "variables": 30998,
+   "clauses": 119209,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/no-mystery-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-no-mystery-sequential-optimal-instance-1-k6.cnf.xz",
+   "bytes": 28568,
+   "hash": "51ece288dbf0a45eb87ce00585d07857",
+   "isohash2": "f5a9919ab8005af9",
+   "variables": 4613,
+   "clauses": 14882,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/no-mystery-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-no-mystery-sequential-optimal-instance-1-k10.cnf.xz",
+   "bytes": 44116,
+   "hash": "38798b877ba1409f979464b0940fce76",
+   "isohash2": "3c50642e431a79c6",
+   "variables": 7249,
+   "clauses": 23394,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/no-mystery-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-no-mystery-sequential-optimal-instance-2-k6.cnf.xz",
+   "bytes": 92100,
+   "hash": "55395e708d29cfa982f565f91e54c27b",
+   "isohash2": "61680d21cc8b28d9",
+   "variables": 14196,
+   "clauses": 65198,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/no-mystery-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-no-mystery-sequential-optimal-instance-2-k10.cnf.xz",
+   "bytes": 119716,
+   "hash": "34c339df5806769bb88554c4d9effb24",
+   "isohash2": "b353fe553976859e",
+   "variables": 22308,
+   "clauses": 102462,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/no-mystery-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-no-mystery-sequential-satisficing-instance-1-k6.cnf.xz",
+   "bytes": 82596,
+   "hash": "7f37a0cfa659da5ec75d91a25f747046",
+   "isohash2": "ce7b3becd01dc908",
+   "variables": 15771,
+   "clauses": 59192,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/no-mystery-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-no-mystery-sequential-satisficing-instance-1-k10.cnf.xz",
+   "bytes": 194528,
+   "hash": "75d124aceec884f9347d5a59e625e768",
+   "isohash2": "3b2b7bfebb6accc0",
+   "variables": 24783,
+   "clauses": 93028,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/no-mystery-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-no-mystery-sequential-satisficing-instance-2-k6.cnf.xz",
+   "bytes": 101636,
+   "hash": "e3d3993d03fdafca9a61c1b86177f6cb",
+   "isohash2": "22f533a1d71774e9",
+   "variables": 19726,
+   "clauses": 75853,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/no-mystery-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-no-mystery-sequential-satisficing-instance-2-k10.cnf.xz",
+   "bytes": 135176,
+   "hash": "bb76fe416fbc80212cc34c64df682842",
+   "isohash2": "2dfe135c6942f2de",
+   "variables": 30998,
+   "clauses": 119209,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/no-mystery-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-peg-solitaire-sequential-multi-core-instance-1-k6.cnf.xz",
+   "bytes": 27712,
+   "hash": "f5c89d6b95d2824479afa1300b355619",
+   "isohash2": "36e73766e9af38eb",
+   "variables": 4151,
+   "clauses": 15536,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-peg-solitaire-sequential-multi-core-instance-1-k10.cnf.xz",
+   "bytes": 34716,
+   "hash": "5952b991ca5d622727aacbbe0cb8e550",
+   "isohash2": "89ff13641746385d",
+   "variables": 6523,
+   "clauses": 24452,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-peg-solitaire-sequential-multi-core-instance-2-k6.cnf.xz",
+   "bytes": 27700,
+   "hash": "9093081279a7ba1e64a80fdc2aa086ac",
+   "isohash2": "a97900ef54ff8bf0",
+   "variables": 4151,
+   "clauses": 15536,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-peg-solitaire-sequential-multi-core-instance-2-k10.cnf.xz",
+   "bytes": 36132,
+   "hash": "e2f05d91ab71c0514f487b6f8aeee44d",
+   "isohash2": "4f482ea8ebd9f625",
+   "variables": 6523,
+   "clauses": 24452,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-peg-solitaire-sequential-optimal-instance-1-k6.cnf.xz",
+   "bytes": 30860,
+   "hash": "b2b375f0a86600c92781ed0ba42ba0dd",
+   "isohash2": "14a1cbc2858248b8",
+   "variables": 4151,
+   "clauses": 15536,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-peg-solitaire-sequential-optimal-instance-1-k10.cnf.xz",
+   "bytes": 33080,
+   "hash": "e09a90bca74f7e8d047db4d332908d00",
+   "isohash2": "c0861eb8a81601c1",
+   "variables": 6523,
+   "clauses": 24452,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-peg-solitaire-sequential-optimal-instance-2-k6.cnf.xz",
+   "bytes": 27712,
+   "hash": "f5c89d6b95d2824479afa1300b355619",
+   "isohash2": "36e73766e9af38eb",
+   "variables": 4151,
+   "clauses": 15536,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-peg-solitaire-sequential-optimal-instance-2-k10.cnf.xz",
+   "bytes": 34716,
+   "hash": "5952b991ca5d622727aacbbe0cb8e550",
+   "isohash2": "89ff13641746385d",
+   "variables": 6523,
+   "clauses": 24452,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-peg-solitaire-sequential-satisficing-instance-1-k6.cnf.xz",
+   "bytes": 27712,
+   "hash": "f5c89d6b95d2824479afa1300b355619",
+   "isohash2": "36e73766e9af38eb",
+   "variables": 4151,
+   "clauses": 15536,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-peg-solitaire-sequential-satisficing-instance-1-k10.cnf.xz",
+   "bytes": 34716,
+   "hash": "5952b991ca5d622727aacbbe0cb8e550",
+   "isohash2": "89ff13641746385d",
+   "variables": 6523,
+   "clauses": 24452,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-peg-solitaire-sequential-satisficing-instance-2-k6.cnf.xz",
+   "bytes": 27700,
+   "hash": "9093081279a7ba1e64a80fdc2aa086ac",
+   "isohash2": "a97900ef54ff8bf0",
+   "variables": 4151,
+   "clauses": 15536,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-peg-solitaire-sequential-satisficing-instance-2-k10.cnf.xz",
+   "bytes": 36132,
+   "hash": "e2f05d91ab71c0514f487b6f8aeee44d",
+   "isohash2": "4f482ea8ebd9f625",
+   "variables": 6523,
+   "clauses": 24452,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-scanalyzer-3d-sequential-optimal-instance-1-k6.cnf.xz",
+   "bytes": 43252,
+   "hash": "0e3291e7692caabe1160371d826993b4",
+   "isohash2": "b625e48ee256589f",
+   "variables": 4256,
+   "clauses": 19532,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/scanalyzer-3d-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-scanalyzer-3d-sequential-optimal-instance-1-k10.cnf.xz",
+   "bytes": 62536,
+   "hash": "370c0abd3c7523ff6e4a0250af7c7391",
+   "isohash2": "ca4632fb3942af8c",
+   "variables": 6688,
+   "clauses": 30700,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/scanalyzer-3d-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-scanalyzer-3d-sequential-optimal-instance-2-k6.cnf.xz",
+   "bytes": 67352,
+   "hash": "0bd33b77534624c06fbf9fdaebce1853",
+   "isohash2": "7f165719a47dc2a3",
+   "variables": 3990,
+   "clauses": 26064,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/scanalyzer-3d-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-scanalyzer-3d-sequential-optimal-instance-2-k10.cnf.xz",
+   "bytes": 69012,
+   "hash": "eb85d1aafe6fa703cca91e8fce2a6c89",
+   "isohash2": "a892d6d60f1d2918",
+   "variables": 6270,
+   "clauses": 40968,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/scanalyzer-3d-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-sokoban-sequential-multi-core-instance-1-k6.cnf.xz",
+   "bytes": 122680,
+   "hash": "a5a2df19ac1eed548661e86194a74a68",
+   "isohash2": "b2c731ff671ae63e",
+   "variables": 11410,
+   "clauses": 74078,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-sokoban-sequential-multi-core-instance-1-k10.cnf.xz",
+   "bytes": 149636,
+   "hash": "21cec0c899b00c1f456ea440e8782207",
+   "isohash2": "a94222423466841a",
+   "variables": 17930,
+   "clauses": 116466,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-sokoban-sequential-multi-core-instance-2-k6.cnf.xz",
+   "bytes": 61336,
+   "hash": "7f82c7445d0c4f86626744b5ee3abcd1",
+   "isohash2": "92bad714b17bf61a",
+   "variables": 7700,
+   "clauses": 42654,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-sokoban-sequential-multi-core-instance-2-k10.cnf.xz",
+   "bytes": 86048,
+   "hash": "def0708bc9359c8cdfb937539fbf74f2",
+   "isohash2": "8a5c5da4299f6d58",
+   "variables": 12100,
+   "clauses": 67082,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-sokoban-sequential-optimal-instance-1-k6.cnf.xz",
+   "bytes": 27684,
+   "hash": "92e79e1147d0a2c05d7a1a229641a6b8",
+   "isohash2": "a93528a0bf59a276",
+   "variables": 3640,
+   "clauses": 15935,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-sokoban-sequential-optimal-instance-1-k10.cnf.xz",
+   "bytes": 38840,
+   "hash": "f9812e691a3998daae53a371eb745d75",
+   "isohash2": "f891c85c559c78ef",
+   "variables": 5720,
+   "clauses": 25067,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-sokoban-sequential-optimal-instance-2-k6.cnf.xz",
+   "bytes": 61340,
+   "hash": "a860afbeab17fb26fbd9b9975a3923a9",
+   "isohash2": "bbb720197f7fe38d",
+   "variables": 6706,
+   "clauses": 35476,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-sokoban-sequential-optimal-instance-2-k10.cnf.xz",
+   "bytes": 67068,
+   "hash": "e0b2178a21131c64bafd142adf82900e",
+   "isohash2": "02d332f49a15a474",
+   "variables": 10538,
+   "clauses": 55796,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-sokoban-sequential-satisficing-instance-1-k6.cnf.xz",
+   "bytes": 122680,
+   "hash": "a5a2df19ac1eed548661e86194a74a68",
+   "isohash2": "b2c731ff671ae63e",
+   "variables": 11410,
+   "clauses": 74078,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-sokoban-sequential-satisficing-instance-1-k10.cnf.xz",
+   "bytes": 149636,
+   "hash": "21cec0c899b00c1f456ea440e8782207",
+   "isohash2": "a94222423466841a",
+   "variables": 17930,
+   "clauses": 116466,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-sokoban-sequential-satisficing-instance-2-k6.cnf.xz",
+   "bytes": 61336,
+   "hash": "7f82c7445d0c4f86626744b5ee3abcd1",
+   "isohash2": "92bad714b17bf61a",
+   "variables": 7700,
+   "clauses": 42654,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-sokoban-sequential-satisficing-instance-2-k10.cnf.xz",
+   "bytes": 86048,
+   "hash": "def0708bc9359c8cdfb937539fbf74f2",
+   "isohash2": "8a5c5da4299f6d58",
+   "variables": 12100,
+   "clauses": 67082,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-transport-sequential-optimal-instance-1-k6.cnf.xz",
+   "bytes": 55736,
+   "hash": "b20fec5917c14c25f7974f4c2715b452",
+   "isohash2": "e3136bb2a1175f46",
+   "variables": 6720,
+   "clauses": 26299,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/transport-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-transport-sequential-optimal-instance-1-k10.cnf.xz",
+   "bytes": 59512,
+   "hash": "90d854f758709a35f4185722983cc356",
+   "isohash2": "dfd3584ae93a54b6",
+   "variables": 10560,
+   "clauses": 41339,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/transport-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-transport-sequential-optimal-instance-2-k6.cnf.xz",
+   "bytes": 56352,
+   "hash": "853476f2775ac0b92db05de80bf87024",
+   "isohash2": "aaa80cdb61a7d98f",
+   "variables": 6888,
+   "clauses": 26636,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/transport-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-transport-sequential-optimal-instance-2-k10.cnf.xz",
+   "bytes": 76640,
+   "hash": "c83a561250e01b8efc543a60ecf2d015",
+   "isohash2": "368736c6d332c770",
+   "variables": 10824,
+   "clauses": 41868,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/transport-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-visit-all-sequential-multi-core-instance-1-k6.cnf.xz",
+   "bytes": 111836,
+   "hash": "3b5e99ecbdb41f82cb62fe8922c52407",
+   "isohash2": "0ceb8dc9ce7ba20a",
+   "variables": 14413,
+   "clauses": 102552,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/visit-all-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-visit-all-sequential-multi-core-instance-1-k10.cnf.xz",
+   "bytes": 137708,
+   "hash": "05db69a297b35c9def0890a5b1876317",
+   "isohash2": "75e213721d32c35d",
+   "variables": 22649,
+   "clauses": 161156,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/visit-all-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-visit-all-sequential-multi-core-instance-2-k6.cnf.xz",
+   "bytes": 164404,
+   "hash": "a6f85d4c344af99278e59b4f83be1e0f",
+   "isohash2": "ee8d9a87cbe3f2aa",
+   "variables": 19761,
+   "clauses": 175618,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/visit-all-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-visit-all-sequential-multi-core-instance-2-k10.cnf.xz",
+   "bytes": 186808,
+   "hash": "f353d98c955b3d74170d7488e93731f4",
+   "isohash2": "7f801cafb056ceb6",
+   "variables": 31053,
+   "clauses": 275974,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/visit-all-sequential-multi-core"
+   }
+  },
+  {
+   "file": "ipc-2011-visit-all-sequential-optimal-instance-1-k6.cnf.xz",
+   "bytes": 1404,
+   "hash": "f9dd92a2a2171cb3f717d56895e22f06",
+   "isohash2": "7125a6e2df7325f3",
+   "variables": 273,
+   "clauses": 578,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/visit-all-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-visit-all-sequential-optimal-instance-1-k10.cnf.xz",
+   "bytes": 1780,
+   "hash": "14dada52bd78c1417b873ffc8f31ef90",
+   "isohash2": "b3612dd940a05662",
+   "variables": 429,
+   "clauses": 910,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/visit-all-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-visit-all-sequential-optimal-instance-2-k6.cnf.xz",
+   "bytes": 1168,
+   "hash": "ec5eb132884f29e1b0331d4e3e47d866",
+   "isohash2": "226c0df5fcc7af52",
+   "variables": 203,
+   "clauses": 424,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/visit-all-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-visit-all-sequential-optimal-instance-2-k10.cnf.xz",
+   "bytes": 1464,
+   "hash": "860564c1db7e29a20e9a3d38283af237",
+   "isohash2": "0f176db02605bff5",
+   "variables": 319,
+   "clauses": 668,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/visit-all-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-visit-all-sequential-satisficing-instance-1-k6.cnf.xz",
+   "bytes": 111836,
+   "hash": "3b5e99ecbdb41f82cb62fe8922c52407",
+   "isohash2": "0ceb8dc9ce7ba20a",
+   "variables": 14413,
+   "clauses": 102552,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/visit-all-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-visit-all-sequential-satisficing-instance-1-k10.cnf.xz",
+   "bytes": 137708,
+   "hash": "05db69a297b35c9def0890a5b1876317",
+   "isohash2": "75e213721d32c35d",
+   "variables": 22649,
+   "clauses": 161156,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/visit-all-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-visit-all-sequential-satisficing-instance-2-k6.cnf.xz",
+   "bytes": 164404,
+   "hash": "a6f85d4c344af99278e59b4f83be1e0f",
+   "isohash2": "ee8d9a87cbe3f2aa",
+   "variables": 19761,
+   "clauses": 175618,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/visit-all-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-visit-all-sequential-satisficing-instance-2-k10.cnf.xz",
+   "bytes": 186808,
+   "hash": "f353d98c955b3d74170d7488e93731f4",
+   "isohash2": "7f801cafb056ceb6",
+   "variables": 31053,
+   "clauses": 275974,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/visit-all-sequential-satisficing"
+   }
+  },
+  {
+   "file": "ipc-2011-woodworking-sequential-optimal-instance-1-k6.cnf.xz",
+   "bytes": 31624,
+   "hash": "3b91a4507d90b8fdea2c8a7fe94e955c",
+   "isohash2": "1a46ae39d00aa469",
+   "variables": 4109,
+   "clauses": 17824,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/woodworking-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-woodworking-sequential-optimal-instance-1-k10.cnf.xz",
+   "bytes": 39156,
+   "hash": "476a027e6847af47d049004f30c77a7f",
+   "isohash2": "c1eb2b584de66fdd",
+   "variables": 6457,
+   "clauses": 28028,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/woodworking-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-woodworking-sequential-optimal-instance-2-k6.cnf.xz",
+   "bytes": 52400,
+   "hash": "b41d2130c2a05a8d593aac14224ebdd0",
+   "isohash2": "3a8efbb63ac40c84",
+   "variables": 5131,
+   "clauses": 29969,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/woodworking-sequential-optimal"
+   }
+  },
+  {
+   "file": "ipc-2011-woodworking-sequential-optimal-instance-2-k10.cnf.xz",
+   "bytes": 70888,
+   "hash": "64f88e118bc7d974b2a1e93c3165a4dd",
+   "isohash2": "4cf07d45d30ea24d",
+   "variables": 8063,
+   "clauses": 47113,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/woodworking-sequential-optimal"
+   }
+  }
+ ],
+ "linked": [],
+ "skipped": [
+  {
+   "name": "ipc-2011-barman-sequential-multi-core-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 682985,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-barman-sequential-multi-core-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 1073409,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-barman-sequential-multi-core-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 682985,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-barman-sequential-multi-core-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 1073409,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-barman-sequential-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 682985,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-barman-sequential-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 1073409,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-barman-sequential-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 682985,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-barman-sequential-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 1073409,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-crew-planning-temporal-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/crew-planning-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-crew-planning-temporal-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/crew-planning-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-crew-planning-temporal-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/crew-planning-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-crew-planning-temporal-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/crew-planning-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-elevator-sequential-multi-core-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 354801,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-elevator-sequential-multi-core-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 859519,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-elevator-sequential-multi-core-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 1350715,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-elevator-sequential-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 354801,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-elevator-sequential-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 859519,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-elevator-sequential-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 1350715,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-elevator-temporal-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/elevator-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-elevator-temporal-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/elevator-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-elevator-temporal-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/elevator-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-elevator-temporal-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/elevator-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-floor-tile-temporal-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-floor-tile-temporal-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-floor-tile-temporal-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-floor-tile-temporal-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/floor-tile-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-match-cellar-temporal-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/match-cellar-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-match-cellar-temporal-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/match-cellar-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-match-cellar-temporal-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/match-cellar-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-match-cellar-temporal-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/match-cellar-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-parking-sequential-multi-core-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/parking-sequential-multi-core"
+   }
+  },
+  {
+   "name": "ipc-2011-parking-sequential-multi-core-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/parking-sequential-multi-core"
+   }
+  },
+  {
+   "name": "ipc-2011-parking-sequential-multi-core-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/parking-sequential-multi-core"
+   }
+  },
+  {
+   "name": "ipc-2011-parking-sequential-multi-core-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/parking-sequential-multi-core"
+   }
+  },
+  {
+   "name": "ipc-2011-parking-sequential-optimal-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 5207067,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-parking-sequential-optimal-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 8182683,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-parking-sequential-optimal-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 5207068,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-parking-sequential-optimal-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 8182684,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-parking-sequential-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/parking-sequential-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-parking-sequential-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/parking-sequential-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-parking-sequential-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/parking-sequential-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-parking-sequential-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/parking-sequential-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-parking-temporal-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/parking-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-parking-temporal-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/parking-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-parking-temporal-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/parking-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-parking-temporal-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/parking-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-peg-solitaire-temporal-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-peg-solitaire-temporal-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-peg-solitaire-temporal-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-peg-solitaire-temporal-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/peg-solitaire-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-scanalyzer-3d-sequential-multi-core-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 39865728,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-scanalyzer-3d-sequential-multi-core-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 62646176,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-scanalyzer-3d-sequential-multi-core-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 1563084,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-scanalyzer-3d-sequential-multi-core-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 2456316,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-scanalyzer-3d-sequential-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 39865728,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-scanalyzer-3d-sequential-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 62646176,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-scanalyzer-3d-sequential-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 1563084,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-scanalyzer-3d-sequential-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 2456316,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-sokoban-temporal-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-sokoban-temporal-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-sokoban-temporal-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-sokoban-temporal-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/sokoban-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-storage-temporal-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/storage-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-storage-temporal-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/storage-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-storage-temporal-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/storage-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-storage-temporal-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/storage-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-temporal-machine-shop-temporal-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/temporal-machine-shop-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-temporal-machine-shop-temporal-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/temporal-machine-shop-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-temporal-machine-shop-temporal-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/temporal-machine-shop-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-temporal-machine-shop-temporal-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/temporal-machine-shop-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-tidybot-sequential-multi-core-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/tidybot-sequential-multi-core"
+   }
+  },
+  {
+   "name": "ipc-2011-tidybot-sequential-multi-core-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/tidybot-sequential-multi-core"
+   }
+  },
+  {
+   "name": "ipc-2011-tidybot-sequential-multi-core-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/tidybot-sequential-multi-core"
+   }
+  },
+  {
+   "name": "ipc-2011-tidybot-sequential-multi-core-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/tidybot-sequential-multi-core"
+   }
+  },
+  {
+   "name": "ipc-2011-tidybot-sequential-optimal-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 4799284,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-tidybot-sequential-optimal-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 7541832,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-tidybot-sequential-optimal-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 11994245,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-tidybot-sequential-optimal-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 18848237,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-tidybot-sequential-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/tidybot-sequential-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-tidybot-sequential-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/tidybot-sequential-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-tidybot-sequential-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/tidybot-sequential-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-tidybot-sequential-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/tidybot-sequential-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-transport-sequential-multi-core-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 1778383,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-transport-sequential-multi-core-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 2794655,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-transport-sequential-multi-core-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 2441151,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-transport-sequential-multi-core-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 3836151,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-transport-sequential-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 1778383,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-transport-sequential-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 2794655,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-transport-sequential-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 2441151,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-transport-sequential-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 3836151,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-turn-and-open-temporal-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/turn-and-open-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-turn-and-open-temporal-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/turn-and-open-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-turn-and-open-temporal-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/turn-and-open-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-turn-and-open-temporal-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2011/domains/turn-and-open-temporal-satisficing"
+   }
+  },
+  {
+   "name": "ipc-2011-woodworking-sequential-multi-core-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 1510549,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-woodworking-sequential-multi-core-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 2373901,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-woodworking-sequential-multi-core-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 1621995,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-woodworking-sequential-multi-core-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 2549059,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-woodworking-sequential-satisficing-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 1510549,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-woodworking-sequential-satisficing-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 2373901,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-woodworking-sequential-satisficing-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 1621995,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2011-woodworking-sequential-satisficing-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 2549059,
+   "reason": "over the limit of 300000 clauses"
+  }
+ ]
+}

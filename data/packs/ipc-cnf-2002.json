@@ -1,0 +1,2635 @@
+{
+ "pack": "ipc-cnf-2002",
+ "title": "The planning competition of 2002 as CNF, examples",
+ "why": "The planning competitions distribute PDDL, not formulas, so every SAT author who wants to work on planning rebuilds the same translation and the same encoding. This pack is those instances as CNF, at several plan lengths, produced by one pinned chain: Fast Downward's translator, then the freeLunch encoder. The plan length is what the published SAT competition instances fix to one or two values, and what a solver author needs to vary.",
+ "generator": "freelunch",
+ "image": "satex-gen/freelunch:2022",
+ "instances": 29,
+ "bytes": 2211340,
+ "linked_to_gbd": 0,
+ "not_encodable": 163,
+ "files": [
+  {
+   "file": "ipc-2002-depots-strips-automatic-instance-1-k6.cnf.xz",
+   "bytes": 14236,
+   "hash": "f3ef4221265a29e28d0901c839dbe2a7",
+   "isohash2": "b1a02fb23be1d721",
+   "variables": 1876,
+   "clauses": 7138,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-depots-strips-automatic-instance-1-k10.cnf.xz",
+   "bytes": 19476,
+   "hash": "e6ba7b4adf9ea4dd00a3d6ca3691d388",
+   "isohash2": "8fb62b34bf3fc524",
+   "variables": 2948,
+   "clauses": 11234,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-depots-strips-automatic-instance-2-k6.cnf.xz",
+   "bytes": 58264,
+   "hash": "b6552918c4bc1c4e66f6ac7fd719765f",
+   "isohash2": "b747f4245fb27471",
+   "variables": 4032,
+   "clauses": 28350,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-depots-strips-automatic-instance-2-k10.cnf.xz",
+   "bytes": 72952,
+   "hash": "8b07e1b7bc396ed5bb1f0c23c6e3bef2",
+   "isohash2": "c21c5865a02966ed",
+   "variables": 6336,
+   "clauses": 44574,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-driverlog-strips-automatic-instance-1-k6.cnf.xz",
+   "bytes": 7820,
+   "hash": "eee9f55f967c0014ec0242e2954e5eca",
+   "isohash2": "b7011649a476158e",
+   "variables": 1652,
+   "clauses": 4348,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-driverlog-strips-automatic-instance-1-k10.cnf.xz",
+   "bytes": 10088,
+   "hash": "58258a6fca23d300d8fcc9b0cd8799c4",
+   "isohash2": "bf8d06aa4ac20016",
+   "variables": 2596,
+   "clauses": 6844,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-driverlog-strips-automatic-instance-2-k6.cnf.xz",
+   "bytes": 9776,
+   "hash": "daebdf1052168717e797f0bf79b010d1",
+   "isohash2": "10155d47a6f3f3f6",
+   "variables": 2030,
+   "clauses": 5305,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-driverlog-strips-automatic-instance-2-k10.cnf.xz",
+   "bytes": 11452,
+   "hash": "f7da19bcdfdb385a3191f00c4ca53404",
+   "isohash2": "d753fdceab8dfad4",
+   "variables": 3190,
+   "clauses": 8349,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-freecell-strips-automatic-instance-1-k6.cnf.xz",
+   "bytes": 160920,
+   "hash": "627a4c4a33fc94125cc7897e55ce129b",
+   "isohash2": "aaa3686636c5ff06",
+   "variables": 5446,
+   "clauses": 79172,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/freecell-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-freecell-strips-automatic-instance-1-k10.cnf.xz",
+   "bytes": 218024,
+   "hash": "86bdff81199523b178bdcb364e6c3dd5",
+   "isohash2": "4579302cc745678e",
+   "variables": 8558,
+   "clauses": 124440,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/freecell-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-freecell-strips-automatic-instance-2-k6.cnf.xz",
+   "bytes": 587892,
+   "hash": "057daac91b678cf039aa22c778459d43",
+   "isohash2": "9c01fa957276fc58",
+   "variables": 10878,
+   "clauses": 295178,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/freecell-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-rovers-strips-automatic-instance-1-k6.cnf.xz",
+   "bytes": 3484,
+   "hash": "7a752a04209595633b143d0700620085",
+   "isohash2": "e086d3529de4f972",
+   "variables": 826,
+   "clauses": 1934,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-rovers-strips-automatic-instance-1-k10.cnf.xz",
+   "bytes": 5012,
+   "hash": "d27e7a78038e58ff6cee5d62fcdab8a7",
+   "isohash2": "d5f1b672600a8169",
+   "variables": 1298,
+   "clauses": 3050,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-rovers-strips-automatic-instance-2-k6.cnf.xz",
+   "bytes": 2740,
+   "hash": "bd2cdd1b029a41d73458424d68375a76",
+   "isohash2": "4624315b00ed3dcc",
+   "variables": 609,
+   "clauses": 1444,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-rovers-strips-automatic-instance-2-k10.cnf.xz",
+   "bytes": 5304,
+   "hash": "3ab52ef53fabd09db66598a68fa23bf5",
+   "isohash2": "fab195d69b6e32d9",
+   "variables": 957,
+   "clauses": 2276,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-rovers-strips-hand-coded-instance-1-k6.cnf.xz",
+   "bytes": 45712,
+   "hash": "ae60bda2be4d6368db1555edfbf229d5",
+   "isohash2": "0c242f10d7841e15",
+   "variables": 9072,
+   "clauses": 35414,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-strips-hand-coded"
+   }
+  },
+  {
+   "file": "ipc-2002-rovers-strips-hand-coded-instance-1-k10.cnf.xz",
+   "bytes": 79848,
+   "hash": "19db70567399ec44cef9a1f39446ce90",
+   "isohash2": "1c6de0e1e2f0c788",
+   "variables": 14256,
+   "clauses": 55710,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-strips-hand-coded"
+   }
+  },
+  {
+   "file": "ipc-2002-rovers-strips-hand-coded-instance-2-k6.cnf.xz",
+   "bytes": 82544,
+   "hash": "72bbe3c2b9a1f65c441fb872b2101305",
+   "isohash2": "5c5d959b6b8579a4",
+   "variables": 14091,
+   "clauses": 54445,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-strips-hand-coded"
+   }
+  },
+  {
+   "file": "ipc-2002-rovers-strips-hand-coded-instance-2-k10.cnf.xz",
+   "bytes": 107076,
+   "hash": "0fa55aee044011dc232e05d381752724",
+   "isohash2": "5dd61c2d85529b3e",
+   "variables": 22143,
+   "clauses": 85641,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-strips-hand-coded"
+   }
+  },
+  {
+   "file": "ipc-2002-satellite-strips-automatic-instance-1-k6.cnf.xz",
+   "bytes": 3796,
+   "hash": "e6bb92f4402cb418acd0627ef6f7bc47",
+   "isohash2": "d9dda2bfc1e71ffb",
+   "variables": 917,
+   "clauses": 1943,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-satellite-strips-automatic-instance-1-k10.cnf.xz",
+   "bytes": 5240,
+   "hash": "526adb54ffae72efd975eb68609498c7",
+   "isohash2": "acf2d818757b14cb",
+   "variables": 1441,
+   "clauses": 3059,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-satellite-strips-automatic-instance-2-k6.cnf.xz",
+   "bytes": 6020,
+   "hash": "ead8b8b19dcfcafba13339cc66a8d704",
+   "isohash2": "533fe3aeaac19bbe",
+   "variables": 1330,
+   "clauses": 2892,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-satellite-strips-automatic-instance-2-k10.cnf.xz",
+   "bytes": 6920,
+   "hash": "29c0fa316510c9df8781eeed22687a26",
+   "isohash2": "b2b9a709b6e405df",
+   "variables": 2090,
+   "clauses": 4552,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-zenotravel-strips-automatic-instance-1-k6.cnf.xz",
+   "bytes": 7252,
+   "hash": "df35cb2f109c7c56dd8c5042fac1a396",
+   "isohash2": "c7c7915e58d612a9",
+   "variables": 1400,
+   "clauses": 3626,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-zenotravel-strips-automatic-instance-1-k10.cnf.xz",
+   "bytes": 9148,
+   "hash": "f0a518d253c1c0c6d23c78e6cc6ca2e0",
+   "isohash2": "9ada8262fb0fce0b",
+   "variables": 2200,
+   "clauses": 5702,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-zenotravel-strips-automatic-instance-2-k6.cnf.xz",
+   "bytes": 7140,
+   "hash": "86183a0d304d422e6952fbe28e93a1df",
+   "isohash2": "2902a1150a178f0d",
+   "variables": 1400,
+   "clauses": 3625,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-zenotravel-strips-automatic-instance-2-k10.cnf.xz",
+   "bytes": 9008,
+   "hash": "2ce5a3d530aa879eb8f6474c5dcbd6da",
+   "isohash2": "204fb0749d76d5e8",
+   "variables": 2200,
+   "clauses": 5701,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-strips-automatic"
+   }
+  },
+  {
+   "file": "ipc-2002-zenotravel-strips-hand-coded-instance-1-k6.cnf.xz",
+   "bytes": 296000,
+   "hash": "332385207400ec0e669bc0f46beaeb3d",
+   "isohash2": "97a85b556b20e340",
+   "variables": 76125,
+   "clauses": 217475,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-strips-hand-coded"
+   }
+  },
+  {
+   "file": "ipc-2002-zenotravel-strips-hand-coded-instance-2-k6.cnf.xz",
+   "bytes": 358196,
+   "hash": "3582eb6847f6fb34d7bbdade0439d936",
+   "isohash2": "dcbb4e7b306ff245",
+   "variables": 93835,
+   "clauses": 267463,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-strips-hand-coded"
+   }
+  }
+ ],
+ "linked": [],
+ "skipped": [
+  {
+   "name": "ipc-2002-depots-numeric-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-numeric-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-numeric-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-numeric-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-numeric-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-numeric-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-numeric-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-numeric-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-strips-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-strips-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-strips-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-strips-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-strips-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-strips-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-strips-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-strips-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-simple-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-simple-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-simple-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-simple-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-simple-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-simple-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-simple-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-depots-time-simple-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/depots-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-hard-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-hard-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-hard-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-hard-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-hard-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-hard-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-hard-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-hard-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-hard-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-hard-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-hard-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-hard-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-hard-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-hard-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-numeric-hard-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-numeric-hard-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-strips-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 11388334,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2002-driverlog-strips-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 17896534,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2002-driverlog-strips-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 11813617,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2002-driverlog-strips-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 18564957,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2002-driverlog-time-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-simple-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-simple-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-simple-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-simple-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-simple-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-simple-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-simple-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-driverlog-time-simple-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/driverlog-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-freecell-strips-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 463890,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2002-rovers-numeric-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-numeric-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-numeric-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-numeric-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-numeric-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-numeric-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-numeric-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-numeric-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-simple-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-simple-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-simple-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-simple-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-simple-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-simple-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-simple-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-rovers-time-simple-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/rovers-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-complex-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-complex-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-complex-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-complex-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-complex-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-complex-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-complex-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-complex-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-complex-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-complex-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-complex-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-complex-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-complex-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-complex-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-complex-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-complex-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-numeric-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-numeric-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-numeric-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-numeric-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-numeric-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-numeric-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-numeric-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-numeric-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-numeric-hard-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-numeric-hard-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-numeric-hard-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-numeric-hard-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-numeric-hard-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-numeric-hard-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-numeric-hard-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-numeric-hard-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-strips-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 308729,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2002-satellite-strips-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 485285,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2002-satellite-strips-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 457850,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2002-satellite-strips-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 719646,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2002-satellite-time-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-simple-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-simple-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-simple-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-simple-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-simple-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-simple-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-simple-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-satellite-time-simple-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/satellite-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-settlers-numeric-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/settlers-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-settlers-numeric-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/settlers-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-settlers-numeric-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/settlers-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-settlers-numeric-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/settlers-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-umtranslog-2-numeric-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/umtranslog-2-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-umtranslog-2-numeric-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/umtranslog-2-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-umtranslog-2-numeric-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/umtranslog-2-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-umtranslog-2-numeric-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/umtranslog-2-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-numeric-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-numeric-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-numeric-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-numeric-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-numeric-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-numeric-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-numeric-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-numeric-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-numeric-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-numeric-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-strips-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 341835,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2002-zenotravel-strips-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 420423,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-simple-automatic-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-simple-automatic-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-simple-automatic-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-simple-automatic-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-simple-automatic"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-simple-hand-coded-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-simple-hand-coded-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-simple-hand-coded-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-simple-hand-coded"
+   }
+  },
+  {
+   "name": "ipc-2002-zenotravel-time-simple-hand-coded-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2002/domains/zenotravel-time-simple-hand-coded"
+   }
+  }
+ ]
+}

@@ -400,6 +400,28 @@ curl -LO https://github.com/sat-heritage/benchs-generators/releases/download/pac
 tar xf ipc-cnf-1998-2000.tar     # the CNFs, compressed, and index.json
 ```
 
+### The planning competitions, 2002 to 2014
+
+Six more packs, one per competition, built with the same chain but with the
+settings of an example: two instances per strips domain, plan lengths six and
+ten, nothing past 300 thousand clauses.
+
+| Competition | Instances | Refused by the encoder | Past the limit | Size |
+|---|---|---|---|---|
+| 2002 | 29 | 152 | 11 | 2.2 MB |
+| 2004 | 12 | 48 | 0 | 0.3 MB |
+| 2006 | 16 | 136 | 0 | 0.1 MB |
+| 2008 | 48 | 60 | 0 | 2.0 MB |
+| 2011 | 82 | 56 | 46 | 6.4 MB |
+| 2014 | 79 | 63 | 106 | 9.9 MB |
+
+**A limitation worth stating plainly.** freeLunch refuses 515 of the 781 tasks
+tried over those competitions, with errors of its own on domains Fast Downward
+translates without complaint. The packs of 2004 and 2006 are therefore a dozen
+formulas out of more than a thousand instances, and they show what the chain
+does rather than cover the competition. The cause is not understood yet; when
+it is, the packs can be rebuilt from the same specs.
+
 ## Bridges
 
 A generator makes an instance out of parameters. A **bridge** starts from an

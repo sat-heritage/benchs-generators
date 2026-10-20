@@ -1,0 +1,44 @@
+{
+  "pack": "ipc-cnf-2011",
+  "title": "The planning competition of 2011 as CNF, examples",
+  "why": "The planning competitions distribute PDDL, not formulas, so every SAT author who wants to work on planning rebuilds the same translation and the same encoding. This pack is those instances as CNF, at several plan lengths, produced by one pinned chain: Fast Downward's translator, then the freeLunch encoder. The plan length is what the published SAT competition instances fix to one or two values, and what a solver author needs to vary.",
+  "status": "published",
+  "generator": "freelunch",
+  "items": {
+    "kind": "pddl-grid",
+    "upstream_collection": "ipc",
+    "competitions": [
+      "ipc-2011"
+    ],
+    "instances_per_domain": 2,
+    "method": "cr",
+    "k": [
+      6,
+      10
+    ],
+    "domains": "strips only: the encoder does not take the ADL domains",
+    "note": "the three smallest instances of each strips domain, by the number in their name"
+  },
+  "exclude_known": true,
+  "permission": "to ask: the instances are collected and republished by the Potassco group from the planning competitions; the CNF is derived from them by a pinned chain",
+  "size_note": "measured on a sample: a gripper instance at ten steps is 23 thousand clauses, a depots one 399 thousand, and a hundred-block task 61 million. A full pack needs the instances chosen with their size in mind.",
+  "distribution": {
+    "github_release": "packs-2026",
+    "asset": "ipc-cnf-2011.tar",
+    "zenodo": null,
+    "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-2011.tar",
+    "sha256": "b4fcc970745a8d4bca1921b8815439d6c38b510f5aef7c911105449e48ae5a7a"
+  },
+  "max_clauses": 300000,
+  "nature": "examples",
+  "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by changing the plan length or picking another task",
+  "regenerate": "tools/fetch_upstream.py ipc && docker run --rm -v \"$CACHE/ipc/files/ipc-2011/domains/<domain>:/data:ro\" satex-gen/freelunch:2022 domain.pddl instances/<instance>.pddl cr <plan length>",
+  "built": {
+    "instances": 82,
+    "bytes": 6444892,
+    "refused_by_encoder": 56,
+    "over_the_clause_limit": 46,
+    "chain": "Fast Downward translator, then freeLunch compactReinforced"
+  },
+  "coverage_note": "freeLunch refuses 56 of the 184 tasks tried here, and 46 more are past the clause limit of a pack of examples. The refusals are the encoder's own limitation, not a choice: it fails on domains the translator accepts. Until that is understood, these packs show what the chain does rather than cover the competition."
+}

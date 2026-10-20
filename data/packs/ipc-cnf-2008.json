@@ -1,0 +1,1660 @@
+{
+ "pack": "ipc-cnf-2008",
+ "title": "The planning competition of 2008 as CNF, examples",
+ "why": "The planning competitions distribute PDDL, not formulas, so every SAT author who wants to work on planning rebuilds the same translation and the same encoding. This pack is those instances as CNF, at several plan lengths, produced by one pinned chain: Fast Downward's translator, then the freeLunch encoder. The plan length is what the published SAT competition instances fix to one or two values, and what a solver author needs to vary.",
+ "generator": "freelunch",
+ "image": "satex-gen/freelunch:2022",
+ "instances": 48,
+ "bytes": 2013704,
+ "linked_to_gbd": 0,
+ "not_encodable": 60,
+ "files": [
+  {
+   "file": "ipc-2008-elevator-sequential-optimal-strips-instance-1-k6.cnf.xz",
+   "bytes": 22132,
+   "hash": "85e27fe04503fc14bef97f2b9c4ecd01",
+   "isohash2": "e5dd47733b2b04d1",
+   "variables": 3892,
+   "clauses": 12679,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-elevator-sequential-optimal-strips-instance-1-k10.cnf.xz",
+   "bytes": 29164,
+   "hash": "2061e814a2dd3079c1b59f32a7810c98",
+   "isohash2": "72558c9647f8c18b",
+   "variables": 6116,
+   "clauses": 19939,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-elevator-sequential-optimal-strips-instance-2-k6.cnf.xz",
+   "bytes": 28740,
+   "hash": "c27233d6b03ae1d8fac7f752ae3578ac",
+   "isohash2": "2cdcfda60b474db9",
+   "variables": 5222,
+   "clauses": 17119,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-elevator-sequential-optimal-strips-instance-2-k10.cnf.xz",
+   "bytes": 37108,
+   "hash": "3a38bb6b2815cb4987c35f8875702c90",
+   "isohash2": "f12a242db2af382a",
+   "variables": 8206,
+   "clauses": 26923,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-elevator-sequential-satisficing-strips-instance-1-k6.cnf.xz",
+   "bytes": 37472,
+   "hash": "c6cda7bb05bbaf2955804fb5aee3cd74",
+   "isohash2": "5807d49184d00df7",
+   "variables": 6384,
+   "clauses": 22982,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-elevator-sequential-satisficing-strips-instance-1-k10.cnf.xz",
+   "bytes": 47740,
+   "hash": "907c92dfa71908dada297360b613d0f0",
+   "isohash2": "660a24062e63fcd1",
+   "variables": 10032,
+   "clauses": 36134,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-elevator-sequential-satisficing-strips-instance-2-k6.cnf.xz",
+   "bytes": 47708,
+   "hash": "a76c1b75386b4dd0356194eed7c19e39",
+   "isohash2": "46965a1e543209fd",
+   "variables": 7546,
+   "clauses": 29535,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-elevator-sequential-satisficing-strips-instance-2-k10.cnf.xz",
+   "bytes": 61932,
+   "hash": "606c5badc9bc4179915d275583f4eedb",
+   "isohash2": "0349787b113d218f",
+   "variables": 11858,
+   "clauses": 46435,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-peg-solitaire-sequential-optimal-strips-instance-1-k6.cnf.xz",
+   "bytes": 13272,
+   "hash": "75292ae0faa1fa5bf509b243010a9a80",
+   "isohash2": "3aea73c1b609652b",
+   "variables": 2184,
+   "clauses": 7037,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-peg-solitaire-sequential-optimal-strips-instance-1-k10.cnf.xz",
+   "bytes": 17236,
+   "hash": "424082ad6ba6a1117a909e2c5955436f",
+   "isohash2": "0f3969bdee3a66f9",
+   "variables": 3432,
+   "clauses": 11081,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-peg-solitaire-sequential-optimal-strips-instance-2-k6.cnf.xz",
+   "bytes": 30316,
+   "hash": "a7764c07bbfa5d1612577d87932087d1",
+   "isohash2": "c395c7dfad4c1c23",
+   "variables": 4151,
+   "clauses": 15536,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-peg-solitaire-sequential-optimal-strips-instance-2-k10.cnf.xz",
+   "bytes": 32444,
+   "hash": "13b4152120c3fff7b5ccc4ffe6b64bcb",
+   "isohash2": "f481b6c3307b877d",
+   "variables": 6523,
+   "clauses": 24452,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-1-k6.cnf.xz",
+   "bytes": 13272,
+   "hash": "75292ae0faa1fa5bf509b243010a9a80",
+   "isohash2": "3aea73c1b609652b",
+   "variables": 2184,
+   "clauses": 7037,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-1-k10.cnf.xz",
+   "bytes": 17236,
+   "hash": "424082ad6ba6a1117a909e2c5955436f",
+   "isohash2": "0f3969bdee3a66f9",
+   "variables": 3432,
+   "clauses": 11081,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-2-k6.cnf.xz",
+   "bytes": 30316,
+   "hash": "a7764c07bbfa5d1612577d87932087d1",
+   "isohash2": "c395c7dfad4c1c23",
+   "variables": 4151,
+   "clauses": 15536,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-2-k10.cnf.xz",
+   "bytes": 32444,
+   "hash": "13b4152120c3fff7b5ccc4ffe6b64bcb",
+   "isohash2": "f481b6c3307b877d",
+   "variables": 6523,
+   "clauses": 24452,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-scanalyzer-3d-sequential-optimal-strips-instance-1-k6.cnf.xz",
+   "bytes": 121232,
+   "hash": "c57284196b08f66705ef4051585d8aaa",
+   "isohash2": "04f5d02646c251d6",
+   "variables": 5250,
+   "clauses": 46224,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-scanalyzer-3d-sequential-optimal-strips-instance-1-k10.cnf.xz",
+   "bytes": 130520,
+   "hash": "238e0bcc7754f27326a7f1475a8a94dd",
+   "isohash2": "e2b1859faeb277d1",
+   "variables": 8250,
+   "clauses": 72648,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-scanalyzer-3d-sequential-optimal-strips-instance-2-k6.cnf.xz",
+   "bytes": 67352,
+   "hash": "0bd33b77534624c06fbf9fdaebce1853",
+   "isohash2": "7f165719a47dc2a3",
+   "variables": 3990,
+   "clauses": 26064,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-scanalyzer-3d-sequential-optimal-strips-instance-2-k10.cnf.xz",
+   "bytes": 69012,
+   "hash": "eb85d1aafe6fa703cca91e8fce2a6c89",
+   "isohash2": "a892d6d60f1d2918",
+   "variables": 6270,
+   "clauses": 40968,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-1-k6.cnf.xz",
+   "bytes": 121232,
+   "hash": "c57284196b08f66705ef4051585d8aaa",
+   "isohash2": "04f5d02646c251d6",
+   "variables": 5250,
+   "clauses": 46224,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-1-k10.cnf.xz",
+   "bytes": 130520,
+   "hash": "238e0bcc7754f27326a7f1475a8a94dd",
+   "isohash2": "e2b1859faeb277d1",
+   "variables": 8250,
+   "clauses": 72648,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-2-k6.cnf.xz",
+   "bytes": 67352,
+   "hash": "0bd33b77534624c06fbf9fdaebce1853",
+   "isohash2": "7f165719a47dc2a3",
+   "variables": 3990,
+   "clauses": 26064,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-2-k10.cnf.xz",
+   "bytes": 69012,
+   "hash": "eb85d1aafe6fa703cca91e8fce2a6c89",
+   "isohash2": "a892d6d60f1d2918",
+   "variables": 6270,
+   "clauses": 40968,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-sokoban-sequential-optimal-strips-instance-1-k6.cnf.xz",
+   "bytes": 24744,
+   "hash": "857087194c8f2eb1885a32172920ff21",
+   "isohash2": "bd1cb71a6c8f9a22",
+   "variables": 3500,
+   "clauses": 14421,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-sokoban-sequential-optimal-strips-instance-1-k10.cnf.xz",
+   "bytes": 29072,
+   "hash": "1cda71a2dadac789693fe0e1121bf0ac",
+   "isohash2": "c4942da9414ca956",
+   "variables": 5500,
+   "clauses": 22693,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-sokoban-sequential-optimal-strips-instance-2-k6.cnf.xz",
+   "bytes": 23684,
+   "hash": "2bf3cd647faa3aee316de30674371608",
+   "isohash2": "6fd1cd2f24b32b2d",
+   "variables": 3024,
+   "clauses": 11849,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-sokoban-sequential-optimal-strips-instance-2-k10.cnf.xz",
+   "bytes": 24420,
+   "hash": "2d9e67213f2a1c87b2d4ba722febf730",
+   "isohash2": "801a4e2dc64f1fcf",
+   "variables": 4752,
+   "clauses": 18645,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-sokoban-sequential-satisficing-strips-instance-1-k6.cnf.xz",
+   "bytes": 23684,
+   "hash": "2bf3cd647faa3aee316de30674371608",
+   "isohash2": "6fd1cd2f24b32b2d",
+   "variables": 3024,
+   "clauses": 11849,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-sokoban-sequential-satisficing-strips-instance-1-k10.cnf.xz",
+   "bytes": 24420,
+   "hash": "2d9e67213f2a1c87b2d4ba722febf730",
+   "isohash2": "801a4e2dc64f1fcf",
+   "variables": 4752,
+   "clauses": 18645,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-sokoban-sequential-satisficing-strips-instance-2-k6.cnf.xz",
+   "bytes": 46376,
+   "hash": "c14d82f1b348d73b839b8ed1c0782a92",
+   "isohash2": "1ab7c2c5ba66f83e",
+   "variables": 5572,
+   "clauses": 27405,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-sokoban-sequential-satisficing-strips-instance-2-k10.cnf.xz",
+   "bytes": 53784,
+   "hash": "ba16a55a8007356ebb3679f2f9742d0f",
+   "isohash2": "c5d378fa9a5dafe2",
+   "variables": 8756,
+   "clauses": 43105,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-transport-sequential-optimal-strips-instance-1-k6.cnf.xz",
+   "bytes": 8924,
+   "hash": "0f94ae6addc151ca6e1cbbaab8b1533c",
+   "isohash2": "9b6ef313415e440a",
+   "variables": 1428,
+   "clauses": 4270,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-transport-sequential-optimal-strips-instance-1-k10.cnf.xz",
+   "bytes": 11508,
+   "hash": "e54571c750451eb461a86fececf885e7",
+   "isohash2": "b44c29fd00d5484a",
+   "variables": 2244,
+   "clauses": 6718,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-transport-sequential-optimal-strips-instance-2-k6.cnf.xz",
+   "bytes": 23188,
+   "hash": "3ed0eb9c129f2d6596bc9c24b2cf2f0d",
+   "isohash2": "3be0e12b4943b4b8",
+   "variables": 3612,
+   "clauses": 12472,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-transport-sequential-optimal-strips-instance-2-k10.cnf.xz",
+   "bytes": 27492,
+   "hash": "adc9e4b47bb9c38c54f85630a6ec9156",
+   "isohash2": "6ab4d53154ce7cf8",
+   "variables": 5676,
+   "clauses": 19608,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-transport-sequential-satisficing-strips-instance-1-k6.cnf.xz",
+   "bytes": 13552,
+   "hash": "9770fc6e16e0602dc59b83d1c561f657",
+   "isohash2": "7a066a8b84839c31",
+   "variables": 2324,
+   "clauses": 7039,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-transport-sequential-satisficing-strips-instance-1-k10.cnf.xz",
+   "bytes": 21596,
+   "hash": "008fb73e768fd8687d36399997485fda",
+   "isohash2": "59fb88063e7ffcb8",
+   "variables": 3652,
+   "clauses": 11071,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-transport-sequential-satisficing-strips-instance-2-k6.cnf.xz",
+   "bytes": 56136,
+   "hash": "b360d30343f7545b211fbb3cb29769f0",
+   "isohash2": "698d020617637778",
+   "variables": 7588,
+   "clauses": 29657,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-transport-sequential-satisficing-strips-instance-2-k10.cnf.xz",
+   "bytes": 70852,
+   "hash": "5d21be917f40f2299df5fb6f8934540b",
+   "isohash2": "f39a5d27dc8682a8",
+   "variables": 11924,
+   "clauses": 46617,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-woodworking-sequential-optimal-strips-instance-1-k6.cnf.xz",
+   "bytes": 22424,
+   "hash": "b41b6fce70984ec314e9f4e276ff112a",
+   "isohash2": "4a86c83a32e03b0d",
+   "variables": 2604,
+   "clauses": 10936,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-woodworking-sequential-optimal-strips-instance-1-k10.cnf.xz",
+   "bytes": 24480,
+   "hash": "7418882a46322f122674696909b55aea",
+   "isohash2": "86b4bdf77a2625ce",
+   "variables": 4092,
+   "clauses": 17196,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-woodworking-sequential-optimal-strips-instance-2-k6.cnf.xz",
+   "bytes": 32044,
+   "hash": "b2310d2a509767e0a9f68c22882a1905",
+   "isohash2": "4e12dbddd9024772",
+   "variables": 3458,
+   "clauses": 15612,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-woodworking-sequential-optimal-strips-instance-2-k10.cnf.xz",
+   "bytes": 37832,
+   "hash": "6fa99ec57b124fe187d7fdeb021ef6da",
+   "isohash2": "efd7a98e3c233592",
+   "variables": 5434,
+   "clauses": 24548,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-sequential-optimal-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-woodworking-sequential-satisficing-strips-instance-1-k6.cnf.xz",
+   "bytes": 12856,
+   "hash": "fa92096ade022e40d2d6790aab77e644",
+   "isohash2": "3ae45f7adec484a6",
+   "variables": 1813,
+   "clauses": 6631,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-woodworking-sequential-satisficing-strips-instance-1-k10.cnf.xz",
+   "bytes": 15672,
+   "hash": "8374bfa71ffda5e8627cd44350042aa6",
+   "isohash2": "ded468172110d3c7",
+   "variables": 2849,
+   "clauses": 10431,
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-woodworking-sequential-satisficing-strips-instance-2-k6.cnf.xz",
+   "bytes": 49104,
+   "hash": "a65f015b79ce817628b5fc1e3bfc4a5e",
+   "isohash2": "efb9907d3beb4832",
+   "variables": 5537,
+   "clauses": 26950,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-sequential-satisficing-strips"
+   }
+  },
+  {
+   "file": "ipc-2008-woodworking-sequential-satisficing-strips-instance-2-k10.cnf.xz",
+   "bytes": 61096,
+   "hash": "860c0bda5b264af11062cb47676fa544",
+   "isohash2": "df7c89e92fc7373c",
+   "variables": 8701,
+   "clauses": 42374,
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-sequential-satisficing-strips"
+   }
+  }
+ ],
+ "linked": [],
+ "skipped": [
+  {
+   "name": "ipc-2008-crew-planning-net-benefit-optimal-numeric-fluents-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/crew-planning-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-crew-planning-net-benefit-optimal-numeric-fluents-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/crew-planning-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-crew-planning-net-benefit-optimal-numeric-fluents-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/crew-planning-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-crew-planning-net-benefit-optimal-numeric-fluents-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/crew-planning-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-crew-planning-temporal-satisficing-strips-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/crew-planning-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-crew-planning-temporal-satisficing-strips-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/crew-planning-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-crew-planning-temporal-satisficing-strips-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/crew-planning-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-crew-planning-temporal-satisficing-strips-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/crew-planning-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-net-benefit-optimal-numeric-fluents-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-net-benefit-optimal-numeric-fluents-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-net-benefit-optimal-numeric-fluents-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-net-benefit-optimal-numeric-fluents-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-net-benefit-optimal-strips-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-net-benefit-optimal-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-net-benefit-optimal-strips-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-net-benefit-optimal-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-net-benefit-optimal-strips-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-net-benefit-optimal-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-net-benefit-optimal-strips-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-net-benefit-optimal-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-temporal-satisficing-numeric-fluents-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-temporal-satisficing-numeric-fluents-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-temporal-satisficing-numeric-fluents-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-temporal-satisficing-numeric-fluents-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-temporal-satisficing-strips-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-temporal-satisficing-strips-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-temporal-satisficing-strips-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-elevator-temporal-satisficing-strips-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/elevator-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-model-train-temporal-satisficing-numeric-fluents-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/model-train-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-model-train-temporal-satisficing-numeric-fluents-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/model-train-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-model-train-temporal-satisficing-numeric-fluents-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/model-train-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-model-train-temporal-satisficing-numeric-fluents-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/model-train-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-openstacks-net-benefit-optimal-strips-negative-preconditions-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/openstacks-net-benefit-optimal-strips-negative-preconditions"
+   }
+  },
+  {
+   "name": "ipc-2008-openstacks-net-benefit-optimal-strips-negative-preconditions-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/openstacks-net-benefit-optimal-strips-negative-preconditions"
+   }
+  },
+  {
+   "name": "ipc-2008-openstacks-net-benefit-optimal-strips-negative-preconditions-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/openstacks-net-benefit-optimal-strips-negative-preconditions"
+   }
+  },
+  {
+   "name": "ipc-2008-openstacks-net-benefit-optimal-strips-negative-preconditions-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/openstacks-net-benefit-optimal-strips-negative-preconditions"
+   }
+  },
+  {
+   "name": "ipc-2008-peg-solitaire-net-benefit-optimal-strips-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-net-benefit-optimal-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-peg-solitaire-net-benefit-optimal-strips-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-net-benefit-optimal-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-peg-solitaire-net-benefit-optimal-strips-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-net-benefit-optimal-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-peg-solitaire-net-benefit-optimal-strips-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-net-benefit-optimal-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-peg-solitaire-temporal-satisficing-strips-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-peg-solitaire-temporal-satisficing-strips-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-peg-solitaire-temporal-satisficing-strips-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-peg-solitaire-temporal-satisficing-strips-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-sokoban-temporal-satisficing-strips-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-sokoban-temporal-satisficing-strips-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-sokoban-temporal-satisficing-strips-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-sokoban-temporal-satisficing-strips-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-temporal-satisficing-strips"
+   }
+  },
+  {
+   "name": "ipc-2008-transport-net-benefit-optimal-numeric-fluents-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-transport-net-benefit-optimal-numeric-fluents-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-transport-net-benefit-optimal-numeric-fluents-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-transport-net-benefit-optimal-numeric-fluents-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-transport-temporal-satisficing-numeric-fluents-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-transport-temporal-satisficing-numeric-fluents-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-transport-temporal-satisficing-numeric-fluents-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-transport-temporal-satisficing-numeric-fluents-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/transport-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-woodworking-net-benefit-optimal-numeric-fluents-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-woodworking-net-benefit-optimal-numeric-fluents-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-woodworking-net-benefit-optimal-numeric-fluents-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-woodworking-net-benefit-optimal-numeric-fluents-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-net-benefit-optimal-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-woodworking-temporal-satisficing-numeric-fluents-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-woodworking-temporal-satisficing-numeric-fluents-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-woodworking-temporal-satisficing-numeric-fluents-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-temporal-satisficing-numeric-fluents"
+   }
+  },
+  {
+   "name": "ipc-2008-woodworking-temporal-satisficing-numeric-fluents-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/woodworking-temporal-satisficing-numeric-fluents"
+   }
+  }
+ ]
+}
