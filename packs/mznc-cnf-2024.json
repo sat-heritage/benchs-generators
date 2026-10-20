@@ -1,0 +1,29 @@
+{
+  "pack": "mznc-cnf-2024",
+  "title": "The MiniZinc Challenge 2024 as CNF, examples",
+  "why": "The constraint programming competition distributes MiniZinc models and their data, not formulas, so every SAT author who wants to work on constraint problems rebuilds the same flattening and the same encoding. This pack is those instances as CNF, produced by one pinned chain: the MiniZinc compiler 2.10.1, then Picat's SAT module. The competition's own data files are the parameters, and any other size is produced on demand with the same chain.",
+  "status": "proposed",
+  "generator": "minizinc",
+  "items": {
+    "kind": "mzn-grid",
+    "upstream_collection": "mznc",
+    "years": [
+      2024
+    ],
+    "instances_per_problem": 2,
+    "note": "the two smallest data files of each problem of the edition, the model beside them; a problem whose instances are self-contained models takes the models themselves"
+  },
+  "exclude_known": true,
+  "permission": "to ask: the models and their data are archived by the MiniZinc Challenge organisers; the CNF is derived from them by a pinned chain",
+  "size_note": "measured on the twenty problems of the edition, at the smallest data file of each: from 469 clauses for a monitor placement instance to 2.5 million for an aircraft disassembly one, with a median around 60 thousand. Flattening alone can grind: one monitor placement instance was still in the MiniZinc compiler after twenty minutes, so the pack gives each instance five minutes and records the ones that go past it.",
+  "max_clauses": 300000,
+  "timeout_seconds": 300,
+  "nature": "examples",
+  "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by taking another data file of the same problem or changing a parameter in the model",
+  "skip_reasons": {
+    "3": "the model does not compile with MiniZinc 2.10.1, the version pinned here",
+    "4": "PicatSAT could not encode the flattened model",
+    "5": "PicatSAT settled it by propagation while reading the FlatZinc, so no formula was written"
+  },
+  "regenerate": "tools/fetch_upstream.py mznc && docker run --rm -v \"$CACHE/mznc/files/2024/<problem>:/data:ro\" satex-gen/minizinc:2.10.1 <problem>.mzn <data file>"
+}

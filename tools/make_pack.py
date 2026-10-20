@@ -17,7 +17,7 @@ identified exactly like the competition ones.
 The files land outside the repository, ready for a release; the index, which is
 small, is written to data/packs/<name>.json.
 """
-import argparse, json, re, sqlite3, subprocess, sys, tempfile, urllib.request
+import argparse, json, re, sqlite3, subprocess, sys, tempfile, urllib.request, uuid
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -63,6 +63,31 @@ def items_of(spec: dict) -> list[dict]:
                                     "upstream": {"collection": it["upstream_collection"],
                                                  "dir": str(domain.relative_to(files))}})
         return out
+    if it["kind"] == "mzn-grid":
+        files = fetch_upstream.ensure(it["upstream_collection"])
+        n = it.get("instances_per_problem", 2)
+        out = []
+        for year in it["years"]:
+            for prob in sorted((files / str(year)).glob("*/")):
+                models = sorted(prob.glob("*.mzn"), key=lambda q: q.stat().st_size)
+                data = sorted((q for q in prob.iterdir() if q.suffix in (".dzn", ".json")),
+                              key=lambda q: q.stat().st_size)
+                if not models:
+                    continue
+                up = {"collection": it["upstream_collection"], "dir": f"{year}/{prob.name}"}
+                if not data:
+                    # some problems are self-contained models, one per instance
+                    pairs = [(m, None) for m in models[:n]]
+                else:
+                    named = prob / f"{prob.name}.mzn"
+                    model = named if named.exists() else models[0]
+                    pairs = [(model, d) for d in data[:n]]
+                for model, d in pairs:
+                    stem = re.sub(r"[^A-Za-z0-9._-]", "-", (d or model).name.rsplit(".", 1)[0])
+                    out.append({"name": f"mznc{year}-{prob.name}-{stem}.cnf",
+                                "args": [model.name] + ([d.name] if d else []),
+                                "upstream": up})
+        return out
     if it["kind"] != "grid":
         sys.exit(f"unknown item kind: {it['kind']}")
     files = fetch_upstream.ensure(it["upstream_collection"])
@@ -77,7 +102,7 @@ def items_of(spec: dict) -> list[dict]:
     return out
 
 
-def produce(meta: dict, item: dict, dest: Path) -> int:
+def produce(meta: dict, item: dict, dest: Path, timeout: int | None = None) -> int:
     mount, args = [], list(item["args"])
     if "upstream" in item and "dir" in item["upstream"]:      # a directory, as a planning domain needs
         files = fetch_upstream.ensure(item["upstream"]["collection"])
@@ -89,9 +114,15 @@ def produce(meta: dict, item: dict, dest: Path) -> int:
             sys.exit(f"{item['upstream']['file']} is not in the collection")
         mount = ["-v", f"{member.parent}:/src:ro"]
         args = [a.replace("{file}", f"/src/{member.name}") for a in args]
+    name = f"satex-pack-{uuid.uuid4().hex[:12]}"
     with open(dest / item["name"], "w") as f:
-        return subprocess.run(["docker", "run", "--rm", *mount, meta["image"], *args],
-                              stdout=f, stderr=subprocess.DEVNULL).returncode
+        try:
+            return subprocess.run(["docker", "run", "--rm", "--name", name, *mount, meta["image"], *args],
+                                  stdout=f, stderr=subprocess.DEVNULL, timeout=timeout).returncode
+        except subprocess.TimeoutExpired:
+            # the client is gone but the container is not: stop it by name
+            subprocess.run(["docker", "kill", name], capture_output=True)
+            return 124
 
 
 def measure(directory: Path, names: list[str]) -> dict:
@@ -110,6 +141,11 @@ def main(argv=None) -> int:
 
     spec = json.load(open(ROOT / "packs" / f"{args.pack}.json"))
     limit_clauses = spec.get("max_clauses")
+    # what a non-zero exit of this image means, in the words of the pack
+    reasons = {3: "not a classical planning domain: the translator refused it",
+               4: "the encoder failed on a task the translator accepted",
+               124: f"over the time limit of {spec.get('timeout_seconds')} seconds"}
+    reasons.update({int(k): v for k, v in spec.get("skip_reasons", {}).items()})
     meta = catalogue.one(spec["generator"])["meta"]
     cache = fetch_upstream.DEFAULT_CACHE
     known = set() if args.keep_known else gbd_hashes(cache)
@@ -123,12 +159,11 @@ def main(argv=None) -> int:
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         for item in items:
-            code = produce(meta, item, tmp)
+            code = produce(meta, item, tmp, spec.get("timeout_seconds"))
             path = tmp / item["name"]
             # an encoder refuses some inputs, an ADL domain for instance: note and move on
             if not path.exists() or not any(l.startswith("p cnf") for l in open(path, errors="replace")):
-                why = {3: "not a classical planning domain: the translator refused it",
-                       4: "the encoder failed on a task the translator accepted"}.get(code, f"exit {code}")
+                why = reasons.get(code, f"exit {code}")
                 skipped.append({"name": item["name"], "args": item["args"],
                                 "upstream": item.get("upstream"), "reason": why})
                 path.unlink(missing_ok=True)

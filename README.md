@@ -307,6 +307,8 @@ the organisers distributed:
 ```sh
 docker run --rm -v "$PWD:/data" satex-gen/aiger:2021 cnf mycircuit.aig > mine.cnf
 docker run --rm -v "$PWD:/data" satex-gen/aiger:2021 unroll 20 mymodel.aig > mine.cnf
+docker run --rm -v "$PWD:/data" satex-gen/freelunch:2022 domain.pddl problem.pddl cr 12 > mine.cnf
+docker run --rm -v "$PWD:/data" satex-gen/minizinc:2.10.1 mymodel.mzn mydata.dzn > mine.cnf
 ```
 
 Nothing leaves the machine: the directory you mount is the only thing the image
@@ -354,6 +356,7 @@ distributes circuits; neither distributes formulas. The collections are
 declared in `collections/`, fetched into a local cache, and encoded on demand:
 
 ```sh
+tools/fetch_upstream.py mznc       # the MiniZinc Challenge, 2008 to 2026
 tools/fetch_upstream.py ipc        # the planning competitions, 1998 to 2014
 docker run --rm -v "$CACHE/ipc/files/ipc-1998/domains/gripper-round-1-strips:/data:ro" \
   satex-gen/freelunch:2022 domain.pddl instances/instance-10.pddl cr 10 > gripper.cnf

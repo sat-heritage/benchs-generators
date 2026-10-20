@@ -42,10 +42,19 @@ fi
 
 cd "$work"
 # PicatSAT's FlatZinc front end writes the Picat program it would run...
-picat "$FZN2PICAT" model.fzn >/dev/null 2>"$work/fzn2picat.err" \
+picat "$FZN2PICAT" model.fzn >"$work/fzn2picat.log" 2>&1 \
     || { echo "minizinc-bridge: PicatSAT could not read the FlatZinc" >&2
-         tail -3 "$work/fzn2picat.err" >&2; exit 4; }
-[ -f model.pi ] || { echo "minizinc-bridge: PicatSAT wrote no program" >&2; exit 4; }
+         tail -3 "$work/fzn2picat.log" >&2; exit 4; }
+# exit 5: the front end propagates while it reads the constraints, and sometimes
+# that settles the question before any encoding happens.  There is no formula to
+# write then, and it is not a failure.
+if grep -q UNSATISFIABLE "$work/fzn2picat.log"; then
+    echo "minizinc-bridge: PicatSAT decided the instance while loading the FlatZinc," >&2
+    echo "  its propagation found it unsatisfiable, so no formula was written" >&2
+    exit 5
+fi
+[ -f model.pi ] || { echo "minizinc-bridge: PicatSAT wrote no program" >&2
+                     tail -3 "$work/fzn2picat.log" >&2; exit 4; }
 # ...and this is the one line we add to it: solve/1 over the variables becomes
 # solve/2 with the dump option, which writes the CNF the solver would be given.
 # A model with an objective already uses solve/2, so there the option joins the

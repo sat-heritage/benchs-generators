@@ -1,0 +1,17 @@
+{
+  "collection": "mznc",
+  "name": "Instances of the MiniZinc Challenge, 2008 to 2026",
+  "organizers": "the MiniZinc Challenge organisers, Monash University",
+  "homepage": "https://github.com/MiniZinc/mzn-challenge",
+  "archive": {
+    "kind": "git",
+    "url": "https://github.com/MiniZinc/mzn-challenge.git",
+    "commit": "a8448864fc56162583f24aaf9c25653d93f83765",
+    "tree": "cef10593af42d416ad2f85e12f01f3694a81da32",
+    "bytes": 71000000
+  },
+  "layout": "<year>/<problem>/<problem>.mzn with its data files, <problem>*.dzn or <problem>*.json, beside it",
+  "terms": "the instances of the MiniZinc Challenge, as the organisers archive them; no licence file in the collection",
+  "redistribute": false,
+  "note": "nineteen editions of the constraint programming competition, from 2008 to 2026. This repository keeps the manifest and the pinned commit, never the instances: tools/fetch_upstream.py clones it into a local cache. The CNF encodings are produced on demand by the MiniZinc and PicatSAT bridge. An instance is a model and a data file, not a single file."
+}
