@@ -19,11 +19,185 @@
   "seed": "none: the encoding of a model is deterministic, and two runs give the same formula",
   "notes": "the constraint-programming bridge. It takes a MiniZinc model, the language the CP competition is written in, flattens it to FlatZinc with the MiniZinc compiler, and encodes the FlatZinc to CNF with Picat's SAT module. The model's own parameters make the family scale: n queens goes from 1208 clauses at n=8 to 2632 at n=12 and 28915 at n=30, with the same encoder throughout. It works on anyone's model, not only on ours: mount a directory and name a .mzn file, with a data file or -D as usual, which is the point of a bridge. Four small models of our own are built in, behind --builtin, to show the chain without any file. Two things are worth knowing. PicatSAT's FlatZinc front end can write the Picat program it would run but has no option to write the CNF, so the bridge adds the dump option of solve/2 to that generated program, one line of awk; nothing upstream is modified. And Picat writes the whole formula before it starts solving it, so the bridge stops it as soon as the file holds the clauses its header announces. For a model with an objective, the formula is the satisfaction problem Picat encodes first, without a bound on the objective: to get the usual 'is there a solution of cost at most k' family, put that bound in the model and let k be the parameter. MiniZinc is pinned at 2.10.1, commit c3448c48e7f05f13805616cfd1b9e94972eef58c, tree 930fcc3f46ff71224883251bc398e2bc7be1b8a4, and built from source rather than taken from the release tarball, which carries the IDE and the whole of Qt.",
   "samples": [
-    {"args": ["--builtin", "queens", "8"], "label": "8 queens"},
-    {"args": ["--builtin", "queens", "20"], "label": "20 queens"},
-    {"args": ["--builtin", "queens", "30"], "label": "30 queens"},
-    {"args": ["--builtin", "pigeonhole", "11"], "label": "12 pigeons in 11 holes, unsatisfiable"},
-    {"args": ["--builtin", "magicsquare", "4"], "label": "a magic square of order 4"},
-    {"args": ["--builtin", "golomb", "8"], "label": "a Golomb ruler with 8 marks"}
+    {
+      "args": [
+        "--builtin",
+        "queens",
+        "8"
+      ],
+      "label": "8 queens"
+    },
+    {
+      "args": [
+        "--builtin",
+        "queens",
+        "20"
+      ],
+      "label": "20 queens"
+    },
+    {
+      "args": [
+        "--builtin",
+        "queens",
+        "30"
+      ],
+      "label": "30 queens"
+    },
+    {
+      "args": [
+        "--builtin",
+        "pigeonhole",
+        "11"
+      ],
+      "label": "12 pigeons in 11 holes, unsatisfiable"
+    },
+    {
+      "args": [
+        "--builtin",
+        "magicsquare",
+        "4"
+      ],
+      "label": "a magic square of order 4"
+    },
+    {
+      "args": [
+        "--builtin",
+        "golomb",
+        "8"
+      ],
+      "label": "a Golomb ruler with 8 marks"
+    },
+    {
+      "args": [
+        "triangular.mzn",
+        "n9.dzn"
+      ],
+      "upstream": {
+        "collection": "mznc",
+        "dir": "2024/triangular"
+      },
+      "label": "triangular, the 2024 edition, n=9"
+    },
+    {
+      "args": [
+        "triangular.mzn",
+        "n14.dzn"
+      ],
+      "upstream": {
+        "collection": "mznc",
+        "dir": "2024/triangular"
+      },
+      "label": "triangular, the 2024 edition, n=14"
+    },
+    {
+      "args": [
+        "triangular.mzn",
+        "n20.dzn"
+      ],
+      "upstream": {
+        "collection": "mznc",
+        "dir": "2024/triangular"
+      },
+      "label": "triangular, the 2024 edition, n=20"
+    },
+    {
+      "args": [
+        "triangular.mzn",
+        "n31.dzn"
+      ],
+      "upstream": {
+        "collection": "mznc",
+        "dir": "2024/triangular"
+      },
+      "label": "triangular, the 2024 edition, n=31"
+    },
+    {
+      "args": [
+        "peaceable_queens_mznc2021.mzn",
+        "pq_n7.dzn"
+      ],
+      "upstream": {
+        "collection": "mznc",
+        "dir": "2024/peacable_queens"
+      },
+      "label": "peaceable queens, the 2024 edition, n=7"
+    },
+    {
+      "args": [
+        "peaceable_queens_mznc2021.mzn",
+        "pq_n12.dzn"
+      ],
+      "upstream": {
+        "collection": "mznc",
+        "dir": "2024/peacable_queens"
+      },
+      "label": "peaceable queens, the 2024 edition, n=12"
+    },
+    {
+      "args": [
+        "peaceable_queens_mznc2021.mzn",
+        "pq_n19.dzn"
+      ],
+      "upstream": {
+        "collection": "mznc",
+        "dir": "2024/peacable_queens"
+      },
+      "label": "peaceable queens, the 2024 edition, n=19"
+    },
+    {
+      "args": [
+        "CostasArray.mzn",
+        "17.dzn"
+      ],
+      "upstream": {
+        "collection": "mznc",
+        "dir": "2010/costas_array"
+      },
+      "label": "Costas array of order 17, the 2010 edition"
+    },
+    {
+      "args": [
+        "radiation.mzn",
+        "m06_15_15.dzn"
+      ],
+      "upstream": {
+        "collection": "mznc",
+        "dir": "2012/radiation"
+      },
+      "label": "radiation therapy, the 2012 edition"
+    },
+    {
+      "args": [
+        "amaze3.mzn",
+        "2012-04-27.dzn"
+      ],
+      "upstream": {
+        "collection": "mznc",
+        "dir": "2014/amaze"
+      },
+      "label": "amaze, the 2014 edition"
+    },
+    {
+      "args": [
+        "mapping.mzn",
+        "mesh2x2_1.dzn"
+      ],
+      "upstream": {
+        "collection": "mznc",
+        "dir": "2016/mapping"
+      },
+      "label": "task mapping on a 2x2 mesh, the 2016 edition"
+    },
+    {
+      "args": [
+        "concert-hall-cap.mzn",
+        "concert-cap.mznc2018.02.dzn"
+      ],
+      "upstream": {
+        "collection": "mznc",
+        "dir": "2018/concert-hall-cap"
+      },
+      "label": "concert hall capacity, the 2018 edition"
+    }
   ]
 }

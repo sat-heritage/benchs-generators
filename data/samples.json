@@ -571,6 +571,174 @@
    "variables": 8687,
    "clauses": 68835,
    "reproducible": true
+  },
+  {
+   "label": "triangular, the 2024 edition, n=9",
+   "args": [
+    "triangular.mzn",
+    "n9.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/triangular"
+   },
+   "variables": 178,
+   "clauses": 1367,
+   "reproducible": true
+  },
+  {
+   "label": "triangular, the 2024 edition, n=14",
+   "args": [
+    "triangular.mzn",
+    "n14.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/triangular"
+   },
+   "variables": 434,
+   "clauses": 4475,
+   "reproducible": true
+  },
+  {
+   "label": "triangular, the 2024 edition, n=20",
+   "args": [
+    "triangular.mzn",
+    "n20.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/triangular"
+   },
+   "variables": 882,
+   "clauses": 12718,
+   "reproducible": true
+  },
+  {
+   "label": "triangular, the 2024 edition, n=31",
+   "args": [
+    "triangular.mzn",
+    "n31.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/triangular"
+   },
+   "variables": 2107,
+   "clauses": 53748,
+   "reproducible": true
+  },
+  {
+   "label": "peaceable queens, the 2024 edition, n=7",
+   "args": [
+    "peaceable_queens_mznc2021.mzn",
+    "pq_n7.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/peacable_queens"
+   },
+   "variables": 4621,
+   "clauses": 24332,
+   "reproducible": true
+  },
+  {
+   "label": "peaceable queens, the 2024 edition, n=12",
+   "args": [
+    "peaceable_queens_mznc2021.mzn",
+    "pq_n12.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/peacable_queens"
+   },
+   "variables": 19142,
+   "clauses": 97802,
+   "reproducible": true
+  },
+  {
+   "label": "peaceable queens, the 2024 edition, n=19",
+   "args": [
+    "peaceable_queens_mznc2021.mzn",
+    "pq_n19.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2024/peacable_queens"
+   },
+   "variables": 39094,
+   "clauses": 207168,
+   "reproducible": true
+  },
+  {
+   "label": "Costas array of order 17, the 2010 edition",
+   "args": [
+    "CostasArray.mzn",
+    "17.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2010/costas_array"
+   },
+   "variables": 6024,
+   "clauses": 102363,
+   "reproducible": true
+  },
+  {
+   "label": "radiation therapy, the 2012 edition",
+   "args": [
+    "radiation.mzn",
+    "m06_15_15.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2012/radiation"
+   },
+   "variables": 3468,
+   "clauses": 25898,
+   "reproducible": true
+  },
+  {
+   "label": "amaze, the 2014 edition",
+   "args": [
+    "amaze3.mzn",
+    "2012-04-27.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2014/amaze"
+   },
+   "variables": 1533,
+   "clauses": 7116,
+   "reproducible": true
+  },
+  {
+   "label": "task mapping on a 2x2 mesh, the 2016 edition",
+   "args": [
+    "mapping.mzn",
+    "mesh2x2_1.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2016/mapping"
+   },
+   "variables": 6380,
+   "clauses": 41855,
+   "reproducible": true
+  },
+  {
+   "label": "concert hall capacity, the 2018 edition",
+   "args": [
+    "concert-hall-cap.mzn",
+    "concert-cap.mznc2018.02.dzn"
+   ],
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2018/concert-hall-cap"
+   },
+   "variables": 957,
+   "clauses": 7303,
+   "reproducible": true
   }
  ]
 }

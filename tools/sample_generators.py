@@ -15,6 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 GBD_IMAGE = "satex-gen/gbd:0.4.2"
+TIMEOUT = 900          # a sample is meant to be quick: past this, it is not a sample
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import catalogue, fetch_upstream
 
@@ -36,7 +37,11 @@ def run(gen: str, meta: dict, samples: list[dict]) -> list[dict]:
         names = []
         for i, s in enumerate(samples):
             mount, args = [], list(s["args"])
-            if "upstream" in s:
+            if "upstream" in s and "dir" in s["upstream"]:
+                # a whole directory, as a constraint model and its data need
+                files = fetch_upstream.ensure(s["upstream"]["collection"])
+                mount = ["-v", f"{files / s['upstream']['dir']}:/data:ro"]
+            elif "upstream" in s:
                 files = fetch_upstream.ensure(s["upstream"]["collection"])
                 member = next(files.rglob(s["upstream"]["file"]), None)
                 if member is None:
@@ -46,7 +51,8 @@ def run(gen: str, meta: dict, samples: list[dict]) -> list[dict]:
             for run_id in (1, 2):          # twice, to see whether the command is reproducible
                 name = f"s{i}-{run_id}.cnf"
                 with open(tmp / name, "w") as f:
-                    subprocess.run(["docker", "run", "--rm", *mount, meta["image"], *args], stdout=f)
+                    subprocess.run(["docker", "run", "--rm", *mount, meta["image"], *args],
+                                   stdout=f, timeout=TIMEOUT)
                 names.append(name)
         table = measure(tmp, names)
         for i, s in enumerate(samples):
