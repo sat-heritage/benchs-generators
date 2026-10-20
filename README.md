@@ -414,6 +414,11 @@ minutes per instance.
 | Clauses | 469 at the smallest, 53 thousand median, 299 thousand at the largest |
 | Left out | 4 over the clause limit, 3 over the time limit, 2 settled by propagation, 2 that no longer compile |
 
+```sh
+curl -LO https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/mznc-cnf-2024.tar
+tar xf mznc-cnf-2024.tar
+```
+
 **What is left out, and why it matters which.** A formula past the clause limit
 or an instance past the time limit is our choice, since a pack holds examples:
 the aircraft disassembly instance is 2.5 million clauses, and one monitor

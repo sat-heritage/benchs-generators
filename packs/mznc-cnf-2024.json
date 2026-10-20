@@ -2,7 +2,7 @@
   "pack": "mznc-cnf-2024",
   "title": "The MiniZinc Challenge 2024 as CNF, examples",
   "why": "The constraint programming competition distributes MiniZinc models and their data, not formulas, so every SAT author who wants to work on constraint problems rebuilds the same flattening and the same encoding. This pack is those instances as CNF, produced by one pinned chain: the MiniZinc compiler 2.10.1, then Picat's SAT module. The competition's own data files are the parameters, and any other size is produced on demand with the same chain.",
-  "status": "built, not yet published",
+  "status": "published",
   "generator": "minizinc",
   "items": {
     "kind": "mzn-grid",
@@ -20,6 +20,13 @@
   "timeout_seconds": 300,
   "nature": "examples",
   "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by taking another data file of the same problem or changing a parameter in the model",
+  "distribution": {
+    "github_release": "packs-2026",
+    "asset": "mznc-cnf-2024.tar",
+    "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/mznc-cnf-2024.tar",
+    "sha256": "e82618de134e370480f2f05f24b11c80a36e32fd1d6d179e6a39fd5a20a718e4",
+    "zenodo": null
+  },
   "skip_reasons": {
     "3": "the model does not compile with MiniZinc 2.10.1, the version pinned here",
     "4": "PicatSAT could not encode the flattened model",
