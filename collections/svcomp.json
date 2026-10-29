@@ -1,0 +1,20 @@
+{
+  "collection": "svcomp",
+  "name": "SV-Benchmarks, the verification tasks of the Competition on Software Verification 2025",
+  "organizers": "Dirk Beyer, LMU Munich, and Jan Strejček, Masaryk University, for the competition; the tasks themselves come from hundreds of contributors",
+  "homepage": "https://github.com/sosy-lab/sv-benchmarks",
+  "archive": {
+    "url": "https://zenodo.org/records/15012096/files/svcomp25-sv-benchmarks.zip?download=1",
+    "format": "zip",
+    "bytes": 1783860616,
+    "sha256": "32f162bda8dea33b15d54bf6ac3a1e5b6c68a2f7320fd0e5432e72de9d8cbeef",
+    "md5_upstream": "0b8e7981324615fddafa663b8ea24945"
+  },
+  "doi": "10.5281/zenodo.15012096",
+  "members_count": 175117,
+  "unpacked_bytes": 11758376608,
+  "layout": "sv-benchmarks/c/<family>/*.c beside one *.yml per task, which names the input files, the property file under sv-benchmarks/c/properties/ and the data model; sv-benchmarks/java/ and the Horn clauses are other tracks",
+  "terms": "the archive is CC-BY-4.0 as a collection; the tasks carry their own licences, listed in sv-benchmarks/LICENSES/ and declared file by file with SPDX headers, from Apache-2.0 to GPL and several attribution licences",
+  "redistribute": false,
+  "note": "the citable artefact of SV-COMP 2025, 1.8 GB compressed and 11.8 GB unpacked over 175 thousand files, which is why this repository keeps the manifest only: tools/fetch_upstream.py downloads it into a local cache and the CNF encodings are produced on demand. Member checksums are not recorded here, as for smtqfbv: the list would be longer than the repository. The zip holds the version the competition ran, so a task cannot change under us even though the sv-benchmarks repository moves on; the Zenodo DOI is what a paper cites."
+}

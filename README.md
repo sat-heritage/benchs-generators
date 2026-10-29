@@ -547,6 +547,49 @@ the verifier fetches and mounts it:
  "args": ["unroll", "45", "{file}"]}
 ```
 
+**The sixth bridge takes a C program**, which is what the Competition on
+Software Verification distributes. A task there is a C file and a `.yml` beside
+it naming the property to prove, the data model and the verdict the organisers
+expect; `bridges/svcomp` carries CBMC, which unwinds every loop and every
+recursive call at most k times, bit blasts the C semantics and writes the
+formula:
+
+```sh
+docker run --rm -v "$CACHE/svcomp/files/sv-benchmarks/c:/data:ro" \
+    satex-gen/svcomp:2025 task 20 loops/sum01-1.yml > mine.cnf
+docker run --rm -v "$PWD:/data" satex-gen/svcomp:2025 unwind 20 myprogram.c > mine.cnf
+docker run --rm -v "$PWD:/data" satex-gen/svcomp:2025 info loops/sum01-1.yml
+```
+
+The bound k is what makes the family scale, as the depth does for the hardware
+bridges: on `sum01-1` of the loops family the formula goes from 1824 clauses at
+k=5 to 2332 at 10, 3339 at 20 and 5719 at 40. The collection is wide — 42 745
+tasks in 164 directories — and the sizes span it. At the same bound of ten: 435
+clauses for a small array loop, 7088 for a byte addition, 146 thousand for a
+Windows CD-audio driver, 202 thousand for `test_locks_10`, 261 thousand for a
+Newton iteration over floats.
+
+Two decisions are ours rather than the competition's, and both are written out
+in the script. CBMC dropped `--propertyfile` when it stopped competing, so each
+SV-COMP property is translated into the checks CBMC still has, starting from
+`--no-standard-checks` so that the formula asks what the task declared and
+nothing more. And when a task declares several properties, the one encoded is
+chosen by a stated order of interest rather than by the order in the file: a
+task often puts termination first and the reachability question third. Two
+properties are refused outright: termination, which no bounded unwinding
+expresses, and no-data-race, for which CBMC has no check.
+
+**How a bridge like this is checked.** No competition published these formulas,
+so there is no hash to compare. What can be checked is the question: every task
+declares the verdict its organisers expect, and `verdict K TASK.yml` puts the
+same question, with the same translation and the same bound, to CBMC's own
+solver. On sixteen tasks across five families, fifteen agree and one did not
+finish in two minutes; `bridges/svcomp/verdicts.json` records them one by one
+and the website prints the table. The pair `loops/array-1` and `loops/array-2`
+is the pleasant case: the programs differ by one character, `>=` against `>`,
+the formulas have the same 456 variables and 435 clauses, and one is
+unsatisfiable while the other is satisfiable.
+
 **The fifth bridge takes a BTOR2 model**, which is where the hardware
 competition went after AIGER. HWMCC distributed AIGER until 2017 and BTOR2,
 word level, from 2019 on, so `bridges/btor2` starts where `bridges/aiger`

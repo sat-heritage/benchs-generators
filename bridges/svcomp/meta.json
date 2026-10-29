@@ -1,0 +1,75 @@
+{
+  "kind": "bridge",
+  "name": "SV-COMP bridge",
+  "authors": "Daniel Kroening and Edmund Clarke for CBMC, with the CBMC contributors since; the verification tasks are by the contributors of SV-Benchmarks, collected by Dirk Beyer",
+  "authors_source": "the LICENSE of diffblue/cbmc and the release notes of cbmc-6.11.0",
+  "year": 2025,
+  "competitions": [
+    "Competition on Software Verification, SV-COMP, whose verification tasks this encodes"
+  ],
+  "language": "C++",
+  "license": "BSD-4-Clause",
+  "license_note": "CBMC's licence allows the binary to travel, provided the notice travels with it and the acknowledgement is displayed. The image keeps the licence text, and the acknowledgement is this: this product includes software developed by Daniel Kroening, Edmund Clarke, Computer Science Department, University of Oxford, Computer Science Department, Carnegie Mellon University.",
+  "publish_image": true,
+  "source_repo": "https://github.com/diffblue/cbmc.git",
+  "source_commit": "820ff0f555b43fb78e0cd9332e498461bd14244b",
+  "source_url": "https://github.com/diffblue/cbmc/releases/download/cbmc-6.11.0/ubuntu-24.04-cbmc-6.11.0-Linux.deb",
+  "source_sha256": "b3721aa541038384d7801ea3aeabbcddc3e8845ac8f1cbff637cf8dec7481ac8",
+  "image": "satex-gen/svcomp:2025",
+  "usage": "svcomp-bridge task K TASK.yml | svcomp-bridge unwind K FILE.c ... | svcomp-bridge info TASK.yml | svcomp-bridge verdict K TASK.yml",
+  "seed": "none: a bridge encodes a given program, it invents nothing",
+  "notes": "the competition of software verification, where the artefact is a C program rather than a circuit or a model. A task is a C file and a .yml beside it naming the property, the data model and the verdict the organisers expect; CBMC unwinds every loop and every recursive call at most k times, bit blasts the C semantics, and writes the formula with --dimacs. The bound k is what makes the family scale: on sum01-1 of the loops family it goes from 1554 clauses at k=2 to 1824 at 5, 2332 at 10, 3339 at 20 and 5719 at 40. Two things this bridge decides and the competition does not. CBMC dropped --propertyfile when it stopped competing, so the property is translated into the checks CBMC still has, starting from --no-standard-checks so that the formula asks what the task declared and nothing more; the translation is written out in the script, property by property. And the unwinding assertions are left off, so the formula is the bounded question rather than the question whether the bound sufficed. Two properties are refused outright with exit 3: termination, which no bounded unwinding expresses, and no-data-race, for which CBMC has no check. The verdict mode is what keeps the translation honest: it answers the same question with CBMC's own solver, and the answer has to agree with the verdict the task declares.",
+  "collections": {
+    "svcomp": "the C verification tasks of SV-COMP 2025, encoded at a bound k"
+  },
+  "samples": [
+    {
+      "args": [
+        "task",
+        "5",
+        "loops/sum01-1.yml"
+      ],
+      "upstream": {
+        "collection": "svcomp",
+        "dir": "sv-benchmarks/c"
+      },
+      "label": "sum01-1 of the loops family, no-overflow, bound 5"
+    },
+    {
+      "args": [
+        "task",
+        "10",
+        "loops/sum01-1.yml"
+      ],
+      "upstream": {
+        "collection": "svcomp",
+        "dir": "sv-benchmarks/c"
+      },
+      "label": "sum01-1 of the loops family, no-overflow, bound 10"
+    },
+    {
+      "args": [
+        "task",
+        "20",
+        "loops/sum01-1.yml"
+      ],
+      "upstream": {
+        "collection": "svcomp",
+        "dir": "sv-benchmarks/c"
+      },
+      "label": "sum01-1 of the loops family, no-overflow, bound 20"
+    },
+    {
+      "args": [
+        "task",
+        "40",
+        "loops/sum01-1.yml"
+      ],
+      "upstream": {
+        "collection": "svcomp",
+        "dir": "sv-benchmarks/c"
+      },
+      "label": "sum01-1 of the loops family, no-overflow, bound 40"
+    }
+  ]
+}

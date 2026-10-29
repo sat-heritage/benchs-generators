@@ -1,0 +1,169 @@
+{
+ "bound": 10,
+ "what": "A bridge whose upstream publishes no formulas has no reference instance to compare a hash against, so what is checked here is the question the formula asks. Every task of SV-COMP declares the verdict the organisers expect; the bridge's verdict mode puts the same question, with the same property translation and the same bound, to CBMC's own solver. An answer of unsatisfiable on a task expected to hold, or satisfiable on one expected to fail, is the formula asking what the competition asked.",
+ "caveat": "A bound is a bound: a task expected to fail may still come out unsatisfiable because ten unwindings are not enough to reach the violation, which is a true answer to a smaller question and is recorded as such rather than as an agreement. CBMC's own solver answers here; a formula written out and given to a SAT solver is the same question in another file.",
+ "image": "satex-gen/svcomp:2025",
+ "rows": [
+  {
+   "task": "bitvector/byte_add_1-1.yml",
+   "property": "unreach-call",
+   "expected": "true",
+   "cbmc": "UNSATISFIABLE",
+   "agreement": "agrees",
+   "variables": 2986,
+   "clauses": 7088,
+   "formula": "written"
+  },
+  {
+   "task": "bitvector/byte_add_1-2.yml",
+   "property": "no-overflow",
+   "expected": "false",
+   "cbmc": "SATISFIABLE",
+   "agreement": "agrees",
+   "variables": 3139,
+   "clauses": 7471,
+   "formula": "written"
+  },
+  {
+   "task": "bitvector/byte_add-1.yml",
+   "property": "unreach-call",
+   "expected": "false",
+   "cbmc": "SATISFIABLE",
+   "agreement": "agrees",
+   "variables": 3735,
+   "clauses": 9333,
+   "formula": "written"
+  },
+  {
+   "task": "bitvector/byte_add_2-1.yml",
+   "property": "no-overflow",
+   "expected": "false",
+   "cbmc": "SATISFIABLE",
+   "agreement": "agrees",
+   "variables": 3234,
+   "clauses": 7775,
+   "formula": "written"
+  },
+  {
+   "task": "loops/array-1.yml",
+   "property": "unreach-call",
+   "expected": "true",
+   "cbmc": "UNSATISFIABLE",
+   "agreement": "agrees",
+   "variables": 456,
+   "clauses": 435,
+   "formula": "written"
+  },
+  {
+   "task": "loops/array-2.yml",
+   "property": "unreach-call",
+   "expected": "false",
+   "cbmc": "SATISFIABLE",
+   "agreement": "agrees",
+   "variables": 456,
+   "clauses": 435,
+   "formula": "written"
+  },
+  {
+   "task": "loops/bubble_sort-1.yml",
+   "property": "valid-memsafety",
+   "expected": "false",
+   "cbmc": "UNDECIDED",
+   "agreement": "undecided",
+   "variables": null,
+   "clauses": null,
+   "formula": "none: the encoding did not finish within two minutes either",
+   "note": "CBMC did not finish within the two minutes this check allows, so nothing is claimed either way"
+  },
+  {
+   "task": "locks/test_locks_10.yml",
+   "property": "unreach-call",
+   "expected": "true",
+   "cbmc": "UNSATISFIABLE",
+   "agreement": "agrees",
+   "variables": 47345,
+   "clauses": 201909,
+   "formula": "written"
+  },
+  {
+   "task": "locks/test_locks_11.yml",
+   "property": "unreach-call",
+   "expected": "true",
+   "cbmc": "UNSATISFIABLE",
+   "agreement": "agrees",
+   "variables": 55487,
+   "clauses": 237988,
+   "formula": "written"
+  },
+  {
+   "task": "recursive-simple/afterrec-1.yml",
+   "property": "unreach-call",
+   "expected": "false",
+   "cbmc": "SATISFIABLE",
+   "agreement": "agrees",
+   "variables": null,
+   "clauses": null,
+   "formula": "none: no clauses left after simplification"
+  },
+  {
+   "task": "recursive-simple/afterrec_2calls-1.yml",
+   "property": "unreach-call",
+   "expected": "false",
+   "cbmc": "SATISFIABLE",
+   "agreement": "agrees",
+   "variables": null,
+   "clauses": null,
+   "formula": "none: no clauses left after simplification"
+  },
+  {
+   "task": "eca-rers2012/Problem01_label00.yml",
+   "property": "unreach-call",
+   "expected": "true",
+   "cbmc": "UNSATISFIABLE",
+   "agreement": "agrees",
+   "variables": 26284,
+   "clauses": 164120,
+   "formula": "written"
+  },
+  {
+   "task": "eca-rers2012/Problem01_label01.yml",
+   "property": "unreach-call",
+   "expected": "true",
+   "cbmc": "UNSATISFIABLE",
+   "agreement": "agrees",
+   "variables": 26216,
+   "clauses": 162437,
+   "formula": "written"
+  },
+  {
+   "task": "ntdrivers-simplified/cdaudio_simpl1.cil-1.yml",
+   "property": "no-overflow",
+   "expected": "false",
+   "cbmc": "SATISFIABLE",
+   "agreement": "agrees",
+   "variables": 76932,
+   "clauses": 146069,
+   "formula": "written"
+  },
+  {
+   "task": "floats-cdfpl/newton_1_1.yml",
+   "property": "unreach-call",
+   "expected": "true",
+   "cbmc": "UNSATISFIABLE",
+   "agreement": "agrees",
+   "variables": 57049,
+   "clauses": 260980,
+   "formula": "written"
+  },
+  {
+   "task": "floats-cdfpl/newton_1_2.yml",
+   "property": "unreach-call",
+   "expected": "true",
+   "cbmc": "UNSATISFIABLE",
+   "agreement": "agrees",
+   "variables": 57049,
+   "clauses": 260980,
+   "formula": "written"
+  }
+ ]
+}

@@ -310,6 +310,9 @@ ROUTES = [
     ("A hardware model in BTOR2, the format since HWMCC 2019", "ready",
      "bridges/btor2: bit blasted by btor2aiger, then unrolled and encoded as an AIG",
      'docker run --rm -v "$PWD:/data" satex-gen/btor2:2026 unroll 20 model.btor2 > mine.cnf'),
+    ("A C program with an assertion, or a whole SV-COMP verification task", "ready",
+     "bridges/svcomp: CBMC unwinds every loop k times, bit blasts the C semantics and writes the formula",
+     'docker run --rm -v "$PWD:/data" satex-gen/svcomp:2025 unwind 20 myprogram.c > mine.cnf'),
     ("A bit-vector formula in SMT-LIB", "partly",
      "the circuits of the SMT-LIB benchmarks are already there; encoding your own formula needs Boolector or "
      "Bitwuzla in the chain, as the CRUX recipe does", ""),
@@ -451,6 +454,41 @@ tar xf {esc(dist.get('asset', ''))}</pre>
     return "".join(out)
 
 
+def verdict_section(g: dict) -> str:
+    """What a bridge is checked against when nobody published its formulas.
+
+    A generator is checked by regenerating a known instance and comparing the
+    hash.  A bridge onto a competition that distributes programs rather than
+    formulas has nothing to compare, so what is checked is the question: the
+    task declares the verdict its organisers expect, and the formula has to
+    agree with it.
+    """
+    path = ROOT_DIR / g["dirpath"] / "verdicts.json"
+    if not path.exists():
+        return ""
+    d = json.load(open(path))
+    rows = "".join(
+        f"""<tr><td>{esc(r['task'])}</td><td>{esc(r['property'])}</td>
+<td>{esc(r['expected'])}</td><td>{esc(r['cbmc'])}</td>
+<td>{'<span class="badge ok">agrees</span>' if r['agreement'] == 'agrees'
+     else '<span class="badge warn">' + esc(r['agreement']) + '</span>'}
+{(' <span class="tag">' + esc(r['note']) + '</span>') if r.get('note') else ''}</td>
+<td class="num">{r['clauses']:,}</td></tr>""" if r.get("clauses") else
+        f"""<tr><td>{esc(r['task'])}</td><td>{esc(r['property'])}</td>
+<td>{esc(r['expected'])}</td><td>{esc(r['cbmc'])}</td>
+<td>{'<span class="badge ok">agrees</span>' if r['agreement'] == 'agrees'
+     else '<span class="badge warn">' + esc(r['agreement']) + '</span>'}</td>
+<td class="muted-inline">{esc(r['formula'])}</td></tr>"""
+        for r in d["rows"])
+    agree = sum(1 for r in d["rows"] if r["agreement"] == "agrees")
+    return f"""<div class="section"><h2>Does the formula ask the right question?</h2>
+<p class="legend">{esc(d['what'])}</p>
+<div class="stats"><div class="stat"><div class="n">{agree} of {len(d['rows'])}</div><div class="l">agree with the competition's verdict</div></div>
+<div class="stat"><div class="n">{d['bound']}</div><div class="l">unwindings, the bound used here</div></div></div>
+<div class="tablewrap"><table><tr><th>Task</th><th>Property encoded</th><th>Expected</th><th>Answer at this bound</th><th></th><th class="num">Clauses</th></tr>{rows}</table></div>
+<p class="legend">{esc(d['caveat'])}</p></div>"""
+
+
 def generator_page(g: dict, rankings: dict) -> str:
     meta = [("Authors", g.get("authors")), ("Source of the author list", g.get("authors_source")),
             ("Language", g.get("language")), ("Licence", g.get("license")),
@@ -483,9 +521,9 @@ def generator_page(g: dict, rankings: dict) -> str:
 <div class="section"><h2>What it is</h2><dl>{dl}</dl></div>
 <div class="section"><h2>Build it and run it</h2><pre>{esc(build)}</pre>
 <p class="legend">{"The image can be published: the licence allows it." if g.get('publish_image') else "The image is not published: the generator declares no licence, so only this recipe is distributed. Building it locally is fine."}</p></div>
-{pack_section(g)}{samples_section(g)}
+{pack_section(g)}{samples_section(g)}{verdict_section(g)}
 {f'''<div class="section"><h2>Reference instances</h2><p class="legend">{esc(summary)}. Each line regenerates one known instance, from a competition or from the set its author published; the level says how close the result is. See <a href="../verification.html">verification</a>.</p>
-<div class="tablewrap"><table><tr><th>Instance</th><th>Family</th><th>Command arguments</th><th>GBD hash</th><th>Level</th></tr>{"".join(rows)}</table></div></div>''' if rows else '''<div class="section"><h2>No reference instance to check against</h2>
+<div class="tablewrap"><table><tr><th>Instance</th><th>Family</th><th>Command arguments</th><th>GBD hash</th><th>Level</th></tr>{"".join(rows)}</table></div></div>''' if rows else '' if verdict_section(g) else '''<div class="section"><h2>No reference instance to check against</h2>
 <p class="legend">No competition published the formulas this recipe produces, so there is nothing whose hash we
 could compare ours to: what is checked here is the chain itself, by rebuilding it from pinned sources and
 producing the samples above twice. The formulas we distribute are in the pack.</p></div>'''}

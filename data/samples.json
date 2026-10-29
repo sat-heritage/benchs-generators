@@ -1023,5 +1023,67 @@
    "clauses": 21110,
    "reproducible": true
   }
+ ],
+ "svcomp": [
+  {
+   "label": "sum01-1 of the loops family, no-overflow, bound 5",
+   "args": [
+    "task",
+    "5",
+    "loops/sum01-1.yml"
+   ],
+   "upstream": {
+    "collection": "svcomp",
+    "dir": "sv-benchmarks/c"
+   },
+   "variables": 729,
+   "clauses": 1824,
+   "reproducible": true
+  },
+  {
+   "label": "sum01-1 of the loops family, no-overflow, bound 10",
+   "args": [
+    "task",
+    "10",
+    "loops/sum01-1.yml"
+   ],
+   "upstream": {
+    "collection": "svcomp",
+    "dir": "sv-benchmarks/c"
+   },
+   "variables": 945,
+   "clauses": 2332,
+   "reproducible": true
+  },
+  {
+   "label": "sum01-1 of the loops family, no-overflow, bound 20",
+   "args": [
+    "task",
+    "20",
+    "loops/sum01-1.yml"
+   ],
+   "upstream": {
+    "collection": "svcomp",
+    "dir": "sv-benchmarks/c"
+   },
+   "variables": 1349,
+   "clauses": 3339,
+   "reproducible": true
+  },
+  {
+   "label": "sum01-1 of the loops family, no-overflow, bound 40",
+   "args": [
+    "task",
+    "40",
+    "loops/sum01-1.yml"
+   ],
+   "upstream": {
+    "collection": "svcomp",
+    "dir": "sv-benchmarks/c"
+   },
+   "variables": 2179,
+   "clauses": 5719,
+   "reproducible": true
+  }
  ]
 }
