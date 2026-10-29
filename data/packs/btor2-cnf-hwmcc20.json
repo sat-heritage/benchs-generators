@@ -1,0 +1,628 @@
+{
+ "pack": "btor2-cnf-hwmcc20",
+ "title": "The HWMCC 2019 and 2020 models as CNF, examples",
+ "why": "The hardware competition moved from AIGER to BTOR2 in 2019, and nobody distributes those models as formulas. This pack is the bit-vector models of the two editions in CNF, at three depths, produced by one pinned chain: btor2aiger bit blasts, aigmove and aigunroll expand, and the plain Tseitin encoder of the aiger examples writes the formula \u2014 the same encoder the AIGER pack uses, so the two sit side by side.",
+ "generator": "btor2",
+ "image": "satex-gen/btor2:2026",
+ "instances": 30,
+ "bytes": 3070412,
+ "linked_to_gbd": 0,
+ "not_encodable": 9,
+ "files": [
+  {
+   "file": "intersymbol_analog_estimation_convergence-k5.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "intersymbol_analog_estimation_convergence.btor"
+   }
+  },
+  {
+   "file": "intersymbol_analog_estimation_convergence-k10.cnf.xz",
+   "bytes": 164720,
+   "hash": "0421185ffd742de0c576d03f744f71ae",
+   "isohash2": "11f601f6094538f5",
+   "variables": 23726,
+   "clauses": 70982,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "intersymbol_analog_estimation_convergence.btor"
+   }
+  },
+  {
+   "file": "intersymbol_analog_estimation_convergence-k20.cnf.xz",
+   "bytes": 327744,
+   "hash": "4eec2a83af9d66028da061fc40132d55",
+   "isohash2": "4735505389fb9e9c",
+   "variables": 48316,
+   "clauses": 144692,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "intersymbol_analog_estimation_convergence.btor"
+   }
+  },
+  {
+   "file": "ridecore-k5.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "ridecore.btor"
+   }
+  },
+  {
+   "file": "buggy_ridecore-k5.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "buggy_ridecore.btor"
+   }
+  },
+  {
+   "file": "zipcpu-busdelay-p15-k5.cnf.xz",
+   "bytes": 34564,
+   "hash": "a974247b043e57321b1f58e0d276ad14",
+   "isohash2": "fe1edf070be2581d",
+   "variables": 4782,
+   "clauses": 13214,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "zipcpu-busdelay-p15.btor"
+   }
+  },
+  {
+   "file": "zipcpu-busdelay-p15-k10.cnf.xz",
+   "bytes": 105840,
+   "hash": "80e550ae8e0b383e387e746b892c8a42",
+   "isohash2": "a8d7b9e50451b466",
+   "variables": 14487,
+   "clauses": 41204,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "zipcpu-busdelay-p15.btor"
+   }
+  },
+  {
+   "file": "zipcpu-busdelay-p15-k20.cnf.xz",
+   "bytes": 250904,
+   "hash": "2d0ff6fd7fbda3e6ee96cc1616962969",
+   "isohash2": "f13c6c8c6dacd296",
+   "variables": 33947,
+   "clauses": 97334,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "zipcpu-busdelay-p15.btor"
+   }
+  },
+  {
+   "file": "zipcpu-busdelay-p46-k5.cnf.xz",
+   "bytes": 8728,
+   "hash": "9e7d9ff5f3f6b43b0137e3a5650379bf",
+   "isohash2": "7c55af81423a648c",
+   "variables": 1304,
+   "clauses": 3164,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "zipcpu-busdelay-p46.btor"
+   }
+  },
+  {
+   "file": "zipcpu-busdelay-p46-k10.cnf.xz",
+   "bytes": 29792,
+   "hash": "778abcf0bee4da16b640f9f39f5625f8",
+   "isohash2": "47430621aa3c9e4e",
+   "variables": 4373,
+   "clauses": 11246,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "zipcpu-busdelay-p46.btor"
+   }
+  },
+  {
+   "file": "zipcpu-busdelay-p46-k20.cnf.xz",
+   "bytes": 73176,
+   "hash": "8ea02992c7d6dfb81821eac40e6e551a",
+   "isohash2": "8eb362fa4a549d32",
+   "variables": 10563,
+   "clauses": 27566,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "zipcpu-busdelay-p46.btor"
+   }
+  },
+  {
+   "file": "picorv32_mutCY_nomem-p3-k5.cnf.xz",
+   "bytes": 630816,
+   "hash": "d0e5f2f90aef477555444d8838e8422c",
+   "isohash2": "289f69eba05fa972",
+   "variables": 85122,
+   "clauses": 247397,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "picorv32_mutCY_nomem-p3.btor"
+   }
+  },
+  {
+   "file": "marlann_compute_cp_fail2-p0-k5.cnf.xz",
+   "bytes": 70752,
+   "hash": "5bdeb08f9959ff8502b7cdb0d71cf8cf",
+   "isohash2": "7bae6714d150b251",
+   "variables": 10176,
+   "clauses": 28217,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "marlann_compute_cp_fail2-p0.btor"
+   }
+  },
+  {
+   "file": "marlann_compute_cp_fail2-p0-k10.cnf.xz",
+   "bytes": 178248,
+   "hash": "11fda524043595719bcb36d8337962d6",
+   "isohash2": "7c3eccafe8d637e1",
+   "variables": 26685,
+   "clauses": 73724,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "marlann_compute_cp_fail2-p0.btor"
+   }
+  },
+  {
+   "file": "marlann_compute_cp_fail2-p0-k20.cnf.xz",
+   "bytes": 406620,
+   "hash": "03660d5fc1da694913986e2444a9bf0c",
+   "isohash2": "820c7834d2d1bb1a",
+   "variables": 60822,
+   "clauses": 168020,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "marlann_compute_cp_fail2-p0.btor"
+   }
+  },
+  {
+   "file": "marlann_compute_cp_fail1-p2-k5.cnf.xz",
+   "bytes": 8272,
+   "hash": "effd0bdfc1412a0cc363d4c5f9d279cc",
+   "isohash2": "9cf9316337a4ec80",
+   "variables": 1208,
+   "clauses": 3134,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "marlann_compute_cp_fail1-p2.btor"
+   }
+  },
+  {
+   "file": "marlann_compute_cp_fail1-p2-k10.cnf.xz",
+   "bytes": 17148,
+   "hash": "aebd291e8ca5ac97706bd86fa61f9f08",
+   "isohash2": "e596b73b95d54511",
+   "variables": 2459,
+   "clauses": 6659,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "marlann_compute_cp_fail1-p2.btor"
+   }
+  },
+  {
+   "file": "marlann_compute_cp_fail1-p2-k20.cnf.xz",
+   "bytes": 34844,
+   "hash": "7fcc332d05ce3cb64ede85397f20ef33",
+   "isohash2": "b508ae4bc3b9b9bf",
+   "variables": 5019,
+   "clauses": 13859,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "marlann_compute_cp_fail1-p2.btor"
+   }
+  },
+  {
+   "file": "vgasim_imgfifo-p093-k5.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "vgasim_imgfifo-p093.btor"
+   }
+  },
+  {
+   "file": "vgasim_imgfifo-p093-k10.cnf.xz",
+   "bytes": 88756,
+   "hash": "c55271525e5d1a45165698df1148d302",
+   "isohash2": "8731ea44614d735d",
+   "variables": 12780,
+   "clauses": 34430,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "vgasim_imgfifo-p093.btor"
+   }
+  },
+  {
+   "file": "vgasim_imgfifo-p093-k20.cnf.xz",
+   "bytes": 275652,
+   "hash": "d67d84d6b43caced17d30b14a7c04b13",
+   "isohash2": "bc5a518402362dd0",
+   "variables": 39183,
+   "clauses": 109139,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "vgasim_imgfifo-p093.btor"
+   }
+  },
+  {
+   "file": "vgasim_imgfifo-p064-k5.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "vgasim_imgfifo-p064.btor"
+   }
+  },
+  {
+   "file": "vgasim_imgfifo-p064-k10.cnf.xz",
+   "bytes": 88916,
+   "hash": "a00cac642b14b7c45943570e16323a21",
+   "isohash2": "a41b007c712a0334",
+   "variables": 12820,
+   "clauses": 34535,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "vgasim_imgfifo-p064.btor"
+   }
+  },
+  {
+   "file": "vgasim_imgfifo-p064-k20.cnf.xz",
+   "bytes": 273996,
+   "hash": "669c76f505001fcfa9bec20ec5cf8daa",
+   "isohash2": "a515ade8e77c3109",
+   "variables": 39303,
+   "clauses": 109454,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "vgasim_imgfifo-p064.btor"
+   }
+  },
+  {
+   "file": "simple_alu-k5.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "simple_alu.btor"
+   }
+  },
+  {
+   "file": "simple_alu-k10.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "simple_alu.btor"
+   }
+  },
+  {
+   "file": "simple_alu-k20.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "simple_alu.btor"
+   }
+  },
+  {
+   "file": "stack-p2-k5.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "stack-p2.btor"
+   }
+  },
+  {
+   "file": "stack-p2-k10.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "stack-p2.btor"
+   }
+  },
+  {
+   "file": "stack-p2-k20.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "stack-p2.btor"
+   }
+  }
+ ],
+ "linked": [],
+ "skipped": [
+  {
+   "name": "ridecore-k10.cnf",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "ridecore.btor"
+   },
+   "reason": "over the time limit of 300 seconds"
+  },
+  {
+   "name": "ridecore-k20.cnf",
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "ridecore.btor"
+   },
+   "reason": "over the time limit of 300 seconds"
+  },
+  {
+   "name": "buggy_ridecore-k10.cnf",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "buggy_ridecore.btor"
+   },
+   "reason": "over the time limit of 300 seconds"
+  },
+  {
+   "name": "buggy_ridecore-k20.cnf",
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "buggy_ridecore.btor"
+   },
+   "reason": "over the time limit of 300 seconds"
+  },
+  {
+   "name": "picorv32_mutCY_nomem-p3-k10.cnf",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "clauses": 945596,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "picorv32_mutCY_nomem-p3-k20.cnf",
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "clauses": 2343866,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "picorv32_mutCY_nomem-p0-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 309644,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "picorv32_mutCY_nomem-p0-k10.cnf",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "clauses": 1008779,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "picorv32_mutCY_nomem-p0-k20.cnf",
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "clauses": 2407049,
+   "reason": "over the limit of 300000 clauses"
+  }
+ ]
+}

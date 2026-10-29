@@ -1,0 +1,607 @@
+{
+ "pack": "hwmcc10-cnf",
+ "title": "The HWMCC 2010 circuits as CNF",
+ "why": "A hardware verification competition distributes circuits, not formulas. Every SAT solver author who wants to work on them has to rebuild the same unrolling and the same encoding, and the handful of depths the SAT competitions kept are not enough to study how a solver scales with the depth. This pack is that collection in CNF, at several depths, produced by one pinned chain.",
+ "generator": "aiger/hwmcc10",
+ "image": "satex-gen/aiger:2021",
+ "instances": 33,
+ "bytes": 3498120,
+ "linked_to_gbd": 0,
+ "not_encodable": 3,
+ "files": [
+  {
+   "file": "pdtvisgray1-k5.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisgray1.aig"
+   }
+  },
+  {
+   "file": "pdtvisgray1-k10.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisgray1.aig"
+   }
+  },
+  {
+   "file": "pdtvisgray1-k20.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisgray1.aig"
+   }
+  },
+  {
+   "file": "eijks510-k5.cnf.xz",
+   "bytes": 8100,
+   "hash": "e825383768b1de69d160459de14ce8c6",
+   "isohash2": "0e20f6b2348dd725",
+   "variables": 983,
+   "clauses": 2846,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "eijks510.aig"
+   }
+  },
+  {
+   "file": "eijks510-k10.cnf.xz",
+   "bytes": 30464,
+   "hash": "821754214826798df0cb040579191a1d",
+   "isohash2": "92985eb7031457fa",
+   "variables": 3618,
+   "clauses": 10466,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "eijks510.aig"
+   }
+  },
+  {
+   "file": "eijks510-k20.cnf.xz",
+   "bytes": 73836,
+   "hash": "c08db519bd80fdd692b06366921b7b24",
+   "isohash2": "84ffd346f1c6fc54",
+   "variables": 8888,
+   "clauses": 25706,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "eijks510.aig"
+   }
+  },
+  {
+   "file": "abp4p2tt-k5.cnf.xz",
+   "bytes": 14460,
+   "hash": "efd983c653077608484a85cb704441c4",
+   "isohash2": "19e229a87f644ccc",
+   "variables": 2129,
+   "clauses": 5540,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "abp4p2tt.aig"
+   }
+  },
+  {
+   "file": "abp4p2tt-k10.cnf.xz",
+   "bytes": 44016,
+   "hash": "d37a83a4cf9bb0c53accaf10f8a81322",
+   "isohash2": "9688c6f5e0b79eac",
+   "variables": 6144,
+   "clauses": 16691,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "abp4p2tt.aig"
+   }
+  },
+  {
+   "file": "abp4p2tt-k20.cnf.xz",
+   "bytes": 108596,
+   "hash": "e5ba59e3763b3187abca2c382c19af3e",
+   "isohash2": "62cda01c2abd1c72",
+   "variables": 14944,
+   "clauses": 41321,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "abp4p2tt.aig"
+   }
+  },
+  {
+   "file": "pdtvisheap00-k5.cnf.xz",
+   "bytes": 16564,
+   "hash": "dc4fadce2b673a71ed5d619c21f06dc6",
+   "isohash2": "76f9a3614a741f92",
+   "variables": 2084,
+   "clauses": 6203,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisheap00.aig"
+   }
+  },
+  {
+   "file": "pdtvisheap00-k10.cnf.xz",
+   "bytes": 58640,
+   "hash": "b235c8eadb99a671cf4a570ef5e3a410",
+   "isohash2": "bc77d529d2ad4d9e",
+   "variables": 7824,
+   "clauses": 23363,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisheap00.aig"
+   }
+  },
+  {
+   "file": "pdtvisheap00-k20.cnf.xz",
+   "bytes": 139928,
+   "hash": "415690a41942d50abe7c7c94ca65a6da",
+   "isohash2": "ecf0ccbb71ddcf0a",
+   "variables": 19304,
+   "clauses": 57683,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisheap00.aig"
+   }
+  },
+  {
+   "file": "bobsmnut2-k5.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "bobsmnut2.aig"
+   }
+  },
+  {
+   "file": "bobsmnut2-k10.cnf.xz",
+   "bytes": 10136,
+   "hash": "f3cc7c6fdfc84d05211e222922efc68f",
+   "isohash2": "557cfe43b0cebab8",
+   "variables": 1182,
+   "clauses": 3449,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "bobsmnut2.aig"
+   }
+  },
+  {
+   "file": "bobsmnut2-k20.cnf.xz",
+   "bytes": 40100,
+   "hash": "9d426daef37d090bdd1c712052a1516f",
+   "isohash2": "f9a578dcfa7ec053",
+   "variables": 4722,
+   "clauses": 13889,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "bobsmnut2.aig"
+   }
+  },
+  {
+   "file": "pdtswvtms10x8p1-k5.cnf.xz",
+   "bytes": 7844,
+   "hash": "aeeabd22bf44d46efa69eccf81127708",
+   "isohash2": "925b73fe28ea48e9",
+   "variables": 1063,
+   "clauses": 3092,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtswvtms10x8p1.aig"
+   }
+  },
+  {
+   "file": "pdtswvtms10x8p1-k10.cnf.xz",
+   "bytes": 71128,
+   "hash": "6b04c2c70dd443d51435accb7fc13095",
+   "isohash2": "10bc163d7e403c7d",
+   "variables": 10066,
+   "clauses": 29816,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtswvtms10x8p1.aig"
+   }
+  },
+  {
+   "file": "pdtswvtms10x8p1-k20.cnf.xz",
+   "bytes": 207576,
+   "hash": "4de3a77ebbb11251e9c707c4a80f4f05",
+   "isohash2": "693cceba2e5e7747",
+   "variables": 31558,
+   "clauses": 93722,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtswvtms10x8p1.aig"
+   }
+  },
+  {
+   "file": "pdtvisvsar31-k5.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisvsar31.aig"
+   }
+  },
+  {
+   "file": "pdtvisvsar31-k10.cnf.xz",
+   "bytes": 4428,
+   "hash": "5c65da88d6f3cedefde9f5ae865d9af1",
+   "isohash2": "4340767612bbb040",
+   "variables": 538,
+   "clauses": 1568,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisvsar31.aig"
+   }
+  },
+  {
+   "file": "pdtvisvsar31-k20.cnf.xz",
+   "bytes": 26408,
+   "hash": "9610fb5fe48e6587f8681e138c014d44",
+   "isohash2": "612e92ee34db762c",
+   "variables": 3362,
+   "clauses": 9938,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisvsar31.aig"
+   }
+  },
+  {
+   "file": "eijkbs4863-k5.cnf.xz",
+   "bytes": 95940,
+   "hash": "e3e520cb44c5a5a9e4727adaa996363d",
+   "isohash2": "4be990b9e79c3a2c",
+   "variables": 12354,
+   "clauses": 36491,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "eijkbs4863.aig"
+   }
+  },
+  {
+   "file": "eijkbs4863-k10.cnf.xz",
+   "bytes": 217612,
+   "hash": "e71d053e82f8fac1c4016909d937fd13",
+   "isohash2": "44bdf552aa63cd8a",
+   "variables": 28814,
+   "clauses": 85136,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "eijkbs4863.aig"
+   }
+  },
+  {
+   "file": "eijkbs4863-k20.cnf.xz",
+   "bytes": 454016,
+   "hash": "8d2fdc5623c9988fede371b640fa4253",
+   "isohash2": "8cb8087878df5ff6",
+   "variables": 61734,
+   "clauses": 182426,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "eijkbs4863.aig"
+   }
+  },
+  {
+   "file": "pdtswvqis8x8p2-k5.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtswvqis8x8p2.aig"
+   }
+  },
+  {
+   "file": "pdtswvqis8x8p2-k10.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtswvqis8x8p2.aig"
+   }
+  },
+  {
+   "file": "pdtswvqis8x8p2-k20.cnf.xz",
+   "bytes": 320952,
+   "hash": "81181754db3d28b6ab40daeb3381f8a2",
+   "isohash2": "79a4923a25709c06",
+   "variables": 46746,
+   "clauses": 139796,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtswvqis8x8p2.aig"
+   }
+  },
+  {
+   "file": "pdtvisvsa16a09-k5.cnf.xz",
+   "bytes": 84,
+   "hash": "673c3d2399f86574afca269499120ad5",
+   "isohash2": "7da0c9d42afb674a",
+   "variables": 1,
+   "clauses": 2,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisvsa16a09.aig"
+   }
+  },
+  {
+   "file": "pdtvisvsa16a09-k10.cnf.xz",
+   "bytes": 25620,
+   "hash": "cf72221227fc88310d35bfaa3c7bb084",
+   "isohash2": "1cfa315aff2763a9",
+   "variables": 3209,
+   "clauses": 9488,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisvsa16a09.aig"
+   }
+  },
+  {
+   "file": "pdtvisvsa16a09-k20.cnf.xz",
+   "bytes": 89716,
+   "hash": "28d4c01f0047e9de5aca730659656d6d",
+   "isohash2": "1908b47cfcbea5d9",
+   "variables": 11521,
+   "clauses": 34232,
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisvsa16a09.aig"
+   }
+  },
+  {
+   "file": "139462p22-k5.cnf.xz",
+   "bytes": 271592,
+   "hash": "8c67076b6818354e3970a5f972071fc8",
+   "isohash2": "a8a8cfb5ac685d17",
+   "variables": 36087,
+   "clauses": 104387,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "139462p22.aig"
+   }
+  },
+  {
+   "file": "139462p22-k10.cnf.xz",
+   "bytes": 592636,
+   "hash": "6bad5e605bfa54c592bbbf52d9196ad7",
+   "isohash2": "99871cb938979040",
+   "variables": 78868,
+   "clauses": 228800,
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "139462p22.aig"
+   }
+  },
+  {
+   "file": "139464p22-k5.cnf.xz",
+   "bytes": 567140,
+   "hash": "8c8ce00a13e6eac972a2c4b1d588755f",
+   "isohash2": "67c2aea8e698b76d",
+   "variables": 80073,
+   "clauses": 233645,
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "139464p22.aig"
+   }
+  }
+ ],
+ "linked": [],
+ "skipped": [
+  {
+   "name": "139462p22-k20.cnf",
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "clauses": 477650,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "139464p22-k10.cnf",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "clauses": 511598,
+   "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "139464p22-k20.cnf",
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "clauses": 1067528,
+   "reason": "over the limit of 300000 clauses"
+  }
+ ]
+}

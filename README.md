@@ -431,6 +431,30 @@ freeLunch failing on a task the translator accepted; those are recorded one by
 one in the indexes. The first run of these packs reported 515 refusals in one
 undifferentiated heap, which told nobody anything.
 
+### The packs of the hardware competitions
+
+Two packs, one per format: the circuits of 2010 as AIGER, and the bit-vector
+models of 2019 and 2020 as BTOR2, each at depths 5, 10 and 20, nothing past 300
+thousand clauses and five minutes per instance.
+
+| Edition | Instances | Left out | Size |
+|---|---|---|---|
+| HWMCC 2010, AIGER | 33 from 12 circuits | 3 over the clause limit | 3.5 MB |
+| HWMCC 2019 and 2020, BTOR2 | 30 from 12 models | 5 over the limit, 4 over time | 3.1 MB |
+
+```sh
+curl -LO https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/hwmcc10-cnf.tar
+curl -LO https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/btor2-cnf-hwmcc20.tar
+```
+
+Both go through the same Tseitin encoder, so a formula of 2010 and one of 2020
+can be compared without wondering whether the encoding moved. The circuits of
+the 2010 pack are taken evenly along the size order of the 758 in the
+collection: built from the twelve smallest, as the first version of that spec
+said, the pack came to 0.1 MB of trivia. The BTOR2 pack covers the bit-vector
+track only — `btor2aiger` cannot bit blast an unbounded array, and its 315 array
+models stay out.
+
 ### The packs of the constraint competition
 
 Five packs: one per four editions of the MiniZinc Challenge from 2008 to 2023,

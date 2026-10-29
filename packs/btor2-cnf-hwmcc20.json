@@ -2,7 +2,7 @@
   "pack": "btor2-cnf-hwmcc20",
   "title": "The HWMCC 2019 and 2020 models as CNF, examples",
   "why": "The hardware competition moved from AIGER to BTOR2 in 2019, and nobody distributes those models as formulas. This pack is the bit-vector models of the two editions in CNF, at three depths, produced by one pinned chain: btor2aiger bit blasts, aigmove and aigunroll expand, and the plain Tseitin encoder of the aiger examples writes the formula \u2014 the same encoder the AIGER pack uses, so the two sit side by side.",
-  "status": "proposed",
+  "status": "published",
   "generator": "btor2",
   "items": {
     "kind": "grid",
@@ -29,9 +29,34 @@
   "timeout_seconds": 300,
   "nature": "examples",
   "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by raising the depth or picking another model",
+  "distribution": {
+    "github_release": "packs-2026",
+    "asset": "btor2-cnf-hwmcc20.tar",
+    "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/btor2-cnf-hwmcc20.tar",
+    "sha256": "dbd10fff3716c43a038bdded2934b42c3741a575232a54b2f5e0411b021877d8",
+    "zenodo": null
+  },
   "skip_reasons": {
     "3": "btor2aiger could not bit blast the model, which is what an array model gets",
     "4": "the encoder refused the unrolled circuit"
   },
-  "regenerate": "tools/fetch_upstream.py hwmcc20 && docker run --rm -v \"$CACHE/hwmcc20/files/btor2/bv/<year>/<submitter>:/data:ro\" satex-gen/btor2:2026 unroll <depth> <model>.btor"
+  "regenerate": "tools/fetch_upstream.py hwmcc20 && docker run --rm -v \"$CACHE/hwmcc20/files/btor2/bv/<year>/<submitter>:/data:ro\" satex-gen/btor2:2026 unroll <depth> <model>.btor",
+  "built": {
+    "instances": 30,
+    "models": 12,
+    "bytes": 3070412,
+    "archive_bytes": 3112960,
+    "clauses": {
+      "min": 2,
+      "median": 12230,
+      "max": 247397
+    },
+    "left_out": {
+      "over the clause limit": 5,
+      "over the time limit": 4
+    },
+    "chain": "btor2aiger bit blasts, aigmove and aigunroll expand over k time frames, then poormanaigtocnf writes the formula",
+    "sha256": "dbd10fff3716c43a038bdded2934b42c3741a575232a54b2f5e0411b021877d8"
+  },
+  "coverage_note": "30 instances from twelve models at depths 5, 10 and 20, two models from each submitter and year of the bit-vector track. Nine are left out, all by our own limits: five past 300 thousand clauses and four past five minutes, which is what the real designs of these editions cost \u2014 ridecore, picorv32 and zipcpu are not toy circuits. The array track is not in the pack at all: btor2aiger cannot bit blast an unbounded array, and the bridge says so rather than guessing."
 }

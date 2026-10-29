@@ -1,8 +1,8 @@
 {
   "pack": "hwmcc10-cnf",
-  "title": "The HWMCC 2010 circuits as CNF",
+  "title": "The HWMCC 2010 circuits as CNF, examples",
   "why": "A hardware verification competition distributes circuits, not formulas. Every SAT solver author who wants to work on them has to rebuild the same unrolling and the same encoding, and the handful of depths the SAT competitions kept are not enough to study how a solver scales with the depth. This pack is that collection in CNF, at several depths, produced by one pinned chain.",
-  "status": "proposed",
+  "status": "published",
   "generator": "aiger/hwmcc10",
   "items": {
     "kind": "grid",
@@ -24,7 +24,10 @@
   "exclude_known": true,
   "permission": "to ask: the circuits are distributed by the competition, the CNF is derived from them by a pinned toolchain",
   "distribution": {
-    "github_release": null,
+    "github_release": "packs-2026",
+    "asset": "hwmcc10-cnf.tar",
+    "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/hwmcc10-cnf.tar",
+    "sha256": "99f6a3da459defe2647ba0ca2148f92be4e6ec6cbf067c1de8b8119b9eba536e",
     "zenodo": null
   },
   "solver_note": "the depths worth keeping are the ones around the transition between unsatisfiable and satisfiable, which a bounded model checker finds; a blind grid produces mostly trivial or hopeless instances",
@@ -35,5 +38,22 @@
   "skip_reasons": {
     "4": "the encoder refused the unrolled circuit"
   },
-  "regenerate": "tools/fetch_upstream.py hwmcc10 && docker run --rm -v \"$CACHE/hwmcc10/files:/data:ro\" satex-gen/aiger:2021 unroll <depth> <model>.aig"
+  "regenerate": "tools/fetch_upstream.py hwmcc10 && docker run --rm -v \"$CACHE/hwmcc10/files:/data:ro\" satex-gen/aiger:2021 unroll <depth> <model>.aig",
+  "built": {
+    "instances": 33,
+    "models": 12,
+    "bytes": 3498120,
+    "archive_bytes": 3543040,
+    "clauses": {
+      "min": 2,
+      "median": 10466,
+      "max": 233645
+    },
+    "left_out": {
+      "over the clause limit": 3
+    },
+    "chain": "the AIGER toolbox: aigunroll over k time frames, then poormanaigtocnf, the plain Tseitin encoder of the aiger examples",
+    "sha256": "99f6a3da459defe2647ba0ca2148f92be4e6ec6cbf067c1de8b8119b9eba536e"
+  },
+  "coverage_note": "33 instances from twelve circuits at depths 5, 10 and 20, the circuits taken evenly along the size order of the 758 in the collection rather than from its small end, where the models are toys: built from the twelve smallest, the same pack came to 0.1 MB of trivia. Three instances are past the clause limit, which is our choice. The smallest formula here still has two clauses, since a spread reaches the small circuits too; the largest has 233 thousand."
 }
