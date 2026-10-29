@@ -39,6 +39,7 @@ UPSTREAM = {}
 SAMPLES = {}
 ROOT_DIR = Path(".")
 SOLVERS = {}
+PACKS = []
 
 
 def load(root: Path):
@@ -49,6 +50,10 @@ def load(root: Path):
     if (root / "data" / "solvers.json").exists():
         SOLVERS.update(json.load(open(root / "data" / "solvers.json"))["years"])
     UPSTREAM.update(catalogue.collections(root))
+    for spec_path in sorted((root / "packs").glob("*.json")):
+        spec = json.load(open(spec_path))
+        index_path = root / "data" / "packs" / f"{spec['pack']}.json"
+        PACKS.append((spec, json.load(open(index_path)) if index_path.exists() else None))
     rankings = json.load(open(root / "data" / "rankings.json"))
     fam_of = {h: tuple(v) for h, v in rankings["instance_family"].items()}
     size_of = {h: n for h, n in rankings.get("instance_file", {}).items()}
@@ -348,12 +353,8 @@ what a competition is short of, and the <a href="{REPO_URL}/issues">issues</a> a
 
 
 def packs_page() -> str:
-    specs, built = [], []
-    for spec_path in sorted((ROOT_DIR / "packs").glob("*.json")):
-        s = json.load(open(spec_path))
-        index_path = ROOT_DIR / "data" / "packs" / f"{s['pack']}.json"
-        idx = json.load(open(index_path)) if index_path.exists() else None
-        (built if s.get("status") == "published" else specs).append((s, idx))
+    built = [(s, idx) for s, idx in PACKS if s.get("status") == "published"]
+    specs = [(s, idx) for s, idx in PACKS if s.get("status") != "published"]
     rows = []
     for s, idx in built:
         dist = s.get("distribution", {})
@@ -412,6 +413,44 @@ the same formula every time.</p>
 <div class="tablewrap"><table><tr><th>Sample</th><th>Command arguments</th><th class="num">Variables</th><th class="num">Clauses</th><th></th><th></th></tr>{body}</table></div></div>"""
 
 
+def pack_section(g: dict) -> str:
+    """The formulas this recipe actually ships, instance by instance.
+
+    A pack is the only CNF this project distributes, so a recipe page that has one
+    says what is in it: the page a reader lands on is the page that must show it.
+    """
+    mine = [(s, idx) for s, idx in PACKS if s.get("generator") == g["key"] and s.get("status") == "published"]
+    out = []
+    for s, idx in mine:
+        dist, files = s.get("distribution", {}), (idx or {}).get("files", [])
+        cl = [f["clauses"] for f in files] or [0]
+        rows = "".join(
+            f"""<tr><td>{esc(f['file'].removesuffix('.cnf.xz'))}
+{(f'<span class="tag" title="' + esc(", ".join(f["aliases"])) + f'">and {len(f["aliases"])} more name' + ("s" if len(f["aliases"]) > 1 else "") + ' for this same formula</span>') if f.get('aliases') else ''}</td>
+<td><code>{esc(' '.join(f['args']))}</code></td>
+<td class="num">{f['variables']:,}</td><td class="num">{f['clauses']:,}</td>
+<td class="num">{human_size(f['bytes'])}</td>
+<td><span class="nolink">{esc(f['hash'][:12])}…</span></td></tr>"""
+            for f in sorted(files, key=lambda f: f["clauses"]))
+        skipped = (idx or {}).get("skipped", [])
+        out.append(f"""<div class="section"><h2>Formulas we distribute: {esc(s['title'])}</h2>
+<p class="legend">{esc(s.get('example_note', ''))} The whole pack is one archive, which also carries an
+<code>index.json</code> with these lines in machine form. See <a href="../packs.html">packs</a>.</p>
+<div class="stats">
+<div class="stat"><div class="n">{len(files)}</div><div class="l">formulas in the pack</div></div>
+<div class="stat"><div class="n">{((idx or {}).get('bytes', 0) / 1e6):.1f} MB</div><div class="l">compressed</div></div>
+<div class="stat"><div class="n">{min(cl):,}</div><div class="l">clauses in the smallest</div></div>
+<div class="stat"><div class="n">{max(cl):,}</div><div class="l">clauses in the largest</div></div>
+</div>
+<pre class="cmd">curl -LO {esc(dist.get('url', ''))}
+tar xf {esc(dist.get('asset', ''))}</pre>
+<div class="tablewrap"><table><tr><th>Formula</th><th>Command arguments</th><th class="num">Variables</th>
+<th class="num">Clauses</th><th class="num">Compressed</th><th>Hash GBD would give it</th></tr>{rows}</table></div>
+<p class="legend">{f"{len(skipped)} more were produced and left out, over the limits this pack set itself: " if skipped else ""}{esc(s.get('size_note', ''))}</p>
+{f'<p>Any other size, with the same pinned chain:</p><pre class="cmd">{esc(s["regenerate"])}</pre>' if s.get('regenerate') else ''}</div>""")
+    return "".join(out)
+
+
 def generator_page(g: dict, rankings: dict) -> str:
     meta = [("Authors", g.get("authors")), ("Source of the author list", g.get("authors_source")),
             ("Language", g.get("language")), ("Licence", g.get("license")),
@@ -444,9 +483,12 @@ def generator_page(g: dict, rankings: dict) -> str:
 <div class="section"><h2>What it is</h2><dl>{dl}</dl></div>
 <div class="section"><h2>Build it and run it</h2><pre>{esc(build)}</pre>
 <p class="legend">{"The image can be published: the licence allows it." if g.get('publish_image') else "The image is not published: the generator declares no licence, so only this recipe is distributed. Building it locally is fine."}</p></div>
-{samples_section(g)}
-<div class="section"><h2>Reference instances</h2><p class="legend">{esc(summary)}. Each line regenerates one known instance, from a competition or from the set its author published; the level says how close the result is. See <a href="../verification.html">verification</a>.</p>
-<div class="tablewrap"><table><tr><th>Instance</th><th>Family</th><th>Command arguments</th><th>GBD hash</th><th>Level</th></tr>{"".join(rows)}</table></div></div>
+{pack_section(g)}{samples_section(g)}
+{f'''<div class="section"><h2>Reference instances</h2><p class="legend">{esc(summary)}. Each line regenerates one known instance, from a competition or from the set its author published; the level says how close the result is. See <a href="../verification.html">verification</a>.</p>
+<div class="tablewrap"><table><tr><th>Instance</th><th>Family</th><th>Command arguments</th><th>GBD hash</th><th>Level</th></tr>{"".join(rows)}</table></div></div>''' if rows else '''<div class="section"><h2>No reference instance to check against</h2>
+<p class="legend">No competition published the formulas this recipe produces, so there is nothing whose hash we
+could compare ours to: what is checked here is the chain itself, by rebuilding it from pinned sources and
+producing the samples above twice. The formulas we distribute are in the pack.</p></div>'''}
 {('<div class="section"><h2>Notes</h2><ul>' + "".join(f"<li>{esc(n)}</li>" for n in sorted(notes)) + "</ul></div>") if notes else ""}"""
     return page(g["name"], body, 1)
 

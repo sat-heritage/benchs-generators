@@ -4,28 +4,11 @@
  "why": "The hardware competition moved from AIGER to BTOR2 in 2019, and nobody distributes those models as formulas. This pack is the bit-vector models of the two editions in CNF, at three depths, produced by one pinned chain: btor2aiger bit blasts, aigmove and aigunroll expand, and the plain Tseitin encoder of the aiger examples writes the formula \u2014 the same encoder the AIGER pack uses, so the two sit side by side.",
  "generator": "btor2",
  "image": "satex-gen/btor2:2026",
- "instances": 30,
- "bytes": 3070412,
+ "instances": 19,
+ "bytes": 3069488,
  "linked_to_gbd": 0,
- "not_encodable": 9,
+ "not_encodable": 20,
  "files": [
-  {
-   "file": "intersymbol_analog_estimation_convergence-k5.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "5",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc20",
-    "file": "intersymbol_analog_estimation_convergence.btor"
-   }
-  },
   {
    "file": "intersymbol_analog_estimation_convergence-k10.cnf.xz",
    "bytes": 164720,
@@ -58,40 +41,6 @@
    "upstream": {
     "collection": "hwmcc20",
     "file": "intersymbol_analog_estimation_convergence.btor"
-   }
-  },
-  {
-   "file": "ridecore-k5.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "5",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc20",
-    "file": "ridecore.btor"
-   }
-  },
-  {
-   "file": "buggy_ridecore-k5.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "5",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc20",
-    "file": "buggy_ridecore.btor"
    }
   },
   {
@@ -316,23 +265,6 @@
    }
   },
   {
-   "file": "vgasim_imgfifo-p093-k5.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "5",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc20",
-    "file": "vgasim_imgfifo-p093.btor"
-   }
-  },
-  {
    "file": "vgasim_imgfifo-p093-k10.cnf.xz",
    "bytes": 88756,
    "hash": "c55271525e5d1a45165698df1148d302",
@@ -367,23 +299,6 @@
    }
   },
   {
-   "file": "vgasim_imgfifo-p064-k5.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "5",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc20",
-    "file": "vgasim_imgfifo-p064.btor"
-   }
-  },
-  {
    "file": "vgasim_imgfifo-p064-k10.cnf.xz",
    "bytes": 88916,
    "hash": "a00cac642b14b7c45943570e16323a21",
@@ -415,108 +330,6 @@
    "upstream": {
     "collection": "hwmcc20",
     "file": "vgasim_imgfifo-p064.btor"
-   }
-  },
-  {
-   "file": "simple_alu-k5.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "5",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc20",
-    "file": "simple_alu.btor"
-   }
-  },
-  {
-   "file": "simple_alu-k10.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "10",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc20",
-    "file": "simple_alu.btor"
-   }
-  },
-  {
-   "file": "simple_alu-k20.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "20",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc20",
-    "file": "simple_alu.btor"
-   }
-  },
-  {
-   "file": "stack-p2-k5.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "5",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc20",
-    "file": "stack-p2.btor"
-   }
-  },
-  {
-   "file": "stack-p2-k10.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "10",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc20",
-    "file": "stack-p2.btor"
-   }
-  },
-  {
-   "file": "stack-p2-k20.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "20",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc20",
-    "file": "stack-p2.btor"
    }
   }
  ],
@@ -623,6 +436,160 @@
    ],
    "clauses": 2407049,
    "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "intersymbol_analog_estimation_convergence-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "intersymbol_analog_estimation_convergence.btor"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "ridecore-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "ridecore.btor"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "buggy_ridecore-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "buggy_ridecore.btor"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "vgasim_imgfifo-p093-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "vgasim_imgfifo-p093.btor"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "vgasim_imgfifo-p064-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "vgasim_imgfifo-p064.btor"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "simple_alu-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "simple_alu.btor"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "simple_alu-k10.cnf",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "simple_alu.btor"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "simple_alu-k20.cnf",
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "simple_alu.btor"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "stack-p2-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "stack-p2.btor"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "stack-p2-k10.cnf",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "stack-p2.btor"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "stack-p2-k20.cnf",
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "stack-p2.btor"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
   }
  ]
 }

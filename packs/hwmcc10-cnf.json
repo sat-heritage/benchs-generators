@@ -27,11 +27,13 @@
     "github_release": "packs-2026",
     "asset": "hwmcc10-cnf.tar",
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/hwmcc10-cnf.tar",
-    "sha256": "99f6a3da459defe2647ba0ca2148f92be4e6ec6cbf067c1de8b8119b9eba536e",
+    "sha256": "cf77ed8a3cdd625ab4ed27d869ec44ed58f8ef18424582d8b7507023a8d77ce2",
     "zenodo": null
   },
   "solver_note": "the depths worth keeping are the ones around the transition between unsatisfiable and satisfiable, which a bounded model checker finds; a blind grid produces mostly trivial or hopeless instances",
   "max_clauses": 300000,
+  "min_clauses": 10,
+  "floor_note": "A depth under the model's reachability horizon gives nothing to solve: aigunroll's constant propagation proves the property unreachable while it unrolls, the encoder writes the two-clause formula, and every model that hits it writes the same file. Such a formula is left out, with the depth that produced it recorded, and so is a formula a name already in this pack produced.",
   "timeout_seconds": 300,
   "nature": "examples",
   "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by raising the depth or picking a bigger circuit",
@@ -40,20 +42,21 @@
   },
   "regenerate": "tools/fetch_upstream.py hwmcc10 && docker run --rm -v \"$CACHE/hwmcc10/files:/data:ro\" satex-gen/aiger:2021 unroll <depth> <model>.aig",
   "built": {
-    "instances": 33,
-    "models": 12,
-    "bytes": 3498120,
-    "archive_bytes": 3543040,
+    "instances": 25,
+    "models": 11,
+    "bytes": 3497448,
+    "archive_bytes": 3532800,
     "clauses": {
-      "min": 2,
-      "median": 10466,
+      "min": 1568,
+      "median": 25706,
       "max": 233645
     },
     "left_out": {
+      "degenerate, under the clause floor": 8,
       "over the clause limit": 3
     },
     "chain": "the AIGER toolbox: aigunroll over k time frames, then poormanaigtocnf, the plain Tseitin encoder of the aiger examples",
-    "sha256": "99f6a3da459defe2647ba0ca2148f92be4e6ec6cbf067c1de8b8119b9eba536e"
+    "sha256": "cf77ed8a3cdd625ab4ed27d869ec44ed58f8ef18424582d8b7507023a8d77ce2"
   },
-  "coverage_note": "33 instances from twelve circuits at depths 5, 10 and 20, the circuits taken evenly along the size order of the 758 in the collection rather than from its small end, where the models are toys: built from the twelve smallest, the same pack came to 0.1 MB of trivia. Three instances are past the clause limit, which is our choice. The smallest formula here still has two clauses, since a spread reaches the small circuits too; the largest has 233 thousand."
+  "coverage_note": "25 formulas from eleven circuits at depths 5, 10 and 20, the circuits taken evenly along the size order of the 758 in the collection rather than from its small end, where the models are toys: built from the twelve smallest, the same pack came to 0.1 MB of trivia. Eleven combinations are left out: eight under the clause floor and three past the clause limit. The eight are depths at which the property is not reachable, which aigunroll settles by constant propagation while it unrolls; the encoder then writes the two-clause formula, identical for every circuit that hits it, so the pack keeps none of them. From 1568 clauses to 233 thousand is what remains, which is the range of the collection."
 }

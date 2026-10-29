@@ -4,62 +4,11 @@
  "why": "A hardware verification competition distributes circuits, not formulas. Every SAT solver author who wants to work on them has to rebuild the same unrolling and the same encoding, and the handful of depths the SAT competitions kept are not enough to study how a solver scales with the depth. This pack is that collection in CNF, at several depths, produced by one pinned chain.",
  "generator": "aiger/hwmcc10",
  "image": "satex-gen/aiger:2021",
- "instances": 33,
- "bytes": 3498120,
+ "instances": 25,
+ "bytes": 3497448,
  "linked_to_gbd": 0,
- "not_encodable": 3,
+ "not_encodable": 11,
  "files": [
-  {
-   "file": "pdtvisgray1-k5.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "5",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc10",
-    "file": "pdtvisgray1.aig"
-   }
-  },
-  {
-   "file": "pdtvisgray1-k10.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "10",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc10",
-    "file": "pdtvisgray1.aig"
-   }
-  },
-  {
-   "file": "pdtvisgray1-k20.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "20",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc10",
-    "file": "pdtvisgray1.aig"
-   }
-  },
   {
    "file": "eijks510-k5.cnf.xz",
    "bytes": 8100,
@@ -214,23 +163,6 @@
    }
   },
   {
-   "file": "bobsmnut2-k5.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "5",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc10",
-    "file": "bobsmnut2.aig"
-   }
-  },
-  {
    "file": "bobsmnut2-k10.cnf.xz",
    "bytes": 10136,
    "hash": "f3cc7c6fdfc84d05211e222922efc68f",
@@ -313,23 +245,6 @@
    "upstream": {
     "collection": "hwmcc10",
     "file": "pdtswvtms10x8p1.aig"
-   }
-  },
-  {
-   "file": "pdtvisvsar31-k5.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "5",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc10",
-    "file": "pdtvisvsar31.aig"
    }
   },
   {
@@ -418,40 +333,6 @@
    }
   },
   {
-   "file": "pdtswvqis8x8p2-k5.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "5",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc10",
-    "file": "pdtswvqis8x8p2.aig"
-   }
-  },
-  {
-   "file": "pdtswvqis8x8p2-k10.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "10",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc10",
-    "file": "pdtswvqis8x8p2.aig"
-   }
-  },
-  {
    "file": "pdtswvqis8x8p2-k20.cnf.xz",
    "bytes": 320952,
    "hash": "81181754db3d28b6ab40daeb3381f8a2",
@@ -466,23 +347,6 @@
    "upstream": {
     "collection": "hwmcc10",
     "file": "pdtswvqis8x8p2.aig"
-   }
-  },
-  {
-   "file": "pdtvisvsa16a09-k5.cnf.xz",
-   "bytes": 84,
-   "hash": "673c3d2399f86574afca269499120ad5",
-   "isohash2": "7da0c9d42afb674a",
-   "variables": 1,
-   "clauses": 2,
-   "args": [
-    "unroll",
-    "5",
-    "{file}"
-   ],
-   "upstream": {
-    "collection": "hwmcc10",
-    "file": "pdtvisvsa16a09.aig"
    }
   },
   {
@@ -602,6 +466,118 @@
    ],
    "clauses": 1067528,
    "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "pdtvisgray1-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisgray1.aig"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "pdtvisgray1-k10.cnf",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisgray1.aig"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "pdtvisgray1-k20.cnf",
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisgray1.aig"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "bobsmnut2-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "bobsmnut2.aig"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "pdtvisvsar31-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisvsar31.aig"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "pdtswvqis8x8p2-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtswvqis8x8p2.aig"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "pdtswvqis8x8p2-k10.cnf",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtswvqis8x8p2.aig"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
+  },
+  {
+   "name": "pdtvisvsa16a09-k5.cnf",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "clauses": 2,
+   "upstream": {
+    "collection": "hwmcc10",
+    "file": "pdtvisvsa16a09.aig"
+   },
+   "reason": "degenerate: 2 clauses, at or under the floor of 10"
   }
  ]
 }

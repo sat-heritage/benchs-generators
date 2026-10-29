@@ -439,8 +439,8 @@ thousand clauses and five minutes per instance.
 
 | Edition | Instances | Left out | Size |
 |---|---|---|---|
-| HWMCC 2010, AIGER | 33 from 12 circuits | 3 over the clause limit | 3.5 MB |
-| HWMCC 2019 and 2020, BTOR2 | 30 from 12 models | 5 over the limit, 4 over time | 3.1 MB |
+| HWMCC 2010, AIGER | 25 from 11 circuits | 8 degenerate, 3 over the clause limit | 3.5 MB |
+| HWMCC 2019 and 2020, BTOR2 | 19 from 8 models | 11 degenerate, 5 over the limit, 4 over time | 3.1 MB |
 
 ```sh
 curl -LO https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/hwmcc10-cnf.tar
@@ -448,7 +448,17 @@ curl -LO https://github.com/sat-heritage/benchs-generators/releases/download/pac
 ```
 
 Both go through the same Tseitin encoder, so a formula of 2010 and one of 2020
-can be compared without wondering whether the encoding moved. The circuits of
+can be compared without wondering whether the encoding moved.
+
+**Degenerate is a verdict, not a failure.** Ask for a depth the property cannot
+reach and `aigunroll` settles it by constant propagation while it unrolls: the
+circuit collapses to a constant output and the encoder writes `p cnf 1 2`, the
+same two-clause formula for every model that hits it. True, and worth nothing as
+a benchmark — nineteen of them were in the first version of these two packs, all
+under one hash. A pack now states a `min_clauses` floor and keeps no formula at
+or under it, and no two files of a pack may carry the same hash: the four BTOR2
+models and the one 2010 circuit that produced nothing else left the packs
+entirely. The circuits of
 the 2010 pack are taken evenly along the size order of the 758 in the
 collection: built from the twelve smallest, as the first version of that spec
 said, the pack came to 0.1 MB of trivia. The BTOR2 pack covers the bit-vector

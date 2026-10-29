@@ -26,6 +26,8 @@
   "permission": "to ask: the models are distributed by the competition, the CNF is derived from them by a pinned chain",
   "size_note": "measured on rast-p00 of the 2020 edition: 5177 clauses at depth 5, 45305 at depth 10, 151145 at depth 20. The depth is what makes the formula grow, and the models differ by two orders of magnitude in state, so the pack keeps nothing past 300 thousand clauses and gives each instance five minutes.",
   "max_clauses": 300000,
+  "min_clauses": 10,
+  "floor_note": "A depth under the model's reachability horizon gives nothing to solve: aigunroll's constant propagation proves the property unreachable while it unrolls, the encoder writes the two-clause formula, and every model that hits it writes the same file. Such a formula is left out, with the depth that produced it recorded, and so is a formula a name already in this pack produced.",
   "timeout_seconds": 300,
   "nature": "examples",
   "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by raising the depth or picking another model",
@@ -33,7 +35,7 @@
     "github_release": "packs-2026",
     "asset": "btor2-cnf-hwmcc20.tar",
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/btor2-cnf-hwmcc20.tar",
-    "sha256": "dbd10fff3716c43a038bdded2934b42c3741a575232a54b2f5e0411b021877d8",
+    "sha256": "be4b8461f219a0f7f967278f66fb8508a172163cc84d5a82e41241fc3a5ddcb4",
     "zenodo": null
   },
   "skip_reasons": {
@@ -42,21 +44,22 @@
   },
   "regenerate": "tools/fetch_upstream.py hwmcc20 && docker run --rm -v \"$CACHE/hwmcc20/files/btor2/bv/<year>/<submitter>:/data:ro\" satex-gen/btor2:2026 unroll <depth> <model>.btor",
   "built": {
-    "instances": 30,
-    "models": 12,
-    "bytes": 3070412,
-    "archive_bytes": 3112960,
+    "instances": 19,
+    "models": 8,
+    "bytes": 3069488,
+    "archive_bytes": 3102720,
     "clauses": {
-      "min": 2,
-      "median": 12230,
+      "min": 3134,
+      "median": 34535,
       "max": 247397
     },
     "left_out": {
+      "degenerate, under the clause floor": 11,
       "over the clause limit": 5,
       "over the time limit": 4
     },
     "chain": "btor2aiger bit blasts, aigmove and aigunroll expand over k time frames, then poormanaigtocnf writes the formula",
-    "sha256": "dbd10fff3716c43a038bdded2934b42c3741a575232a54b2f5e0411b021877d8"
+    "sha256": "be4b8461f219a0f7f967278f66fb8508a172163cc84d5a82e41241fc3a5ddcb4"
   },
-  "coverage_note": "30 instances from twelve models at depths 5, 10 and 20, two models from each submitter and year of the bit-vector track. Nine are left out, all by our own limits: five past 300 thousand clauses and four past five minutes, which is what the real designs of these editions cost \u2014 ridecore, picorv32 and zipcpu are not toy circuits. The array track is not in the pack at all: btor2aiger cannot bit blast an unbounded array, and the bridge says so rather than guessing."
+  "coverage_note": "19 formulas from eight models at depths 5, 10 and 20, chosen two per submitter and year of the bit-vector track. Twenty combinations are left out, every one by a limit of ours: eleven under the clause floor, five past 300 thousand clauses and four past five minutes, which is what the real designs of these editions cost \u2014 ridecore, picorv32 and zipcpu are not toy circuits. The eleven under the floor are four models whose property no depth of this grid can reach: aigunroll proves it while unrolling and the encoder writes the two-clause formula, the same file every time, so the models leave the pack rather than fill it with one formula under eight names. The array track is not in the pack at all: btor2aiger cannot bit blast an unbounded array, and the bridge says so rather than guessing."
 }

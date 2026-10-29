@@ -38,6 +38,68 @@ def gbd_hashes(cache: Path) -> set:
     return {h for (h,) in sqlite3.connect(db).execute("select hash from features")}
 
 
+def write_index(pack: str, doc: dict, out: Path) -> None:
+    """The index goes twice: in the repository, and in the archive it describes."""
+    (ROOT / "data" / "packs").mkdir(parents=True, exist_ok=True)
+    json.dump(doc, open(ROOT / "data" / "packs" / f"{pack}.json", "w"), indent=1)
+    json.dump(doc, open(out / "index.json", "w"), indent=1)
+
+
+def prune_built(pack: str, spec: dict, out: Path) -> int:
+    """Apply the same policy to a pack already produced, without regenerating it.
+
+    The formulas are on disk and their hashes are in the index, so dropping the
+    degenerate and the duplicated is a matter of deleting files and rewriting
+    the index: the pack that comes out is the pack a fresh build would give.
+    """
+    doc = json.load(open(ROOT / "data" / "packs" / f"{pack}.json"))
+    before = len(doc["files"])
+    for name in prune(doc["files"], doc["skipped"], spec.get("min_clauses")):
+        (out / name).unlink(missing_ok=True)
+    doc["instances"] = len(doc["files"])
+    doc["bytes"] = sum(e["bytes"] for e in doc["files"])
+    doc["not_encodable"] = len(doc["skipped"])
+    write_index(pack, doc, out)
+    print(f"{before} -> {doc['instances']} instances ({doc['bytes'] / 1e6:.1f} MB), "
+          f"{before - doc['instances']} dropped -> {out}", file=sys.stderr)
+    return 0
+
+
+def prune(index: list, skipped: list, min_clauses) -> list[str]:
+    """Drop what a pack must not distribute: the degenerate and the identical.
+
+    A formula at or under min_clauses is not a benchmark.  On the hardware packs
+    it is the two-clause formula the encoder writes when aigunroll's constant
+    propagation already proves the property unreachable at that depth: a true
+    answer, and the same file for every model that hits it.  And the same formula
+    under two names is one formula: IPC publishes a domain once per track,
+    scoring rules apart, so the three tracks of floortile flatten to one CNF.
+    The first name in the pack's own order is kept, the others are recorded as
+    its aliases and the files are returned, for the caller to delete.
+    """
+    seen, kept, dropped = {}, [], []
+    for e in index:
+        name = e["file"].removesuffix(".xz")
+        if min_clauses and e["clauses"] <= min_clauses:
+            skipped.append({"name": name, "args": e["args"], "clauses": e["clauses"],
+                            "upstream": e.get("upstream"),
+                            "reason": f"degenerate: {e['clauses']} clauses, at or under the floor of {min_clauses}"})
+            dropped.append(e["file"])
+            continue
+        first = seen.get(e["hash"])
+        if first is not None:
+            first.setdefault("aliases", []).append(name)
+            skipped.append({"name": name, "args": e["args"], "clauses": e["clauses"],
+                            "upstream": e.get("upstream"),
+                            "reason": f"the same formula as {first['file'].removesuffix('.xz')}, hash included"})
+            dropped.append(e["file"])
+            continue
+        seen[e["hash"]] = e
+        kept.append(e)
+    index[:] = kept
+    return dropped
+
+
 def items_of(spec: dict) -> list[dict]:
     it = spec["items"]
     if it["kind"] == "list":
@@ -166,9 +228,13 @@ def main(argv=None) -> int:
     ap.add_argument("--out", required=True, help="directory for the files, outside the repository")
     ap.add_argument("--limit", type=int, help="stop after this many instances, to size a pack before producing it")
     ap.add_argument("--keep-known", action="store_true", help="keep the instances GBD already serves")
+    ap.add_argument("--prune", action="store_true",
+                    help="apply the floor and the duplicate rule to a pack already produced, and stop")
     args = ap.parse_args(argv)
 
     spec = json.load(open(ROOT / "packs" / f"{args.pack}.json"))
+    if args.prune:
+        return prune_built(args.pack, spec, Path(args.out).expanduser() / args.pack)
     limit_clauses = spec.get("max_clauses")
     # what a non-zero exit of this image means, in the words of the pack
     reasons = {3: "not a classical planning domain: the translator refused it",
@@ -240,14 +306,16 @@ def main(argv=None) -> int:
             if done % 25 == 0:
                 print(f"  {done}/{len(items)}: {len(index)} kept, {len(linked)} already in GBD", file=sys.stderr)
 
+    for name in prune(index, skipped, spec.get("min_clauses")):
+        (out / name).unlink(missing_ok=True)
+
     doc = {"pack": args.pack, "title": spec["title"], "why": spec["why"], "generator": spec["generator"],
            "image": meta["image"], "instances": len(index), "bytes": sum(e["bytes"] for e in index),
            "linked_to_gbd": len(linked), "not_encodable": len(skipped),
            "files": index, "linked": linked, "skipped": skipped}
-    (ROOT / "data" / "packs").mkdir(parents=True, exist_ok=True)
-    json.dump(doc, open(ROOT / "data" / "packs" / f"{args.pack}.json", "w"), indent=1)
+    write_index(args.pack, doc, out)
     print(f"{len(index)} instances kept ({doc['bytes'] / 1e6:.1f} MB), {len(linked)} left to GBD, "
-          f"{len(skipped)} the encoder refused -> {out}",
+          f"{len(skipped)} left out -> {out}",
           file=sys.stderr)
     return 0
 
