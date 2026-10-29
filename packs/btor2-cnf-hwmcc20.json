@@ -1,0 +1,37 @@
+{
+  "pack": "btor2-cnf-hwmcc20",
+  "title": "The HWMCC 2019 and 2020 models as CNF, examples",
+  "why": "The hardware competition moved from AIGER to BTOR2 in 2019, and nobody distributes those models as formulas. This pack is the bit-vector models of the two editions in CNF, at three depths, produced by one pinned chain: btor2aiger bit blasts, aigmove and aigunroll expand, and the plain Tseitin encoder of the aiger examples writes the formula \u2014 the same encoder the AIGER pack uses, so the two sit side by side.",
+  "status": "proposed",
+  "generator": "btor2",
+  "items": {
+    "kind": "grid",
+    "upstream_collection": "hwmcc20",
+    "subdir": "btor2/bv",
+    "pattern": "*.btor",
+    "models": "smallest_per_directory:2",
+    "args": [
+      "unroll",
+      "{k}",
+      "{file}"
+    ],
+    "k": [
+      5,
+      10,
+      20
+    ],
+    "note": "two of the small models from each submitter and year of the bit-vector track, at three depths. The array track is out: btor2aiger cannot bit blast an unbounded array"
+  },
+  "exclude_known": true,
+  "permission": "to ask: the models are distributed by the competition, the CNF is derived from them by a pinned chain",
+  "size_note": "measured on rast-p00 of the 2020 edition: 5177 clauses at depth 5, 45305 at depth 10, 151145 at depth 20. The depth is what makes the formula grow, and the models differ by two orders of magnitude in state, so the pack keeps nothing past 300 thousand clauses and gives each instance five minutes.",
+  "max_clauses": 300000,
+  "timeout_seconds": 300,
+  "nature": "examples",
+  "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by raising the depth or picking another model",
+  "skip_reasons": {
+    "3": "btor2aiger could not bit blast the model, which is what an array model gets",
+    "4": "the encoder refused the unrolled circuit"
+  },
+  "regenerate": "tools/fetch_upstream.py hwmcc20 && docker run --rm -v \"$CACHE/hwmcc20/files/btor2/bv/<year>/<submitter>:/data:ro\" satex-gen/btor2:2026 unroll <depth> <model>.btor"
+}

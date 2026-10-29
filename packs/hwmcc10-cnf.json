@@ -7,7 +7,8 @@
   "items": {
     "kind": "grid",
     "upstream_collection": "hwmcc10",
-    "models": "all",
+    "pattern": "*.aig",
+    "models": "spread:12",
     "args": [
       "unroll",
       "{k}",
@@ -16,9 +17,9 @@
     "k": [
       5,
       10,
-      20,
-      40
-    ]
+      20
+    ],
+    "note": "twelve of the 758 circuits, taken evenly along the size order rather than from the small end, where the collection holds toys: the pack shows the range of the set. Three depths each, and the clause limit drops what comes out too big"
   },
   "exclude_known": true,
   "permission": "to ask: the circuits are distributed by the competition, the CNF is derived from them by a pinned toolchain",
@@ -26,5 +27,13 @@
     "github_release": null,
     "zenodo": null
   },
-  "solver_note": "the depths worth keeping are the ones around the transition between unsatisfiable and satisfiable, which a bounded model checker finds; a blind grid produces mostly trivial or hopeless instances"
+  "solver_note": "the depths worth keeping are the ones around the transition between unsatisfiable and satisfiable, which a bounded model checker finds; a blind grid produces mostly trivial or hopeless instances",
+  "max_clauses": 300000,
+  "timeout_seconds": 300,
+  "nature": "examples",
+  "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by raising the depth or picking a bigger circuit",
+  "skip_reasons": {
+    "4": "the encoder refused the unrolled circuit"
+  },
+  "regenerate": "tools/fetch_upstream.py hwmcc10 && docker run --rm -v \"$CACHE/hwmcc10/files:/data:ro\" satex-gen/aiger:2021 unroll <depth> <model>.aig"
 }

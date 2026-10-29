@@ -91,7 +91,36 @@ def items_of(spec: dict) -> list[dict]:
     if it["kind"] != "grid":
         sys.exit(f"unknown item kind: {it['kind']}")
     files = fetch_upstream.ensure(it["upstream_collection"])
-    models = sorted(p.name for p in files.rglob("*.aig")) if it.get("models") == "all" else it["models"]
+    # a collection may hold tracks this chain does not take, the array models of
+    # the hardware competition for instance: a pack may name the subtree it wants
+    files = files / it["subdir"] if it.get("subdir") else files
+    pattern = it.get("pattern", "*.aig")
+    want = it.get("models")
+    if want == "all":
+        models = sorted(q.name for q in files.rglob(pattern))
+    elif isinstance(want, str) and want.startswith("smallest_per_directory:"):
+        # a competition that files its models by submitter and year: a couple of
+        # the small ones from each, so the pack covers the spread of the set
+        n = int(want.split(":")[1])
+        byedir = {}
+        for q in files.rglob(pattern):
+            byedir.setdefault(q.parent, []).append(q)
+        models = [q.name for d in sorted(byedir)
+                  for q in sorted(byedir[d], key=lambda x: x.stat().st_size)[:n]]
+    elif isinstance(want, str) and want.startswith("smallest:"):
+        # a flat collection: the smallest models, since a pack holds examples
+        n = int(want.split(":")[1])
+        models = [q.name for q in sorted(files.rglob(pattern), key=lambda x: x.stat().st_size)[:n]]
+    elif isinstance(want, str) and want.startswith("spread:"):
+        # the smallest models of a large collection are often toys: this takes N
+        # evenly spaced along the size order instead, so the pack shows the range
+        # and the clause limit drops whatever comes out too big
+        n = int(want.split(":")[1])
+        ordered = sorted(files.rglob(pattern), key=lambda x: x.stat().st_size)
+        step = max(1, len(ordered) // n)
+        models = [q.name for q in ordered[::step][:n]]
+    else:
+        models = want
     out = []
     for model in models:
         for k in it.get("k", [None]):
