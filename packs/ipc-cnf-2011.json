@@ -27,7 +27,7 @@
     "github_release": "packs-2026",
     "asset": "ipc-cnf-2011.tar",
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-2011.tar",
-    "sha256": "04ffedc70c526d197465b15a5fcd857b551c1e48508473623adfd8798d169795",
+    "sha256": "0f2079a4201d8ba0e8b5cb15886b83f0cf459c5cac113fe532c8be6b3daf208f",
     "zenodo": null
   },
   "max_clauses": 300000,
@@ -35,13 +35,21 @@
   "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by changing the plan length or picking another task",
   "regenerate": "tools/fetch_upstream.py ipc && docker run --rm -v \"$CACHE/ipc/files/ipc-2011/domains/<domain>:/data:ro\" satex-gen/freelunch:2022 domain.pddl instances/<instance>.pddl cr <plan length>",
   "built": {
-    "instances": 82,
-    "bytes": 6444892,
+    "instances": 55,
+    "bytes": 4043080,
     "left_out": {
       "over the clause limit": 46,
-      "the encoder failed": 16
+      "the encoder failed": 16,
+      "the same formula under another name": 27
     },
-    "chain": "Fast Downward translator, then freeLunch compactReinforced"
+    "chain": "Fast Downward translator, then freeLunch compactReinforced",
+    "archive_bytes": 4147200,
+    "clauses": {
+      "min": 424,
+      "median": 29969,
+      "max": 275974
+    },
+    "sha256": "0f2079a4201d8ba0e8b5cb15886b83f0cf459c5cac113fe532c8be6b3daf208f"
   },
-  "coverage_note": "classical strips domains only. Of the tasks tried, 46 were left out because over the clause limit, 16 were left out because the encoder failed. A formula past the limit is a choice, a refusal by the translator means the domain is not classical planning, and a failure of the encoder is its own."
+  "coverage_note": "55 formulas. Of the tasks tried, 46 are past the clause limit, which is our choice, sixteen failed in the encoder, and 27 were the same formula twice or three times. A domain of the planning competition is published once per track, and the tracks differ in how a planner is scored, not in the PDDL: the same domain and the same instance give the same SAS+ task and the same formula. Those are dropped, the kept file recording the other names it answers to."
 }

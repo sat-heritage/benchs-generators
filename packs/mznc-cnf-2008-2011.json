@@ -27,7 +27,7 @@
     "github_release": "packs-2026",
     "asset": "mznc-cnf-2008-2011.tar",
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/mznc-cnf-2008-2011.tar",
-    "sha256": "752c6640104eb4bac2dc38a67f5e297e13e576a044fa901bf32903b2eefc7373",
+    "sha256": "86ccc0e59dcdecf6cc7d3360db910894667b5ab093cdcf7971113897df589792",
     "zenodo": null
   },
   "skip_reasons": {
@@ -37,21 +37,22 @@
   },
   "regenerate": "tools/fetch_upstream.py mznc && docker run --rm -v \"$CACHE/mznc/files/<year>/<problem>:/data:ro\" satex-gen/minizinc:2.10.1 <model>.mzn <data file>",
   "built": {
-    "instances": 25,
-    "problems": 25,
-    "bytes": 3298832,
-    "archive_bytes": 3338240,
+    "instances": 24,
+    "problems": 24,
+    "bytes": 3283788,
+    "archive_bytes": 3328000,
     "clauses": {
       "min": 5035,
-      "median": 38470,
+      "median": 42112,
       "max": 143425
     },
     "left_out": {
       "does not compile with MiniZinc 2.10.1": 24,
-      "over the clause limit": 3
+      "over the clause limit": 3,
+      "the same formula under another name": 1
     },
     "chain": "MiniZinc 2.10.1 compiler, then Picat's SAT module through the dump option",
-    "sha256": "752c6640104eb4bac2dc38a67f5e297e13e576a044fa901bf32903b2eefc7373"
+    "sha256": "86ccc0e59dcdecf6cc7d3360db910894667b5ab093cdcf7971113897df589792"
   },
-  "coverage_note": "25 instances, one per problem of the four editions, and the pack documents a drift as much as it holds formulas: 24 of the 52 models do not compile with MiniZinc 2.10.1 at all. The 2009 edition compiles nowhere, 2008 keeps two problems of ten, 2010 six of eleven, and 2011 all seventeen. The models of the early editions use the search annotations of MiniZinc 1.x, for instance int_search with four arguments, which the modern compiler refuses. Reaching them needs the compiler of their year, which the challenge archive names edition by edition; that is a second pinned compiler, not a fix to this one. The three other exclusions are formulas past the clause limit, which is our choice."
+  "coverage_note": "25 instances, one per problem of the four editions, and the pack documents a drift as much as it holds formulas: 24 of the 52 models do not compile with MiniZinc 2.10.1 at all. The 2009 edition compiles nowhere, 2008 keeps two problems of ten, 2010 six of eleven, and 2011 all seventeen. The models of the early editions use the search annotations of MiniZinc 1.x, for instance int_search with four arguments, which the modern compiler refuses. Reaching them needs the compiler of their year, which the challenge archive names edition by edition; that is a second pinned compiler, not a fix to this one. The three other exclusions are formulas past the clause limit, which is our choice. The one dropped is a problem the challenge used twice: the same model and the same data file in two editions, so one formula under two names. The file kept names the earlier edition and records the later."
 }

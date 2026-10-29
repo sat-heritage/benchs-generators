@@ -411,16 +411,26 @@ thousand clauses.
 
 | Competition | Instances | Left out | Size |
 |---|---|---|---|
-| 1998 and 2000 | 47 | 17 over the clause limit | 2.8 MB |
+| 1998 and 2000 | 35 | 17 over the clause limit, 12 the same formula twice | 2.8 MB |
 | 2002 | 29 | 11 over the limit, 4 by the encoder | 2.2 MB |
 | 2004 | 4 | 4 refused by the translator | 0.04 MB |
 | 2006 | 16 | 8 by the encoder | 0.1 MB |
-| 2008 | 48 | 12 refused by the translator | 2.0 MB |
-| 2011 | 82 | 46 over the limit, 16 by the encoder | 6.4 MB |
-| 2014 | 79 | 107 over the limit, 22 by the encoder | 9.9 MB |
+| 2008 | 38 | 12 refused by the translator, 10 the same formula twice | 1.5 MB |
+| 2011 | 55 | 46 over the limit, 27 duplicates, 16 by the encoder | 4.0 MB |
+| 2014 | 51 | 107 over the limit, 28 duplicates, 22 by the encoder | 6.1 MB |
 
-305 formulas, 23 MB in all, in the `packs-2026` release, with an `index.json`
+228 formulas, 17 MB in all, in the `packs-2026` release, with an `index.json`
 in each archive giving the GBD hash of every file and the command that made it.
+
+**A track is not an instance.** A planning competition publishes each domain
+once per track — agile, satisficing, optimal, multi-core — and the tracks differ
+in how a planner is scored, not in the PDDL. The same domain and instance give
+the same SAS+ task and the same formula, so 77 of the 305 files these packs first
+held were one formula under two to four names; floortile 2014 appeared in all
+four tracks. In 2000 the same thing happens between the typed and untyped
+variants of a domain, since the translator erases the types. The packs now keep
+one file per formula and record the other names it answers to, in its index
+entry.
 
 **What is left out, and why it matters which.** A domain that is temporal,
 numeric, metric or carries preferences is not classical planning: Fast
@@ -475,15 +485,17 @@ minutes per instance.
 
 | Editions | Instances | Left out | Size |
 |---|---|---|---|
-| 2008 to 2011 | 25 | 24 do not compile with 2.10.1, 3 over the clause limit | 3.3 MB |
+| 2008 to 2011 | 24 | 24 do not compile with 2.10.1, 3 over the clause limit, 1 duplicate | 3.3 MB |
 | 2012 to 2015 | 60 | 16 over the limit, 2 empty formulas, 1 by the encoder | 9.3 MB |
-| 2016 to 2019 | 54 | 22 over the limit, 2 by the encoder, 1 over time, 1 does not compile | 7.4 MB |
+| 2016 to 2019 | 53 | 22 over the limit, 2 by the encoder, 1 over time, 1 does not compile, 1 duplicate | 7.3 MB |
 | 2020 to 2023 | 46 | 18 over the limit, 8 settled by propagation, 6 do not compile, 1 over time, 1 by the encoder | 6.5 MB |
 | 2024 | 29 | 4 over the limit, 3 over time, 2 settled by propagation, 2 do not compile | 6.6 MB |
 
-214 formulas, 33 MB in all, in the `packs-2026` release beside the planning
+212 formulas, 33 MB in all, in the `packs-2026` release beside the planning
 packs, with an `index.json` in each archive giving the GBD hash of every file
-and the command that made it.
+and the command that made it. The two duplicates are problems the challenge used
+twice, model and data file alike: grid colouring in 2010 and again in 2011,
+zephyrus in 2016 and again in 2019.
 
 ```sh
 curl -LO https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/mznc-cnf-2024.tar

@@ -4,10 +4,10 @@
  "why": "The constraint programming competition distributes MiniZinc models and their data, not formulas, so every SAT author who wants to work on constraint problems rebuilds the same flattening and the same encoding. This pack is the editions of 2008 to 2011 as CNF, one instance per problem, produced by one pinned chain: the MiniZinc compiler 2.10.1, then Picat's SAT module. The most recent edition has its own pack, with two instances per problem; the history is grouped by four years so that a pack stays a handful of examples.",
  "generator": "minizinc",
  "image": "satex-gen/minizinc:2.10.1",
- "instances": 25,
- "bytes": 3298832,
+ "instances": 24,
+ "bytes": 3283788,
  "linked_to_gbd": 0,
- "not_encodable": 27,
+ "not_encodable": 28,
  "files": [
   {
    "file": "mznc2008-shortest_path-05.cnf.xz",
@@ -102,7 +102,10 @@
    "upstream": {
     "collection": "mznc",
     "dir": "2010/grid_colouring"
-   }
+   },
+   "aliases": [
+    "mznc2011-grid-colouring-7_8.cnf"
+   ]
   },
   {
    "file": "mznc2010-solbat-sb_12_12_5_2.cnf.xz",
@@ -245,22 +248,6 @@
    "upstream": {
     "collection": "mznc",
     "dir": "2011/fillomino"
-   }
-  },
-  {
-   "file": "mznc2011-grid-colouring-7_8.cnf.xz",
-   "bytes": 15044,
-   "hash": "1af82691fefe83e05df020e07c1b25a4",
-   "isohash2": "541227f6ef5a0944",
-   "variables": 899,
-   "clauses": 5769,
-   "args": [
-    "GridColoring.mzn",
-    "7_8.dzn"
-   ],
-   "upstream": {
-    "collection": "mznc",
-    "dir": "2011/grid-colouring"
    }
   },
   {
@@ -724,6 +711,19 @@
    ],
    "clauses": 3986318,
    "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2011-grid-colouring-7_8.cnf",
+   "args": [
+    "GridColoring.mzn",
+    "7_8.dzn"
+   ],
+   "clauses": 5769,
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2011/grid-colouring"
+   },
+   "reason": "the same formula as mznc2010-grid_colouring-7_8.cnf, hash included"
   }
  ]
 }

@@ -27,7 +27,7 @@
     "github_release": "packs-2026",
     "asset": "ipc-cnf-2008.tar",
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-2008.tar",
-    "sha256": "20300f6c1365fc5616c9125e0c41be767ed23fab770b7be63409cc935feb9891",
+    "sha256": "d93b2d3d4243563eb5d6ae60682092951d55a8fbc731aa23805b0546ee2e44ab",
     "zenodo": null
   },
   "max_clauses": 300000,
@@ -35,12 +35,20 @@
   "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by changing the plan length or picking another task",
   "regenerate": "tools/fetch_upstream.py ipc && docker run --rm -v \"$CACHE/ipc/files/ipc-2008/domains/<domain>:/data:ro\" satex-gen/freelunch:2022 domain.pddl instances/<instance>.pddl cr <plan length>",
   "built": {
-    "instances": 48,
-    "bytes": 2013704,
+    "instances": 38,
+    "bytes": 1484216,
     "left_out": {
-      "not classical planning": 12
+      "not classical planning": 12,
+      "the same formula under another name": 10
     },
-    "chain": "Fast Downward translator, then freeLunch compactReinforced"
+    "chain": "Fast Downward translator, then freeLunch compactReinforced",
+    "archive_bytes": 1546240,
+    "clauses": {
+      "min": 4270,
+      "median": 19773,
+      "max": 72648
+    },
+    "sha256": "d93b2d3d4243563eb5d6ae60682092951d55a8fbc731aa23805b0546ee2e44ab"
   },
-  "coverage_note": "classical strips domains only. Of the tasks tried, 12 were left out because not classical planning. A formula past the limit is a choice, a refusal by the translator means the domain is not classical planning, and a failure of the encoder is its own."
+  "coverage_note": "38 formulas. Twelve tasks were refused by the translator, which is what a domain that is not classical planning gets, and ten were the same formula twice. A domain of the planning competition is published once per track, and the tracks differ in how a planner is scored, not in the PDDL: the same domain and the same instance give the same SAS+ task and the same formula. Those are dropped, the kept file recording the other names it answers to."
 }

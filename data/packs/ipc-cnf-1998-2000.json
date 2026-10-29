@@ -4,10 +4,10 @@
  "why": "The planning competitions distribute PDDL, not formulas, so every SAT author who wants to work on planning rebuilds the same translation and the same encoding. This pack is those instances as CNF, at several plan lengths, produced by one pinned chain: Fast Downward's translator, then the freeLunch encoder. The plan length is what the published SAT competition instances fix to one or two values, and what a solver author needs to vary.",
  "generator": "freelunch",
  "image": "satex-gen/freelunch:2022",
- "instances": 47,
- "bytes": 2829132,
+ "instances": 35,
+ "bytes": 2761000,
  "linked_to_gbd": 0,
- "not_encodable": 17,
+ "not_encodable": 29,
  "files": [
   {
    "file": "ipc-1998-grid-round-2-strips-instance-1-k6.cnf.xz",
@@ -439,7 +439,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2000/domains/blocks-strips-typed"
-   }
+   },
+   "aliases": [
+    "ipc-2000-blocks-strips-untyped-instance-1-k6.cnf"
+   ]
   },
   {
    "file": "ipc-2000-blocks-strips-typed-instance-1-k10.cnf.xz",
@@ -457,7 +460,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2000/domains/blocks-strips-typed"
-   }
+   },
+   "aliases": [
+    "ipc-2000-blocks-strips-untyped-instance-1-k10.cnf"
+   ]
   },
   {
    "file": "ipc-2000-blocks-strips-typed-instance-2-k6.cnf.xz",
@@ -475,7 +481,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2000/domains/blocks-strips-typed"
-   }
+   },
+   "aliases": [
+    "ipc-2000-blocks-strips-untyped-instance-2-k6.cnf"
+   ]
   },
   {
    "file": "ipc-2000-blocks-strips-typed-instance-2-k10.cnf.xz",
@@ -493,79 +502,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2000/domains/blocks-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-blocks-strips-untyped-instance-1-k6.cnf.xz",
-   "bytes": 7844,
-   "hash": "02250982eb4282428c887b0f92b99b02",
-   "isohash2": "3bd820a49db80908",
-   "variables": 938,
-   "clauses": 3723,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-blocks-strips-untyped-instance-1-k10.cnf.xz",
-   "bytes": 10656,
-   "hash": "bb6769477a77899aab0f41f48b53f26d",
-   "isohash2": "fa593aeb665113d9",
-   "variables": 1474,
-   "clauses": 5859,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-blocks-strips-untyped-instance-2-k6.cnf.xz",
-   "bytes": 9976,
-   "hash": "4744a8ea3b211dacddc04c7496a4c3c1",
-   "isohash2": "fcf07cb823ce4079",
-   "variables": 938,
-   "clauses": 3726,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-blocks-strips-untyped-instance-2-k10.cnf.xz",
-   "bytes": 9892,
-   "hash": "b6c1144d4dfe2a4fadeaad1140bfa304",
-   "isohash2": "e0a6434e9b7a930d",
-   "variables": 1474,
-   "clauses": 5862,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/blocks-strips-untyped"
-   }
+   },
+   "aliases": [
+    "ipc-2000-blocks-strips-untyped-instance-2-k10.cnf"
+   ]
   },
   {
    "file": "ipc-2000-elevator-strips-simple-typed-instance-1-k6.cnf.xz",
@@ -583,7 +523,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2000/domains/elevator-strips-simple-typed"
-   }
+   },
+   "aliases": [
+    "ipc-2000-elevator-strips-simple-untyped-instance-1-k6.cnf"
+   ]
   },
   {
    "file": "ipc-2000-elevator-strips-simple-typed-instance-1-k10.cnf.xz",
@@ -601,7 +544,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2000/domains/elevator-strips-simple-typed"
-   }
+   },
+   "aliases": [
+    "ipc-2000-elevator-strips-simple-untyped-instance-1-k10.cnf"
+   ]
   },
   {
    "file": "ipc-2000-elevator-strips-simple-typed-instance-2-k6.cnf.xz",
@@ -619,7 +565,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2000/domains/elevator-strips-simple-typed"
-   }
+   },
+   "aliases": [
+    "ipc-2000-elevator-strips-simple-untyped-instance-2-k6.cnf"
+   ]
   },
   {
    "file": "ipc-2000-elevator-strips-simple-typed-instance-2-k10.cnf.xz",
@@ -637,79 +586,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2000/domains/elevator-strips-simple-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-elevator-strips-simple-untyped-instance-1-k6.cnf.xz",
-   "bytes": 820,
-   "hash": "30af3075d4ce2a8fbab9dd25621fcb11",
-   "isohash2": "d791a6ddc33368ea",
-   "variables": 147,
-   "clauses": 284,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-elevator-strips-simple-untyped-instance-1-k10.cnf.xz",
-   "bytes": 1004,
-   "hash": "90f11632d4344a663e8aeb98c189cf0b",
-   "isohash2": "dedf4e5e32276972",
-   "variables": 231,
-   "clauses": 448,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-elevator-strips-simple-untyped-instance-2-k6.cnf.xz",
-   "bytes": 788,
-   "hash": "cb485759b318ac4d50b67a37ac91bdfb",
-   "isohash2": "eb66851edbf0b580",
-   "variables": 147,
-   "clauses": 284,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-elevator-strips-simple-untyped-instance-2-k10.cnf.xz",
-   "bytes": 988,
-   "hash": "667dae80b5e044995d25d748f2aa0edf",
-   "isohash2": "bcf7c9fe729521ae",
-   "variables": 231,
-   "clauses": 448,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
-   }
+   },
+   "aliases": [
+    "ipc-2000-elevator-strips-simple-untyped-instance-2-k10.cnf"
+   ]
   },
   {
    "file": "ipc-2000-logistics-strips-typed-instance-1-k6.cnf.xz",
@@ -727,7 +607,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2000/domains/logistics-strips-typed"
-   }
+   },
+   "aliases": [
+    "ipc-2000-logistics-strips-untyped-instance-1-k6.cnf"
+   ]
   },
   {
    "file": "ipc-2000-logistics-strips-typed-instance-1-k10.cnf.xz",
@@ -745,7 +628,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2000/domains/logistics-strips-typed"
-   }
+   },
+   "aliases": [
+    "ipc-2000-logistics-strips-untyped-instance-1-k10.cnf"
+   ]
   },
   {
    "file": "ipc-2000-logistics-strips-typed-instance-2-k6.cnf.xz",
@@ -763,7 +649,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2000/domains/logistics-strips-typed"
-   }
+   },
+   "aliases": [
+    "ipc-2000-logistics-strips-untyped-instance-2-k6.cnf"
+   ]
   },
   {
    "file": "ipc-2000-logistics-strips-typed-instance-2-k10.cnf.xz",
@@ -781,79 +670,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2000/domains/logistics-strips-typed"
-   }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-untyped-instance-1-k6.cnf.xz",
-   "bytes": 5832,
-   "hash": "af20f65d64c3e126b454bc983081abd2",
-   "isohash2": "bd1db16e92f8ebd5",
-   "variables": 1232,
-   "clauses": 3161,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-untyped-instance-1-k10.cnf.xz",
-   "bytes": 6880,
-   "hash": "7a4a3365d6a6b04025bf3a1fc94e624a",
-   "isohash2": "9c77e48581f99b46",
-   "variables": 1936,
-   "clauses": 4973,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-untyped-instance-2-k6.cnf.xz",
-   "bytes": 6228,
-   "hash": "f2d13f0023e5eba5e4d710c25d7a3de6",
-   "isohash2": "e60097275761c3e4",
-   "variables": 1232,
-   "clauses": 3161,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-untyped"
-   }
-  },
-  {
-   "file": "ipc-2000-logistics-strips-untyped-instance-2-k10.cnf.xz",
-   "bytes": 7224,
-   "hash": "2ced77faa1702e2eb5e47facd7e5a0a6",
-   "isohash2": "94b211fe9ed67631",
-   "variables": 1936,
-   "clauses": 4973,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2000/domains/logistics-strips-untyped"
-   }
+   },
+   "aliases": [
+    "ipc-2000-logistics-strips-untyped-instance-2-k10.cnf"
+   ]
   }
  ],
  "linked": [],
@@ -1044,6 +864,186 @@
    ],
    "clauses": 947318,
    "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "ipc-2000-blocks-strips-untyped-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 3723,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2000/domains/blocks-strips-untyped"
+   },
+   "reason": "the same formula as ipc-2000-blocks-strips-typed-instance-1-k6.cnf, hash included"
+  },
+  {
+   "name": "ipc-2000-blocks-strips-untyped-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 5859,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2000/domains/blocks-strips-untyped"
+   },
+   "reason": "the same formula as ipc-2000-blocks-strips-typed-instance-1-k10.cnf, hash included"
+  },
+  {
+   "name": "ipc-2000-blocks-strips-untyped-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 3726,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2000/domains/blocks-strips-untyped"
+   },
+   "reason": "the same formula as ipc-2000-blocks-strips-typed-instance-2-k6.cnf, hash included"
+  },
+  {
+   "name": "ipc-2000-blocks-strips-untyped-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 5862,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2000/domains/blocks-strips-untyped"
+   },
+   "reason": "the same formula as ipc-2000-blocks-strips-typed-instance-2-k10.cnf, hash included"
+  },
+  {
+   "name": "ipc-2000-elevator-strips-simple-untyped-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 284,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
+   },
+   "reason": "the same formula as ipc-2000-elevator-strips-simple-typed-instance-1-k6.cnf, hash included"
+  },
+  {
+   "name": "ipc-2000-elevator-strips-simple-untyped-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 448,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
+   },
+   "reason": "the same formula as ipc-2000-elevator-strips-simple-typed-instance-1-k10.cnf, hash included"
+  },
+  {
+   "name": "ipc-2000-elevator-strips-simple-untyped-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 284,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
+   },
+   "reason": "the same formula as ipc-2000-elevator-strips-simple-typed-instance-2-k6.cnf, hash included"
+  },
+  {
+   "name": "ipc-2000-elevator-strips-simple-untyped-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 448,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2000/domains/elevator-strips-simple-untyped"
+   },
+   "reason": "the same formula as ipc-2000-elevator-strips-simple-typed-instance-2-k10.cnf, hash included"
+  },
+  {
+   "name": "ipc-2000-logistics-strips-untyped-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 3161,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2000/domains/logistics-strips-untyped"
+   },
+   "reason": "the same formula as ipc-2000-logistics-strips-typed-instance-1-k6.cnf, hash included"
+  },
+  {
+   "name": "ipc-2000-logistics-strips-untyped-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 4973,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2000/domains/logistics-strips-untyped"
+   },
+   "reason": "the same formula as ipc-2000-logistics-strips-typed-instance-1-k10.cnf, hash included"
+  },
+  {
+   "name": "ipc-2000-logistics-strips-untyped-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 3161,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2000/domains/logistics-strips-untyped"
+   },
+   "reason": "the same formula as ipc-2000-logistics-strips-typed-instance-2-k6.cnf, hash included"
+  },
+  {
+   "name": "ipc-2000-logistics-strips-untyped-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 4973,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2000/domains/logistics-strips-untyped"
+   },
+   "reason": "the same formula as ipc-2000-logistics-strips-typed-instance-2-k10.cnf, hash included"
   }
  ]
 }

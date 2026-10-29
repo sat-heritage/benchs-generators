@@ -4,10 +4,10 @@
  "why": "The planning competitions distribute PDDL, not formulas, so every SAT author who wants to work on planning rebuilds the same translation and the same encoding. This pack is those instances as CNF, at several plan lengths, produced by one pinned chain: Fast Downward's translator, then the freeLunch encoder. The plan length is what the published SAT competition instances fix to one or two values, and what a solver author needs to vary.",
  "generator": "freelunch",
  "image": "satex-gen/freelunch:2022",
- "instances": 48,
- "bytes": 2013704,
+ "instances": 38,
+ "bytes": 1484216,
  "linked_to_gbd": 0,
- "not_encodable": 12,
+ "not_encodable": 22,
  "files": [
   {
    "file": "ipc-2008-elevator-sequential-optimal-strips-instance-1-k6.cnf.xz",
@@ -169,7 +169,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2008/domains/peg-solitaire-sequential-optimal-strips"
-   }
+   },
+   "aliases": [
+    "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-1-k6.cnf"
+   ]
   },
   {
    "file": "ipc-2008-peg-solitaire-sequential-optimal-strips-instance-1-k10.cnf.xz",
@@ -187,7 +190,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2008/domains/peg-solitaire-sequential-optimal-strips"
-   }
+   },
+   "aliases": [
+    "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-1-k10.cnf"
+   ]
   },
   {
    "file": "ipc-2008-peg-solitaire-sequential-optimal-strips-instance-2-k6.cnf.xz",
@@ -205,7 +211,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2008/domains/peg-solitaire-sequential-optimal-strips"
-   }
+   },
+   "aliases": [
+    "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-2-k6.cnf"
+   ]
   },
   {
    "file": "ipc-2008-peg-solitaire-sequential-optimal-strips-instance-2-k10.cnf.xz",
@@ -223,79 +232,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2008/domains/peg-solitaire-sequential-optimal-strips"
-   }
-  },
-  {
-   "file": "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-1-k6.cnf.xz",
-   "bytes": 13272,
-   "hash": "75292ae0faa1fa5bf509b243010a9a80",
-   "isohash2": "3aea73c1b609652b",
-   "variables": 2184,
-   "clauses": 7037,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2008/domains/peg-solitaire-sequential-satisficing-strips"
-   }
-  },
-  {
-   "file": "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-1-k10.cnf.xz",
-   "bytes": 17236,
-   "hash": "424082ad6ba6a1117a909e2c5955436f",
-   "isohash2": "0f3969bdee3a66f9",
-   "variables": 3432,
-   "clauses": 11081,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2008/domains/peg-solitaire-sequential-satisficing-strips"
-   }
-  },
-  {
-   "file": "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-2-k6.cnf.xz",
-   "bytes": 30316,
-   "hash": "a7764c07bbfa5d1612577d87932087d1",
-   "isohash2": "c395c7dfad4c1c23",
-   "variables": 4151,
-   "clauses": 15536,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2008/domains/peg-solitaire-sequential-satisficing-strips"
-   }
-  },
-  {
-   "file": "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-2-k10.cnf.xz",
-   "bytes": 32444,
-   "hash": "13b4152120c3fff7b5ccc4ffe6b64bcb",
-   "isohash2": "f481b6c3307b877d",
-   "variables": 6523,
-   "clauses": 24452,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2008/domains/peg-solitaire-sequential-satisficing-strips"
-   }
+   },
+   "aliases": [
+    "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-2-k10.cnf"
+   ]
   },
   {
    "file": "ipc-2008-scanalyzer-3d-sequential-optimal-strips-instance-1-k6.cnf.xz",
@@ -313,7 +253,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2008/domains/scanalyzer-3d-sequential-optimal-strips"
-   }
+   },
+   "aliases": [
+    "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-1-k6.cnf"
+   ]
   },
   {
    "file": "ipc-2008-scanalyzer-3d-sequential-optimal-strips-instance-1-k10.cnf.xz",
@@ -331,7 +274,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2008/domains/scanalyzer-3d-sequential-optimal-strips"
-   }
+   },
+   "aliases": [
+    "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-1-k10.cnf"
+   ]
   },
   {
    "file": "ipc-2008-scanalyzer-3d-sequential-optimal-strips-instance-2-k6.cnf.xz",
@@ -349,7 +295,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2008/domains/scanalyzer-3d-sequential-optimal-strips"
-   }
+   },
+   "aliases": [
+    "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-2-k6.cnf"
+   ]
   },
   {
    "file": "ipc-2008-scanalyzer-3d-sequential-optimal-strips-instance-2-k10.cnf.xz",
@@ -367,79 +316,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2008/domains/scanalyzer-3d-sequential-optimal-strips"
-   }
-  },
-  {
-   "file": "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-1-k6.cnf.xz",
-   "bytes": 121232,
-   "hash": "c57284196b08f66705ef4051585d8aaa",
-   "isohash2": "04f5d02646c251d6",
-   "variables": 5250,
-   "clauses": 46224,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-satisficing-strips"
-   }
-  },
-  {
-   "file": "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-1-k10.cnf.xz",
-   "bytes": 130520,
-   "hash": "238e0bcc7754f27326a7f1475a8a94dd",
-   "isohash2": "e2b1859faeb277d1",
-   "variables": 8250,
-   "clauses": 72648,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-satisficing-strips"
-   }
-  },
-  {
-   "file": "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-2-k6.cnf.xz",
-   "bytes": 67352,
-   "hash": "0bd33b77534624c06fbf9fdaebce1853",
-   "isohash2": "7f165719a47dc2a3",
-   "variables": 3990,
-   "clauses": 26064,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-satisficing-strips"
-   }
-  },
-  {
-   "file": "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-2-k10.cnf.xz",
-   "bytes": 69012,
-   "hash": "eb85d1aafe6fa703cca91e8fce2a6c89",
-   "isohash2": "a892d6d60f1d2918",
-   "variables": 6270,
-   "clauses": 40968,
-   "args": [
-    "domain.pddl",
-    "instances/instance-2.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-satisficing-strips"
-   }
+   },
+   "aliases": [
+    "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-2-k10.cnf"
+   ]
   },
   {
    "file": "ipc-2008-sokoban-sequential-optimal-strips-instance-1-k6.cnf.xz",
@@ -493,7 +373,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2008/domains/sokoban-sequential-optimal-strips"
-   }
+   },
+   "aliases": [
+    "ipc-2008-sokoban-sequential-satisficing-strips-instance-1-k6.cnf"
+   ]
   },
   {
    "file": "ipc-2008-sokoban-sequential-optimal-strips-instance-2-k10.cnf.xz",
@@ -511,43 +394,10 @@
    "upstream": {
     "collection": "ipc",
     "dir": "ipc-2008/domains/sokoban-sequential-optimal-strips"
-   }
-  },
-  {
-   "file": "ipc-2008-sokoban-sequential-satisficing-strips-instance-1-k6.cnf.xz",
-   "bytes": 23684,
-   "hash": "2bf3cd647faa3aee316de30674371608",
-   "isohash2": "6fd1cd2f24b32b2d",
-   "variables": 3024,
-   "clauses": 11849,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "6"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2008/domains/sokoban-sequential-satisficing-strips"
-   }
-  },
-  {
-   "file": "ipc-2008-sokoban-sequential-satisficing-strips-instance-1-k10.cnf.xz",
-   "bytes": 24420,
-   "hash": "2d9e67213f2a1c87b2d4ba722febf730",
-   "isohash2": "801a4e2dc64f1fcf",
-   "variables": 4752,
-   "clauses": 18645,
-   "args": [
-    "domain.pddl",
-    "instances/instance-1.pddl",
-    "cr",
-    "10"
-   ],
-   "upstream": {
-    "collection": "ipc",
-    "dir": "ipc-2008/domains/sokoban-sequential-satisficing-strips"
-   }
+   },
+   "aliases": [
+    "ipc-2008-sokoban-sequential-satisficing-strips-instance-1-k10.cnf"
+   ]
   },
   {
    "file": "ipc-2008-sokoban-sequential-satisficing-strips-instance-2-k6.cnf.xz",
@@ -1043,6 +893,156 @@
     "dir": "ipc-2008/domains/peg-solitaire-net-benefit-optimal-strips"
    },
    "reason": "not a classical planning domain: the translator refused it"
+  },
+  {
+   "name": "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 7037,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-sequential-satisficing-strips"
+   },
+   "reason": "the same formula as ipc-2008-peg-solitaire-sequential-optimal-strips-instance-1-k6.cnf, hash included"
+  },
+  {
+   "name": "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 11081,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-sequential-satisficing-strips"
+   },
+   "reason": "the same formula as ipc-2008-peg-solitaire-sequential-optimal-strips-instance-1-k10.cnf, hash included"
+  },
+  {
+   "name": "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 15536,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-sequential-satisficing-strips"
+   },
+   "reason": "the same formula as ipc-2008-peg-solitaire-sequential-optimal-strips-instance-2-k6.cnf, hash included"
+  },
+  {
+   "name": "ipc-2008-peg-solitaire-sequential-satisficing-strips-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 24452,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/peg-solitaire-sequential-satisficing-strips"
+   },
+   "reason": "the same formula as ipc-2008-peg-solitaire-sequential-optimal-strips-instance-2-k10.cnf, hash included"
+  },
+  {
+   "name": "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 46224,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-satisficing-strips"
+   },
+   "reason": "the same formula as ipc-2008-scanalyzer-3d-sequential-optimal-strips-instance-1-k6.cnf, hash included"
+  },
+  {
+   "name": "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 72648,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-satisficing-strips"
+   },
+   "reason": "the same formula as ipc-2008-scanalyzer-3d-sequential-optimal-strips-instance-1-k10.cnf, hash included"
+  },
+  {
+   "name": "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-2-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 26064,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-satisficing-strips"
+   },
+   "reason": "the same formula as ipc-2008-scanalyzer-3d-sequential-optimal-strips-instance-2-k6.cnf, hash included"
+  },
+  {
+   "name": "ipc-2008-scanalyzer-3d-sequential-satisficing-strips-instance-2-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-2.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 40968,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/scanalyzer-3d-sequential-satisficing-strips"
+   },
+   "reason": "the same formula as ipc-2008-scanalyzer-3d-sequential-optimal-strips-instance-2-k10.cnf, hash included"
+  },
+  {
+   "name": "ipc-2008-sokoban-sequential-satisficing-strips-instance-1-k6.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "6"
+   ],
+   "clauses": 11849,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-sequential-satisficing-strips"
+   },
+   "reason": "the same formula as ipc-2008-sokoban-sequential-optimal-strips-instance-2-k6.cnf, hash included"
+  },
+  {
+   "name": "ipc-2008-sokoban-sequential-satisficing-strips-instance-1-k10.cnf",
+   "args": [
+    "domain.pddl",
+    "instances/instance-1.pddl",
+    "cr",
+    "10"
+   ],
+   "clauses": 18645,
+   "upstream": {
+    "collection": "ipc",
+    "dir": "ipc-2008/domains/sokoban-sequential-satisficing-strips"
+   },
+   "reason": "the same formula as ipc-2008-sokoban-sequential-optimal-strips-instance-2-k10.cnf, hash included"
   }
  ]
 }

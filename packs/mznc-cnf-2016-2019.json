@@ -27,7 +27,7 @@
     "github_release": "packs-2026",
     "asset": "mznc-cnf-2016-2019.tar",
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/mznc-cnf-2016-2019.tar",
-    "sha256": "1be3e4c78842e462a0131ab10e532d21c2f8cb8f4c3d5a0592fd4601a2f23066",
+    "sha256": "b525e16f098c4bc609fde7a47cc6266036995f51230528635999d2dbf097f221",
     "zenodo": null
   },
   "skip_reasons": {
@@ -37,23 +37,24 @@
   },
   "regenerate": "tools/fetch_upstream.py mznc && docker run --rm -v \"$CACHE/mznc/files/<year>/<problem>:/data:ro\" satex-gen/minizinc:2.10.1 <model>.mzn <data file>",
   "built": {
-    "instances": 54,
-    "problems": 54,
-    "bytes": 7353496,
-    "archive_bytes": 7424000,
+    "instances": 53,
+    "problems": 53,
+    "bytes": 7252660,
+    "archive_bytes": 7321600,
     "clauses": {
       "min": 3530,
-      "median": 34431,
+      "median": 33316,
       "max": 287303
     },
     "left_out": {
       "over the clause limit": 22,
       "the encoder failed": 2,
       "does not compile with MiniZinc 2.10.1": 1,
-      "over the time limit": 1
+      "over the time limit": 1,
+      "the same formula under another name": 1
     },
     "chain": "MiniZinc 2.10.1 compiler, then Picat's SAT module through the dump option",
-    "sha256": "1be3e4c78842e462a0131ab10e532d21c2f8cb8f4c3d5a0592fd4601a2f23066"
+    "sha256": "b525e16f098c4bc609fde7a47cc6266036995f51230528635999d2dbf097f221"
   },
-  "coverage_note": "54 instances, one per problem of the four editions, and the best covered span: of the 80 problems only 22 are past the clause limit, our choice, two the encoder could not take, one is past the five-minute limit and one no longer compiles."
+  "coverage_note": "54 instances, one per problem of the four editions, and the best covered span: of the 80 problems only 22 are past the clause limit, our choice, two the encoder could not take, one is past the five-minute limit and one no longer compiles. The one dropped is a problem the challenge used twice: the same model and the same data file in two editions, so one formula under two names. The file kept names the earlier edition and records the later."
 }

@@ -28,20 +28,28 @@
     "github_release": "packs-2026",
     "asset": "ipc-cnf-1998-2000.tar",
     "url": "https://github.com/sat-heritage/benchs-generators/releases/download/packs-2026/ipc-cnf-1998-2000.tar",
-    "sha256": "33a8f2c090e1a911a6e39b106c3663b6870f988e5fc64aad0eb9fcae116af28c",
+    "sha256": "560c3e5ad2352e03e92f440a63c5fe7375b41343f9873f71670db8f0f647343d",
     "zenodo": null
   },
   "max_clauses": 300000,
   "built": {
-    "instances": 47,
-    "bytes": 2829132,
+    "instances": 35,
+    "bytes": 2761000,
     "left_out": {
-      "over the clause limit": 17
+      "over the clause limit": 17,
+      "the same formula under another name": 12
     },
-    "chain": "Fast Downward translator, then freeLunch compactReinforced"
+    "chain": "Fast Downward translator, then freeLunch compactReinforced",
+    "archive_bytes": 2816000,
+    "clauses": {
+      "min": 284,
+      "median": 5489,
+      "max": 274500
+    },
+    "sha256": "560c3e5ad2352e03e92f440a63c5fe7375b41343f9873f71670db8f0f647343d"
   },
   "nature": "examples",
   "example_note": "a pack is a handful of small formulas, meant to be looked at, not a benchmark suite: the sizes a solver author needs are produced on demand with the same pinned chain, by changing the plan length or picking another task",
   "regenerate": "tools/fetch_upstream.py ipc && docker run --rm -v \"$CACHE/ipc/files/ipc-1998/domains/gripper-round-1-strips:/data:ro\" satex-gen/freelunch:2022 domain.pddl instances/instance-10.pddl cr 10",
-  "coverage_note": "classical strips domains only. Of the tasks tried, 17 were left out because over the clause limit. A formula past the limit is a choice, a refusal by the translator means the domain is not classical planning, and a failure of the encoder is its own."
+  "coverage_note": "35 formulas. Of the tasks tried, 17 are past the clause limit, which is our choice, and twelve were the same formula twice. Of the twelve dropped, each is the untyped variant of a domain also published typed: Fast Downward's translator erases the type declarations, so both variants flatten to the same task and the same formula. classical strips domains only; a refusal by the translator means the domain is not classical planning, and a failure of the encoder is its own."
 }

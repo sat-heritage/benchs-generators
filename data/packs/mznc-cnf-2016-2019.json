@@ -4,10 +4,10 @@
  "why": "The constraint programming competition distributes MiniZinc models and their data, not formulas, so every SAT author who wants to work on constraint problems rebuilds the same flattening and the same encoding. This pack is the editions of 2016 to 2019 as CNF, one instance per problem, produced by one pinned chain: the MiniZinc compiler 2.10.1, then Picat's SAT module. The most recent edition has its own pack, with two instances per problem; the history is grouped by four years so that a pack stays a handful of examples.",
  "generator": "minizinc",
  "image": "satex-gen/minizinc:2.10.1",
- "instances": 54,
- "bytes": 7353496,
+ "instances": 53,
+ "bytes": 7252660,
  "linked_to_gbd": 0,
- "not_encodable": 26,
+ "not_encodable": 27,
  "files": [
   {
    "file": "mznc2016-celar-CELAR6-SUB0.cnf.xz",
@@ -246,7 +246,10 @@
    "upstream": {
     "collection": "mznc",
     "dir": "2016/zephyrus"
-   }
+   },
+   "aliases": [
+    "mznc2019-zephyrus-12__8__6__3.cnf"
+   ]
   },
   {
    "file": "mznc2017-city-position-city-5-05.cnf.xz",
@@ -853,22 +856,6 @@
     "collection": "mznc",
     "dir": "2019/triangular"
    }
-  },
-  {
-   "file": "mznc2019-zephyrus-12__8__6__3.cnf.xz",
-   "bytes": 100836,
-   "hash": "0842da90860f8ab8d226e9e336893142",
-   "isohash2": "72629af5e2760f7c",
-   "variables": 7371,
-   "clauses": 38937,
-   "args": [
-    "zephyrus.mzn",
-    "12__8__6__3.dzn"
-   ],
-   "upstream": {
-    "collection": "mznc",
-    "dir": "2019/zephyrus"
-   }
   }
  ],
  "linked": [],
@@ -1117,6 +1104,19 @@
    ],
    "clauses": 935902,
    "reason": "over the limit of 300000 clauses"
+  },
+  {
+   "name": "mznc2019-zephyrus-12__8__6__3.cnf",
+   "args": [
+    "zephyrus.mzn",
+    "12__8__6__3.dzn"
+   ],
+   "clauses": 38937,
+   "upstream": {
+    "collection": "mznc",
+    "dir": "2019/zephyrus"
+   },
+   "reason": "the same formula as mznc2016-zephyrus-12__8__6__3.cnf, hash included"
   }
  ]
 }
