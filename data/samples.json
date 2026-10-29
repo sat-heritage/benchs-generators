@@ -931,5 +931,97 @@
    "clauses": 3200,
    "reproducible": true
   }
+ ],
+ "btor2": [
+  {
+   "label": "rast-p00 of 2020, 5 time frames",
+   "args": [
+    "unroll",
+    "5",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "rast-p00.btor"
+   },
+   "variables": 1879,
+   "clauses": 5177,
+   "reproducible": true
+  },
+  {
+   "label": "rast-p00 of 2020, 10 time frames",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "rast-p00.btor"
+   },
+   "variables": 15990,
+   "clauses": 45305,
+   "reproducible": true
+  },
+  {
+   "label": "rast-p00 of 2020, 20 time frames",
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "rast-p00.btor"
+   },
+   "variables": 52740,
+   "clauses": 151145,
+   "reproducible": true
+  },
+  {
+   "label": "zipversa composecrc of 2019, 10 time frames",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "zipversa_composecrc_prf-p00.btor"
+   },
+   "variables": 7960,
+   "clauses": 23312,
+   "reproducible": true
+  },
+  {
+   "label": "zipversa composecrc of 2019, 20 time frames",
+   "args": [
+    "unroll",
+    "20",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "zipversa_composecrc_prf-p00.btor"
+   },
+   "variables": 24422,
+   "clauses": 72368,
+   "reproducible": true
+  },
+  {
+   "label": "qspiflash dualflexpress of 2019, 10 time frames",
+   "args": [
+    "unroll",
+    "10",
+    "{file}"
+   ],
+   "upstream": {
+    "collection": "hwmcc20",
+    "file": "qspiflash_dualflexpress_divfive-p164.btor"
+   },
+   "variables": 7753,
+   "clauses": 21110,
+   "reproducible": true
+  }
  ]
 }

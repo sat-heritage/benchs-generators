@@ -501,6 +501,34 @@ the verifier fetches and mounts it:
  "args": ["unroll", "45", "{file}"]}
 ```
 
+**The fifth bridge takes a BTOR2 model**, which is where the hardware
+competition went after AIGER. HWMCC distributed AIGER until 2017 and BTOR2,
+word level, from 2019 on, so `bridges/btor2` starts where `bridges/aiger`
+stops:
+
+```sh
+docker run --rm -v "$PWD:/data" satex-gen/btor2:2026 unroll 20 model.btor2 > mine.cnf
+docker run --rm -v "$PWD:/data" satex-gen/btor2:2026 info model.btor2
+```
+
+`btor2aiger` bit blasts the model, `aigmove` turns its bad state property into
+an output, `aigunroll` expands it over k time frames, and the same plain Tseitin
+encoder as the other bridge writes the CNF — so a model of either era is encoded
+the same way. On `rast-p00` of the 2020 edition the depth takes it from 5177
+clauses at 5 frames to 45305 at 10 and 151145 at 20.
+
+It covers the bit-vector track, 188 models of the two editions. The 315 array
+models are refused by `btor2aiger` with "arrays not supported yet", since an
+unbounded array cannot be bit blasted without an abstraction; the bridge passes
+that message through rather than hiding it.
+
+Three things the build needed, all pinned in the recipe: `btor2aiger` is off by
+default in Btor2Tools; it calls a bit blasting API that exists only on
+Boolector's `bitblast-api` branch, which is what the authors' own setup script
+checks out; and it compiles against the AIGER 1.9.4 release, not the current
+repository, whose library has moved on. The tools that run come from the aiger
+commit the other bridge uses.
+
 **The fourth bridge takes an XCSP3 instance.** `bridges/xcsp3` carries Neng-Fa
 Zhou's XCSP3 interpreter and the same Picat encoder, so the format of the XCSP
 competitions goes in and a CNF comes out, either as an instance or as the
@@ -570,7 +598,11 @@ the three tasks we have. The `compactReinforced` encoder works, but no
 competition instance uses it on a task the repository carries.
 
 **The first bridge, and an open question.** `bridges/aiger` builds the AIGER
-toolbox and unrolls the HWMCC 2010 models. It produces the right family at any
+toolbox and unrolls the HWMCC 2010 models. It now also ships `aigmove`, so a
+model that states its property as a bad state, the AIGER 1.9 way, is handled
+instead of refused: `aigunroll` will not touch those, and the bridge moves the
+property to an output first. The 2010 models have none and take the direct
+road, so the 31 reference instances are unchanged. It produces the right family at any
 depth, but it does not reproduce the 31 unrolled instances the SAT competitions
 used. The model is identical in the 2010 and 2011 AIGER distributions and the
 depth is right, yet for `bobsm5378d2` at depth 45 our encoding has 82006

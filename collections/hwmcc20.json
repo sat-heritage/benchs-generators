@@ -1,0 +1,17 @@
+{
+  "collection": "hwmcc20",
+  "name": "BTOR2 models of the Hardware Model Checking Competition 2019 and 2020",
+  "organizers": "the HWMCC organisers; this copy is the mirror kept by Kevin Laeufer",
+  "homepage": "https://github.com/ekiwi/hwmcc20",
+  "archive": {
+    "kind": "git",
+    "url": "https://github.com/ekiwi/hwmcc20.git",
+    "commit": "7428fe95d2b5655ac2d84160faf68443c4b6c274",
+    "tree": "9bf5c5826e3b72dd309617a4cf8174b8ead2298e",
+    "bytes": 15000000
+  },
+  "layout": "btor2/<bv|array>/<year>/<submitter>/*.btor, the split single property models of the two editions",
+  "terms": "the models of the competition, as mirrored; no licence file in the mirror",
+  "redistribute": false,
+  "note": "the competition distributed AIGER until 2017 and BTOR2 from 2019, which is why this collection exists beside hwmcc10: same competition, a format nine years later. The mirror says it holds the split, selected and bit-blasted single property benchmarks of HWMCC'20, with the 2019 models beside them. This repository keeps the manifest and the pinned commit, never the models: tools/fetch_upstream.py clones it into a local cache, and the CNF encodings are produced on demand by the BTOR2 bridge."
+}

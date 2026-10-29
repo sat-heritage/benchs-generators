@@ -302,6 +302,9 @@ ROUTES = [
     ("A constraint problem as a PyCSP3 model and its data", "partly",
      "bridges/xcsp3, which compiles the model with the pinned PyCSP3 first",
      'docker run --rm -v "$PWD:/data" satex-gen/xcsp3:2023 Model.py -data=12 > mine.cnf'),
+    ("A hardware model in BTOR2, the format since HWMCC 2019", "ready",
+     "bridges/btor2: bit blasted by btor2aiger, then unrolled and encoded as an AIG",
+     'docker run --rm -v "$PWD:/data" satex-gen/btor2:2026 unroll 20 model.btor2 > mine.cnf'),
     ("A bit-vector formula in SMT-LIB", "partly",
      "the circuits of the SMT-LIB benchmarks are already there; encoding your own formula needs Boolector or "
      "Bitwuzla in the chain, as the CRUX recipe does", ""),
