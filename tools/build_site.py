@@ -258,12 +258,16 @@ def bridges_page(gens: dict, rankings: dict) -> str:
     rows = []
     for g in sorted((g for g in gens.values() if g.get("kind") == "bridge"),
                     key=lambda g: (g["name"].lower(), g.get("collection") or "")):
-        up = UPSTREAM.get(g.get("collection")) or {}
+        # a bridge with no reference instances has no collection in its key, but
+        # its recipe still says which collections it consumes: that is the row
+        name = g.get("collection") or next(iter(g.get("collections", {})), None)
+        up = UPSTREAM.get(name) or {}
         size = f"{up['archive']['bytes'] / 1e6:.0f} MB" if up.get("archive", {}).get("bytes") else "—"
         rows.append(f"""<tr><td><a href="generators/{esc(g['slug'])}.html">{esc(g['name'])}</a></td>
-<td>{esc(g.get('collection') or '—')}</td>
+<td>{esc(name or '—')}</td>
 <td>{(f'<a href="{esc(up["homepage"])}">' + esc(up['name']) + '</a>') if up.get('homepage') else esc(up.get('name', '—'))}</td>
-<td class="num">{size}</td><td class="num">{len(g['exact'])} / {len(g['checked'])}</td>
+<td class="num">{size}</td>
+<td class="num">{f"{len(g['exact'])} / {len(g['checked'])}" if g['references'] else '<span class="tag">no published formula to check against</span>'}</td>
 <td>{esc(up.get('terms', ''))}</td></tr>""")
     body = f"""<div class="hero"><h1>Bridges</h1>
 <p>A bridge does not invent instances: it encodes artefacts that another competition distributes, a circuit of a

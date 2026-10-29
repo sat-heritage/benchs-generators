@@ -4,7 +4,7 @@
   "organizers": "Dirk Beyer, LMU Munich, and Jan Strejček, Masaryk University, for the competition; the tasks themselves come from hundreds of contributors",
   "homepage": "https://github.com/sosy-lab/sv-benchmarks",
   "archive": {
-    "url": "https://zenodo.org/records/15012096/files/svcomp25-sv-benchmarks.zip?download=1",
+    "url": "https://zenodo.org/records/15012096/files/svcomp25-sv-benchmarks.zip",
     "format": "zip",
     "bytes": 1783860616,
     "sha256": "32f162bda8dea33b15d54bf6ac3a1e5b6c68a2f7320fd0e5432e72de9d8cbeef",
