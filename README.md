@@ -178,6 +178,16 @@ one big C file and it is fine. This is a start and people can benefit from it!
 **The short way.** Open an issue with a link to the code and one example command
 line. We do the rest and send you the page for checking.
 
+**The middle way, a pull request that costs you nothing.** Add one directory to
+[`contributions/`](contributions/README.md), named after your generator, and put
+in whatever you already have: the source, your makefile or just the compile
+line, the script you really ran, a note on what it wants. It does not have to be
+tidy and it does not have to follow the layout below — that directory has no
+rules, on purpose. We move the code where it belongs, write the recipe and the
+metadata around it, check it by regenerating what you gave us, and send you the
+page before anything is published. One example command line and the name of one
+instance it should produce are worth more to us than any amount of tidying.
+
 **The whole thing, four files.** Say your generator is called `wombat`:
 
     cnf/wombat/Dockerfile        how to build it
