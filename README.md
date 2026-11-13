@@ -367,6 +367,38 @@ that runs each solver.
 The website gathers this as a three-step page: turn your problem into CNF, pick
 a solver, and find the family your problem resembles.
 
+## A generator that came in by mail
+
+The call for generators brought one in, which is the point of the call. Sami
+Cherif answered it with a link to
+[carlberton/sat-syndrome-decoding](https://github.com/carlberton/sat-syndrome-decoding),
+the generator behind *SAT-Based Syndrome Decoding and Low-Weight Codewords* by
+Carl Berton, Sami Cherif and Claire Delaplace (FM 2026). It is `cnf/satsd` now:
+a random parity-check matrix and syndrome from a size and a seed, then the
+decoding question encoded with PySAT's cardinality and pseudo-Boolean
+encodings, 636 clauses at n=10 and 187682 at n=150.
+
+```sh
+docker run --rm satex-gen/satsd:2026 sd 100 0 > mine.cnf
+docker run --rm satex-gen/satsd:2026 sd 100 0 --format CNF2 --cc 6 --pb 1 > other.cnf
+docker run --rm satex-gen/satsd:2026 raw 20 3
+```
+
+**And it arrived with a reproducibility bug already in it, three weeks old.**
+The repository commits the instances it produced, so they can be checked: with
+today's `python-sat` they do not come back. Up to **1.9.dev16**, of 15 October
+2026, PySAT's encodings reproduce the authors' files byte for byte; from
+**1.9.dev17**, five days later, the same command gives 3630 variables and 8218
+clauses where their file has 4048 and 8683. The recipe pins 1.9.dev16, and all
+thirty instances they published come back at N1. Anyone regenerating those
+formulas today without pinning would be comparing their solver against
+different formulas than the paper's.
+
+The repository carries no licence; the authors allow the image to be
+distributed with a reference to their repository, which is what the recipe does
+— the sources are fetched from their repository at a pinned commit, never
+copied here.
+
 ## Sources that exist nowhere else
 
 A few generators are on no public repository: their author wrote them, used

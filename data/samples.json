@@ -1085,5 +1085,83 @@
    "clauses": 5719,
    "reproducible": true
   }
+ ],
+ "satsd": [
+  {
+   "label": "n=40, the authors' own CNF1 configuration",
+   "args": [
+    "sd",
+    "40",
+    "0"
+   ],
+   "variables": 4048,
+   "clauses": 8683,
+   "reproducible": true
+  },
+  {
+   "label": "n=100, CNF1",
+   "args": [
+    "sd",
+    "100",
+    "0"
+   ],
+   "variables": 33409,
+   "clauses": 70797,
+   "reproducible": true
+  },
+  {
+   "label": "n=150, CNF1",
+   "args": [
+    "sd",
+    "150",
+    "0"
+   ],
+   "variables": 91779,
+   "clauses": 187682,
+   "reproducible": true
+  },
+  {
+   "label": "n=100, the second model",
+   "args": [
+    "sd",
+    "100",
+    "0",
+    "--format",
+    "CNF2"
+   ],
+   "variables": 22288,
+   "clauses": 47695,
+   "reproducible": true
+  },
+  {
+   "label": "n=100, another seed",
+   "args": [
+    "sd",
+    "100",
+    "7",
+    "--format",
+    "CNF1"
+   ],
+   "variables": 32813,
+   "clauses": 69672,
+   "reproducible": true
+  },
+  {
+   "label": "n=100, totalizer and BDD encodings",
+   "args": [
+    "sd",
+    "100",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "6",
+    "--pb",
+    "1"
+   ],
+   "variables": 23600,
+   "clauses": 71973,
+   "reproducible": true
+  }
  ]
 }

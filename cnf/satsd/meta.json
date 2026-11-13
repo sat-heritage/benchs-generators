@@ -1,0 +1,26 @@
+{
+  "name": "SAT-based syndrome decoding",
+  "authors": "Carl Berton, Sami Cherif and Claire Delaplace",
+  "authors_source": "the README of github.com/carlberton/sat-syndrome-decoding and their paper, SAT-Based Syndrome Decoding and Low-Weight Codewords, FM 2026",
+  "year": 2026,
+  "competitions": [],
+  "language": "Python",
+  "license": "none stated; the authors permit distribution",
+  "license_note": "the repository carries no licence file. The authors gave permission by mail, in November 2026, for the generator to be distributed with a reference to their repository, which is what this recipe does: the image is published, the sources are not redistributed but fetched from github.com/carlberton/sat-syndrome-decoding at the pinned commit, and the credit and the paper travel with it. Ask them before reusing the code elsewhere.",
+  "publish_image": true,
+  "source_repo": "https://github.com/carlberton/sat-syndrome-decoding.git",
+  "source_commit": "7177dc9fbae346b1dd997b61af6ad0208f7a35f2",
+  "source_tree": "4059c751f3c8074c2a08e83cfb2ca787e9977d15",
+  "image": "satex-gen/satsd:2026",
+  "usage": "satsd-gen sd N SEED [--format CNF1|CNF2|XNF1|XNF2] [--cc K] [--pb K] | satsd-gen raw N SEED",
+  "seed": "the second argument: the seed fixes the parity-check matrix and the syndrome, through Python's random module, so a size and a seed name one instance",
+  "notes": "syndrome decoding is the problem code-based cryptography rests on: given a parity-check matrix H, a syndrome s and a weight w, find an error e of weight at most w with He = s. The generator draws H and s at random from a size n and a seed, sets w to 1.05 times the Gilbert-Varshamov distance, and the model scripts encode the question with PySAT's cardinality and pseudo-Boolean encodings, in two variants and with the encodings as parameters. N is what makes the family scale: 636 clauses at n=10, 70797 at n=100, 187682 at n=150 in the authors' own configuration, and we have run it to n=200. The repository's other half, the low-weight codeword problem, writes MaxSAT in WCNF, so this image does not expose it; its code travels in the image under /opt/satsd/lw. One thing matters more than the rest here: the formula depends on the version of python-sat. Up to 1.9.dev16, of 15 October 2026, PySAT reproduces the instances the authors committed byte for byte; from 1.9.dev17, five days later, the same command gives 3630 variables and 8218 clauses where their file has 4048 and 8683. The recipe pins 1.9.dev16, so the thirty reference instances match; with today's PySAT they would not, and a paper that regenerates them now would be comparing against something else. This recipe came from the authors answering our call for generators.",
+  "samples": [
+    {"args": ["sd", "40", "0"], "label": "n=40, the authors' own CNF1 configuration"},
+    {"args": ["sd", "100", "0"], "label": "n=100, CNF1"},
+    {"args": ["sd", "150", "0"], "label": "n=150, CNF1"},
+    {"args": ["sd", "100", "0", "--format", "CNF2"], "label": "n=100, the second model"},
+    {"args": ["sd", "100", "7", "--format", "CNF1"], "label": "n=100, another seed"},
+    {"args": ["sd", "100", "0", "--format", "CNF1", "--cc", "6", "--pb", "1"], "label": "n=100, totalizer and BDD encodings"}
+  ]
+}

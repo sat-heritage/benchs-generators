@@ -1,0 +1,516 @@
+{
+ "generator": "satsd",
+ "source": "the instances committed in github.com/carlberton/sat-syndrome-decoding at commit 7177dc9fbae346b1dd997b61af6ad0208f7a35f2, which are the ones the authors produced for their FM 2026 paper. No competition published these formulas, so there is nothing in GBD to compare against: the hashes here are the ones gbdc computes on the authors' own files, and reproducing them is what the image is checked against.",
+ "references": [
+  {
+   "instance": "SD_10_0-cnf1.cnf",
+   "gbdhash": "0cbff00f700edd272bcfbaa1a40f0ac9",
+   "isohash2": "4d6e2cef6d5cce34",
+   "args": [
+    "sd",
+    "10",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_10_0.cnf"
+  },
+  {
+   "instance": "SD_20_0-cnf1.cnf",
+   "gbdhash": "580355016d42f27506fcceae39f68558",
+   "isohash2": "34847e25fa5bc044",
+   "args": [
+    "sd",
+    "20",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_20_0.cnf"
+  },
+  {
+   "instance": "SD_30_0-cnf1.cnf",
+   "gbdhash": "b2880a1e404f46cf6d01737ae339bfde",
+   "isohash2": "de4c47b00230a849",
+   "args": [
+    "sd",
+    "30",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_30_0.cnf"
+  },
+  {
+   "instance": "SD_40_0-cnf1.cnf",
+   "gbdhash": "b811da7bb7b22d668fa5c0ba11560b8c",
+   "isohash2": "05bc664b8c22b510",
+   "args": [
+    "sd",
+    "40",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_40_0.cnf"
+  },
+  {
+   "instance": "SD_50_0-cnf1.cnf",
+   "gbdhash": "34f7e1113d00a5091fb0b4caf0606e04",
+   "isohash2": "cc5871ed3abbcf11",
+   "args": [
+    "sd",
+    "50",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_50_0.cnf"
+  },
+  {
+   "instance": "SD_60_0-cnf1.cnf",
+   "gbdhash": "91d5f3f407f17697246857967ca2d6f8",
+   "isohash2": "4a01ab4facfafde3",
+   "args": [
+    "sd",
+    "60",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_60_0.cnf"
+  },
+  {
+   "instance": "SD_70_0-cnf1.cnf",
+   "gbdhash": "fd8495bc436caa9a66e11c0a4e8abd08",
+   "isohash2": "834bd632210e53bd",
+   "args": [
+    "sd",
+    "70",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_70_0.cnf"
+  },
+  {
+   "instance": "SD_80_0-cnf1.cnf",
+   "gbdhash": "17040af374d1d10f86ba857fea0614b2",
+   "isohash2": "efe04df1b823da35",
+   "args": [
+    "sd",
+    "80",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_80_0.cnf"
+  },
+  {
+   "instance": "SD_90_0-cnf1.cnf",
+   "gbdhash": "73a86461dea6343c3e166b87574c7395",
+   "isohash2": "cf72d367d4d05c06",
+   "args": [
+    "sd",
+    "90",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_90_0.cnf"
+  },
+  {
+   "instance": "SD_100_0-cnf1.cnf",
+   "gbdhash": "c5dc5f338628427c3250dde5a850d696",
+   "isohash2": "4b0e689e30aee709",
+   "args": [
+    "sd",
+    "100",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_100_0.cnf"
+  },
+  {
+   "instance": "SD_110_0-cnf1.cnf",
+   "gbdhash": "e7b620d490cc95ea094cb43deee3d1bc",
+   "isohash2": "3897e1c5a3462344",
+   "args": [
+    "sd",
+    "110",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_110_0.cnf"
+  },
+  {
+   "instance": "SD_120_0-cnf1.cnf",
+   "gbdhash": "c9bf608b2e89cf1a067a8f639ad64056",
+   "isohash2": "d070662564dac167",
+   "args": [
+    "sd",
+    "120",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_120_0.cnf"
+  },
+  {
+   "instance": "SD_130_0-cnf1.cnf",
+   "gbdhash": "6aa5366432de560f6113f05a3da66fe8",
+   "isohash2": "a89611c78d86af81",
+   "args": [
+    "sd",
+    "130",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_130_0.cnf"
+  },
+  {
+   "instance": "SD_140_0-cnf1.cnf",
+   "gbdhash": "3bd27f073729e7d4281799722da92453",
+   "isohash2": "dac1533de08e024b",
+   "args": [
+    "sd",
+    "140",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_140_0.cnf"
+  },
+  {
+   "instance": "SD_150_0-cnf1.cnf",
+   "gbdhash": "ff48d730407bfb4ed22a8a8634f566e9",
+   "isohash2": "2e9c4709612d5167",
+   "args": [
+    "sd",
+    "150",
+    "0",
+    "--format",
+    "CNF1",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF1/PB_5/encoding_3/SD_150_0.cnf"
+  },
+  {
+   "instance": "SD_10_0-cnf2.cnf",
+   "gbdhash": "83768eb0fcef6e8c614d1ee68992444e",
+   "isohash2": "7587a79596292b80",
+   "args": [
+    "sd",
+    "10",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_10_0.cnf"
+  },
+  {
+   "instance": "SD_20_0-cnf2.cnf",
+   "gbdhash": "df41780f73f2043f26b8bcb230a1eb09",
+   "isohash2": "871600725f0e333f",
+   "args": [
+    "sd",
+    "20",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_20_0.cnf"
+  },
+  {
+   "instance": "SD_30_0-cnf2.cnf",
+   "gbdhash": "348fab06b62550f0a2f7db14bef4868f",
+   "isohash2": "6a9e89fbbe465522",
+   "args": [
+    "sd",
+    "30",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_30_0.cnf"
+  },
+  {
+   "instance": "SD_40_0-cnf2.cnf",
+   "gbdhash": "44637f3da07fc85fc8b144adc9170945",
+   "isohash2": "e42318c8955638f1",
+   "args": [
+    "sd",
+    "40",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_40_0.cnf"
+  },
+  {
+   "instance": "SD_50_0-cnf2.cnf",
+   "gbdhash": "4fc3b6b8f1179b13d0809c967a3947f8",
+   "isohash2": "812db31c92338c06",
+   "args": [
+    "sd",
+    "50",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_50_0.cnf"
+  },
+  {
+   "instance": "SD_60_0-cnf2.cnf",
+   "gbdhash": "ffb74c895988370534e7d71dc6f0a910",
+   "isohash2": "218aec4e92fc168f",
+   "args": [
+    "sd",
+    "60",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_60_0.cnf"
+  },
+  {
+   "instance": "SD_70_0-cnf2.cnf",
+   "gbdhash": "37897888b217636c32648509ceac6d14",
+   "isohash2": "fa4b8d88f38a21e8",
+   "args": [
+    "sd",
+    "70",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_70_0.cnf"
+  },
+  {
+   "instance": "SD_80_0-cnf2.cnf",
+   "gbdhash": "8d7460c5dc02ff68186c5c0f85bb52ab",
+   "isohash2": "65b24458755e89ed",
+   "args": [
+    "sd",
+    "80",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_80_0.cnf"
+  },
+  {
+   "instance": "SD_90_0-cnf2.cnf",
+   "gbdhash": "0a13264247580cf6ec125206a3021b54",
+   "isohash2": "2079741245f134d3",
+   "args": [
+    "sd",
+    "90",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_90_0.cnf"
+  },
+  {
+   "instance": "SD_100_0-cnf2.cnf",
+   "gbdhash": "7072d84c7ec71a7c235c5cae2a718dc5",
+   "isohash2": "28f0a2cc3d93295c",
+   "args": [
+    "sd",
+    "100",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_100_0.cnf"
+  },
+  {
+   "instance": "SD_110_0-cnf2.cnf",
+   "gbdhash": "2f7b5c161576dec276d14e1cf7e67996",
+   "isohash2": "46d3e4e81ff29abf",
+   "args": [
+    "sd",
+    "110",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_110_0.cnf"
+  },
+  {
+   "instance": "SD_120_0-cnf2.cnf",
+   "gbdhash": "cffe4622552887722080026ef347f28b",
+   "isohash2": "9cb9adbfde75b79d",
+   "args": [
+    "sd",
+    "120",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_120_0.cnf"
+  },
+  {
+   "instance": "SD_130_0-cnf2.cnf",
+   "gbdhash": "55b68e621984197b77f8a0b97dcde642",
+   "isohash2": "d764b9278f6e64e9",
+   "args": [
+    "sd",
+    "130",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_130_0.cnf"
+  },
+  {
+   "instance": "SD_140_0-cnf2.cnf",
+   "gbdhash": "efee1df31e53eacc8106c8068ff2d013",
+   "isohash2": "70456e0974f490cb",
+   "args": [
+    "sd",
+    "140",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_140_0.cnf"
+  },
+  {
+   "instance": "SD_150_0-cnf2.cnf",
+   "gbdhash": "cf8967dc710bdba8fb7c91d939ae6a32",
+   "isohash2": "43285e64ac1fe427",
+   "args": [
+    "sd",
+    "150",
+    "0",
+    "--format",
+    "CNF2",
+    "--cc",
+    "3",
+    "--pb",
+    "5"
+   ],
+   "note": "the file the authors committed in their repository, under syndrome_decoding_problem/Challenges/seed_0/CNF2/PB_5/encoding_3/SD_150_0.cnf"
+  }
+ ]
+}

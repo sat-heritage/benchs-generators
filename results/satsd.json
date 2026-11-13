@@ -1,0 +1,517 @@
+{
+  "target": "satsd",
+  "image": "satex-gen/satsd:2026",
+  "subset": null,
+  "results": [
+    {
+      "instance": "SD_10_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "10",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "0cbff00f700edd272bcfbaa1a40f0ac9",
+      "got": "0cbff00f700edd272bcfbaa1a40f0ac9",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_20_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "20",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "580355016d42f27506fcceae39f68558",
+      "got": "580355016d42f27506fcceae39f68558",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_30_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "30",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "b2880a1e404f46cf6d01737ae339bfde",
+      "got": "b2880a1e404f46cf6d01737ae339bfde",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_40_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "40",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "b811da7bb7b22d668fa5c0ba11560b8c",
+      "got": "b811da7bb7b22d668fa5c0ba11560b8c",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_50_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "50",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "34f7e1113d00a5091fb0b4caf0606e04",
+      "got": "34f7e1113d00a5091fb0b4caf0606e04",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_60_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "60",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "91d5f3f407f17697246857967ca2d6f8",
+      "got": "91d5f3f407f17697246857967ca2d6f8",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_70_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "70",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "fd8495bc436caa9a66e11c0a4e8abd08",
+      "got": "fd8495bc436caa9a66e11c0a4e8abd08",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_80_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "80",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "17040af374d1d10f86ba857fea0614b2",
+      "got": "17040af374d1d10f86ba857fea0614b2",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_90_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "90",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "73a86461dea6343c3e166b87574c7395",
+      "got": "73a86461dea6343c3e166b87574c7395",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_100_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "100",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "c5dc5f338628427c3250dde5a850d696",
+      "got": "c5dc5f338628427c3250dde5a850d696",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_110_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "110",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "e7b620d490cc95ea094cb43deee3d1bc",
+      "got": "e7b620d490cc95ea094cb43deee3d1bc",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_120_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "120",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "c9bf608b2e89cf1a067a8f639ad64056",
+      "got": "c9bf608b2e89cf1a067a8f639ad64056",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_130_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "130",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "6aa5366432de560f6113f05a3da66fe8",
+      "got": "6aa5366432de560f6113f05a3da66fe8",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_140_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "140",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "3bd27f073729e7d4281799722da92453",
+      "got": "3bd27f073729e7d4281799722da92453",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_150_0-cnf1.cnf",
+      "args": [
+        "sd",
+        "150",
+        "0",
+        "--format",
+        "CNF1",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "ff48d730407bfb4ed22a8a8634f566e9",
+      "got": "ff48d730407bfb4ed22a8a8634f566e9",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_10_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "10",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "83768eb0fcef6e8c614d1ee68992444e",
+      "got": "83768eb0fcef6e8c614d1ee68992444e",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_20_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "20",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "df41780f73f2043f26b8bcb230a1eb09",
+      "got": "df41780f73f2043f26b8bcb230a1eb09",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_30_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "30",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "348fab06b62550f0a2f7db14bef4868f",
+      "got": "348fab06b62550f0a2f7db14bef4868f",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_40_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "40",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "44637f3da07fc85fc8b144adc9170945",
+      "got": "44637f3da07fc85fc8b144adc9170945",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_50_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "50",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "4fc3b6b8f1179b13d0809c967a3947f8",
+      "got": "4fc3b6b8f1179b13d0809c967a3947f8",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_60_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "60",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "ffb74c895988370534e7d71dc6f0a910",
+      "got": "ffb74c895988370534e7d71dc6f0a910",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_70_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "70",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "37897888b217636c32648509ceac6d14",
+      "got": "37897888b217636c32648509ceac6d14",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_80_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "80",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "8d7460c5dc02ff68186c5c0f85bb52ab",
+      "got": "8d7460c5dc02ff68186c5c0f85bb52ab",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_90_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "90",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "0a13264247580cf6ec125206a3021b54",
+      "got": "0a13264247580cf6ec125206a3021b54",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_100_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "100",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "7072d84c7ec71a7c235c5cae2a718dc5",
+      "got": "7072d84c7ec71a7c235c5cae2a718dc5",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_110_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "110",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "2f7b5c161576dec276d14e1cf7e67996",
+      "got": "2f7b5c161576dec276d14e1cf7e67996",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_120_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "120",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "cffe4622552887722080026ef347f28b",
+      "got": "cffe4622552887722080026ef347f28b",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_130_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "130",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "55b68e621984197b77f8a0b97dcde642",
+      "got": "55b68e621984197b77f8a0b97dcde642",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_140_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "140",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "efee1df31e53eacc8106c8068ff2d013",
+      "got": "efee1df31e53eacc8106c8068ff2d013",
+      "level": "N1"
+    },
+    {
+      "instance": "SD_150_0-cnf2.cnf",
+      "args": [
+        "sd",
+        "150",
+        "0",
+        "--format",
+        "CNF2",
+        "--cc",
+        "3",
+        "--pb",
+        "5"
+      ],
+      "expected": "cf8967dc710bdba8fb7c91d939ae6a32",
+      "got": "cf8967dc710bdba8fb7c91d939ae6a32",
+      "level": "N1"
+    }
+  ]
+}
